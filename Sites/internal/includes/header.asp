@@ -228,61 +228,161 @@
                               Performance Evaluation </a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr></tbody></table><!-- end: navBar --><!-- begin: navBar -->
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         <table cellSpacing="0" cellPadding="0" width="100%" border="0"><!-- header -->
                           <tbody>
                           <tr>
                             <td class="navBarHdrCell" vAlign="top" colSpan="2"><span class="navBarHdr"><img src="images/spacer.gif" width="3" border="0">Benefits</span></td></tr>
                           <tr>
-                            <td colSpan="2"><img height="10" src="images/spacer.gif" width="1" border="0"></td></tr><!-- mainNav -->
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/comp/PTORequest.pdf" target>PTO Form</a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/leapaid.html" target>LEAP Policy and <br>Application 
-                          </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://www.valic.com/valic2000/valicweb.nsf/CalledFrame?OpenForm&amp;home" target>VALIC</a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/benefits/HumanaDirectory.pdf" target>Humana Directory</a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/benefits/HumanaFormulary.pdf" target>Humana Formulary </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://www.humana.com/" target="humana">Humana 
-                              Web Site </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="https://www.benefitsnow.com/servicecenter/default.jsp?cono=55739" target>AON Flex Advantage Center </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/benefits/baptist_healthPharm_list.pdf" target>Participating Pharmacy <br>List 
-                          </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
-                          <tr>
-                            <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/services/comm_pavilion.html" target>Participating Pharmacy <br>List 
-                          </a></td></tr>
-                          <tr>
-                            <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr></tbody></table>
+                            <td colSpan="2"><img height="10" src="images/spacer.gif" width="1" border="0"></td>
+                            </tr>
+                            <!-- mainNav -->
+                         	<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/comp/PTORequest.pdf" target="_blank">PTO Request
+Form</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.valic.com" target="_blank">VALIC</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaDirectory.pdf" target="_blank">Humana
+Directory</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaFormulary.pdf" target="_blank">Humana
+Formulary</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.humana.com/" target="_blank">Humana Web
+Site</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="https://www.benefitsnow.com/servicecenter/default.jsp?cono=55739" target="_blank">AON Flex Advantage
+Center</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/benefits/baptist_healthPharm_list.pdf" target="_blank">Participating
+Pharmacies</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/services/comm_pavilion.html" target="_blank">Pavilion
+Pharmacy<br>Locations</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+                         
+                         
+                          </tbody>
+                          
+                          
+                          </table>
 
 <!-- /insert navBar -->
 											</td>
