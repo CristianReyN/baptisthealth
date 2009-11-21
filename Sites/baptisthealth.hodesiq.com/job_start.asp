@@ -130,7 +130,9 @@
 					
 			</form>
 			<!--END FORM SECTION-->
-		
+			
+			<BR><BR><font face="Arial" size="2"><b>Employee Referrals, <a href="joblist.asp?user_id=<%request("user_id").Item%>&ERP=y">click here.</a></b></font>
+					
 
 	<!--#include file="includes/footer.asp"-->
 	
