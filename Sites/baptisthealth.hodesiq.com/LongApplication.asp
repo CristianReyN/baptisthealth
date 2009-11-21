@@ -1269,7 +1269,7 @@ b {
 		{
 			if(document.frmLongApp.chkStillEmployeed.checked==true)
 				{
-					document.frmLongApp.showhidStillEmployeed.='Yes';
+					document.frmLongApp.showhidStillEmployeed.value='Yes';
 				}
 				
 			var strFieldID='';
