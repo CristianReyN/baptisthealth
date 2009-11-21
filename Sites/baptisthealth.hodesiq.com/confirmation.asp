@@ -40,9 +40,10 @@ next
 					<tr><td>
 					
 						<div class="headerwithbackground">
-							Confirmation
+							<b>Confirmation</b>
 						</div>
-						<FONT SIZE="2" FACE="ARIAL,HELVETICA"><%=strMessage%></font>
+						<br>
+						<FONT SIZE="2" FACE="ARIAL,HELVETICA"><%=Replace(strMessage, vbCrLf, "<br>")%></font>
 					</td>
 					<tr><td>&nbsp;</td></tr>
 				
