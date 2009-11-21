@@ -22,9 +22,7 @@ next
 
 %>
 
-<HTML>
 
-	<!--#include file="includes/head.asp"-->
 	<SCRIPT LANGUAGE=javascript>
 	<!--
 		<%if sDeleteCookies <> "" then%>
@@ -33,8 +31,7 @@ next
 	//-->
 	</SCRIPT>
 	
-	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
-		
+	
 		<!--#include file="includes/header.asp"-->
 		
 				
@@ -57,12 +54,3 @@ next
 		
 		<br clear="all">
 		
-		<%
-		if err.number <> 0 then
-			Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-		end if
-		%>
-	
-	</body>
-
-</HTML>

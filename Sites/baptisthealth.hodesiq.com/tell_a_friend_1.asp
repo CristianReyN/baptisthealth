@@ -35,13 +35,7 @@ end if
 
 %>
 
-<HTML>
-
-<!--#include file="includes/head.asp"-->
-
-	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();document.frm.from_name.focus();">//-->
-
-	<!--#include file="includes/header.asp"-->
+<!--#include file="includes/header.asp"-->
 	
 		
 		
@@ -194,18 +188,12 @@ end if
 	<!--#include file="includes/footer.asp"-->
 	
    <%
-	if err.number <> 0 then
-		Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-	end if
 	
 	if not blnJobCartWasUsed then set objJobInfoRS = nothing
 	%>
 	
 
-	
-</body>
 
-</html>
 
 <SCRIPT LANGUAGE=javascript>
 <!--

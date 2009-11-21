@@ -1,7 +1,6 @@
 <!--#include file="includes/local_subs.asp"-->
 <!--#include file="includes/IDInclude.asp"-->
 
-<!--#include file="includes/head.asp"-->
 <!--#include file="includes/header.asp"-->
 
 <%

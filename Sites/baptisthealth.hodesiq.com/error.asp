@@ -1,9 +1,4 @@
 <!--#include file="includes/local_subs.asp"-->
-
-<HTML>
-<!--#include file="includes/head.asp"-->
-	
-	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
 	
 		<!--#include file="includes/header.asp"-->
 		
@@ -27,11 +22,7 @@
 						</font>
 					</td>
 				</table>
-				
+				<br clear='all'>
 		<!--#include file="includes/footer.asp"-->
 		
-		<br clear='all'>
-	
-	</body>
-
-</HTML>
+		

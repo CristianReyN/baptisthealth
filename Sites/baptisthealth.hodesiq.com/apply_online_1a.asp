@@ -35,10 +35,6 @@ else
 end if
 %>
 
-<html>
-
-<!--#include file="includes/head.asp"-->
-
 	
 	<!--#include file="includes/header.asp"-->
 	
@@ -113,16 +109,9 @@ end if
 	
 	<!--#include file="includes/footer.asp"-->
 	
-	<%
-	if err.number <> 0 then
-		Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-	end if
-	%>
 	
 	</form>
 	
-</body>
-</html>
 
 <script language="javascript">
 	

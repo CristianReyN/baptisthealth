@@ -235,9 +235,11 @@ if (topelem != null){
 function initialize() {
 
 preload();
+
 closeallmenus();
 stopall();
 dimensions();
+
 if (win_width < 800) {
 mainmenuleft = 300;
 mainmenu2left = 300;
@@ -251,6 +253,7 @@ mainmenu2left = 180;
      }
 offset1 = 5;
 offset2 = 125;
+
 placeIt('mainmenu',mainmenuleft,0);
 placeIt('MedicalServices',mainmenuleft + offset1,21);
 placeIt('HealthInformation',mainmenuleft +offset1+offset2,21);
@@ -355,9 +358,9 @@ function showPrinterFriendly()
 
 	w = window.open("pf.html","Print","height=600,width=764,left=80,top=80,scrollbars=1,menubar=1,resizable=1,toolbar=1");
 	w.document.write("<html><head><title>Print Window</title>");
-	w.document.write("<link rel='stylesheet' href='/components/gwn/css/print.css' type='text/css'>");
-	w.document.write("<link rel='stylesheet' href='/components/gwn/css/onmedia.css' type='text/css' media='print'></head>");
-	w.document.write("<body><br><br><img src='/images/logo/bhlogo.gif'><br><br>");
+	w.document.write("<link rel='stylesheet' href='http://www.e-baptisthealth.com/components/gwn/css/print.css' type='text/css'>");
+	w.document.write("<link rel='stylesheet' href='http://www.e-baptisthealth.com/components/gwn/css/onmedia.css' type='text/css' media='print'></head>");
+	w.document.write("<body><br><br><img src='http://www.e-baptisthealth.com/images/logo/bhlogo.gif'><br><br>");
 	w.document.write(strBody);
 	w.document.write("</body></html>");
 	w.document.close;

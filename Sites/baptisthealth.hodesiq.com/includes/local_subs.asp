@@ -19,7 +19,7 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = ""
 		
-		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
+		sDomain = "http://careers.dev.hodesiq.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
@@ -31,7 +31,7 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = ""
 		
-		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
+		sDomain = "http://baptisthealth.stg.hodesiq.com/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263

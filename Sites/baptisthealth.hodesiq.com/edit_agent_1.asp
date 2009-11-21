@@ -1,8 +1,5 @@
 <!--#include file="includes/local_subs.asp"-->
 <!--#include file="includes/IDInclude.asp"-->
-
-
-<html>
 <%
 on error resume next
 
@@ -20,7 +17,6 @@ Set RsAgent = GetUserAgent(clng(intcontactID), clng(Request("agent")))
 
 %> 
 
-<!--#include file="includes/head.asp"-->
 
 <SCRIPT LANGUAGE=javascript>
 <!--
@@ -150,8 +146,6 @@ function selectall()
 </SCRIPT>
 
 
-
-<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
 	
 	<!--#include file="includes/header.asp"-->
 	
@@ -456,25 +450,13 @@ function selectall()
 		                </p></td></tr></tbody></table>
 		              <p align="center"><input type=submit id=submit1 name=submit1>  &nbsp;<input type=reset id=reset1 name=reset1>
 		</form>
-		<p>&nbsp;
-
+		
 
 
 
 
 <!--#include file="includes/footer.asp"-->
 
-	<%
-	if err.number <> 0 then
-		Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-	end if
-	%>
-
-</body>
-
-</html>
-
-
-
+	
 
               

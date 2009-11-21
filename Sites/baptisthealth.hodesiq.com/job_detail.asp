@@ -41,13 +41,7 @@ blnIncrementJobView = true
 ViewedJobCounter intJobID
 %>
 
-<html>
-
-	<!--#include file="includes/head.asp"-->
-	
-	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
-			
-		<!--#include file="includes/header.asp"-->
+<!--#include file="includes/header.asp"-->
 	
 				<table width="100%" align="center">
 				<tr>
@@ -145,26 +139,16 @@ ViewedJobCounter intJobID
 				
 				</table>
 	
-		
-		<!--#include file="includes/footer.asp"-->
-		
 		<form name="frm" action="job_detail.asp" method="post">
 			<input type="hidden" name="JobID" value="<%=objJobInfoRS.fields("requisition_id").value%>">
 			<input type="hidden" name="user_id" value="<%=Request("user_id")%>">
 		</form>
 		
-		<%
-		if err.number <> 0 then
-			Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-		end if
+		<!--#include file="includes/footer.asp"-->
 		
-		set objJobInfoRS = nothing
-		%>
-				
-	</body>
-	
-</html>
-
+		
+		
+		
 <script language="javascript">
 <!--
 

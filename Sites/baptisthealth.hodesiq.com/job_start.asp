@@ -1,12 +1,4 @@
 <!--#include file="includes/local_subs.asp"-->
-<%
-
-'response.redirect sDomain & "job_start.asp"
-
-%>
-
-<% 'Response.Redirect "http://smartpost.hodes.com/baptisthealth/job_start.asp" %>
-
 
 
 <%on error resume next
@@ -28,9 +20,6 @@
 
 %>
 
-<html>
-
-<!--#include file="includes/head.asp"-->
 
 <script language="JavaScript">
 <!--
@@ -87,16 +76,14 @@
 //-->
 </script>
 
-<!--y topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
-
-	<!--#include file="includes/header.asp"-->
+<!--#include file="includes/header.asp"-->
 	
 
 				
 			<!--BEGIN FORM SECTION-->
 			<form name="frm" action="joblist.asp?User_ID=<%=Request("User_ID")%>" method="post" onsubmit="SetFieldValues()">
 			
-			<table cellpadding="0" cellspacing="0" width="100%">
+			<table cellpadding="0" cellspacing="0" width="100%" VALIGN="top">
 			<%if trim(request("message")) <> "" then%>
 				<tr>
 					<td>
@@ -156,12 +143,4 @@
 
 	<!--#include file="includes/footer.asp"-->
 	
-	<%
-	if err.number <> 0 then
-		Response.Redirect ("error.asp?user_id=" & Request("user_id"))
-	end if
-	%>
-
-</body>
-
-</html>
+	

@@ -10,7 +10,6 @@
 	end if	
 	%>
 
-	<HTML>
 	
 	<SCRIPT LANGUAGE=javascript>
 	<!--
@@ -42,11 +41,6 @@
 	else
 		%>
 
-<!--#include file="includes/head.asp"-->
-
-
-		<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
-		
 		<!--#include file="includes/header.asp"-->
 	
 		
@@ -104,8 +98,6 @@
 			<!--#include file="includes/footer.asp"-->
 		
 		
-		</BODY>
-		</HTML>
 	<%end if%>
 	<%else%>
 	<% 'process answer to see if it matches our database, if it does email the password to user

@@ -335,9 +335,9 @@ function showPrinterFriendly()
 
 	w = window.open("pf.html","Print","height=600,width=764,left=80,top=80,scrollbars=1,menubar=1,resizable=1,toolbar=1");
 	w.document.write("<html><head><title>Print Window</title>");
-	w.document.write("<link rel='stylesheet' href='/components/gwn/css/print.css' type='text/css'>");
-	w.document.write("<link rel='stylesheet' href='/components/gwn/css/onmedia.css' type='text/css' media='print'></head>");
-	w.document.write("<body><br><br><img src='/images/logo/bhlogo.gif'><br><br>");
+	w.document.write("<link rel='stylesheet' href='http://www.e-baptisthealth.com/components/gwn/css/print.css' type='text/css'>");
+	w.document.write("<link rel='stylesheet' href='http://www.e-baptisthealth.com/components/gwn/css/onmedia.css' type='text/css' media='print'></head>");
+	w.document.write("<body><br><br><img src='http://www.e-baptisthealth.com/images/logo/bhlogo.gif'><br><br>");
 	w.document.write(strBody);
 	w.document.write("</body></html>");
 	w.document.close;
