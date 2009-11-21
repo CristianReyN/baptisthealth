@@ -1,0 +1,256 @@
+.boldText
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.plainText
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.Text10px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.arialBlkLink12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: underline
+}
+.brownText
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #958c7b;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.arialBlue12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.arialBlueLink12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: underline
+}
+.arialBoldBlue12px
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    TEXT-DECORATION: none
+}
+.GaBlue13px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 13px;
+    COLOR: #6699cc;
+    LINE-HEIGHT: 20px;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBlueLink12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: underline
+}
+.GaBoldBlueLink12px
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: underline
+}
+.GaItalBlueLink12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-STYLE: italic;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: underline
+}
+.GaBlue18px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #6699cc;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBlue18px2
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBlue22px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 22px;
+    COLOR: #6699cc;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBrn18px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #958c7b;
+    LINE-HEIGHT: 30px;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBrn18px2
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #958c7b;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBrn24px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 24px;
+    COLOR: #958c7b;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBlk18px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px;
+    COLOR: #000000;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBlk22px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 22px;
+    COLOR: #000000;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaGrey14px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    COLOR: #666666;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBoldGrey12px
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #666666;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaBoldBlue16px
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.GaItalBlue12px
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #003399;
+    FONT-STYLE: italic;
+    FONT-FAMILY: georgia, times, serif;
+    TEXT-DECORATION: none
+}
+.italicLink
+{
+    FONT-STYLE: italic
+}
+#community
+{
+    Z-INDEX: 500;
+    RIGHT: 767px;
+    LEFT: 168px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    BOTTOM: 60px;
+    POSITION: absolute;
+    TOP: 11px;
+    HEIGHT: 49px;
+    BACKGROUND-COLOR: #ebe7e0;
+    layer-background-color: #ebe7e0
+}
+#patients
+{
+    Z-INDEX: 500;
+    RIGHT: 767px;
+    LEFT: 168px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    BOTTOM: 60px;
+    POSITION: absolute;
+    TOP: 11px;
+    HEIGHT: 49px;
+    BACKGROUND-COLOR: #ebe7e0;
+    layer-background-color: #ebe7e0
+}
+#physicians
+{
+    Z-INDEX: 500;
+    RIGHT: 767px;
+    LEFT: 168px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    BOTTOM: 60px;
+    POSITION: absolute;
+    TOP: 11px;
+    HEIGHT: 49px;
+    BACKGROUND-COLOR: #ebe7e0;
+    layer-background-color: #ebe7e0
+}
+#employees
+{
+    Z-INDEX: 500;
+    RIGHT: 767px;
+    LEFT: 168px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    BOTTOM: 60px;
+    POSITION: absolute;
+    TOP: 11px;
+    HEIGHT: 49px;
+    BACKGROUND-COLOR: #ebe7e0;
+    layer-background-color: #ebe7e0
+}
