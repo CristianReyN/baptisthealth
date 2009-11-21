@@ -137,7 +137,7 @@ b {
                                       </font></td>
                                   </tr>
                                   <tr> 
-                                    <td height="1%" valign="top"><p class="smalltextb">Other 
+                                    <td height="1%" valign="top"><p class="smalltextb">Alternative 
                                         Phone</font></td>
                                     <td valign="top"><p class="smalltextb">Email 
                                         Address</font></td>
