@@ -9,6 +9,7 @@ DIM SHIFT_ID
 DIM LOCATION_ID
 dim sBaptistDomain
 dim ERP_ID
+dim strCollectAppIDs
 Dim SECURED_ADDRESS
 
 select case GetAppServer()
@@ -852,6 +853,202 @@ end function
 		set GetDynamicConnection_BAPTIST = objADOConn
 	end function
 
+	'Not only inserts new applicants but it also collects a list of applicant Ids.	
+	Function InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
+						  strEmail, strJSPassword, strAddress, strCity, intState, strStateName, intCountry, _
+						  strZip, strHomePhone, strWorkPhone, strMobilePhone, strResume, strMediaCode, intJobSeekerID, _
+						  intApplicantSource, blnAddQA, blnAlwaysSendNotification, iGender, iEthnicity)
+			
+	on error resume next
+
+		'server.ScriptTimeout = 300
+				
+		ArchiveApplicantData HIRING_ORG_ID
+			
+		dim intIndicator
+		dim objJobSeeker 
+		dim intReturnArray
+		dim intCount
+		dim intJobID
+		dim intQuestionnaireID
+		dim intAlreadyAppliedCount
+		dim intTotalJobs
+		dim lngClientID
+				
+		intAlreadyAppliedCount = 0
+		intTotalJobs = ubound(arrJobIDs) + 1
+		
+		strMediaCode = cstr(strMediaCode)
+		if len(strMediaCode) < 4 then strMediaCode = right("0000" & strMediaCode, 4)
+		
+		set objJobSeeker = server.CreateObject("corpjs.corp_job_seeker")
+		
+		for intCount = 0 to ubound(arrJobIDs)
+					
+			intJobId = clng(arrJobIDs(intCount))
+				
+			set objJobInfoRS = GetJobDetailsRS(intJobId)
+						
+			strUserMgtID = objJobInfoRS.fields.item("created_user_mgt_id").value
+			intHiringOrgID = objJobInfoRS.fields.item("hiring_orgID").value
+			lngClientID = objJobInfoRS.fields.item("client_id").value
+					
+			if isnull(lngClientID) then lngClientID = 510
+				
+			dim lngJobSeekerType   : lngJobSeekerType   = 3
+			dim lngApplicantSource : lngApplicantSource = 5
+			dim lngAddressType     : lngAddressType     = 1
+
+			dim arrInputParams     : arrInputParams = array _
+			( _
+				strFirstName, _
+				strLastName, _
+				strMiddleName, _
+				strSSN, _
+				strEmail, _
+				strJSPassword, _
+				intHiringOrgID, _
+				strAddress, _
+				"", _ 
+				strCity, _
+				intState, _
+				intCountry, _
+				strZip, _
+				strHomePhone, _
+				strWorkPhone, _
+				strMobilePhone, _
+				strResume, _
+				intJobSeekerID, _
+				strUserMgtID, _
+				lngClientID, _
+				intJobId, _
+				lngApplicantSource, _
+				strMediaCode, _
+				strStateName, _
+				lngJobSeekerType, _
+				lngAddressType, _
+				Null _
+			)
+					
+			intReturnArray = objJobSeeker.AddJobseekerMain(arrIQConnection, arrInputParams)
+			
+			if err.number = 0 then
+					
+				m_lngJSID = intReturnArray(0)
+				m_lngAppID = intReturnArray(2)
+					
+				'Now collect the applicant ids
+				strCollectAppIDs = strCollectAppIDs & m_lngAppID & ","
+					
+				'********************************************EEO STUFF*******************************************
+				'9/21/01 ADDED BY DWILEY	-	'Edited 9/9/2002 by jsherian	
+				'THIS FUNCTION WILL INSERT EOO INFO FOR 
+				'APPLICANT IF HIRING ORG IS AN EEO CLIENT
+				
+				Dim objEEO
+				Set objEEO = server.CreateObject("ccc.eeo")
+
+				If objEEO.IsHiringOrgEEO(APP_SERVER, intJobID) Then		
+					
+					'intEEOResult = objEEO.InsertEEOApplicant(APP_SERVER, HIRING_ORG_ID, intJobID, CLng(intReturnArray(0)), CLng(intReturnArray(2)), iGender, iEthnicity)
+					
+					dim arrEEOInput(6)
+							
+					if iGender = ""    or cstr(iGender)    = "0" then iGender    = "0"
+					if iEthnicity = "" or cstr(iEthnicity) = "0" then iEthnicity = "0"
+					if iVeteran = ""   or cstr(iVeteran)   = "0" then iVeteran   = "0"  'note that iVeteran is a global and not a formal param
+						
+					arrEEOInput(0) = HIRING_ORG_ID
+					arrEEOInput(1) = intJobId
+					arrEEOInput(2) = m_lngJSID
+					arrEEOInput(3) = m_lngAppID
+					arrEEOInput(4) = iGender
+					arrEEOInput(5) = iEthnicity
+					arrEEOInput(6) = iVeteran
+					
+					ExecuteDynamicStoredProcedure_NoReturn "sp_EEO_Insert_Applicant", arrEEOInput
+							
+				End If
+				'******************************************************************************************
+				'THIS INSERTS APPLICANT INTO CUSTOM JOB SEARCH DB
+						dim strSearchResume
+													   
+					strSearchResume =  strFirstName & " "  & strLastName  & " "  & strMiddleName & " "  & _ 
+						strEmail  & " "  & strAddress & " "  & _ 
+						strCity & " "  & strZip & " "  & _ 
+						strHomePhone & " "  & strSSN & " " & strStateName & " " & strResume
+						
+					arrInputParams = array(m_lngJSID,m_lngAppID, null,null,strSearchResume,HIRING_ORG_ID, TRUE, intState,intCountry, _
+						strFirstName, strLastName, strMiddleName, _
+						strEmail,strAddress , null, _
+						strCity, strStateName, strHomePhone,arrJobIDs(intCount))
+			
+					AddApplicantIntoSearchDB arrInputParams
+				
+				'**************************************************************************************
+			
+				if blnAddQA then
+					'single job with questionnaire
+					intQuestionnaireID = GetJobQuestionnaireID(intJobId)
+					if intQuestionnaireID <> 0 then
+						InsertQuestionnaireResults intJobId, intReturnArray(2), intQuestionnaireID
+						strQA = GetQuestionnaireResults(intReturnArray(2))
+						SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail	
+					end if
+				elseif not blnAddQA and Request("txtJobCartJobs").Item <> "" then
+					'do nothing email is sent when questionnaire is graded
+					'applying for multiple jobs with questions
+				else
+					'single job with no questionnaire or mult jobs with no questionnaire
+					SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail				
+				end if
+						
+				'SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail
+					
+				strJobSeekerIDs = strJobSeekerIDs & cstr(intReturnArray(2)) & ","
+				strResumeID = cstr(intReturnArray(0))
+					
+				if err.number <> 0 then err.clear
+						
+				
+						
+			elseif ((err.number = -2147217873) Or (err.number = 2627)) then
+				intAlreadyAppliedCount = intAlreadyAppliedCount + 1
+				strJobSeekerIDs = strJobSeekerIDs & "0,"
+				err.clear
+			else
+					
+				'improved error handling (added 2/19/2002)
+				strJobSeekerIDs = strJobSeekerIDs & "0,"
+				EmailApplicantInfoToSupport intJobId, err.number, err.Source, err.Description, Request.ServerVariables("URL")
+				err.clear
+				'=========================================
+						
+				'AddJobSeeker_JobCart = 0
+				'exit function
+						
+			end if
+			
+			Set objJobInfoRS = Nothing
+				
+		next
+				
+		if len(strJobSeekerIDs) > 1 then strJobSeekerIDs = left(strJobSeekerIDs, len(strJobSeekerIDs) - 1)
+				
+		if intAlreadyAppliedCount = intTotalJobs then
+			intIndicator = -1
+		else
+			intIndicator = 1
+		end if
+		
+		'server.ScriptTimeout = 90
+			
+		InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST = intIndicator
+				
+		Set objJobSeeker = Nothing
+				
+	End Function
+	
 	Function GetStateList(strStateSelected, blnWithDefault)
 		Dim strStates
 		
@@ -913,5 +1110,4 @@ end function
 				GetStateList = strStates
 			End If
 	End Function
-	
 </script>

@@ -1552,17 +1552,10 @@ b {
 							
 						if(blnChecked==false)
 							{
-								//CATCH NEW REQUIRED FIELD, SINCE IT WAS NOT NAMED WIT THE _ delimiter when the form was created.
-								if (arrValidateRadio[iLoop] == "radEverEmployeedWithBaptist") {
-									alert('Please make a selection - employment at Baptist Health Facility')
-									eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[0].focus()')
-									return false;
-								} else {
-									strID = strID.replace('_',' ')
-									alert('Please make a selection - ' + strID)
-									eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[0].focus()')
-									return false;
-								}	
+								strID = strID.replace('_',' ')
+								alert('Please make a selection - ' + strID)
+								eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[0].focus()')
+								return false;
 							}
 					}
 				//End radio validation
