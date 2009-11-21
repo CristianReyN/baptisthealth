@@ -71,7 +71,7 @@ else
 	
 	set objJobsRS = GetSearchResults_CustomFields(strCategory, strTitle, intLocation, strKeywords, intCountry, arrCustomData)
 	objJobsRS.sort = strSortColumn
-	strResults = GetPagedSortableSearchResults_CustomReq(objJobsRS, PAGE_SIZE, intPage, strNoResultsMessage, true)								 	
+	strResults = GetPagedSortableSearchResults_CustomReq_delay(objJobsRS, PAGE_SIZE, intPage, strNoResultsMessage, true)								 	
 	
 end if
 %>

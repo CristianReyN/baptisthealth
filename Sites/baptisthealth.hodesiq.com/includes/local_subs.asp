@@ -313,4 +313,182 @@ on error resume next
 			
 end function
 
+	function GetPagedSortableSearchResults_CustomReq_delay(objResultsRS, intPagesize, intCurrentPage, _
+													 strNoResultsMessage, blnIncludeShortDescription)
+		
+		dim strHTML,strCustomHTML, strCustomFieldName
+		dim intStartRecord
+		dim intEndRecord
+		dim intNumResults
+		dim blnShowPrevious
+		dim blnShowNext
+		dim blnCustomLocation
+		Dim iColumnCount
+		Dim CFD
+				
+		iColumnCount = 0
+		
+		If objResultsRS.bof And objResultsRS.eof Then
+			
+			GetPagedSortableSearchResults_CustomReq = strNoResultsMessage
+			
+		else
+			
+			objResultsRS.PageSize = intPageSize
+			intMaxPage = objResultsRS.PageCount
+			
+			blnShowPrevious = true
+			blnShowNext = true
+				
+			if intCurrentPage = intMaxPage and intCurrentPage = 1 then
+				blnShowPrevious = false
+				blnShowNext = false
+			elseif intCurrentPage >= intMaxPage then
+				intCurrentPage = intMaxPage
+				blnShowNext = false
+			elseif intCurrentPage <= 1 then
+				intCurrentPage = 1
+				blnShowPrevious = false
+			end if
+
+			objResultsRS.AbsolutePage = intCurrentPage
+				
+			intPagedCounter = (intPageSize * (intCurrentPage - 1))
+			
+			intStartRecord = intPagedCounter + 1
+			intEndRecord = intPagedCounter + intPagesize
+			intTotalResults = objResultsRS.recordcount
+			
+			if intEndRecord > objResultsRS.recordcount then
+				intEndRecord = intTotalResults
+			end if
+			
+			with objResultsRS
+				
+				For each CFD in arrCustomFieldsData
+					If CFD(CF_FIELD_RESULTS) Then
+						iColumnCount = iColumnCount + 1
+						if Instr(1, CFD(CF_FIELD_NAME), "LOCATION", vbTextCompare) then blnCustomLocation = True
+						strCustomHTML = strCustomHTML & "<td><a href=""Javascript: Sort('CustomField" & CFD(CF_FIELD_ID) & "_1')"">"
+						strCustomHTML = strCustomHTML & "<span class='resultsTitle'>" & CFD(CF_FIELD_NAME) & "</span>"
+						strCustomHTML = strCustomHTML & "</a></td>"
+					End If
+				Next
+				strHTML = strHTML & "<table border='0' cellpadding='2' cellspacing='0' width='100%'>"
+				strHTML = strHTML & "<tr>"
+				strHTML = strHTML & "<td width='70'><a href=""Javascript: Sort('careerpost_datetime desc')""><span class='resultsTitle'>DATE</span></a></td>"
+				strHTML = strHTML & "<td><a href=""Javascript: Sort('title')""><span class='resultsTitle'>JOB TITLE</span></a></td>"
+				if not blnCustomLocation then
+					strHTML = strHTML & "<td width='110'><a href=""Javascript: Sort('city_name')""><span class='resultsTitle'>LOCATION</span></a></td>"
+				end if
+				strHTML = strHTML & strCustomHTML
+				strHTML = strHTML & "</tr>"
+				strHTML = strHTML & "<tr><td COLSPAN='" & iColumnCount + 3 & "'><hr></td></tr>"
+
+				Do Until .AbsolutePage <> intCurrentPage
+					
+					if DateDiff("d", .fields.item("careerpost_datetime").value ,Now())>120 then
+					
+					intPagedCounter = intPagedCounter + 1
+						
+					strHTML = strHTML & "<tr>"
+					strHTML = strHTML & "<td width='70' class='resultsBody' valign='top'>" & getDateInMMDDYYFormat(.fields.item("careerpost_datetime").value) & "</td>"
+					strHTML = strHTML & "<td class='resultsBody' valign='top'>"
+					strHTML = strHTML & "<a href='job_detail.asp?JobID=" & trim(.fields.item("requisition_id").value) & "&user_id=" & Request("user_id") & "'>"
+					strHTML = strHTML & trim(.fields.item("title").value) & "</a></td>"
+					
+					if not blnCustomLocation then
+						strHTML = strHTML & "<td class='resultsBody' valign='top'width='110'>"
+						strHTML = strHTML & getjoblocationfordisplay(objResultsRS)
+						strHTML = strHTML & "</td>"
+					end if
+											
+					Dim iPrevQ, sValue, sCustomFieldLine
+					iPrevQ = 0
+					
+					For each CFD in arrCustomFieldsData
+						
+						sCustomFieldLine = ""
+						
+						If CFD(CF_FIELD_RESULTS) Then
+							
+							Select Case CFD(CF_FIELD_TYPE)
+								Case CFT_MULTIPLE_SELECT, CFT_CHECKBOX
+									For iAnswers = 0 To UBound(CFD(CF_FIELD_ANSWERS))
+
+										sValue = .Fields("CustomField" & CFD(CF_FIELD_ID) & "_" & (iAnswers + 1)) & ""
+										If sValue <> "" Then
+											sCustomFieldLine = sCustomFieldLine & sValue & ", "
+										End If
+
+									Next
+						
+									If sCustomFieldLine <> "" Then
+										sCustomFieldLine = Left(sCustomFieldLine, Len(sCustomFieldLine) - 2)
+									End If
+										
+								Case Else
+									sValue = .Fields("CustomField" & CFD(CF_FIELD_ID) & "_1") & ""
+									If sValue <> "" Then
+										sCustomFieldLine = sCustomFieldLine & sValue
+									End If
+
+							End Select
+							
+							if Len(sCustomFieldLine) > 25 then sCustomFieldLine = Replace(sCustomFieldLine, " (", "<br>(")
+							strHTML = strHTML & "<td class='resultsBody' valign=top>" & sCustomFieldLine & "</td>"
+								
+						End If
+							
+					Next
+
+					strHTML = strHTML & "</tr>"
+					
+					if blnIncludeShortDescription then
+						
+						dim strRequirements
+							
+						strRequirements = StripHTML(trim(.fields.item("requirements").value))
+						if len(strRequirements) > 75 then strRequirements = left(strRequirements, 75) & "..."
+							
+						strHTML = strHTML & "<tr><td class='resultsBody'>&nbsp;</td><td class='resultsBody' colspan=" & iColumnCount + 2 & ">" & strRequirements & "</td></tr>"
+						
+					end if
+					strHTML = strHTML & "<tr><td COLSPAN='" & iColumnCount + 3 & "'><hr></td></tr>"
+
+					SearchCounter .fields.item("requisition_id").value
+						
+					.movenext
+				end if
+					
+				loop		
+					
+				.close
+					
+			end with
+			
+			'strHTML = strHTML & "<tr><td colspan='3'><hr></td></tr>"
+				
+			strHTML = strHTML & "<tr><td COLSPAN='" & iColumnCount + 3 & "'>"
+				strHTML = strHTML & "<table width=100% cellspacing=0 cellpadding=0 border=0><tr>"
+					strHTML = strHTML & "<td class='resultsBody'>Displaying records <b>" & intStartRecord & "</b> through <b>" & intEndRecord & "</b></td>"
+					strHTML = strHTML & "<td class='resultsBody' align='right'>"
+			
+					if blnShowPrevious then strHTML = strHTML & "<a href=""Javascript: Move('previous')"">Previous</a>"
+					if blnShowPrevious and blnShowNext then strHTML = strHTML & "&nbsp;&nbsp;&nbsp;&nbsp;"
+					if blnShowNext then strHTML = strHTML & "<a href=""Javascript: Move('next')"">Next</a></td>"
+				strHTML = strHTML & "</tr></table>"
+			strHTML = strHTML & "</td></tr>"
+			strHTML = strHTML & "<tr><td COLSPAN='" & iColumnCount + 3 & "'>&nbsp;</td></tr>"
+			strHTML = strHTML & "<tr><td COLSPAN='" & iColumnCount + 3 & "' class='resultsBody' align=center>"
+				
+			strHTML = strHTML & "(Click on the column headers to re-sort the results)</td></tr></table>"
+							
+			GetPagedSortableSearchResults_CustomReq_delay = strHTML
+				
+		End If
+			
+	End Function
+
+
 </script>
