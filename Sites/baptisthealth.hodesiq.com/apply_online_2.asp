@@ -154,7 +154,7 @@ select case intResult
 		strConfirm = "An error occurred while attempting to process your request.  Please try again."
 	
 	case -1
-		strAction = "confirmation.asp"
+		strAction = UnsecuredBaseURL & "confirmation.asp"
 		strConfirm = "You have already applied for the selected position(s).  Please feel free to browse our site for other opportunities of interest."
 	
 	case 1
@@ -168,11 +168,10 @@ select case intResult
 		else
 			'strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			
-			'strAction = "http://www.baptisthealthjaxjobs.com/confirmation.asp"
-			strAction = "confirmation.asp"
+			strAction = UnsecuredBaseURL & "confirmation.asp"
 		end if
 		
-		strConfirm = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application." & vbCrLf & vbCrLf & "We appreciate your interest in Baptist Health and wish you success in your employment endeavors." & vbCrLf & vbCrLf & "Very Sincerely," & vbCrLf & vbCrLf & "Baptist HR Staff" & vbCrLf & vbCrLf & "*** This is an automatically generated communication, please do not respond to this e-mail. ***"
+		strConfirm = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application." & vbCrLf & vbCrLf & "We appreciate your interest in Baptist Health and wish you success in your employment endeavors." & vbCrLf & vbCrLf & "Very Sincerely," & vbCrLf & vbCrLf & "Baptist HR Staff" & vbCrLf & vbCrLf & "*** This is an automatically generated communication. ***" & vbCrLf & "*** Please do not respond to this e-mail. ***"
 		
 end select
 

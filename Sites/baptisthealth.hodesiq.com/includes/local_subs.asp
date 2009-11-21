@@ -19,7 +19,6 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = ""
 		
-		sDomain = "http://careers.dev.hodesiq.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
@@ -31,7 +30,6 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = ""
 		
-		sDomain = "http://baptisthealth.stg.hodesiq.com/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
@@ -43,23 +41,9 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = "https://baptisthealth.hodesiq.com/"
 		
-		'sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
 		sDomain = "http://www.baptisthealthjaxjobs.com/"
 				
-		LOCATION_ID = 263
-		SHIFT_ID = 264
-		ERP_ID = 288
-		
-	case else
-		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931
-		SECURED_ADDRESS = ""
-		
-		'sDomain = "http://careers.hodes.com/baptisthealth/"
-		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
-		sDomain = "http://www.baptisthealthjaxjobs.com/"
-		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
 		ERP_ID = 288
@@ -137,7 +121,7 @@ strCurrentPage = Request.ServerVariables("URL")
 			.from = strFromEmail
 			.to = objJobInfoRS.fields.item("email_address").value
 			'.cc = "jfour001@bmcjax.com"
-			.bcc = "hodesiq-track@hodesiq.com"
+			.bcc = TRACKING_EMAIL_ADDR
 			.subject = "Online Application Response for Baptist Health \" & objJobInfoRS.fields.item("requisition_code").value
 			.body = strHTML 
 			.send
