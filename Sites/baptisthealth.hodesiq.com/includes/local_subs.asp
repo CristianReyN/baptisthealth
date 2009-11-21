@@ -29,6 +29,7 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		SECURED_ADDRESS = ""
 		
+		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264		
@@ -37,12 +38,10 @@ select case GetAppServer()
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
-		SECURED_ADDRESS = ""
-'		SECURED_ADDRESS = "https://baptisthealth.hodesiq.com/"
+		SECURED_ADDRESS = "https://baptisthealth.hodesiq.com/"
 		
-		sBaptistDomain = sDomain
-'		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
-'		sDomain = "http://www.baptisthealthjaxjobs.com/"
+		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
+		sDomain = "http://www.baptisthealthjaxjobs.com/"
 				
 		LOCATION_ID = 263
 		SHIFT_ID = 264
