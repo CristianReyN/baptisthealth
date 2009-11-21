@@ -259,14 +259,14 @@
 						<xsl:if test="LongApplication/radNameChange = 'Yes'" >
             <input type="radio" name="radNameChange" onclick="javascript:this.checked=!this.checked;" checked="checked" />
             Yes 
-            <input type="radio" name="radNameChange" onclick="javascript:this.checked=!this.checked;"  />
+            <input type="radio" name="radNameChange2" onclick="javascript:this.checked=!this.checked;"  />
             No<br/>
 						</xsl:if>
 						
 						<xsl:if test="LongApplication/radNameChange = 'No'" >
-            <input type="radio" name="radNameChange" disabled="disabled" />
+            <input type="radio" name="radNameChange" onclick="javascript:this.checked=!this.checked;" />
             Yes 
-            <input type="radio" name="radNameChange"  disabled="disabled" checked="checked" />
+            <input type="radio" name="radNameChange2"  onclick="javascript:this.checked=!this.checked;" checked="checked" />
             No<br/>
 						</xsl:if>
 						
@@ -307,8 +307,8 @@
           <td width="28%" rowspan="3" valign="top" align="right">
           <p class="smalltext">
 					<xsl:if test="LongApplication/radPast7Years = 'Yes'" >
-          <input type="radio" name="radPast7Years" disabled="disabled" checked="checked" />Yes 
-          <input type="radio" name="radPast7Years"  disabled="disabled" />No<br/>
+          <input type="radio" name="radPast7Years" onclick="javascript:this.checked=!this.checked;" checked="checked" />Yes 
+          <input type="radio" name="radPast7Years2"  onclick="javascript:this.checked=!this.checked;" />No<br/>
 						<!--
 						<tr>
 						<td><input name="txtCounty7Years_2" type="text" value="{LongApplication/txtCounty7Years_2}" size="10" /></td>
@@ -321,8 +321,8 @@
 						-->
 					</xsl:if>          
 					<xsl:if test="LongApplication/radPast7Years = 'No'" >
-          <input type="radio" name="radPast7Years" disabled="disabled" />Yes 
-          <input type="radio" name="radPast7Years"  disabled="disabled" checked="checked" />No
+          <input type="radio" name="radPast7Years" onclick="javascript:this.checked=!this.checked;" />Yes 
+          <input type="radio" name="radPast7Years2"  onclick="javascript:this.checked=!this.checked;" checked="checked" />No
 					</xsl:if>          
 
           </p>If yes,</td>
@@ -345,13 +345,13 @@
           <td colspan="1" align="right"><p class="smalltext">
           
 					<xsl:if test="LongApplication/radRelativesWithBaptist = 'Yes'" >
-          <input type="radio" name="radRelativesWithBaptist" disabled="disabled" checked="checked" />Yes 
-          <input type="radio" name="radRelativesWithBaptist"  disabled="disabled" />No
+          <input type="radio" name="radRelativesWithBaptist" onclick="javascript:this.checked=!this.checked;" checked="checked" />Yes 
+          <input type="radio" name="radRelativesWithBaptist2"  onclick="javascript:this.checked=!this.checked;" />No
 					</xsl:if>          
 
 					<xsl:if test="LongApplication/radRelativesWithBaptist = 'No'" >
-          <input type="radio" name="radRelativesWithBaptist" disabled="disabled" />Yes 
-          <input type="radio" name="radRelativesWithBaptist"  disabled="disabled" checked="checked" />No
+          <input type="radio" name="radRelativesWithBaptist" onclick="javascript:this.checked=!this.checked;" />Yes 
+          <input type="radio" name="radRelativesWithBaptist2"  onclick="javascript:this.checked=!this.checked;" checked="checked" />No
 					</xsl:if>          
           
           </p></td>
@@ -364,141 +364,141 @@
 
 				<xsl:choose>        
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'PRN') and contains(LongApplication/radAvailability, 'Part time') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'PRN') and contains(LongApplication/radAvailability, 'Part time')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'PRN') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'PRN') and contains(LongApplication/radAvailability, 'Part time') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'Part time') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'PRN')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'Part time')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'PRN') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Part time') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
 
         <xsl:when test="contains(LongApplication/radAvailability, 'Part time') and contains(LongApplication/radAvailability, 'PRN')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
 				
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time') and contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
 				
         <xsl:when test="contains(LongApplication/radAvailability, 'Full time')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>				
         <xsl:when test="contains(LongApplication/radAvailability, 'Part time')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'PRN')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>
         <xsl:when test="contains(LongApplication/radAvailability, 'Other')">
-					<TR><TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
+					<TR><TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="15" type="checkbox" /><font color="red">Full Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="16" type="checkbox" /><font color="red">PRN</font></P></TD>
 					</TR>
 					<TR>
-						<TD><P class="smalltext"><INPUT disabled="disabled" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
-						<TD><P class="smalltext"><INPUT disabled="disabled" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" tabIndex="17" type="checkbox" /><font color="red">Part Time</font></P></TD>
+						<TD><P class="smalltext"><INPUT onclick="javascript:this.checked=!this.checked;" checked="checked" tabIndex="18" type="checkbox" /><font color="red">Other</font></P></TD>
 					</TR>
 				</xsl:when>				
 				</xsl:choose>
@@ -506,15 +506,15 @@
 				<xsl:if test="LongApplication/radAvailability = 'Full time'" >
 				<tr> 
 					<td height="3%">
-						<input type="radio" name="radAvailability" disabled="disabled" checked="checked" />
+						<input type="radio" name="radAvailability" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 						<span class="smalltext">Full time</span><br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability2" onclick="javascript:this.checked=!this.checked;" />
 						Part Time
 					</td>
 					<td>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability3" onclick="javascript:this.checked=!this.checked;" />
 						PRN<br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability4" onclick="javascript:this.checked=!this.checked;" />
 						Other
 					</td>
 					<td colspan="3"></td>
@@ -524,15 +524,15 @@
 				<xsl:if test="LongApplication/radAvailability = 'Part time'" >
 				<tr> 
 					<td height="3%">
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability" onclick="javascript:this.checked=!this.checked;" />
 						<span class="smalltext">Full time</span><br/>
-						<input type="radio" name="radAvailability" disabled="disabled" checked="checked" />
+						<input type="radio" name="radAvailability2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 						Part Time
 					</td>
 					<td>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability3" onclick="javascript:this.checked=!this.checked;" />
 						PRN<br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability4" onclick="javascript:this.checked=!this.checked;" />
 						Other
 					</td>
 					<td colspan="3"></td>
@@ -542,15 +542,15 @@
 				<xsl:if test="LongApplication/radAvailability = 'PRN'" >
 				<tr> 
 					<td height="3%">
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability" onclick="javascript:this.checked=!this.checked;" />
 						<span class="smalltext">Full time</span><br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability2" onclick="javascript:this.checked=!this.checked;" />
 						Part Time
 					</td>
 					<td>
-						<input type="radio" name="radAvailability" disabled="disabled" checked="checked" />
+						<input type="radio" name="radAvailability3" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 						PRN<br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability4" onclick="javascript:this.checked=!this.checked;" />
 						Other
 					</td>
 					<td colspan="3"></td>
@@ -560,15 +560,15 @@
 				<xsl:if test="LongApplication/radAvailability = 'Other'" >
 				<tr> 
 					<td height="3%">
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability" onclick="javascript:this.checked=!this.checked;" />
 						<span class="smalltext">Full time</span><br/>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability2" onclick="javascript:this.checked=!this.checked;" />
 						Part Time
 					</td>
 					<td>
-						<input type="radio" name="radAvailability" disabled="disabled" />
+						<input type="radio" name="radAvailability3" onclick="javascript:this.checked=!this.checked;" />
 						PRN<br/>
-						<input type="radio" name="radAvailability" disabled="disabled" checked="checked" />
+						<input type="radio" name="radAvailability4" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 						Other
 					</td>
 					<td colspan="3"></td>
@@ -599,18 +599,18 @@
 				<xsl:choose>
 				<xsl:when test="LongApplication/radEverEmployeedWithBaptist" >
 					<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'Yes'" >
-						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />Yes 
-						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
+						<input type="radio" name="radEverEmployeedWithBaptist" onclick="javascript:this.checked=!this.checked;" checked="checked" />Yes 
+						<input type="radio" name="radEverEmployeedWithBaptist2" onclick="javascript:this.checked=!this.checked;" />No
 					</xsl:if>
             
 					<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'No'" >
-						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
-						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />No
+						<input type="radio" name="radEverEmployeedWithBaptist" onclick="javascript:this.checked=!this.checked;" />Yes 
+						<input type="radio" name="radEverEmployeedWithBaptist2" onclick="javascript:this.checked=!this.checked;" checked="checked" />No
 					</xsl:if>
 				</xsl:when>
 				<xsl:otherwise>
-					<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
-					<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
+					<input type="radio" name="radEverEmployeedWithBaptist" onclick="javascript:this.checked=!this.checked;" />Yes 
+					<input type="radio" name="radEverEmployeedWithBaptist2" onclick="javascript:this.checked=!this.checked;" />No
 				</xsl:otherwise>
 				</xsl:choose>
             </p>
@@ -766,12 +766,12 @@
                 <INPUT class="inputclass" tabIndex="145" size="2" name="txtEmpHistToYear_1" value="{LongApplication/txtEmpHistToYear_1}" />
 
                   <xsl:if test="LongApplication/showhidStillEmployeed = 'Yes'" >
-                  <input type="checkbox" name="chkStillEmployeed" disabled="disabled" checked="checked" />
+                  <input type="checkbox" name="chkStillEmployeed" onclick="javascript:this.checked=!this.checked;" checked="checked" />
                   Still employed
                   </xsl:if>
 
                   <xsl:if test="LongApplication/showhidStillEmployeed = ''" >
-                  <input type="checkbox" name="chkStillEmployeed" disabled="disabled" />
+                  <input type="checkbox" name="chkStillEmployeed" onclick="javascript:this.checked=!this.checked;" />
                   Still employeed
                   </xsl:if>
                 </font></P>
@@ -806,12 +806,12 @@
                 <INPUT class="inputclass" style="WIDTH: 18px" tabIndex="145" size="4" name="txtEmpHistToYear_2" value="{LongApplication/txtEmpHistToYear_2}" />
 
                   <xsl:if test="LongApplication/showhidStillEmployeed = 'Yes'" >
-                  <input type="checkbox" name="chkStillEmployeed" disabled="disabled" checked="checked" />
+                  <input type="checkbox" name="chkStillEmployeed" onclick="javascript:this.checked=!this.checked;" checked="checked" />
                   Still employeed
                   </xsl:if>
 
                   <xsl:if test="LongApplication/showhidStillEmployeed = ''" >
-                  <input type="checkbox" name="chkStillEmployeed" disabled="disabled" />
+                  <input type="checkbox" name="chkStillEmployeed" onclick="javascript:this.checked=!this.checked;" />
                   Still employeed
                   </xsl:if>
                 </font></P>
@@ -833,13 +833,13 @@
   <tr>
 		<td>May we contact them
 				<xsl:if test="LongApplication/radEmpHistContactSuper_1 = 'Yes'" >
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" checked="checked" />Yes 
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" />No 
+				<input type="radio" name="radEmpHistContactSuper_1" onclick="javascript:this.checked=!this.checked;" checked="checked" />Yes 
+				<input type="radio" name="radEmpHistContactSuper_12" onclick="javascript:this.checked=!this.checked;" />No 
 				</xsl:if>
 
 				<xsl:if test="LongApplication/radEmpHistContactSuper_1 = 'No'" >
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" />Yes 
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" checked="checked" />No 
+				<input type="radio" name="radEmpHistContactSuper_1" onclick="javascript:this.checked=!this.checked;" />Yes 
+				<input type="radio" name="radEmpHistContactSuper_12" onclick="javascript:this.checked=!this.checked;" checked="checked" />No 
 				</xsl:if></td>
   </tr>
    <!--
@@ -850,16 +850,16 @@
 				<input name="txtImmediateSuper_1" type="text" size="30" value="{LongApplication/txtImmediateSuper_1}" />
 				</font><p class="smalltext">May we contact them</p>
 				<xsl:if test="LongApplication/radEmpHistContactSuper_1 = 'Yes'" >
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" checked="checked" />
+				<input type="radio" name="radEmpHistContactSuper_1" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 				Yes 
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" />
+				<input type="radio" name="radEmpHistContactSuper_12" onclick="javascript:this.checked=!this.checked;" />
 				No 
 				</xsl:if>
 
 				<xsl:if test="LongApplication/radEmpHistContactSuper_1 = 'No'" >
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" />
+				<input type="radio" name="radEmpHistContactSuper_1" onclick="javascript:this.checked=!this.checked;" />
 				Yes 
-				<input type="radio" name="radEmpHistContactSuper_1" disabled="disabled" checked="checked" />
+				<input type="radio" name="radEmpHistContactSuper_12" onclick="javascript:this.checked=!this.checked;" checked="checked" />
 				No 
 				</xsl:if>				
 		</td>
@@ -1364,61 +1364,61 @@
             <P class="smalltext">
 							<xsl:if test="LongApplication/radLast_Year_High_School = '9'" >
 							9 
-              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  disabled="disabled" checked="checked" />
+              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  onclick="javascript:this.checked=!this.checked;" checked="checked" />
               10 
-              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School2" onclick="javascript:this.checked=!this.checked;" />
               11 
-              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School3" onclick="javascript:this.checked=!this.checked;" />
               12 
-              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School4" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_High_School = '10'" >
 							9 
-              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  disabled="disabled" />
+              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  onclick="javascript:this.checked=!this.checked;" />
               10 
-              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               11 
-              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School3" onclick="javascript:this.checked=!this.checked;" />
               12 
-              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School4" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_High_School = '11'" >
 							9 
-              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  disabled="disabled" />
+              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  onclick="javascript:this.checked=!this.checked;" />
               10 
-              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School2" onclick="javascript:this.checked=!this.checked;" />
               11 
-              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School3" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               12 
-              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School4" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>              
               
 							<xsl:if test="LongApplication/radLast_Year_High_School = '12'" >
 							9 
-              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  disabled="disabled" />
+              <INPUT tabIndex="56" type="radio" value="9" name="radLast_Year_High_School"  onclick="javascript:this.checked=!this.checked;" />
               10 
-              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="57" type="radio" value="10" name="radLast_Year_High_School2" onclick="javascript:this.checked=!this.checked;" />
               11 
-              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School" disabled="disabled" />
+              <INPUT tabIndex="58" type="radio" value="11" name="radLast_Year_High_School3" onclick="javascript:this.checked=!this.checked;" />
               12 
-              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="59" type="radio" value="12" name="radLast_Year_High_School4" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               </xsl:if>              
             </P>
             <P class="smalltext">Graduated/GED?<BR/>
 							<xsl:if test="LongApplication/radGraduated_High_School = 'Yes'" >
-              <INPUT tabIndex="60" type="radio" value="Yes" name="radGraduated_High_School" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="60" type="radio" value="Yes" name="radGraduated_High_School" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               Yes 
-              <INPUT tabIndex="61" type="radio" value="No" Name="radGraduated_High_School" disabled="disabled" />
+              <INPUT tabIndex="61" type="radio" value="No" Name="radGraduated_High_School2" onclick="javascript:this.checked=!this.checked;" />
               No
               </xsl:if>
               
 
 							<xsl:if test="LongApplication/radGraduated_High_School = 'No'" >
-              <INPUT tabIndex="60" type="radio" value="Yes" name="radGraduated_High_School" disabled="disabled" />
+              <INPUT tabIndex="60" type="radio" value="Yes" name="radGraduated_High_School" onclick="javascript:this.checked=!this.checked;" />
               Yes 
-              <INPUT tabIndex="61" type="radio" value="No" Name="radGraduated_High_School" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="61" type="radio" value="No" Name="radGraduated_High_School2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               No
               </xsl:if>
               </P></TD>
@@ -1446,57 +1446,57 @@
             <P class="smalltext"> 
 							<xsl:if test="LongApplication/radLast_Year_College_1 = '1'" >
 							1
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_12" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_13" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_14" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_1 = '2'" >
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_12" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_13" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_14" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_1 = '3'" >
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_12" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_13" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_14" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_1 = '4'" >
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_1" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_12" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_1" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_13" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_14" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               </xsl:if>
             </P>
             <P class="smalltext">Graduated?<BR/>
 							<xsl:if test="LongApplication/radGraduated_College_1 = 'Yes'" >
-              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_1" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               Yes 
-              <INPUT tabIndex="70" type="radio" value="No" name="radGraduated_College_1" disabled="disabled" />
+              <INPUT tabIndex="70" type="radio" value="No" name="radGraduated_College_12" onclick="javascript:this.checked=!this.checked;" />
               No
               </xsl:if>
               
 							<xsl:if test="LongApplication/radGraduated_College_1 = 'No'" >
-              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_1" disabled="disabled" />
+              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_1" onclick="javascript:this.checked=!this.checked;" />
               Yes 
-              <INPUT tabIndex="70" type="radio" value="No" name="radGraduated_College_1" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="70" type="radio" value="No" name="radGraduated_College_12" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               No
               </xsl:if>
               </P></TD>
@@ -1522,60 +1522,60 @@
             <P class="smalltext">
  							<xsl:if test="LongApplication/radLast_Year_College_2 = '1'" >
 							1 
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_22" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_23" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_24" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
 
  							<xsl:if test="LongApplication/radLast_Year_College_2 = '2'" >
 							1 
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_22" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_23" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_24" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>              
               
  							<xsl:if test="LongApplication/radLast_Year_College_2 = '3'" >
 							1 
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_22" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_23" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_24" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>              
               
  							<xsl:if test="LongApplication/radLast_Year_College_2 = '4'" >
 							1 
-              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="65" type="radio" value="1" name="radLast_Year_College_2" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="66" type="radio" value="2" name="radLast_Year_College_22" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_2" disabled="disabled" />
+              <INPUT tabIndex="67" type="radio" value="3" name="radLast_Year_College_23" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="68" type="radio" value="4" name="radLast_Year_College_24" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               </xsl:if>              
             </P>
             <P class="smalltext">Graduated?<BR/>
 							<xsl:if test="LongApplication/radGraduated_College_2 = 'Yes'" >
-              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               Yes 
-              <INPUT tabIndex="70" type="radio" value="No"  name="radGraduated_College_2" disabled="disabled" />
+              <INPUT tabIndex="70" type="radio" value="No"  name="radGraduated_College_22" onclick="javascript:this.checked=!this.checked;" />
               No
               </xsl:if>
               
 							<xsl:if test="LongApplication/radGraduated_College_2 = 'No'" >
-              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_2" disabled="disabled" />
+              <INPUT tabIndex="69" type="radio" value="Yes" name="radGraduated_College_2" onclick="javascript:this.checked=!this.checked;" />
               Yes 
-              <INPUT tabIndex="70" type="radio" value="No"  name="radGraduated_College_2" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="70" type="radio" value="No"  name="radGraduated_College_22" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               No
               </xsl:if>
               </P></TD>
@@ -1602,60 +1602,60 @@
             <P class="smalltext">
 							<xsl:if test="LongApplication/radLast_Year_College_3 = '1'" >
 							1 
-              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               2 
-              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_32" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_33" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_34" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_3 = '2'" >
 							1 
-              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_32" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               3 
-              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_33" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_34" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_3 = '3'" >
 							1 
-              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_32" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_33" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               4 
-              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_34" onclick="javascript:this.checked=!this.checked;" />
               </xsl:if>
               
 							<xsl:if test="LongApplication/radLast_Year_College_3 = '4'" >
 							1 
-              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="74" type="radio" value="1" name="radLast_Year_College_3" onclick="javascript:this.checked=!this.checked;" />
               2 
-              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="75" type="radio" value="2" name="radLast_Year_College_32" onclick="javascript:this.checked=!this.checked;" />
               3 
-              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_3" disabled="disabled" />
+              <INPUT tabIndex="76" type="radio" value="3" name="radLast_Year_College_33" onclick="javascript:this.checked=!this.checked;" />
               4 
-              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="77" type="radio" value="4" name="radLast_Year_College_34" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               </xsl:if>
               </P>
             <P class="smalltext">Graduated?<BR/>
 							<xsl:if test="LongApplication/radGraduated_College_3 = 'Yes'" >
-              <INPUT tabIndex="78" type="radio" value="Yes" name="radGraduated_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="78" type="radio" value="Yes" name="radGraduated_College_3" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               Yes 
-              <INPUT tabIndex="79" type="radio" value="No" name="radGraduated_College_3" disabled="disabled" />
+              <INPUT tabIndex="79" type="radio" value="No" name="radGraduated_College_32" onclick="javascript:this.checked=!this.checked;" />
               No
               </xsl:if>
               
 							<xsl:if test="LongApplication/radGraduated_College_3 = 'No'" >
-              <INPUT tabIndex="78" type="radio" value="Yes" name="radGraduated_College_3" disabled="disabled" />
+              <INPUT tabIndex="78" type="radio" value="Yes" name="radGraduated_College_3" onclick="javascript:this.checked=!this.checked;" />
               Yes 
-              <INPUT tabIndex="79" type="radio" value="No" name="radGraduated_College_3" disabled="disabled" checked="checked" />
+              <INPUT tabIndex="79" type="radio" value="No" name="radGraduated_College_32" onclick="javascript:this.checked=!this.checked;" checked="checked" />
               No
               </xsl:if>
               </P></TD>
@@ -1749,16 +1749,16 @@
                 currently or has it ever been under 
                 restriction? 
                 <xsl:if test="LongApplication/radNoValidLicense = 'Yes'" >
-                <input type="radio" name="radNoValidLicense" value="Yes" disabled="disabled" checked="checked" />
+                <input type="radio" name="radNoValidLicense" value="Yes" onclick="javascript:this.checked=!this.checked;" checked="checked" />
                 Yes 
-                <input type="radio" name="radNoValidLicense" value="No" disabled="disabled" />
+                <input type="radio" name="radNoValidLicense2" value="No" onclick="javascript:this.checked=!this.checked;" />
                 No
                 </xsl:if>
                 
                 <xsl:if test="LongApplication/radNoValidLicense = 'No'" >
-                <input type="radio" name="radNoValidLicense" value="Yes" disabled="disabled" />
+                <input type="radio" name="radNoValidLicense" value="Yes" onclick="javascript:this.checked=!this.checked;" />
                 Yes 
-                <input type="radio" name="radNoValidLicense" value="No" disabled="disabled" checked="checked" />
+                <input type="radio" name="radNoValidLicense2" value="No" onclick="javascript:this.checked=!this.checked;" checked="checked" />
                 No
                 </xsl:if>                
                 <br/>
@@ -1877,16 +1877,16 @@
         Baptist Health?</p>
       <p class="smalltext"> 
 				<xsl:if test="LongApplication/radBaptistMngr = 'Yes'" >
-        <input type="radio" name="radBaptistMngr" disabled="disabled" checked="checked" />
+        <input type="radio" name="radBaptistMngr" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         Yes 
-        <input type="radio" name="radBaptistMngr" disabled="disabled" />
+        <input type="radio" name="radBaptistMngr2" onclick="javascript:this.checked=!this.checked;" />
         No
         </xsl:if>
         
 				<xsl:if test="LongApplication/radBaptistMngr = 'No'" >
-        <input type="radio" name="radBaptistMngr" disabled="disabled" />
+        <input type="radio" name="radBaptistMngr" onclick="javascript:this.checked=!this.checked;" />
         Yes 
-        <input type="radio" name="radBaptistMngr" disabled="disabled" checked="checked" />
+        <input type="radio" name="radBaptistMngr2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         No
         </xsl:if>
       </p></td>
@@ -1898,16 +1898,16 @@
         United States?</p>
       <p class="smalltext"> 
 				<xsl:if test="LongApplication/radUSAllowed = 'Yes'" >
-        <input type="radio" name="radUSAllowed" disabled="disabled" checked="checked" />
+        <input type="radio" name="radUSAllowed" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         Yes 
-        <input type="radio" name="radUSAllowed" disabled="disabled" />
+        <input type="radio" name="radUSAllowed2" onclick="javascript:this.checked=!this.checked;" />
         No
         </xsl:if>
         
 				<xsl:if test="LongApplication/radUSAllowed = 'No'" >
-        <input type="radio" name="radUSAllowed" disabled="disabled" />
+        <input type="radio" name="radUSAllowed" onclick="javascript:this.checked=!this.checked;" />
         Yes 
-        <input type="radio" name="radUSAllowed" disabled="disabled" checked="checked" />
+        <input type="radio" name="radUSAllowed2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         No
         </xsl:if>
         </p></td>
@@ -1919,16 +1919,16 @@
 		</p>
         <p class="smalltext">
 					<xsl:if test="LongApplication/radNoFraud = 'Yes'" >
-          <input type="radio" name="radNoFraud" disabled="disabled" checked="checked" />
+          <input type="radio" name="radNoFraud" onclick="javascript:this.checked=!this.checked;" checked="checked" />
           Yes 
-          <input type="radio" name="radNoFraud" disabled="disabled" />
+          <input type="radio" name="radNoFraud2" onclick="javascript:this.checked=!this.checked;" />
           No
           </xsl:if>
           
 					<xsl:if test="LongApplication/radNoFraud = 'No'" >
-          <input type="radio" name="radNoFraud" disabled="disabled" />
+          <input type="radio" name="radNoFraud" onclick="javascript:this.checked=!this.checked;" />
           Yes 
-          <input type="radio" name="radNoFraud" disabled="disabled" checked="checked" />
+          <input type="radio" name="radNoFraud2" onclick="javascript:this.checked=!this.checked;" checked="checked" />
           No
           </xsl:if>
         </p>
@@ -1943,16 +1943,16 @@
           health care program.</p>
         <p class="smalltext"> 
 					<xsl:if test="LongApplication/radConviction = 'Yes'" >
-          <input type="radio" name="radConviction" value="Yes" disabled="disabled" checked="checked" />
+          <input type="radio" name="radConviction" value="Yes" onclick="javascript:this.checked=!this.checked;" checked="checked" />
           Yes 
-          <input type="radio" name="radConviction" value="No" disabled="disabled" />
+          <input type="radio" name="radConviction2" value="No" onclick="javascript:this.checked=!this.checked;" />
           No
           </xsl:if>
           
 					<xsl:if test="LongApplication/radConviction = 'No'" >
-          <input type="radio" name="radConviction" value="Yes" disabled="disabled" />
+          <input type="radio" name="radConviction" value="Yes" onclick="javascript:this.checked=!this.checked;" />
           Yes 
-          <input type="radio" name="radConviction" value="No" disabled="disabled" checked="checked" />
+          <input type="radio" name="radConviction2" value="No" onclick="javascript:this.checked=!this.checked;" checked="checked" />
           No
           </xsl:if>
           <br/>
@@ -1967,16 +1967,16 @@
         program, or have any criminal charges now 
         pending?
         <xsl:if test="LongApplication/radCrime = 'Yes'" > 
-        <input type="radio" name="radCrime" value="Yes" disabled="disabled" checked="checked" />
+        <input type="radio" name="radCrime" value="Yes" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         Yes 
-        <input type="radio" name="radCrime" value="No" />
+        <input type="radio" name="radCrime2" value="No" />
         No
         </xsl:if>
         
         <xsl:if test="LongApplication/radCrime = 'No'" > 
-        <input type="radio" name="radCrime" value="Yes" disabled="disabled" />
+        <input type="radio" name="radCrime" value="Yes" onclick="javascript:this.checked=!this.checked;" />
         Yes 
-        <input type="radio" name="radCrime" value="No" disabled="disabled" checked="checked" />
+        <input type="radio" name="radCrime2" value="No" onclick="javascript:this.checked=!this.checked;" checked="checked" />
         No
         </xsl:if>        
         </p>
@@ -1990,7 +1990,7 @@
 
 					<p class="smalltext">Please read carefully and sign below.</p>
 					<p class="smalltext">
-					<input type="checkbox" name="chkCertify_1" disabled="disabled" checked="checked" value="Agree_1" />
+					<input type="checkbox" name="chkCertify_1" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_1" />
 					I hereby certify that all of the facts and information listed on this 
 					employment application are true and complete. I understand that any 
 					false, incomplete or misleading given by me on this application is 
@@ -1999,7 +1999,7 @@
 					discovered on this application at any time after I am employed may 
 					result in my dismissal.</p>
 					<p class="smalltext">
-          <input type="checkbox" name="chkCertify_2" disabled="disabled" checked="checked" value="Agree_2" />
+          <input type="checkbox" name="chkCertify_2" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_2" />
           I hereby authorize Baptist Health to 
           investigate all statements contained in 
           this application, to interview the references 
@@ -2019,7 +2019,7 @@
           any liability for defamation or invasion 
           of privacy. </p>
         <p class="smalltext">
-          <input type="checkbox" name="chkCertify_3" disabled="disabled" checked="checked" value="Agree_3" />
+          <input type="checkbox" name="chkCertify_3" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_3" />
           If I am offered employment, I understand 
           that such an offer will be conditioned 
           upon satisfactory results of a background 
@@ -2047,7 +2047,7 @@
           for any specified period of time, or to 
           make any agreement contrary to the foregoing. </p>
         <p class="smalltext">
-          <input type="checkbox" name="chkCertify_4" disabled="disabled" checked="checked" value="Agree_4" />
+          <input type="checkbox" name="chkCertify_4" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_4" />
           I further understand and voluntarily agree 
           as a condition of employment or my continued 
           employment, that I may be requested by 
@@ -2074,7 +2074,7 @@
 	for employment and/or decisions concerning your employment status 
 	with Baptist Health. </p>
 					<p class="smalltextb"> 
-					<input type="checkbox" name="chkCertify_5" disabled="disabled" checked="checked" value="Agree_5" />
+					<input type="checkbox" name="chkCertify_5" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_5" />
 					&quot;I certify that I have read, understand 
 					and agree with the above.&quot;</p>
 				<p class="smalltextb"><br/>
@@ -2091,7 +2091,7 @@
 					employment and/or decisions concerning 
 					my employment status with Baptist Health.</p>
 				<p class="smalltextb"> 
-					<input type="checkbox" name="chkCertify_6" disabled="disabled" checked="checked" value="Agree_6" />
+					<input type="checkbox" name="chkCertify_6" onclick="javascript:this.checked=!this.checked;" checked="checked" value="Agree_6" />
 					&quot;I certify that I have read, understand 
 					and agree with the above.&quot; </p>
 					<P CLASS="breakhere"></P>
@@ -2152,7 +2152,7 @@
 					</table>
 					-->
           <p class="smalltextb"> 
-            <input type="checkbox" name="chkFinalAgree" disabled="disabled" checked="checked" value="I agree" />
+            <input type="checkbox" name="chkFinalAgree" onclick="javascript:this.checked=!this.checked;" checked="checked" value="I agree" />
             &quot;I certify that I have read, understand 
             and agree with the above.&quot; 
 					</p>
