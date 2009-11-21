@@ -53,7 +53,7 @@ Function CreateXML(objForm)
 		'Filter the fields to make sure we only print to the xml file the fields we need.
 		'We don't want to print to the xml file unnecessary data like questionnaires and resume.
 		Select Case strFieldComp
-			Case "txt", "rad", "chk", "sel"
+			Case "txt", "rad", "chk", "sel", "str"
 				blnPrintField = True
 			Case Else
 				blnPrintField = False
