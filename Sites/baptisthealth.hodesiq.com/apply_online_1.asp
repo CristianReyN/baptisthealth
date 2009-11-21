@@ -280,6 +280,7 @@
 	                                      
 	            <p class="smalltextb">Last Name</font></p></td>
 	                                  </tr>
+	                                  
 	                                  <tr> 
 	                                    <td height="2%"><font size="-2"> 
 	                                      <input name="txtFirstName" id="First_Name" type="text" value="<%=strFirstName%>">
@@ -291,6 +292,23 @@
 	                                      <input name="txtLastName" id="Last_Name" type="text" value="<%=strLastName%>">
 	                                      </font></td>
 	                                  </tr>
+	                                  
+	                                  
+																		<tr>
+																			<td colspan="3">
+																				<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">* COUNTRY:</font>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td colspan="3">
+																				<select name="Country">
+																					<%=GetCountryDropdown(Country)%>
+																				</select>
+																				<input type="hidden" name="Country_hidden" size="15" MAXLENGTH=30 value="<%=Country%>">
+																			</td>
+																		</tr>
+
+	                                  
 	                                  <tr> 
 	                                    <td height="2%"> 
 	                                      <p class="smalltextb">Street Address</font> 
@@ -354,19 +372,6 @@
 	                                    <td colspan="3"><font size="-2">&nbsp;</font></td>
 	                                  </tr>
 	                                  
-																		<tr>
-																			<td colspan="3">
-																				<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">* COUNTRY:</font>
-																			</td>
-																		</tr>
-																		<tr>
-																			<td colspan="3">
-																				<select name="Country">
-																					<%=GetCountryDropdown(Country)%>
-																				</select>
-																				<input type="hidden" name="Country_hidden" size="15" MAXLENGTH=30 value="<%=Country%>">
-																			</td>
-																		</tr>
 																		<tr>
 
 																		<tr>
