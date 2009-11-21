@@ -186,7 +186,7 @@ strCurrentPage = Request.ServerVariables("URL")
 		arrInputParams(2) = intNumToGet
 		arrInputParams(3) = DAYS_TO_DELAY
 		
-		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration_with_delay", arrInputParams)
+		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration", arrInputParams)
 		
 		set GetTopXRS = objTopXRS
 		

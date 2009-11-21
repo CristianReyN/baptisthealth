@@ -69,7 +69,7 @@ else
 	GetCustomFieldsDataArray ""
 	arrCustomData = GetCustomFieldSearchData()
 	
-	set objJobsRS = GetSearchResults_CustomFields_Delay(strCategory, strTitle, intLocation, strKeywords, intCountry, arrCustomData, DAYS_TO_DELAY)
+	set objJobsRS = GetSearchResults_CustomFields(strCategory, strTitle, intLocation, strKeywords, intCountry, arrCustomData, DAYS_TO_DELAY)
 	objJobsRS.sort = strSortColumn
 	strResults = GetPagedSortableSearchResults_CustomReq(objJobsRS, PAGE_SIZE, intPage, strNoResultsMessage, true)								 	
 	
