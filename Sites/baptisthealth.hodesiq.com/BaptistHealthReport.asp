@@ -45,7 +45,7 @@ if .eof and .bof then
 	Response.Write "No Records Found"
 else
 
-	strReportHTML = "<table border='1' width='100%'>"
+	strReportHTML = "<table border='0' width='100%'>"
 
 	strReportHTML = strReportHTML & strHeader
 
@@ -69,7 +69,7 @@ else
 '	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Comments</b></font></td>"
 '	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
 
-strReportHTML = ReportHeader(.fields("category_name").value)
+strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, True)
 
 do until .eof
 
@@ -110,7 +110,7 @@ do until .eof
 	.movenext
 	
 	if strCategoryHold <> .fields("category_name").value then
-		strReportHTML = ReportHeader(.fields("category_name").value)
+		strReportHTML = ReportHeader(.fields("category_name").value, False)
 	end if
 loop
 
@@ -143,10 +143,15 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 		
 end function
 
-function ReportHeader(strCat)
+function ReportHeader(strCat, blnFirst)
 	Dim strHeaderHTM
 	
 	strCategoryHold = strCat
+	
+	If Not blnFirst Then
+		strHeaderHTM = "<tr><td height='15'></td><tr>"
+	End If
+	
 	strHeaderHTM = strHeaderHTM & "<tr><td colspan='13'><font size='5'><b>"
 	strHeaderHTM = strHeaderHTM & strCategoryHold
 	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
