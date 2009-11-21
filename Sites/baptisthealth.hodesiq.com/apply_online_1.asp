@@ -29,7 +29,8 @@ Dim strState
 Dim strErrorFindingUser
 Dim strJobsHTML
 Dim strHideJobs
-	
+Const LONG_FORM_COLOR = "#FFEBBD"
+
 intJobQuestionnaireID = 0
 intJobID = trim(Request("JobID"))
 if intJobID <> "" then 
@@ -167,7 +168,7 @@ b {
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <input type='hidden' name='showhidStillEmployeed' value=''>
 <td width="100%" height="3484" valign="top"> 
-			<table width="100%" border="0" cellpadding="1" cellspacing="1">
+			<table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" border="0" cellpadding="1" cellspacing="1">
 				<tr> 
 				   <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
 				</tr>			
@@ -407,9 +408,9 @@ b {
 																	</tr>
 
 																	<tr>
-																		<td colspan=3 bgcolor="#ffffff">
+																		<td colspan=3 bgcolor="<%=LONG_FORM_COLOR%>">
 																			<div class="headerwithbackground">
-																				<%=intDisplayNumber%>. Resume or Profile
+																				Resume or Profile
 																			</div>
 																		</td>
 																	</tr>
@@ -573,7 +574,7 @@ b {
                                   </tr>
                                 </table>
                               
-      <table width="98%" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
+      <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
         <tr> 
                                   <td width="2%" rowspan="15" bgcolor="#003399"> 
                                     <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#FFFFFF">M<br>
@@ -675,7 +676,7 @@ b {
                                       </font></td>
                                 </tr>
                               </table>
-                              <table width="98%" height="10" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
+                              <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" height="10" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
                                 <tr> 
                                   <td width="2%" rowspan="15" bgcolor="#003399"> 
                                     <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#FFFFFF">P<br>
@@ -763,7 +764,7 @@ b {
                                   </td>
                                 </tr>
                               </table>
-                              <table width="98%" height="10" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
+                              <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" height="10" border="0" cellpadding="1" cellspacing="1" bordercolor="#CCCCCC">
                                 <tr> 
                                   <td width="2%" rowspan="15" bgcolor="#003399"> 
                                     <p align="center"><font face="Verdana, Arial, Helvetica, sans-serif"><strong><font color="#FFFFFF">P<br>
@@ -854,7 +855,7 @@ b {
                                       </font></td>
                                 </tr>
                               </table>
-                              <table width="100%" border="0" cellpadding="3" cellspacing="3">
+                              <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" border="0" cellpadding="3" cellspacing="3">
                                 <tr bgcolor="#003399"> 
                                     <td width="100%"><strong>&nbsp;<font color="#FFFFFF">EDUCATION</font></strong></td>
                                 </tr>
@@ -1081,7 +1082,7 @@ b {
                                     </TABLE></td>
                                 </tr>
                               </table>
-                                <table width="98%" height="3" border="0" cellpadding="1" cellspacing="1">
+                                <table bgcolor="<%=LONG_FORM_COLOR%>"  width="100%" height="3" border="0" cellpadding="1" cellspacing="1">
                                   <tr bgcolor="#003399"> 
                                     <td height="20%" colspan="4"><p><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif"><strong>&nbsp;REFERENCES<br>
                                         </strong></font><font color="#FFFFFF" size="-2"> 
@@ -1112,7 +1113,7 @@ b {
                                       </font></td>
                                   </tr>
                                 </table>
-                                <table width="98%" height="2" border="0" cellpadding="1" cellspacing="1">
+                                <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" height="2" border="0" cellpadding="1" cellspacing="1">
                                   <tr> 
                                     <td width="23%" height="16%"> <p class="smalltext"><strong><font color="#0000FF">2)</font></strong> 
                                         Name</font></td>
@@ -1135,7 +1136,7 @@ b {
                                       </font></td>
                                   </tr>
                                 </table>
-                                <table width="98%" height="2" border="0" cellpadding="1" cellspacing="1">
+                                <table bgcolor="<%=LONG_FORM_COLOR%>"  width="100%" height="2" border="0" cellpadding="1" cellspacing="1">
                                   <tr> 
                                     <td width="23%" height="16%"> <p class="smalltext"><strong><font color="#0000FF">3)</font></strong> 
                                         Name</font></td>
@@ -1158,7 +1159,7 @@ b {
                                       </font></td>
                                   </tr>
                                 </table>
-                              <table width="98%" height="32" border="0" cellpadding="3" cellspacing="3">
+                              <table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" height="32" border="0" cellpadding="3" cellspacing="3">
                                 <tr> 
                                   <td width="100%" height="2%"> <hr></td>
                                 </tr>
@@ -1167,7 +1168,7 @@ b {
 			<%if intJobQuestionnaireID <> 0 then%>
 			<%'if not isempty(arrJobQuestionnaires) then%>
 				<tr>
-					<td colspan=3 bgcolor="#ffffff">
+					<td colspan=3 bgcolor="<%=LONG_FORM_COLOR%>">
 						<div class="headerwithbackground">
 										Questionnaire
 								</div>
