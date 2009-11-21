@@ -1047,8 +1047,7 @@ b {
                                     </td>
                                 </tr>
                                 <tr> 
-                                  <td height="38%"> <p> 
-<p class="breakhere"></p>
+                                  <td height="38%"> <P CLASS='breakhere'></P>
           <p class="smalltextb">FAIR CREDIT REPORTING ACT<br>
             DISCLOSURE TO APPLICANTS AND EMPLOYEES<br>
             <p class="smalltext">Pursuant to the Fair Credit Reporting Act, 15 U.S.C. 1681-1681u, Baptist 
