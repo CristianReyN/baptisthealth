@@ -607,6 +607,11 @@
             <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
             <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />No
             </xsl:if>
+
+						<xsl:if test="LongApplication/radEverEmployeedWithBaptist = ''" >
+            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
+            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
+            </xsl:if>
             </p>
             <P CLASS="breakhere"></P>
           </td>
