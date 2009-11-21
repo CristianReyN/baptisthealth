@@ -1255,13 +1255,8 @@
 	                                      No</font></p></td>
 	                                </tr>
 	                                <tr> 
-	                                  <td height="49%"> <p class="smalltext">Do you 
-	                                        certify that you have not been found by 
-	                                        an administrative body or civil court 
-	                                        to have violated any of the statues, rules 
-	                                        or regulations pertaining to the Health 
-	                                        Care Financial Act, Medicare, Medicaid 
-	                                        or any other federal programs. </font>
+	                                  <td height="49%"> <p class="smalltext">
+																			Have you ever been found by an administrative body or civil court to have violated any of the statutes, rules or regulations pertaining to the Health Care Financial Act, Medicare, Medicaid or any other federal programs?. </font>
 	                                      <p class="smalltext">
 	                                        <input type="radio" name="radNoFraud" value="Yes" id="No_Fraud">
 	                                        Yes 
