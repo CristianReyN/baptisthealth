@@ -357,11 +357,10 @@ b {
                                               Yr. 
                                               <INPUT class=inputclass style="WIDTH: 18px" tabIndex=143 size=4 name='txtEmpHistFromYear_1'>
                                               </font></P></TD>
-                                          <TD align=left width=312> <P class=smalltext><font size="-2">To 
-                                              Mo. 
-                                              <INPUT name='txtEmpHistToMonth_2' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
+                                          <TD align=left width=312> <P class=smalltext><font size="-2">To Mo. 
+                                              <INPUT name='txtEmpHistToMonth_1' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_2'>
+                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_1'>
                                               
                                               <input type="checkbox" name="chkStillEmployeed" value="Yes">
                                               Still employed
@@ -456,8 +455,7 @@ b {
                                               Yr. 
                                               <INPUT class=inputclass style="WIDTH: 18px" tabIndex=143 size=4 name='txtEmpHistFromYear_2'>
                                             </P></TD>
-                                          <TD width=312 align=left> <P class=smalltext>To 
-                                              Mo. 
+                                          <TD width=312 align=left> <P class=smalltext>To Mo. 
                                               <INPUT name='txtEmpHistToMonth_2' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
                                               Yr. 
                                               <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_2'>
