@@ -7,6 +7,9 @@ dim intPage
 dim strNoResultsMessage
 dim sShowERPJobs
 
+'defined in cc/custom_data_subs.asp
+bShowExpiredJobsInSearchResults = false
+
 sShowERPJobs = request("CustomField_" & ERP_ID).Item
 strSortColumn = request("sort_column").item
 if strSortColumn = "" then strSortColumn = "careerpost_datetime desc"
