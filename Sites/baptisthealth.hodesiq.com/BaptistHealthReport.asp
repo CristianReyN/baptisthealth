@@ -45,7 +45,7 @@ with objJobsRS
 if .eof and .bof then
 	Response.Write "No Records Found"
 else
-	strReportHTML = "<table border='1' width='1000'>"
+	strReportHTML = "<table border='1' width='100%'>"
 
 	strReportHTML = strReportHTML & strHeader
 
@@ -73,19 +73,19 @@ else
 		'strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
 					
 		strReportHTML = strReportHTML & "<tr>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strVP="","N/A",strVP) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strUsr="","N/A",strUsr) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFT="","N/A",strFT) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPT="","N/A",strPT) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPRN="","N/A",strPRN) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="","N/A",strTitle) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="","N/A",strDept) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="","N/A",strShift) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="","N/A",strHours) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="","N/A",strPay) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strMinMid="","N/A",strMinMid) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strComments="","N/A",strComments) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strJobDesc="","N/A",strJobDesc) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strVP="","N/A",strVP) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strUsr="","N/A",strUsr) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strFT="","N/A",strFT) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strPT="","N/A",strPT) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strPRN="","N/A",strPRN) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strTitle="","N/A",strTitle) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strDept="","N/A",strDept) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strShift="","N/A",strShift) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strHours="","N/A",strHours) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strPay="","N/A",strPay) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strMinMid="","N/A",strMinMid) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strComments="","N/A",strComments) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='1'>" & IIF(strJobDesc="","N/A",strJobDesc) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & strHeader & IIF(strHeader = "", "", "<br><br>") & strReqs & IIF(strReqs = "", "", "<br><br>") & strDuties & IIF(strDuties = "", "", "<br><br>") & strFooter & "</font></td>"
 		
 		Response.Write strReportHTML
@@ -121,18 +121,18 @@ function ReportHeader(strCat, strFacility, blnFirst)
 	strHeaderHTM = strHeaderHTM & IIF(strFacility="" Or IsNull(strFacility), "No Location", strFacility) & "/" & strCategoryHold
 	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
 	strHeaderHTM = strHeaderHTM & "<tr><td align='center'><font size='2'><b>Vice President</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Recruiter</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>FT</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>PT</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>PRN</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Job Title</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Dept</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Shift Details</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Hours</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Pay Grade</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Min - Mid</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Comments</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Description</b></font></td></tr>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Recruiter</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>FT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>PT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>PRN</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Job Title</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Dept</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Shift Details</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Hours</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Pay Grade</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Min - Mid</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Comments</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='1'><b>Description</b></font></td></tr>"
 	
 	ReportHeader = strHeaderHTM
 End Function
