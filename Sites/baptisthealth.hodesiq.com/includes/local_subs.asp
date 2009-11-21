@@ -749,7 +749,7 @@ end function
 		'set RsViewApplicant = server.CreateObject("Roam.Applicant").ViewApplicantPersonalInfo2("IQ-DEV-ASP-IQ2",lngApplicantID)
 		set RsViewApplicant = ViewApplicantPersonalInfo2("IQ-SQL-IQ2",lngApplicantID)
 		
-		If RsViewApplicant.Eof Then strErrorFindingUser = "User Not Found<br><br>" & "appid " & lngApplicantID & "<br><br>"
+		If RsViewApplicant.Eof Then strErrorFindingUser = "*User Not Found*<br><br>" & "appid " & lngApplicantID & "<br><br>"
 		
 		strFirstName = RsViewApplicant.Fields("First_Name").Value & ""
 		strMidName   = RsViewApplicant.Fields("Middle_Initial").Value & ""
