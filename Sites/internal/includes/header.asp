@@ -414,6 +414,7 @@
 					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#fdebbc","#000000", "New Openings!")%>
 					<!--END HOT OPENINGS TABLE-->
 					<br>
+					<a href="job_start.asp">Career Home Page</a>
 					<%'CreateUL%>
 				</td>
 				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>

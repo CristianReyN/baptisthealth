@@ -12,7 +12,7 @@ dim ERP_ID
 
 select case GetAppServer()
 	
-	case "DEV"
+	case "DEV", "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 11279 '6931
 		
@@ -23,7 +23,7 @@ select case GetAppServer()
 		'SHIFT_ID = 264
 		'ERP_ID = 262
 		
-	case "DEMO", "STG"
+	case "DEMO"', "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 11279
 		

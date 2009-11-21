@@ -142,10 +142,10 @@
 			
 			<INPUT TYPE="hidden" NAME="CustomField_<%=ERP_ID%>" VALUE="">
 			</form>
-			<!--END FORM SECTION-->
+			<!--END FORM SECTION
 			
 			<BR><BR><font face="Arial" size="2"><b>Employee Referrals, <a href="javascript:ViewErpJobs();">click here.</a></b></font>
-					
+					-->
 
 	<!--#include file="includes/footer.asp"-->
 	
