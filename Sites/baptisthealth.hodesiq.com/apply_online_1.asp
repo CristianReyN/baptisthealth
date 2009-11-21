@@ -15,7 +15,21 @@ dim arrJobCart
 dim arrJobQuestionnaires
 dim intNumberOfSelectedJobs
 dim intJobQuestionnaireID
-
+Dim strAppIDs
+Dim strFirstName
+Dim strMidName
+Dim strLastName
+Dim strStreet
+Dim strCity
+Dim strZip
+Dim strEmail
+Dim strHomePhone
+Dim strWorkPhone
+Dim strState
+Dim strErrorFindingUser
+Dim strJobsHTML
+Dim strHideJobs
+	
 intJobQuestionnaireID = 0
 intJobID = trim(Request("JobID"))
 if intJobID <> "" then 
@@ -47,20 +61,20 @@ else
 	
 end if
 
-First_Name = Request("First_Name")
-Middle_Initial = Request("Middle_Initial")
-Last_Name = Request("Last_Name")
+strFirstName = Request("First_Name")
+strMidName = Request("Middle_Initial")
+strLastName = Request("Last_Name")
 
-Work_Phone = Request("Work_Phone")
-Home_Phone = Request("Home_Phone")
-Email = Request("txtEmailAddress")
-Password = Request("Password")
+strWorkPhone = Request("Work_Phone")
+strHomePhone = Request("Home_Phone")
+strEmail = Request("txtEmailAddress")
+strPassword = Request("Password")
 
-Address = Request("Address")
-City = Request("txtCity")
-State = Request("selState")
-Country = Request("Country")
-Zip = Request("txtZip")
+strStreet = Request("Address")
+strCity = Request("txtCity")
+strState = Request("selState")
+strCountry = Request("Country")
+strZip = Request("txtZip")
 
 resume_text = Request("resume_text")
 
@@ -73,20 +87,20 @@ if len(Request("user_id"))>2 then
 	
 	set RsInfo = GetUserInfo(intJobSeekerID)
 	
-	First_Name = RsInfo.fields.item("first_name").value
-	Middle_Initial = RsInfo.fields.item("middle_initial").value
-	Last_Name = RsInfo.fields.item("last_name").value
+	strFirstName = RsInfo.fields.item("first_name").value
+	strMidName = RsInfo.fields.item("middle_initial").value
+	strLastName = RsInfo.fields.item("last_name").value
 
-	Work_Phone = RsInfo.fields.item("home_phone").value
-	Home_Phone = RsInfo.fields.item("work_phone").value
-	Email = RsInfo.fields.item("email").value
-	Password = RsInfo.fields.item("password").value
+	strWorkPhone = RsInfo.fields.item("home_phone").value
+	strHomePhone = RsInfo.fields.item("work_phone").value
+	strEmail = RsInfo.fields.item("email").value
+	strPassword = RsInfo.fields.item("password").value
 
-	Address = RsInfo.fields.item("address").value
-	City = RsInfo.fields.item("city").value
-	State = RsInfo.fields.item("state").value
-	Country = RsInfo.fields.item("country").value
-	Zip = RsInfo.fields.item("zip").value
+	strStreet = RsInfo.fields.item("address").value
+	strCity = RsInfo.fields.item("city").value
+	strState = RsInfo.fields.item("state").value
+	strCountry = RsInfo.fields.item("country").value
+	strZip = RsInfo.fields.item("zip").value
 
 	resume_text = GetResume(intJobSeekerID)
 
@@ -98,25 +112,11 @@ if Country = "" or isnull(Country) then Country = "1"
 %>
 
 <%
-	Dim strAppIDs
-	Dim strFirstName
-	Dim strMidName
-	Dim strLastName
-	Dim strStreet
-	Dim strCity
-	Dim strZip
-	Dim strEmail
-	Dim strHomePhone
-	Dim strState
-	Dim strErrorFindingUser
-	Dim strJobsHTML
-	Dim strHideJobs
-	
-	strAppIDs = Request.QueryString("AppID").Item
+	'strAppIDs = Request.QueryString("AppID").Item
 
-	If strAppIDs <> "" Then
-		Call ViewApplicant(strAppIDs)
-	End If
+	'If strAppIDs <> "" Then
+	'	Call ViewApplicant(strAppIDs)
+	'End If
 %>
 
 <style>
@@ -335,7 +335,7 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtOtherPhone" id="Other_Phone" type="text" value="">
+                                      <input name="txtOtherPhone" id="Other_Phone" type="text" value="<%=strWorkPhone%>">
                                       </font></td>
 
                                     <td><font size="-2"> 
