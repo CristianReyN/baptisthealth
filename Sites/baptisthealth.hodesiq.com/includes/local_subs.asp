@@ -732,8 +732,6 @@ end function
 	End Function
 
 	Sub ViewApplicant(ByVal strApplicantIDs)
-		on error resume next
-			
 		Const EMPTY_STRING = ""
 			
 		Dim RsViewApplicant
