@@ -44,6 +44,13 @@ b {
 	font-weight: normal;
 	color: #000000;
 }
+.smallertext {
+	font-family: Geneva, Arial, Helvetica, san-serif;
+	font-size: 7pt;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+}
 .smalltextb {
 	font-family: Geneva, Arial, Helvetica, san-serif;
 	font-size: 8pt;
@@ -215,11 +222,11 @@ b {
             <p class="smalltext">Have you resided in another state within the 
               last 7 years? </font> </td>
                                     <td width="28%" rowspan="3" valign="top"> 
-                                      <p class="smalltext"> 
+                                      <span class="smalltext"> 
                                         <input type="radio" name="radPast7Years" value="Yes">
                                         Yes 
                                         <input type="radio" name="radPast7Years" value="No">
-                                        No</font><br>If yes, enter<br>county and state</td>
+                                        No</span></font><br><span class="smallertext">&nbsp;&nbsp;If yes, enter<br>&nbsp;&nbsp;county and state</span></td>
                                     <td width="9%"> <p class="smalltext">
                                         <input name="txtCounty7Years_1" type="text" value="County" size="10">
                                       
