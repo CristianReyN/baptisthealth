@@ -35,7 +35,7 @@ b {
 
 </style>
 <form name='frmLongApp' method='Post' action='WriteXml.asp'>
-<input type='hidden' name='hidAppID' value='12345'>
+<input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
         <tr> 
