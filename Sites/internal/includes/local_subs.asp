@@ -59,6 +59,8 @@ select case GetAppServer()
 		'ERP_ID = 288
 		
 end select
+				APP_SERVER          = "IQ-DEV-ASP-IQ2" ' "IQSQL5-IQ2"
+				REPLICATION_SERVER  = APP_SERVER
 
 
 'sCFL_Search = LOCATION_ID & "," & SHIFT_ID
