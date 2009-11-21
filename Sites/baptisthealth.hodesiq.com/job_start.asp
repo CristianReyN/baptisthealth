@@ -64,7 +64,19 @@
 			document.frm.submit();	
 		}
 	}
-		
+	
+	function ViewErpJobs()
+	{
+		with(document.frm)
+		{
+			var oErp;
+			
+			oErp=eval("CustomField_" + <%=ERP_ID%>);
+			oErp.value="Yes";
+			submit();
+		}
+	}
+	
 //-->
 </script>
 
@@ -127,11 +139,12 @@
 				</td>
 			</tr>
 			</table>
-					
+			
+			<INPUT TYPE="hidden" NAME="CustomField_<%=ERP_ID%>" VALUE="Yes">
 			</form>
 			<!--END FORM SECTION-->
 			
-			<BR><BR><font face="Arial" size="2"><b>Employee Referrals, <a href="joblist.asp?user_id=<%request("user_id").Item%>&ERP=true">click here.</a></b></font>
+			<BR><BR><font face="Arial" size="2"><b>Employee Referrals, <a href="javascript:ViewErpJobs();">click here.</a></b></font>
 					
 
 	<!--#include file="includes/footer.asp"-->

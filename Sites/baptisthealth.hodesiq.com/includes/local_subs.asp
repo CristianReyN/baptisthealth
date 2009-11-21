@@ -8,6 +8,7 @@ DIM FACILITY_ID
 DIM SHIFT_ID
 DIM LOCATION_ID
 dim sBaptistDomain
+dim ERP_ID
 
 select case GetAppServer()
 	
@@ -20,6 +21,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
+		ERP_ID = 262
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
@@ -30,6 +32,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264		
+		ERP_ID = 288
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
@@ -41,6 +44,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
+		ERP_ID = 288
 		
 	case else
 		HIRING_ORG_ID = 632
@@ -52,6 +56,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
+		ERP_ID = 288
 		
 end select
 
@@ -66,6 +71,7 @@ end select
 'sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 'LOCATION_ID = 263
 'SHIFT_ID = 264
+'ERP_ID = 288
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID

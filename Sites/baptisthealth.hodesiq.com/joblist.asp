@@ -5,8 +5,9 @@ on error resume next
 
 dim intPage
 dim strNoResultsMessage
+dim sShowERPJobs
 
-
+sShowERPJobs = request("CustomField_" & ERP_ID).Item
 strSortColumn = request("sort_column").item
 
 intTotalResults = 0
@@ -37,6 +38,7 @@ else
 end if
 '-------------------------------------------------
 
+
 if trim(request("agent")) <> "" then
 
 	dim objAgentJobsRS
@@ -58,6 +60,10 @@ else
 	strTitle = trim(Request("title"))
 	intLocation = -1
 	strKeywords = trim(Request("keywords"))
+	
+	if sShowERPJobs = "Yes" then
+		sCFL_Search = ERP_ID
+	end if
 	
 	GetCustomFieldsDataArray ""
 	arrCustomData = GetCustomFieldSearchData()
@@ -100,7 +106,6 @@ end if
 						
 						<input type="hidden" name="move_indicator" value="">
 						<input type="hidden" name="page" value="<%=intPage%>">
-		
 						<input type="hidden" name="category" value="<%=strCategory%>">
 						<input type="hidden" name="title" value="<%=strTitle%>">
 						<input type="hidden" name="location" value="<%=intLocation%>">
