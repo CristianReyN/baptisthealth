@@ -488,7 +488,7 @@
 	                                        <input type="radio" name="radPast7Years" value="Yes" id="Residence_history">
 	                                        Yes 
 	                                        <input type="radio" name="radPast7Years" value="No" id="Residence_history">
-	                                        No</span></font><br><span class="smallertext">&nbsp;&nbsp;If yes, enter<br>&nbsp;&nbsp;county and state</span></td>
+	                                        No</span></font><br><span class="smallertext">&nbsp;&nbsp;If yes, enter<br>&nbsp;&nbsp;county and state<BR>&nbsp;&nbsp;or province</span></td>
 	                                    <td width="9%"> <p class="smalltext">
 	                                        <input name="txtCounty7Years_1" type="text" value="" size="10">
 	                                      
@@ -899,7 +899,7 @@
 	                                        </TR>
 	                                        <TR> 
 	                                          <TD width=28% height="13%" align=middle bgColor=#eeeeee class=TCell> 
-	                                            <P class=smalltextb>City, State</P>
+	                                            <P class=smalltextb>City, State/Province</P>
 	                                            <P class=smalltext>&nbsp;</P></TD>
 	                                        </TR>
 	                                        <TR> 
