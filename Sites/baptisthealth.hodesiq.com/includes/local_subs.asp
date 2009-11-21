@@ -66,12 +66,11 @@ select case GetAppServer()
 		
 end select
 
-DOC_SERVER_PATH = "\\iq-doc-1\IQ-DOC\" ' request.servervariables("APPL_PHYSICAL_PATH") ' "\\Iq-stg-app-2\data\web\baptisthealth.hodesiq.com\" ' "\\10.1.20.16\iq-doc\"
-
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
 DAYS_TO_DELAY = 5
 
+		
 if trim(request("debug")) = "yes" then
 	Response.Write "DEBUG=YES<br>"
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"

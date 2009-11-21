@@ -1,4 +1,5 @@
 <!--#include file="includes/local_subs.asp"-->
+<!--#include virtual="../cc/JS_jobCart.asp"-->
 <%
 on error resume next
 
@@ -7,12 +8,30 @@ dim strMessage
 strMessage = trim(Request("confirmation"))
 
 if strMessage = "" then strMessage = trim(Request("message"))
+
+dim sDeleteCookies
+sDeleteCookies = ""
+
+for each job in Request.Cookies
+
+	if instr(1, job, JOB_CART_JOB_NAME, 0) <> 0 and trim(Request.Cookies(job)) <> "" then
+		sDeleteCookies = sDeleteCookies & "DeleteJobCookie('" &  JOB_CART_JOB_NAME &  "','" &  trim(Request.Cookies(job)) & "');"
+	end if
+		
+next
+
 %>
 
 <HTML>
 
 	<!--#include file="includes/head.asp"-->
-	
+	<SCRIPT LANGUAGE=javascript>
+	<!--
+		<%if sDeleteCookies <> "" then%>
+			eval("<%=sDeleteCookies%>");
+		<%end if%>
+	//-->
+	</SCRIPT>
 	
 	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
 		
