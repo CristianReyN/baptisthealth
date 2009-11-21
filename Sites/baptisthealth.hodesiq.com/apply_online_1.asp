@@ -168,6 +168,9 @@ b {
 <input type='hidden' name='showhidStillEmployeed' value=''>
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
+				<tr> 
+				   <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
+				</tr>			
 				<tr>
 					<td>
 						<%=strErrorFindingUser%>
@@ -195,6 +198,7 @@ b {
 								<td valign=top colspan=3>
 									<FONT SIZE="3" FACE="ARIAL" color="#093980"><b>
 									<%=objJobInfoRS.fields("title").value%>
+									<input type='hidden' name='strhidJob1' value='<%=objJobInfoRS.Fields("title").value%>'>
 									</b></font>
 								</td>
 							</tr>
@@ -227,6 +231,7 @@ b {
 								<tr>
 									<td colspan="2">
 										<FONT SIZE="2" FACE="HELVETICA,ARIAL,SANS SERIF">&#149;<%=objJobCartJobsRS.fields.item("title").value%></font>
+										<input type='hidden' name='strhidJob<%=objJobCartJobsRS.AbsolutePosition%>' value='<%=objJobCartJobsRS.Fields("title").value%>'>
 									</td>
 								</tr>
 							<%
