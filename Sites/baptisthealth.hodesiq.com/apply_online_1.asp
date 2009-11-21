@@ -576,7 +576,7 @@
 	                                  </tr>
 	                                  <tr> 
 	                                    <td height="27%" colspan="5"> <p> 
-	                                      <p class="smalltext">Have you ever been 
+	                                      <p class="smalltextb">Have you ever been 
 	                                        employed at any Baptist Health Facility? 
 	                                        <input type="radio" name="radEverEmployeedWithBaptist" value="Yes">
 	                                        Yes 
@@ -1569,7 +1569,7 @@
 		var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
 		var arrCheckList=strValidateCheckList.split(",");
 		
-		var strValidateRadio='radNameChange,radLast_Year_High_School,radGraduated_High_School,radPast7Years,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime,radEverEmployeedWithBaptist'
+		var strValidateRadio='radEverEmployeedWithBaptist,radNameChange,radLast_Year_High_School,radGraduated_High_School,radPast7Years,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
 
 		var arrValidateRadio=strValidateRadio.split(",")
 

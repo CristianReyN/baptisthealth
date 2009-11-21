@@ -597,7 +597,7 @@
 
         <tr> 
           <td height="27%" colspan="5">
-			<p class="smalltext">Have you ever been employed at any Baptist Health Facility? 
+			<p class="smalltextb">Have you ever been employed at any Baptist Health Facility? 
 				<xsl:choose>
 				<xsl:when test="LongApplication/radEverEmployeedWithBaptist" >
 					<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'Yes'" >
