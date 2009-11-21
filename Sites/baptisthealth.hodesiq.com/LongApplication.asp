@@ -13,6 +13,7 @@
 	Dim strEmail
 	Dim strHomePhone
 	Dim strState
+	Dim strErrorFindingUser
 	
 	strAppIDs = Request.QueryString("AppID").Item
 
@@ -66,6 +67,11 @@ b {
 <input type='hidden' name='showhidStillEmployeed' value=''>
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
+				<tr>
+					<td>
+						<%=strErrorFindingUser%>
+					</td>
+				</tr>
         <tr> 
            <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
         </tr>			

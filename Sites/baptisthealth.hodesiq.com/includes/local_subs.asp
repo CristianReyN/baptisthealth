@@ -732,6 +732,8 @@ end function
 	End Function
 
 	Sub ViewApplicant(ByVal strApplicantIDs)
+		On Error Resume Next
+		
 		Const EMPTY_STRING = ""
 			
 		Dim RsViewApplicant
@@ -747,6 +749,8 @@ end function
 		'set RsViewApplicant = server.CreateObject("Roam.Applicant").ViewApplicantPersonalInfo2("IQ-DEV-ASP-IQ2",lngApplicantID)
 		set RsViewApplicant = ViewApplicantPersonalInfo2("IQ-REPLICATION",lngApplicantID)
 		
+		If RsViewApplicant.Eof Then strErrorFindingUser = "User Not Found" & VbCrLf & VbCrLf
+		
 		strFirstName = RsViewApplicant.Fields("First_Name").Value & ""
 		strMidName   = RsViewApplicant.Fields("Middle_Initial").Value & ""
 		strLastName  = RsViewApplicant.Fields("Last_Name").Value & ""
@@ -756,6 +760,8 @@ end function
 		strEmail		 = RsViewApplicant.Fields("Email").Value & ""
 		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
 		strState		 = RsViewApplicant.Fields("state_name").Value & ""
+
+		If Err.number <> 0 Then strErrorFindingUser = strErrorFindingUser & Err.Description & VbCrLf & VbCrLf
 			
 		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
 			
