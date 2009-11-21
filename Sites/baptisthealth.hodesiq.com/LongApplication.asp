@@ -56,6 +56,7 @@ b {
 
 <form name='frmLongApp' OnSubmit="return SubmitForm()" method='Post' action='WriteXml.asp'>
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
+<input type='hidden' name='showhidStillEmployeed' value=''>
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
         <tr> 
@@ -1266,6 +1267,11 @@ b {
 
 	function SubmitForm()
 		{
+			if(document.frmLongApp.chkStillEmployeed.checked==true)
+				{
+					document.frmLongApp.showhidStillEmployeed.='Yes';
+				}
+				
 			var strFieldID='';
 			//Check for spaces
 			for(iLoop=0; iLoop < arrTextFields.length; iLoop++)
