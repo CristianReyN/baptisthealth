@@ -1463,9 +1463,9 @@ b {
                                         signature) 
                                       <p class="smalltext"> 
                                         <input type="text" name="txtSignature" id="Signature"></p>
-                                        <p class="smalltext"> Date of birth:<br>
-                                        Month<input type='text' name='selBDateMonth' size='1'>&nbsp;&nbsp;
-                                        Day<input type='text' name='selBDateDay' size='1'>
+                                        <p class="smalltext"> <b>Date of birth:</b><br>
+                                        Month<input type='text' name='selBDateMonth' size='1' id="Birth_month">&nbsp;&nbsp;
+                                        Day<input type='text' name='selBDateDay' size='1' id="Birth_day">
                                         <!--
                                           <p class="smalltextb"> 
                                               Last Six (6) Digits of Your Driver's 
@@ -1496,7 +1496,7 @@ b {
 <%'<!--#include file="includes/footer.asp"-->%>
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,selState,txtZip,txtHomePhone,txtEmailAddress,Country,media_info,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,selState,txtZip,txtHomePhone,txtEmailAddress,Country,media_info,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,selBDateMonth,selBDateDay,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
