@@ -36,7 +36,7 @@ select case GetAppServer()
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931 '11279
+		CAREER_SITE_EMEDIA_ID = 6931 
 		
 		sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealth/"
@@ -48,7 +48,7 @@ select case GetAppServer()
 		
 	case else
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931 '11279 '6931
+		CAREER_SITE_EMEDIA_ID = 6931
 		
 		sDomain = "http://careers.hodes.com/baptisthealthinternal/"
 		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealthinternal/"
