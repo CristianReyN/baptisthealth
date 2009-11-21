@@ -15,6 +15,7 @@
 	Dim strState
 	Dim strErrorFindingUser
 	Dim strJobsHTML
+	Dim strHideJobs
 	
 	strAppIDs = Request.QueryString("AppID").Item
 
@@ -64,6 +65,7 @@ b {
 </style>
 
 <form name='frmLongApp' OnSubmit="return SubmitForm()" method='Post' action='WriteXml.asp'>
+<%=strHideJobs%>
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <input type='hidden' name='showhidStillEmployeed' value=''>
 <td width="100%" height="3484" valign="top"> 

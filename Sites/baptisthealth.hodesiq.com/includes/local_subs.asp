@@ -738,6 +738,7 @@ end function
 		Dim RsViewApplicant
 		Dim lngApplicantID
 		Dim RsGetJobs
+		Dim intCountAllJobs
 			
 		'lngApplicantID = 1924624
 		
@@ -752,8 +753,10 @@ end function
 		If Not IsEmpty(RsGetJobs) Then
 			If Not (RsGetJobs Is Nothing) Then
 				Do While Not RsGetJobs.EOF
-					strJobsHTML = strJobsHTML & "<tr><td colspan='3'><li><p class='smalltextb'>" & RsGetJobs.Fields("title").value & "</p></li></td></tr>"
+					intCountAllJobs = intCountAllJobs + 1
 					
+					strJobsHTML = strJobsHTML & "<tr><td colspan='3'><li><p class='smalltextb'>" & RsGetJobs.Fields("title").value & "</p></li></td></tr>"
+					strHideJobs = strHideJobs & "<input type='hidden' name='strhidJob" & intCountAllJobs & "' value='" & RsGetJobs.Fields("title").value & "'>"
 					RsGetJobs.MoveNext
 				Loop
 			End If
