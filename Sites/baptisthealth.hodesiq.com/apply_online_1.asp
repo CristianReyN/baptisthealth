@@ -301,7 +301,7 @@
 																		</tr>
 																		<tr>
 																			<td colspan="3">
-																				<select name="Country">
+																				<select name="txtCountry">
 																					<%=GetCountryDropdown(Country)%>
 																				</select>
 																				<input type="hidden" name="Country_hidden" size="15" MAXLENGTH=30 value="<%=Country%>">
@@ -607,7 +607,7 @@
 	                                <tr> 
 	                                  <td width="0" height="11%" valign="top"> <p class="smalltext">Country </font>
 	                                      <!--<font size="-2">-->
-	                                      <select name="Country_Emp_1">
+	                                      <select name="txtEmpCountry_1">
 	                                      <%=GetCountryDropdown(Country)%>
 	                                      </select>
 	                                      <!--
@@ -710,7 +710,7 @@
 	                                </tr>
 	                                <tr> 
 																		<td width="0" height="11%" valign="top"> <p class="smalltext">Country<br></font> 
-	                                    <select name="Country_Emp_2">
+	                                    <select name="txtEmpCountry_2">
 	                                    <%=GetCountryDropdown(Country)%>
 	                                    </select>
 	                                  </td>
@@ -804,7 +804,7 @@
 	                                </tr>
 	                                <tr> 
 																		<td width="0" height="11%" valign="top"> <p class="smalltext">Country<br></font> 
-	                                    <select name="Country_Emp_3">
+	                                    <select name="txtEmpCountry_3">
 	                                    <%=GetCountryDropdown(Country)%>
 	                                    </select>
 	                                  </td>	                                
@@ -1611,7 +1611,7 @@
 											
 										if(strFieldID=='State one')
 											{
-												if(document.frmLongApp.Country_Emp_1.value==1)
+												if(document.frmLongApp.txtEmpCountry_1.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
@@ -1622,7 +1622,7 @@
 											
 										if(strFieldID=='State two')
 											{
-												if(document.frmLongApp.Country_Emp_2.value==1)
+												if(document.frmLongApp.txtEmpCountry_2.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
@@ -1633,7 +1633,7 @@
 											
 										if(strFieldID=='State three')				
 											{
-												if(document.frmLongApp.Country_Emp_3.value==1)
+												if(document.frmLongApp.txtEmpCountry_3.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
