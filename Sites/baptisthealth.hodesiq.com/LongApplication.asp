@@ -347,46 +347,46 @@ b {
                                 <tr> 
                                   <td height="7%" colspan="4"> <p class="smalltext">Company </font>
                                       <font size="-2"> 
-                                      <input name="txtEmpHistCo_1" type="text" size="75">
+                                      <input name="txtEmpHistCo_1" type="text" size="75" id="Employer_name">
                                       </font></font></td>
                                 </tr>
                                 <tr> 
                                   <td width="25%" height="11%" valign="top"> <p class="smalltext">City </font>
                                       <font size="-2"> 
-                                      <input type="text" name="txtEmpHistCity_1">
+                                      <input type="text" name="txtEmpHistCity_1" id="Employer_city">
                                       </font> </td>
                                   <td width="9%" valign="top"> <p class="smalltext">State</font><font size="-2"><br>
-                                      <select name="txtEmpHistState_1" size="1">
+                                      <select name="txtEmpHistState_1" size="1" id="Employer_State">
 																				<%=GetStateList("", False)%>
                                       </select>
                                       </font></td>
                                   <td width="10%" valign="top"> <p class="smalltext">Zip</font><font size="-2"><br>
-                                      <input name="txtEmpHistZip_1" type="text" size="10">
+                                      <input name="txtEmpHistZip_1" type="text" size="10" id="Employer_Zip">
                                       </font></td>
                                   <td width="54%" valign="top"> <p class="smalltext">Phone 
                                       Number</font><font size="-2"><br>
-                                      <input name="txtEmpHistPhone_1" type="text" size="15">
+                                      <input name="txtEmpHistPhone_1" type="text" size="15" id="Employer_phone">
                                       </font> </td>
                                 </tr>
                                 <tr> 
                                   <td height="10%"> <p class="smalltext">Job Title<font size="-2"> 
-                                      <input type="text" name="txtEmpHistJobTitle_1">
+                                      <input type="text" name="txtEmpHistJobTitle_1" id="Job_title">
                                       </font></td>
                                   <td colspan="3"><TABLE width="473" align="left" cellPadding=0 cellSpacing=0>
                                       <TBODY>
                                         <TR> 
                                           <TD align=left width=159> <P class=smalltext><font size="-2">From 
                                               Mo. 
-                                              <INPUT class=inputclass size='1' tabIndex=142 name='txtEmpHistFromMonth_1'>
+                                              <INPUT class=inputclass size='1' tabIndex=142 name='txtEmpHistFromMonth_1' id="From_month">
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_1'>
+                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_1' id="From_year">
                                               </font></P></TD>
                                           <TD align=left width=312> <P class=smalltext><font size="-2">To Mo. 
-                                              <INPUT name='txtEmpHistToMonth_1' class=inputclass size=1 tabIndex=144 size=2>
+                                              <INPUT name='txtEmpHistToMonth_1' class=inputclass size=1 tabIndex=144 size=2 id="To_month">
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_1'>
+                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_1' id="To_year">
                                               
-                                              <input type="checkbox" name="chkStillEmployeed" value="Yes">
+                                              <input type="checkbox" name="chkStillEmployeed" value="Yes" id="Still_employed">
                                               Still employed
                                               </font></P></TD>
                                         </TR>
@@ -1251,7 +1251,7 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtRefName_1,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
@@ -1280,7 +1280,7 @@ b {
 							
 							strFieldID = strFieldID.replace("_", " ");
 							
-							alert('Please enter the missing Data - ' + strFieldID)
+							alert('Please enter the missing data - ' + strFieldID)
 							eval('document.frmLongApp.' + arrTextFields[iLoop] + '.select()')
 									
 							return false;
@@ -1339,13 +1339,34 @@ b {
 				
 				//********************************************************************
 				//Conditional validation
+				if(document.frmLongApp.chkStillEmployeed.checked==false)
+					{
+						if(CheckForSpaces(document.frmLongApp.txtEmpHistToMonth_1.value)=='')
+							{
+								strID = document.frmLongApp.txtEmpHistToMonth_1.id
+								strID = strID.replace('_',' ')
+								alert('Please enter the missing data - ' + strID);
+								document.frmLongApp.txtEmpHistToMonth_1.focus();
+								return false;
+							}
+							
+						if(CheckForSpaces(document.frmLongApp.txtEmpHistToYear_1.value)=='')
+							{
+								strID = document.frmLongApp.txtEmpHistToYear_1.id
+								strID = strID.replace('_',' ')
+								alert('Please enter the missing data - ' + strID);
+								document.frmLongApp.txtEmpHistToYear_1.focus();
+								return false;
+							}
+					}
+				
 				if(document.frmLongApp.radNameChange[0].checked==true)
 					{
 						if(CheckForSpaces(document.frmLongApp.txtFormerName.value)=='')
 							{
 								alert('Please enter previous name(s)');
 								document.frmLongApp.txtFormerName.select();
-								return false
+								return false;
 							}
 					}
 	
