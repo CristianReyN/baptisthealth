@@ -837,7 +837,7 @@ end function
 		with objADOConn
 			.CursorLocation = adUseClient
 			.CommandTimeout = 120
-			.Open "file name=d:\data\db\iqrep.udl"
+			.Open "file name=d:\data\db\iq2.udl"
 		end with
 		
 		'Return the ADO Connection object
