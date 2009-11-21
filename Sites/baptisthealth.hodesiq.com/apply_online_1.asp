@@ -484,12 +484,12 @@ b {
               last 7 years? </font> </td>
                                     <td width="28%" rowspan="3" valign="top"> 
                                       <span class="smalltext"> 
-                                        <input type="radio" name="radPast7Years" value="Yes">
+                                        <input type="radio" name="radPast7Years" value="Yes" id="Residence_history">
                                         Yes 
-                                        <input type="radio" name="radPast7Years" value="No">
+                                        <input type="radio" name="radPast7Years" value="No" id="Residence_history">
                                         No</span></font><br><span class="smallertext">&nbsp;&nbsp;If yes, enter<br>&nbsp;&nbsp;county and state</span></td>
                                     <td width="9%"> <p class="smalltext">
-                                        <input name="txtCounty7Years_1" type="text" value="County" size="10">
+                                        <input name="txtCounty7Years_1" type="text" value="" size="10">
                                       
                                       </td>
                                     <td width="17%" valign="top">
@@ -499,13 +499,13 @@ b {
                                     </td>
                                   </tr>
                                   <tr> 
-                                    <td><input name="txtCounty7Years_2" type="text" value="County" size="10"></td>
+                                    <td><input name="txtCounty7Years_2" type="text" value="" size="10"></td>
                                     <td width="17%"><select name="selState7Years_2">
 																				<%=GetStateList("", False)%>
                                       </select></td>
                                   </tr>
                                   <tr> 
-                                    <td><input name="txtCounty7Years_3" type="text" value="County" size="10"></td>
+                                    <td><input name="txtCounty7Years_3" type="text" value="" size="10"></td>
                                     <td width="17%">
 																			<select name="selState7Years_3">
 																				<%=GetStateList("", False)%>
@@ -1538,7 +1538,7 @@ b {
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
 	var arrCheckList=strValidateCheckList.split(",");
 	
-	var strValidateRadio='radNameChange,radLast_Year_High_School,radGraduated_High_School,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
+	var strValidateRadio='radNameChange,radLast_Year_High_School,radGraduated_High_School,radPast7Years,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
 
 	var arrValidateRadio=strValidateRadio.split(",")
 
@@ -1620,6 +1620,24 @@ b {
 				
 				//********************************************************************
 				//Conditional validation
+				
+				if(document.frmLongApp.radPast7Years[0].checked==true)
+					{
+						if(CheckForSpaces(document.frmLongApp.txtCounty7Years_1.value)=='')
+							{
+								alert('Please enter the name of the county where you previously lived.')
+								document.frmLongApp.txtCounty7Years_1.focus()
+								return false;
+							}
+							
+						if(document.frmLongApp.selState7Years_1.value=='')
+							{
+								alert('Please select a state where you previously lived.')
+								document.frmLongApp.selState7Years_1.focus()
+								return false;
+							}
+					}
+								
 				if(document.frmLongApp.chkStillEmployeed.checked==false)
 					{
 						if(CheckForSpaces(document.frmLongApp.txtEmpHistToMonth_1.value)=='')
@@ -1671,7 +1689,7 @@ b {
 							}
 					}
 				//********************************************************************
-				
+
 				if (document.frmLongApp.media_info.value == '')
 					{
 						alert('Please let us know where you heard about this site.');
