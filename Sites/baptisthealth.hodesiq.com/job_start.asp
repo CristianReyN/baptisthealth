@@ -1,43 +1,85 @@
-&lt;% 'Response.Redirect &quot;http://smartpost.hodes.com/baptisthealth/job_start.asp&quot; %&gt;
+<% 'Response.Redirect "http://smartpost.hodes.com/baptisthealth/job_start.asp" %>
 
+<!--#include file="includes/local_subs.asp"-->
 
+<%on error resume next%>
 
-&lt;%on error resume next%&gt;
+<html>
 
+<!--#include file="includes/head.asp"-->
 
-
-
-
-
-
-
+<script language="JavaScript">
+<!--
+		
+	function SetFieldValues()
+	{
+		//document.frm.title.value=document.frm.titleSelect[document.frm.titleSelect.selectedIndex].value
+		//document.frm.location.value=document.frm.locationSelect[document.frm.locationSelect.selectedIndex].value
+		document.frm.category.value=document.frm.categorySelect[document.frm.categorySelect.selectedIndex].value
+	}
+		
+	function ViewAll()
+	{
+		//document.frm.title.value = "";
+		//document.frm.location.value = "-1";
+		document.frm.category.value = "";
+		document.frm.keywords.value = "";
+		document.frm.submit();
+	}
 	
+	function ViewJobCart(strJobCookieName)
+	{
+		var strJobCart;
+		var intIndex;
+		var strCookie;
+		
+		strCookie = document.cookie;
+		intIndex = strCookie.indexOf(strJobCookieName);
+		
+		if (intIndex == -1)	//"Job" not found
+		{
+			alert("There are currently no jobs in your cart.");
+			return;
+		}
+		else
+		{
+			document.frm.action = "job_cart.asp?User_id=<%=Request("user_id")%>";
+			document.frm.submit();	
+		}
+	}
+		
+//-->
+</script>
+
+<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">
+
+	<!--#include file="includes/header.asp"-->
 	
 	<table border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td width="5%">&nbsp;</td>
 		<td valign="top" width="160">
-			
-			&lt;%=GetTopX(5, 160, &quot;#093980&quot;, &quot;#FFFFFF&quot;,&quot;#D9D1C3&quot; ,&quot;#000000&quot;, &quot;Hot Openings!&quot;)%&gt;
-			
+			<!--BEGIN HOT OPENINGS TABLEEE8C82-->
+			<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
+			<!--END HOT OPENINGS TABLE-->
 			<br>
-			&lt;%CreateUL%&gt;
+			<%CreateUL%>
 		</td>
 		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		<td valign="top">
 				
-			
-			<form name="frm" action="joblist.asp?User_ID=<%=Request("          >&quot; method=&quot;post&quot; onsubmit=&quot;SetFieldValues()&quot;&gt;
+			<!--BEGIN FORM SECTION-->
+			<form name="frm" action="joblist.asp?User_ID=<%=Request("User_ID")%>" method="post" onsubmit="SetFieldValues()">
 			
 			<table cellpadding="0" cellspacing="0" width="400">
-			&lt;%if trim(request(&quot;message&quot;)) &lt;&gt; &quot;&quot; then%&gt;
+			<%if trim(request("message")) <> "" then%>
 				<tr>
 					<td>
-						<font face=Arial size=4>&lt;%=trim(request(&quot;message&quot;))%&gt;</font>
+						<font face=Arial size=4><%=trim(request("message"))%></font>
 					</td>
 				</tr>
 				<tr><td>&nbsp;</td></tr>
-			&lt;%end if%&gt;
+			<%end if%>
 					
 			<tr>
 				<td>
@@ -48,7 +90,7 @@
 				<td>
 					<select name="categorySelect">
 						<option value>ALL CATEGORIES</option>
-						&lt;%=GetJobCategories(&quot;Dropdown&quot;)%&gt;
+						<%=GetJobCategories("Dropdown")%>
 					</select><br clear="all">
 					<input type="hidden" name="category" value>
 				</td>
@@ -62,25 +104,25 @@
 				<td>
 					<input type="text" size="30" name="keywords"><br clear="all"><br>
 					<input type="submit" value="Begin Search" id="submit1" name="submit1">&nbsp;&nbsp;
-					<input type="button" value="View All Jobs"                      id="button1" name="button1">
+					<input type="button" value="View All Jobs" onClick="ViewAll();" id="button1" name="button1">
 				</td>
 			</tr>
 			</table>
 					
 			</form>
-			
+			<!--END FORM SECTION-->
 		</td>
 				
 	</tr>
 	</table>
 
+	<!--#include file="includes/footer.asp"-->
 	
-	
-	&lt;%
-	if err.number &lt;&gt; 0 then
-		Response.Redirect (&quot;error.asp?user_id=&quot; &amp; Request(&quot;user_id&quot;))
+	<%
+	if err.number <> 0 then
+		Response.Redirect ("error.asp?user_id=" & Request("user_id"))
 	end if
-	%&gt;
+	%>
 
 </body>
 

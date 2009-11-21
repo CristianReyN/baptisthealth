@@ -18,6 +18,10 @@ select case GetAppServer()
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+	
+	case else
+		HIRING_ORG_ID = 632
+		CAREER_SITE_EMEDIA_ID = 6931
 		
 end select
 
