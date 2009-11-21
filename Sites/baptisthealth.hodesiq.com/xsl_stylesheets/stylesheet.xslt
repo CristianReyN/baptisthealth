@@ -597,21 +597,24 @@
 
         <tr> 
           <td height="27%" colspan="5">
-						<p class="smalltext">Have you ever been employed at any Baptist Health Facility? 
-						<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'Yes'" >
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />Yes 
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
-            </xsl:if>
+			<p class="smalltext">Have you ever been employed at any Baptist Health Facility? 
+				<xsl:choose>
+				<xsl:when test="LongApplication/radEverEmployeedWithBaptist" >
+					<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'Yes'" >
+						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />Yes 
+						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
+					</xsl:if>
             
-						<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'No'" >
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />No
-            </xsl:if>
-
-						<xsl:if test="LongApplication/radEverEmployeedWithBaptist = ''" >
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
-            <input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
-            </xsl:if>
+					<xsl:if test="LongApplication/radEverEmployeedWithBaptist = 'No'" >
+						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
+						<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" checked="checked" />No
+					</xsl:if>
+				</xsl:when>
+				<xsl:otherwise>
+					<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />Yes 
+					<input type="radio" name="radEverEmployeedWithBaptist" disabled="disabled" />No
+				</xsl:otherwise>
+				</xsl:choose>
             </p>
             <P CLASS="breakhere"></P>
           </td>
