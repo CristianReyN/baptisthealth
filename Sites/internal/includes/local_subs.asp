@@ -14,7 +14,7 @@ select case GetAppServer()
 	
 	case "DEV"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931 '11279
+		CAREER_SITE_EMEDIA_ID = 11279
 		
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
@@ -25,7 +25,7 @@ select case GetAppServer()
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931
+		CAREER_SITE_EMEDIA_ID = 98653
 		
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
@@ -36,7 +36,7 @@ select case GetAppServer()
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931 
+		CAREER_SITE_EMEDIA_ID = 98653 
 		
 		sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealth/"
