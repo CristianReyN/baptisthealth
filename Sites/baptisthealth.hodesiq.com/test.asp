@@ -82,6 +82,8 @@
 			<td class="noPf" width="100%" bgcolor="#08347b"><table class="noPf" border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 						<td class="noPf" height="21" align="right"><form class="noPf" method="post" action="http://www.e-baptisthealth.com/tools/search/results"><input type="hidden" name="S" value="5"><script type="text/javascript" language="JavaScript"><!--
+												
+												
 												if (screen.width < 800)
 													{
 													document.write('<input class="searchBox" type="text" size="10" name="SEARCH_TERMS" value="">');
@@ -91,9 +93,12 @@
 													{
 													document.write('<input class="searchBox" type="text" size="15" name="SEARCH_TERMS" value="">');
 													}
+													
 												--></script></td>
-						<td height="21" width="48" align="right"><input type="image" alt="Enter search word or phrase and click here" src="http://www.e-baptisthealth.com/images/gwn/search.gif" onMouseOver="this.src='http://www.e-baptisthealth.com/images/gwn/search-over.gif';" onMouseOut="this.src=http://www.e-baptisthealth.com/images/gwn/search.gif';" border="0" name="image"></form></td>
+						<td height="21" width="48" align="right">
+							<input type="image" alt="Enter search word or phrase and click here" src="http://www.e-baptisthealth.com/images/gwn/search.gif" onMouseOver="this.src='http://www.e-baptisthealth.com/images/gwn/search-over.gif';" onMouseOut="this.src='http://www.e-baptisthealth.com/images/gwn/search.gif';" border="0" name="image"></form></td>
 						<td><script type="text/javascript" language="JavaScript"><!--
+												
 												if (screen.width < 800)
 													{
 													document.write('<img src="http://www.e-baptisthealth.com/images/spacer.gif" width="20">');
@@ -106,6 +111,7 @@
 					</tr>
 					<tr>
 						<td colspan="3" height="43" width="100%" align="right" valign="top" bgcolor="#fdebbc"><script type="text/javascript" language="JavaScript"><!--
+												
 												if (screen.width < 800)
 													{
 													
