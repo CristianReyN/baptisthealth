@@ -60,18 +60,6 @@ select case GetAppServer()
 		
 end select
 
-'HIRING_ORG_ID = 632
-'CAREER_SITE_EMEDIA_ID = 6931
-'APP_SERVER          = "IQ-SQL-IQ2"
-'REPLICATION_SERVER  = APP_SERVER
-'arrIQConnection     = Array("10.100.50.133", "iq2", "sa", "1q51r00t", 3)
-'arrSearchConnection = Array("10.100.50.133", "candidate_search", "sa", "1q51r00t", 3)
-'DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
-'docFileLink         = "https://payflow.hodes.com/iq-doc/"
-'sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
-'LOCATION_ID = 263
-'SHIFT_ID = 264
-'ERP_ID = 288
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
