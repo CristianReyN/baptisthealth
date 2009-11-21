@@ -155,7 +155,7 @@ select case intResult
 	
 	case -1
 		'strAction = UnsecuredBaseURL & "confirmation.asp"
-		strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/" & confirmation.asp
+		strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/confirmation.asp"
 		
 		strConfirm = "You have already applied for the selected position(s).  Please feel free to browse our site for other opportunities of interest."
 	
@@ -171,7 +171,7 @@ select case intResult
 			'strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			
 			'strAction = UnsecuredBaseURL & "confirmation.asp"
-			strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/" & confirmation.asp
+			strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/confirmation.asp"
 		end if
 		
 		strConfirm = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application." & vbCrLf & vbCrLf & "We appreciate your interest in Baptist Health and wish you success in your employment endeavors." & vbCrLf & vbCrLf & "Very Sincerely," & vbCrLf & vbCrLf & "Baptist HR Staff" & vbCrLf & vbCrLf & "*** This is an automatically generated communication. ***" & vbCrLf & "*** Please do not respond to this e-mail. ***"

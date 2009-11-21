@@ -53,7 +53,7 @@ select case err.number
 	
 		if trim(request("last_flag")) = "yes" then
 			'strAction = UnsecuredBaseURL & "confirmation.asp"
-			strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/" & confirmation.asp
+			strAction = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if
