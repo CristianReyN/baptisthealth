@@ -1,4 +1,4 @@
-<!--#include file="includes/local_subs.asp"-->
+<%'<!--#include file="includes/local_subs.asp"-->%>
 <!--#include file="includes/head.asp"-->
 <!--#include file="includes/header.asp"-->
 
@@ -19,6 +19,178 @@
 	If strAppIDs <> "" Then
 		Call ViewApplicant(strAppIDs)
 	End If
+	
+	function GetDynamicConnection_BAPTIST(strAppServer)
+		dim objADOConn
+		
+		'Get an ADO Connection object
+		set objADOConn = server.CreateObject("ADODB.Connection")
+		
+		sUser = "iq-iq3-asp"		
+    strPassword = "0olki87"
+				
+		with objADOConn
+			.CursorLocation = adUseClient
+			.CommandTimeout = 120
+			.Open "file name=d:\data\db\iqrep.udl"
+		end with
+		
+		'Return the ADO Connection object
+		set GetDynamicConnection_BAPTIST = objADOConn
+	end function
+	
+	Public Function ViewApplicantPersonalInfo2(strAppServer, intApplicantID) ' As ADODB.Recordset
+	    'declare connection,recordset and command objects
+	    Const adCmdStoredProc = 4
+	    
+	    Dim objViewApplicantPersonalInfoConnection ' As ADODB.Connection
+	    Dim objViewApplicantPersonalInfoCommand ' As ADODB.Command
+	    
+	    'declare recordset
+	    Dim objViewApplicantPersonalInfoRecordset ' As ADODB.Recordset
+	    
+	   
+	    Set objViewApplicantPersonalInfoConnection = Server.CreateObject("ADODB.Connection")
+	    
+	    'create recordset
+	    Set objViewApplicantPersonalInfoRecordset = Server.CreateObject("ADODB.Recordset")
+	    
+	    'assign connection
+	    Set objViewApplicantPersonalInfoConnection = GetDynamicConnection_BAPTIST(strAppServer) ' objCDynamic.ConnectToDB2(strAppServer)
+	    
+	    'destroy connection class object
+	    Set objCDynamic = Nothing
+
+	    'create command object
+	    Set objViewApplicantPersonalInfoCommand = Server.CreateObject("ADODB.Command")
+	    
+	    'assign command properties
+	    With objViewApplicantPersonalInfoCommand
+	    
+	        Set .ActiveConnection = objViewApplicantPersonalInfoConnection
+	        .CommandText = "SP_View_Applicant_Personal_Info2"
+	        .CommandType = adCmdStoredProc
+	        .CommandTimeout = 120
+	        'create parameters
+	        .Parameters.Append .CreateParameter("@return", adInteger, adParamReturnValue)
+	        .Parameters.Append .CreateParameter("@applicantid", adInteger, adParamInput, 4, intApplicantID)
+	       
+	        'execute command into recordset
+	        Set objViewApplicantPersonalInfoRecordset = .Execute
+	        
+	        Set objViewApplicantPersonalInfoRecordset.ActiveConnection = Nothing
+	        'return recordset thru function
+	        Set ViewApplicantPersonalInfo2 = objViewApplicantPersonalInfoRecordset
+	    End With
+	    'destroy active connection
+	    Set objViewApplicantPersonalInfoCommand.ActiveConnection = Nothing
+	    
+	    'close connection
+	    objViewApplicantPersonalInfoConnection.Close
+	    
+	    'destroy objects
+	    Set objViewApplicantPersonalInfoConnection = Nothing
+	    Set objViewApplicantPersonalInfoCommand = Nothing
+	    
+	    Set objViewApplicantPersonalInfoRecordset = Nothing
+	End Function
+	
+	Sub ViewApplicant(ByVal strApplicantIDs)
+		on error resume next
+			
+		Const EMPTY_STRING = ""
+			
+		Dim RsViewApplicant
+		Dim lngApplicantID
+			
+		'lngApplicantID = 1924624
+		
+		strApplicantIDs  = Split(strApplicantIDs, ",")
+
+		lngApplicantID = Clng(strApplicantIDs(0))
+
+		Set RsViewApplicant = Server.CreateObject("ADODB.Recordset")
+		'set RsViewApplicant = server.CreateObject("Roam.Applicant").ViewApplicantPersonalInfo2("IQ-DEV-ASP-IQ2",lngApplicantID)
+		set RsViewApplicant = ViewApplicantPersonalInfo2("IQ-REPLICATION",lngApplicantID)
+		
+		strFirstName = RsViewApplicant.Fields("First_Name").Value & ""
+		strMidName   = RsViewApplicant.Fields("Middle_Initial").Value & ""
+		strLastName  = RsViewApplicant.Fields("Last_Name").Value & ""
+		strStreet		 = RsViewApplicant.Fields("Street").Value & "" & RsViewApplicant.Fields("Street2").Value & ""
+		strCity			 = RsViewApplicant.Fields("City").Value & ""
+		strZip			 = RsViewApplicant.Fields("Zip").Value & ""
+		strEmail		 = RsViewApplicant.Fields("Email").Value & ""
+		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
+		strState		 = RsViewApplicant.Fields("state_name").Value & ""
+			
+		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
+			
+		If RsViewApplicant.State = 1 Then RsViewApplicant.Close()
+		set RsViewApplicant = Nothing
+	end sub
+	
+	Function GetStateList(strStateSelected, blnWithDefault)
+		Dim strStates
+		
+		  strStates = "<option value=''>Select State</option>"
+		  strStates = strStates &  "<option value='Alabama'>Alabama</option>"
+	  	strStates = strStates &  "<option value='Alaska'>Alaska</option>"
+			strStates = strStates &  "<option value='Arizona'>Arizona</option>"
+			strStates = strStates &  "<option value='Arkansas'>Arkansas</option>"
+			strStates = strStates &  "<option value='California'>California</option>"
+			strStates = strStates &  "<option value='Colorado'>Colorado</option>"
+			strStates = strStates &  "<option value='Connecticut'>Connecticut</option>"
+			strStates = strStates &  "<option value='Delaware'>Delaware</option>"
+			strStates = strStates &  "<option value='Florida'>Florida</option>"
+			strStates = strStates &  "<option value='Georgia'>Georgia</option>"
+			strStates = strStates &  "<option value='Hawaii'>Hawaii</option>"
+			strStates = strStates &  "<option value='Idaho'>Idaho</option>"
+			strStates = strStates &  "<option value='Illinois'>Illinois</option>"
+			strStates = strStates &  "<option value='Indiana'>Indiana</option>"
+			strStates = strStates &  "<option value='Iowa'>Iowa</option>"
+			strStates = strStates &  "<option value='Kansas'>Kansas</option>"
+			strStates = strStates &  "<option value='Kentucky'>Kentucky</option>"
+			strStates = strStates &  "<option value='Louisiana'>Louisiana</option>"
+			strStates = strStates &  "<option value='Maine'>Maine</option>"
+			strStates = strStates &  "<option value='Maryland'>Maryland</option>"
+			strStates = strStates &  "<option value='Massachusetts'>Massachusetts</option>"
+			strStates = strStates &  "<option value='Michigan'>Michigan</option>"
+			strStates = strStates &  "<option value='Minnesota'>Minnesota</option>"
+			strStates = strStates &  "<option value='Mississipp'>Mississippi</option>"
+			strStates = strStates &  "<option value='Missouri'>Missouri</option>"
+			strStates = strStates &  "<option value='Montana'>Montana</option>"
+			strStates = strStates &  "<option value='Nebraska'>Nebraska</option>"
+			strStates = strStates &  "<option value='Nevada'>Nevada</option>"
+			strStates = strStates &  "<option value='New Hampshire'>New Hampshire</option>"
+			strStates = strStates &  "<option value='New Jersey'>New Jersey</option>"
+			strStates = strStates &  "<option value='New Mexico'>New Mexico</option>"
+			strStates = strStates &  "<option value='New York'>New York</option>"
+			strStates = strStates &  "<option value='North Carolina'>North Carolina</option>"
+			strStates = strStates &  "<option value='North Dakota'>North Dakota</option>"
+			strStates = strStates &  "<option value='Ohio'>Ohio</option>"
+			strStates = strStates &  "<option value='Oklahoma'>Oklahoma</option>"
+			strStates = strStates &  "<option value='Oregon'>Oregon</option>"
+			strStates = strStates &  "<option value='Pennsylvania'>Pennsylvania</option>"
+			strStates = strStates &  "<option value='Rhode Island'>Rhode Island</option>"
+			strStates = strStates &  "<option value='South Carolina'>South Carolina</option>"
+			strStates = strStates &  "<option value='South Dakota'>South Dakota</option>"
+			strStates = strStates &  "<option value='Tennessee'>Tennessee</option>"
+			strStates = strStates &  "<option value='Texas'>Texas</option>"
+			strStates = strStates &  "<option value='Utah'>Utah</option>"
+			strStates = strStates &  "<option value='Vermont'>Vermont</option>"
+			strStates = strStates &  "<option value='Virginia'>Virginia</option>"
+			strStates = strStates &  "<option value='Washington'>Washington</option>"
+			strStates = strStates &  "<option value='West Virginia'>West Virginia</option>"
+			strStates = strStates &  "<option value='Wisconsin'>Wisconsin</option>"
+			strStates = strStates &  "<option value='Wyoming'>Wyoming</option>"
+
+			If blnWithDefault = True Then
+				GetStateList = Replace(strStates, "value='" & strStateSelected & "'", "value='" & strStateSelected & "' selected")
+			Else
+				GetStateList = strStates
+			End If
+	End Function
+
 %>
 
 <style>
