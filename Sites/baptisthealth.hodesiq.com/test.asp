@@ -29,40 +29,37 @@
 
 
 	
-		<link rel="stylesheet" href="/components/gwn/css/greystone.css" type="text/css">
-		<link rel="stylesheet" href="/components/gwn/css/bmc.css" type="text/css">
+		<link rel="stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/greystone.css" type="text/css">
+		<link rel="stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/bmc.css" type="text/css">
 
 
 <script type="text/javascript" language="JavaScript">
 <!--
 
-
-
 	if (screen.width < 800)
 		{
-		document.write('<script src="/components/gwn/js/dropdown_menus.js" type="text/javascript"></script><link rel="Stylesheet" rev="Stylesheet" href="/components/gwn/css/dropdown_menus.css"><link rel="Stylesheet" rev="Stylesheet" href="/components/gwn/css/narrowWidth.css">');
+			document.write('<link rel="Stylesheet" rev="Stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/dropdown_menus.css">');
+			document.write('<link rel="Stylesheet" rev="Stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/narrowWidth.css">');
+			document.write('<scr' + 'ipt src="includes/dropdown_menus.js" type="text/javascript">' + '</sc' + 'ript>');
 		}
 
 	else
 		{
-		document.write('<script src="/components/gwn/js/dropdown2_menus.js" type="text/javascript"></script><link rel="Stylesheet" rev="Stylesheet" href="/components/gwn/css/dropdown2_menus.css"><link rel="Stylesheet" rev="Stylesheet" href="/components/gwn/css/wideWidth.css">');
+			document.write('<link rel="Stylesheet" rev="Stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/dropdown2_menus.css">');
+			document.write('<link rel="Stylesheet" rev="Stylesheet" href="http://www.e-baptisthealth.com/components/gwn/css/wideWidth.css">');
+			document.write('<scr' + 'ipt src="includes/dropdown2_menus.js" type="text/javascript">' + '</sc' + 'ript>');
+			
 		}
---&gt;
+	
+-->
 </script>
-
-
-
-	
-
-
-	
 
 
 
 </head>
 
 
-<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="initialize()" onresize="window.location.reload(false)">
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="initialize();">
 
  
  
@@ -73,18 +70,18 @@
 			<td class="logoCell"><a href="http://www.e-baptisthealth.com" border="0"><script type="text/javascript" language="JavaScript"><!--
 												if (screen.width < 800)
 													{
-													document.write('<img class="logoImg" src="/images/gwn/logo/bhLogo.jpg" border="0">');
+													document.write('<img class="logoImg" src="http://www.e-baptisthealth.com/images/gwn/logo/bhLogo.jpg" border="0">');
 													}
 
 												else
 													{
-													document.write('<img class="logoImg" src="/images/gwn/logo/bhLogoWide.jpg" border="0">');
+													document.write('<img class="logoImg" src="http://www.e-baptisthealth.com/images/gwn/logo/bhLogoWide.jpg" border="0">');
 													}
 												--></script></a></td>
-			<td class="noPf" width="1" bgcolor="#08347b"><img src="/images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+			<td class="noPf" width="1" bgcolor="#08347b"><img src="http://www.e-baptisthealth.com/images/spacer.gif"></td>
 			<td class="noPf" width="100%" bgcolor="#08347b"><table class="noPf" border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
-						<td class="noPf" height="21" align="right"><form class="noPf" method="post" action="/tools/search/results"><input type="hidden" name="S" value="5"><script type="text/javascript" language="JavaScript"><!--
+						<td class="noPf" height="21" align="right"><form class="noPf" method="post" action="http://www.e-baptisthealth.com/tools/search/results"><input type="hidden" name="S" value="5"><script type="text/javascript" language="JavaScript"><!--
 												if (screen.width < 800)
 													{
 													document.write('<input class="searchBox" type="text" size="10" name="SEARCH_TERMS" value="">');
@@ -95,11 +92,11 @@
 													document.write('<input class="searchBox" type="text" size="15" name="SEARCH_TERMS" value="">');
 													}
 												--></script></td>
-						<td height="21" width="48" align="right"><input type="image" alt="Enter search word or phrase and click here" src="/images/gwn/search.gif" onMouseOver="this.src='/images/gwn/search-over.gif';" onMouseOut="this.src='/images/gwn/search.gif';" border="0" name="image"></form></td>
+						<td height="21" width="48" align="right"><input type="image" alt="Enter search word or phrase and click here" src="http://www.e-baptisthealth.com/images/gwn/search.gif" onMouseOver="this.src='http://www.e-baptisthealth.com/images/gwn/search-over.gif';" onMouseOut="this.src=http://www.e-baptisthealth.com/images/gwn/search.gif';" border="0" name="image"></form></td>
 						<td><script type="text/javascript" language="JavaScript"><!--
 												if (screen.width < 800)
 													{
-													document.write('<img src="/images/spacer.gif" width="20">');
+													document.write('<img src="http://www.e-baptisthealth.com/images/spacer.gif" width="20">');
 													}
 
 												else
@@ -116,12 +113,12 @@
 
 												else
 													{
-													document.write('<img class="watermarkImg" src="/images/gwn/layout/watermark.gif" width="429" height="43" border="0">');
+													document.write('<img class="watermarkImg" src="http://www.e-baptisthealth.com/images/gwn/layout/watermark.gif" width="429" height="43" border="0">');
 													}
 												--></script></td>
 					</tr>
 					<tr>
-						<td class="noPf" height="20" width="100%" bgcolor="#08347b"><img src="/images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+						<td class="noPf" height="20" width="100%" bgcolor="#08347b"><img src="http://www.e-baptisthealth.com/images/spacer.gif"></td>
 					</tr>
 				</table>
 			</td>
@@ -196,7 +193,7 @@
 	
 <!-- cdm: colspan/use spacer inside -->
 		<tr>
-			<td valign="top" align="left" class="navBarHdrCell" colspan="2"><a class="navBarHdr" onmouseOver="this.className='navBarHdrOver'" onmouseOut="this.className='navBarHdr'" href="http://community.e-baptisthealth.com/services/more.html" target><img src="/images/spacer.gif" width="3" border="0">Patient Services</a></td>
+			<td valign="top" align="left" class="navBarHdrCell" colspan="2"><a class="navBarHdr" onmouseOver="this.className='navBarHdrOver';" onmouseOut="this.className='navBarHdr';" href="http://community.e-baptisthealth.com/services/more.html" target><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0">Patient Services</a></td>
 		</tr>
 
 	
@@ -212,28 +209,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/tools/find-physician/index.jsp" target>Find a Physician</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://community.e-baptisthealth.com/tools/find-physician/index.jsp" target>Find a Physician</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
-		</tr>
-
-		
-			
-		
-
-
-	
-		
-	
-
-		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://patients.e-baptisthealth.com" target>Patient &amp; Visitor<br>Information</a></td>
-		</tr>
-		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -246,11 +226,28 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://patients.e-baptisthealth.com/pc/intro.html" target>Primary Care</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://patients.e-baptisthealth.com" target>Patient &amp; Visitor<br>Information</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://patients.e-baptisthealth.com/pc/intro.html" target>Primary Care</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -262,7 +259,7 @@
 		
 	
 <tr>
-		<td colspan="2"><img src="/images/spacer.gif" width="1" height="6" border="0"></td>
+		<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="6" border="0"></td>
 	</tr>
 
 </table>
@@ -291,7 +288,7 @@
 
 		<tr>
 			<td valign="top" class="navBarHdrCell" colspan="2">
-			<span class="navBarHdr"><img src="/images/spacer.gif" width="3" border="0">About Baptist Health</span></td>
+			<span class="navBarHdr"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0">About Baptist Health</span></td>
 		</tr>
 
 	
@@ -307,28 +304,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.e-baptisthealth.com/about_us/hospitals/index.html" target>Our Circle of Care</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://www.e-baptisthealth.com/about_us/hospitals/index.html" target>Our Circle of Care</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
-		</tr>
-
-		
-			
-		
-
-
-	
-		
-	
-
-		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/wtg/index.html" target>Ways to Give</a></td>
-		</tr>
-		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -341,11 +321,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/careers/index.html" target>Careers</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar';" href="http://community.e-baptisthealth.com/wtg/index.html" target>Ways to Give</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -358,11 +338,28 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar';" href="http://community.e-baptisthealth.com/careers/index.html" target>Careers</a></td>
+		</tr>
+		<tr>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
+		</tr>
+
+		
+			
+		
+
+
+	
+		
+	
+
+		<tr>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/careers/volunteers.html" target>Volunteers</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -374,7 +371,7 @@
 		
 	
 <tr>
-		<td colspan="2"><img src="/images/spacer.gif" width="1" height="6" border="0"></td>
+		<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="6" border="0"></td>
 	</tr>
 
 </table>
@@ -411,7 +408,7 @@
 
 		<tr>
 			<td valign="top" class="navBarHdrCell" colspan="2">
-			<span class="navBarHdr"><img src="/images/spacer.gif" width="3" border="0">Medical Monday </span></td>
+			<span class="navBarHdr"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0">Medical Monday </span></td>
 		</tr>
 
 	
@@ -427,11 +424,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/archives/2004/0414medicalMon.html" target>Medical Monday Topics</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://community.e-baptisthealth.com/archives/2004/0414medicalMon.html" target>Medical Monday Topics</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -443,7 +440,7 @@
 		
 	
 <tr>
-		<td colspan="2"><img src="/images/spacer.gif" width="1" height="6" border="0"></td>
+		<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="6" border="0"></td>
 	</tr>
 
 </table>
@@ -478,7 +475,7 @@
 
 		<tr>
 			<td valign="top" class="navBarHdrCell" colspan="2">
-			<span class="navBarHdr"><img src="/images/spacer.gif" width="3" border="0">Special Feature</span></td>
+			<span class="navBarHdr"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0">Special Feature</span></td>
 		</tr>
 
 	
@@ -494,11 +491,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/archives/2004/halloween.html" target>Halloween Safety</a></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver';" onmouseOut="this.className='navBar';" href="http://community.e-baptisthealth.com/archives/2004/halloween.html" target>Halloween Safety</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -511,11 +508,11 @@
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"><img src="http://www.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://jacksonville.com/tu-online/stories/102504/bus_16992532.shtml" target="_blank">Electronic Medical Record</a></td>
 		</tr>
 		<tr>
-			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
+			<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
 		
@@ -527,7 +524,7 @@
 		
 	
 <tr>
-		<td colspan="2"><img src="/images/spacer.gif" width="1" height="6" border="0"></td>
+		<td colspan="2"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1" height="6" border="0"></td>
 	</tr>
 
 </table>
@@ -549,7 +546,7 @@
 								
 									</td>
 
-									<td class="noPf" bgcolor="#08347b" height="100%" width="1"><img src="/images/spacer.gif" width="1"></td>
+									<td class="noPf" bgcolor="#08347b" height="100%" width="1"><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="1"></td>
 
 									<!-- cdm: close navBar td -->
 									<!-- cdm: begin breadcrumb td here when there is a positive for nav -->
@@ -570,19 +567,19 @@
 							
 								
 										
-											<table class="bgbreadcrumb" cellspacing="0" cellpadding="0" border="0" width="100%" background="/images/layout/breadcrumbBg.gif">
+											<table class="bgbreadcrumb" cellspacing="0" cellpadding="0" border="0" width="100%" background="http://www.e-baptisthealth.com/images/layout/breadcrumbBg.gif">
 										
 									
 							
 
 							<tr>
 								<td align="left" valign="bottom" class="copy">
-									<img src="/images/spacer.gif" width="9">
+									<img src="http://www.e-baptisthealth.com/images/spacer.gif" width="9">
 
 									
 										
 												
-													<a class="navBcrumb" target href="http://www.e-baptisthealth.com/"><img src="/images/nav/breadCrumb.gif" width="7" height="10" border="0">e-baptisthealth.com<img src="/images/spacer.gif" width="4" height="8" border="0"></a>
+													<a class="navBcrumb" target href="http://www.e-baptisthealth.com/"><img src="http://www.e-baptisthealth.com/images/nav/breadCrumb.gif" width="7" height="10" border="0">e-baptisthealth.com<img src="http://www.e-baptisthealth.com/images/spacer.gif" width="4" height="8" border="0"></a>
 												
 											
 									
@@ -624,46 +621,25 @@
 
 									<table cellspacing="0" cellpadding="0" border="0" width="100%">
 										<tr>
-											<td><img src="/images/spacer.gif" width="8"></td><!-- very important navBar/content spacer -->
-											<td><img src="/images/spacer.gif" height="9"></td>
-											<td><img src="/images/spacer.gif" width="8"></td><!-- very important content/border spacer -->										</tr>
+											<td><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="8"></td><!-- very important navBar/content spacer -->
+											<td><img src="http://www.e-baptisthealth.com/images/spacer.gif" height="9"></td>
+											<td><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="8"></td><!-- very important content/border spacer -->										</tr>
 </tr>
 
 
-										<!-- begin: content body -->
+										
 										<tr>
 											<td></td>
 											<td>
 
-
-
-
-<!-- SwishCommand index -->
-
+											<!-- begin: content body -->
+											
 
 
 
 
-<table cellspacing="0" cellpadding="0" border="0" width="100%">
-	<tr>
-		<td width="130" valign="top"><a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/bci/breast/buddycheck.html" target><img class="homepageImg" src="/images/home/20041011_b_pinkrib.jpg"></a></td>
-		<td width="8"><a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/bci/breast/buddycheck.html" target><img src="/images/spacer.gif" border="0" WIDTH="1" HEIGHT="1"></a></td>
-		<td width="142" valign="top">
-			<a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/bci/breast/buddycheck.html" target>Pick a Buddy for Breast Cancer Awareness</a>
-			<br>
-			<a class="homeSecondaryCopy" onmouseOver="this.className='homeSecondaryCopyOver'" onmouseOut="this.className='homeSecondaryCopy'" href="http://community.e-baptisthealth.com/services/bci/breast/buddycheck.html" target>Begin Your Buddy Check During Breast Cancer Awareness Month</a>
-		</td>
-		<td width="11"><img src="/images/spacer.gif" border="0" WIDTH="1" HEIGHT="1"></td>
-		<td width="130" valign="top"><a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/hyperbaric/downtown.html" target><img class="homepageImg" src="/images/home/040517_b_Hyperbarics.jpg"></a></td>
-		<td width="8"><a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/hyperbaric/downtown.html" target><img src="/images/spacer.gif" border="0" WIDTH="1" HEIGHT="1"></a></td>
-		<td width="142" valign="top">
-			<a class="homeSecondaryHdr" onmouseOver="this.className='homeSecondaryHdrOver'" onmouseOut="this.className='homeSecondaryHdr'" href="http://community.e-baptisthealth.com/services/hyperbaric/downtown.html" target>Happy 15th Birthday Hyperbaric Oxygen Therapy &amp; Wound Care</a>
-			<br>
-			<a class="homeSecondaryCopy" onmouseOver="this.className='homeSecondaryCopyOver'" onmouseOut="this.className='homeSecondaryCopy'" href="http://community.e-baptisthealth.com/services/hyperbaric/downtown.html" target>Celebrating 15 years of innovation in Health Care</a>
-		</td>		
-	</tr>
-</table>
-										
+
+											<!-- END: content body -->
 											</td>
 
 											<td></td><!-- third spacer -->
@@ -687,14 +663,14 @@
 
 <table class="noPf" border="0" cellpadding="0" cellspacing="0" width="100%">
 	<tr>
-		<td width="100%" bgcolor="#08347b"><img src="/images/spacer.gif" WIDTH="1" HEIGHT="1"></td>
+		<td width="100%" bgcolor="#08347b"><img src="http://www.e-baptisthealth.com/images/spacer.gif"></td>
 	</tr>
 	<tr>
 		<td bgcolor="#f5f5f5">
 			<!-- Footer Nav -->
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tr>
-					<td width="16%" align="center"><a class="fJump" target href="#" onclick="showPrinterFriendly();return false;">Printer-Friendly&nbsp;&nbsp;<img src="/images/gwn/pf.gif" class="vimg" border="0"></a></td>
+					<td width="16%" align="center"><a class="fJump" target href="#" onclick="showPrinterFriendly();return false;">Printer-Friendly&nbsp;&nbsp;<img src="http://www.e-baptisthealth.com/images/gwn/pf.gif" class="vimg" border="0"></a></td>
 					<td width="8%" align="center"><a class="fJump" target href="http://www.e-baptisthealth.com/functions/help.html">Help</a></td>
 					<td width="19%" align="center"><a class="fJump" target href="http://www.e-baptisthealth.com/hipaa/index.html">HIPAA/Privacy Policy</a></td>
 					<td width="13%" align="center"><a class="fJump" target href="http://www.e-baptisthealth.com/disclaimer/index.html">Disclaimer</a></td>
@@ -715,8 +691,8 @@
 <div id="mainmenu">
   <table border="0" cellpadding="0" cellspacing="0" height="21">
 <tr>
-    <td width="117" height="21"><a href="http://community.e-baptisthealth.com/services/more.html" onmouseover="controlsubmenu('MedicalServices',null,null,'top_MedicalServices')" onmouseout="closeall()"><img id="top_MedicalServices" name="top_MedicalServices" src="/images/gwn/header/MedicalServices-off.gif" width="120" height="21" border="0"></a></td>
-    <td width="135" height="21"><a href="http://community.e-baptisthealth.com/health-info/content/eng/adultIndex.html" onmouseover="controlsubmenu('HealthInformation',null,null,'top_HealthInformation')" onmouseout="closeall()"><img id="top_HealthInformation" name="top_HealthInformation" src="/images/gwn/header/HealthInformation-off.gif" width="120" height="21" border="0"></a></td>
+    <td width="117" height="21"><a href="http://community.e-baptisthealth.com/services/more.html" onmouseover="controlsubmenu('MedicalServices',null,null,'top_MedicalServices')" onmouseout="closeall()"><img id="top_MedicalServices" name="top_MedicalServices" src="http://www.e-baptisthealth.com/images/gwn/header/MedicalServices-off.gif" width="120" height="21" border="0"></a></td>
+    <td width="135" height="21"><a href="http://community.e-baptisthealth.com/health-info/content/eng/adultIndex.html" onmouseover="controlsubmenu('HealthInformation',null,null,'top_HealthInformation')" onmouseout="closeall()"><img id="top_HealthInformation" name="top_HealthInformation" src="http://www.e-baptisthealth.com/images/gwn/header/HealthInformation-off.gif" width="120" height="21" border="0"></a></td>
 </tr>
 </table>
 </div>
@@ -741,7 +717,7 @@
 	<tr>
 		<td valign="top" width="100%" class="menu" id="MedicalServices6"><a class="copyJump" href="http://community.e-baptisthealth.com/services/more.html" target onmouseover="changecolor('MedicalServices6',oncolor)" onmouseout="changecolor('MedicalServices6',offcolor); closeall()"> More...</a></td>
 	</tr>
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 
@@ -775,23 +751,23 @@
 	<tr>
 		<td valign="top" width="100%" class="menu" id="HealthInformation9"><a class="copyJump" href="http://community.e-baptisthealth.com/health-info/content/esp/index.html" target onmouseover="changecolor('HealthInformation9',oncolor)" onmouseout="changecolor('HealthInformation9',offcolor); closeall()"> Español</a></td>
 	</tr>
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 <!-- changed bmc.gif at width=122    to BaptistHealth.gif at width=80 -->
 <div id="mainmenu2">
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td><img src="/images/gwn/logo/BaptistHealth.gif" width="80" height="19"></td>
-            <td><a href="http://community.e-baptisthealth.com/bmc/downtown/index.html" onmouseover="controlsubmenu('Downtown',null,null,'top_Downtown')" onmouseout="closeall()"><img id="top_Downtown" name="top_Downtown" src="/images/gwn/header/Downtown-off.gif" width="62" height="19" border="0"></a></td>
-    <td><img src="/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
-            <td><a href="http://community.e-baptisthealth.com/bmc/beaches/index.html" onmouseover="controlsubmenu('Beaches',null,null,'top_Beaches')" onmouseout="closeall()"><img id="top_Beaches" name="top_Beaches" src="/images/gwn/header/Beaches-off.gif" width="50" height="19" border="0"></a></td>
-    <td><img src="/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
-            <td><a href="http://community.e-baptisthealth.com/bmc/nassau/index.html" onmouseover="controlsubmenu('Nassau',null,null,'top_Nassau')" onmouseout="closeall()"><img id="top_Nassau" name="top_Nassau" src="/images/gwn/header/Nassau-off.gif" width="44" height="19" border="0"></a></td>
-    <td><img src="/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
-            <td><a href="http://community.e-baptisthealth.com/bmc/south/index.html" onmouseover="controlsubmenu('South',null,null,'top_South')" onmouseout="closeall()"><img id="top_South" name="top_South" src="/images/gwn/header/South-off.gif" width="38" height="19" border="0"></a></td>
-    <td><img src="/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
-            <td><a href="http://www.wchjax.com" onmouseover="controlsubmenu('Wolfson',null,null,'top_Wolfson')" target="_blank" onmouseout="closeall()"><img id="top_Wolfson" name="top_Wolfson" src="/images/gwn/header/Wolfson-off.gif" width="112" height="19" border="0"></a></td>
+    <td><img src="http://www.e-baptisthealth.com/images/gwn/logo/BaptistHealth.gif" width="80" height="19"></td>
+            <td><a href="http://community.e-baptisthealth.com/bmc/downtown/index.html" onmouseover="controlsubmenu('Downtown',null,null,'top_Downtown')" onmouseout="closeall()"><img id="top_Downtown" name="top_Downtown" src="http://www.e-baptisthealth.com/images/gwn/header/Downtown-off.gif" width="62" height="19" border="0"></a></td>
+    <td><img src="http://www.e-baptisthealth.com/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
+            <td><a href="http://community.e-baptisthealth.com/bmc/beaches/index.html" onmouseover="controlsubmenu('Beaches',null,null,'top_Beaches')" onmouseout="closeall()"><img id="top_Beaches" name="top_Beaches" src="http://www.e-baptisthealth.com/images/gwn/header/Beaches-off.gif" width="50" height="19" border="0"></a></td>
+    <td><img src="http://www.e-baptisthealth.com/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
+            <td><a href="http://community.e-baptisthealth.com/bmc/nassau/index.html" onmouseover="controlsubmenu('Nassau',null,null,'top_Nassau')" onmouseout="closeall()"><img id="top_Nassau" name="top_Nassau" src="http://www.e-baptisthealth.com/images/gwn/header/Nassau-off.gif" width="44" height="19" border="0"></a></td>
+    <td><img src="http://www.e-baptisthealth.com/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
+            <td><a href="http://community.e-baptisthealth.com/bmc/south/index.html" onmouseover="controlsubmenu('South',null,null,'top_South')" onmouseout="closeall()"><img id="top_South" name="top_South" src="http://www.e-baptisthealth.com/images/gwn/header/South-off.gif" width="38" height="19" border="0"></a></td>
+    <td><img src="http://www.e-baptisthealth.com/images/gwn/header/nav_divider.gif" width="4" height="19"></td>
+            <td><a href="http://www.wchjax.com" onmouseover="controlsubmenu('Wolfson',null,null,'top_Wolfson')" target="_blank" onmouseout="closeall()"><img id="top_Wolfson" name="top_Wolfson" src="http://www.e-baptisthealth.com/images/gwn/header/Wolfson-off.gif" width="112" height="19" border="0"></a></td>
   </tr>
 </table>
 </div>
@@ -811,7 +787,7 @@
 		<td valign="top" width="100%" class="menu" id="Downtown4"><a class="copyJump" onmouseover="changecolor('Downtown4',oncolor)" onmouseout="changecolor('Downtown4',offcolor); closeall()" href="http://community.e-baptisthealth.com/bmc/downtown/admin.html" target> Administration</a></td>
 	</tr>
 
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 
@@ -831,7 +807,7 @@
 		<td valign="top" width="100%" class="menu" id="Beaches4"><a class="copyJump" onmouseover="changecolor('Beaches4',oncolor)" onmouseout="changecolor('Beaches4',offcolor); closeall()" href="http://community.e-baptisthealth.com/bmc/beaches/admin.html" target> Administration</a></td>
 	</tr>
 
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 
@@ -850,7 +826,7 @@
 		<td valign="top" width="100%" class="menu" id="Nassau4"><a class="copyJump" onmouseover="changecolor('Nassau4',oncolor)" onmouseout="changecolor('Nassau4',offcolor); closeall()" href="http://community.e-baptisthealth.com/bmc/nassau/admin.html" target> Administration</a></td>
 	</tr>
 
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 
@@ -869,7 +845,7 @@
 		<td valign="top" width="100%" class="menu" id="South4"><a class="copyJump" onmouseover="changecolor('South4',oncolor)" onmouseout="changecolor('South4',offcolor); closeall()" href="http://community.e-baptisthealth.com/bmc/south/admin.html" target> Administration</a></td>
 	</tr>
 
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 
@@ -888,7 +864,7 @@
 		<td valign="top" width="100%" class="menu" id="Wolfson4"><a class="copyJump" onmouseover="changecolor('Wolfson4',oncolor)" onmouseout="changecolor('Wolfson4',offcolor); closeall()" href="http://www.wchjax.com/welcome/administration.jsp" target="_blank"> Administration</a></td>
 	</tr>
 
-	<tr><td><img src="/images/gwn/spacer.gif" width="1" height="5"></td></tr>
+	<tr><td><img src="http://www.e-baptisthealth.com/images/gwn/spacer.gif" width="1" height="5"></td></tr>
 </table>
 </div>
 

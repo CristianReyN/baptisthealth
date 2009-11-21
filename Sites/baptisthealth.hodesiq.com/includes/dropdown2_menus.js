@@ -83,6 +83,7 @@ var loaded = 0;
 var navdir = "http://www.e-baptisthealth.com/images/gwn/header/";
 
 function preload() {
+
 top_MedicalServices_off = new Image;
 top_MedicalServices_off.src = navdir + "MedicalServices-off.gif";
 top_MedicalServices_on = new Image;
@@ -232,6 +233,7 @@ if (topelem != null){
 // cdm: added topOffset variable to duplicate across hospital buttons which all have the same height setting
 
 function initialize() {
+
 preload();
 closeallmenus();
 stopall();
