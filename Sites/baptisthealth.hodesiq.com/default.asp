@@ -1,6 +1,6 @@
 <!--#include file="includes/local_subs.asp"-->
 <%
 
-response.redirect sDomain & "job_start.asp"
+response.redirect "http://community.e-baptisthealth.com/careers/index.html"
 
 %>
