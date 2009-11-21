@@ -38,8 +38,8 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931 '11279
 		
-		sDomain = "http://careers.hodes.com/baptisthealth/"
-		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
+		sDomain = "http://careers.hodes.com/baptisthealthinternal/"
+		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealthinternal/"
 		
 		
 		LOCATION_ID = 263
@@ -50,8 +50,8 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931 '11279 '6931
 		
-		sDomain = "http://careers.hodes.com/baptisthealth/"
-		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
+		sDomain = "http://careers.hodes.com/baptisthealthinternal/"
+		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealthinternal/"
 		
 		
 		LOCATION_ID = 263
@@ -59,8 +59,7 @@ select case GetAppServer()
 		ERP_ID = 288
 		
 end select
-				APP_SERVER          = "IQSQL5-IQ2" '"IQ-DEV-ASP-IQ2"
-				REPLICATION_SERVER  = APP_SERVER
+
 
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
@@ -314,5 +313,7 @@ on error resume next
 	set objJobSeeker = nothing
 			
 end function
+
+
 
 </script>

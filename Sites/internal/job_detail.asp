@@ -126,7 +126,7 @@ ViewedJobCounter intJobID
 						
 					</td>
 					<td align=right width=142>
-						<a href="https://bhwebapp.bmcjax.com/transferform?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Internal Transfer</span></a>
+						<a href="https://bhwebapp.bmcjax.com/transferform?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>" target="_new"><span class="link">Internal Transfer</span></a>
 					</td>
 				</tr>
 			
