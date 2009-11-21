@@ -1,0 +1,89 @@
+TD.top
+{
+    BACKGROUND-COLOR: #d6d6eb
+}
+UL.perks
+{
+    FONT-SIZE: 8pt
+}
+#pwcharacters
+{
+    FONT-SIZE: 8pt
+}
+DIV.topnav
+{
+    FONT-SIZE: 8pt
+}
+P.criteria
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt
+}
+SELECT.options
+{
+    FONT-SIZE: 10pt
+}
+#registerlink
+{
+    FONT-WEIGHT: bold
+}
+P.registerheader
+{
+    FONT-WEIGHT: bold
+}
+TD.bold
+{
+    FONT-WEIGHT: bold
+}
+TD.criteriaheader
+{
+    BACKGROUND-COLOR: #d6d6eb
+}
+DIV.header
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #000000
+}
+DIV.subheader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt
+}
+DIV.body
+{
+    FONT-SIZE: 10pt
+}
+DIV.headerwithbackground
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    WIDTH: 100%;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Verdana;
+    BACKGROUND-COLOR: #093980
+}
+TD.question
+{
+    FONT-SIZE: xx-small;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #000066;
+    FONT-FAMILY: Arial
+}
+.tellfriend
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: small;
+    FONT-FAMILY: Arial
+}
+.tellfriendinfo
+{
+    FONT-SIZE: x-small;
+    FONT-FAMILY: Arial
+}
+.link
+{
+    FONT-SIZE: 12px;
+    COLOR: #000066;
+    FONT-FAMILY: Arial
+}
