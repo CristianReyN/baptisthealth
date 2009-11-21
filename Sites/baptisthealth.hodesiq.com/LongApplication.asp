@@ -60,6 +60,9 @@ b {
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
         <tr> 
+           <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
+        </tr>			
+        <tr> 
                                     <td height="5%" colspan="5"> <p class="smalltextb">Fields 
                                         in bold are required</font></p></td>
                                   </tr>
@@ -1216,6 +1219,9 @@ b {
                                       <input type="submit" name="subSubmit" value="Submit">
                                     <p></td>
                                 </tr>
+																<tr> 
+																   <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
+																</tr>			
                               </table>
                               
 </form>
