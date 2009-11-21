@@ -9,6 +9,7 @@ DIM SHIFT_ID
 DIM LOCATION_ID
 dim sBaptistDomain
 dim ERP_ID
+dim strCollectAppIDs
 
 select case GetAppServer()
 	
@@ -924,7 +925,7 @@ end function
 				m_lngAppID = intReturnArray(2)
 					
 				'Now collect the applicant ids
-				strAppIDs = strAppIDs & m_lngAppID & ","
+				strCollectAppIDs = strCollectAppIDs & m_lngAppID & ","
 					
 				'********************************************EEO STUFF*******************************************
 				'9/21/01 ADDED BY DWILEY	-	'Edited 9/9/2002 by jsherian	

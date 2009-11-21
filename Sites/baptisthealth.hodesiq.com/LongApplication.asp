@@ -53,6 +53,7 @@ b {
 }
 
 </style>
+
 <form name='frmLongApp' OnSubmit="return SubmitForm()" method='Post' action='WriteXml.asp'>
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <td width="100%" height="3484" valign="top"> 
@@ -649,7 +650,7 @@ b {
                                               <INPUT tabIndex=66 type=radio value=2 name=radLast_Year_College_1>
                                               3 
                                               <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_1 CHECKED>
-                                              4 
+                                              4
                                               <INPUT tabIndex=68 type=radio value=4 name=radLast_Year_College_1>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
@@ -672,31 +673,31 @@ b {
                                             <P class=smalltext>Graduate College/University</P></TD>
                                           <TD width=28% height="9%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT type=text class=inputclass tabIndex=63 size=30 name=txtCollege_1_Name>
+                                                <INPUT type=text class=inputclass tabIndex=63 size=30 name=txtCollege_2_Name>
                                             </P></TD>
                                           <TD class=TCell align=middle width=24% bgColor=#eeeeee rowSpan=2> 
                                             <P class=smalltext>1 
-                                              <INPUT tabIndex=65 type=radio value=1 name=radLast_Year_College_1>
+                                              <INPUT tabIndex=65 type=radio value=1 name=radLast_Year_College_2>
                                               2 
-                                              <INPUT tabIndex=66 type=radio value=2 name=radLast_Year_College_1>
+                                              <INPUT tabIndex=66 type=radio value=2 name=radLast_Year_College_2>
                                               3 
-                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_1 CHECKED>
+                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_2 CHECKED>
                                               4 
-                                              <INPUT tabIndex=68 type=radio value=4 name=radLast_Year_College_1>
+                                              <INPUT tabIndex=68 type=radio value=4 name=radLast_Year_College_2>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
-                                              <INPUT tabIndex=69 type=radio value=Yes name=radGraduated_College_1>
+                                              <INPUT tabIndex=69 type=radio value=Yes name=radGraduated_College_2>
                                               Yes 
-                                              <INPUT tabIndex=70 type=radio value=No  name=radGraduated_College_1 CHECKED>
+                                              <INPUT tabIndex=70 type=radio value=No  name=radGraduated_College_2 CHECKED>
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
-                                              <INPUT type='text' class=inputclass tabIndex=71 size=35 name=txtCollege_1_Degree_or_Certificate>
+                                              <INPUT type='text' class=inputclass tabIndex=71 size=35 name=txtCollege_2_Degree_or_Certificate>
                                             </P></TD>
                                         </TR>
                                         <TR> 
                                           <TD width=28% height="11%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT type=text class=inputclass tabIndex=64 size=30 name=txtCollege_1_City_State>
+                                                <INPUT type=text class=inputclass tabIndex=64 size=30 name=txtCollege_2_City_State>
                                             </P></TD>
                                         </TR>
                                         <TR> 
@@ -705,31 +706,31 @@ b {
                                             </P></TD>
                                           <TD width=28% height="9%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT type=text class=inputclass tabIndex=72 size=30 name=txtCollege_2_Name>
+                                                <INPUT type=text class=inputclass tabIndex=72 size=30 name=txtCollege_3_Name>
                                             </P></TD>
                                           <TD class=TCell align=middle width=24% bgColor=#eeeeee rowSpan=2> 
                                             <P class=smalltext>1 
-                                              <INPUT tabIndex=74 type=radio value=1 name=radLast_Year_College_2>
+                                              <INPUT tabIndex=74 type=radio value=1 name=radLast_Year_College_3>
                                               2 
-                                              <INPUT tabIndex=75 type=radio value=2 name=radLast_Year_College_2>
+                                              <INPUT tabIndex=75 type=radio value=2 name=radLast_Year_College_3>
                                               3 
-                                              <INPUT tabIndex=76 type=radio value=3 name=radLast_Year_College_2 CHECKED>
+                                              <INPUT tabIndex=76 type=radio value=3 name=radLast_Year_College_3 CHECKED>
                                               4 
-                                              <INPUT tabIndex=77 type=radio value=4 name=radLast_Year_College_2>
+                                              <INPUT tabIndex=77 type=radio value=4 name=radLast_Year_College_3>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
-                                              <INPUT tabIndex=78 type=radio value=Yes name=radGraduated_College_2>
+                                              <INPUT tabIndex=78 type=radio value=Yes name=radGraduated_College_3>
                                               Yes 
-                                              <INPUT tabIndex=79 type=radio value=No name=radGraduated_College_2 CHECKED>
+                                              <INPUT tabIndex=79 type=radio value=No name=radGraduated_College_3 CHECKED>
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
-                                              <INPUT type=text class=inputclass tabIndex=80 size=35 name=txtCollege_2_Degree_or_Certificate>
+                                              <INPUT type=text class=inputclass tabIndex=80 size=35 name=txtCollege_3_Degree_or_Certificate>
                                             </P></TD>
                                         </TR>
                                         <TR> 
                                           <TD width=28% height="14%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT type=text class=inputclass tabIndex=73 size=30 name=txtCollege_2_City_State>
+                                                <INPUT type=text class=inputclass tabIndex=73 size=30 name=txtCollege_3_City_State>
                                             </P></TD>
                                         </TR>
                                       </TBODY>
@@ -1251,9 +1252,10 @@ b {
 </body>
 </html>
 
+<!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';

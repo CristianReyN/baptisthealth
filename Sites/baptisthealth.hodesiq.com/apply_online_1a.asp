@@ -53,6 +53,7 @@ end if
 				<input TYPE="hidden" NAME="user_id" VALUE="<%=Request("user_id")%>">	
 				<input TYPE="hidden" NAME="Email" VALUE="<%=Request("Email").item%>">
 				<input TYPE="hidden" NAME="resume_text" VALUE="<%=Request("resume_text").item%>">
+				<input TYPE="hidden" NAME="hidAppIDs" VALUE="<%=Request("hidAppIDs").item%>">
 		
 					<table width="100%" align="center">
 							<%

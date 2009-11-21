@@ -10,7 +10,6 @@ on error resume next
 dim strFirstName
 dim strMiddleInitial
 dim strLastName
-dim strAppIDs
 dim strHomePhone
 dim strWorkPhone
 dim strEmail
@@ -164,9 +163,9 @@ select case intResult
 		if trim(request("apply_1a")) = "yes" and strJobCartJobs <> "" then
 			strAction = "apply_online_1a.asp"
 		else
-			strAppIDs = Left(strAppIDs, Len(strAppIDs)-1)
+			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			
-			strAction = "LongApplication.asp?AppID=" & strAppIDs ' & "&State=" & strStateName
+			strAction = "LongApplication.asp?AppID=" & strCollectAppIDs ' & "&State=" & strStateName
 			'strAction = "confirmation.asp"
 		end if
 		

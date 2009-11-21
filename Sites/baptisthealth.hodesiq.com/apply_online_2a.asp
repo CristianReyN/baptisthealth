@@ -39,6 +39,7 @@ intQACounter = clng(trim(Request("counter")))
 		strResume  = request("resume_text").item
 		strEmail  = request("email").item
 		
+		strCollectAppIDs = Request.Form("hidAppIDs").Item & arrJobSeekerIDs(intQACounter) & ","
 		InsertQuestionnaireResults intJobId, arrJobSeekerIDs(intQACounter), intQuestionnaireID
 		strQA = GetQuestionnaireResults(arrJobSeekerIDs(intQACounter))
 		SendApplyNotificationEmail objJob, strQA, strEmailBody, strResume, strEmail
@@ -51,7 +52,8 @@ select case err.number
 	case 0
 	
 		if trim(request("last_flag")) = "yes" then
-			strAction = "confirmation.asp"
+			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
+			strAction = "LongApplication.asp?AppID=" & strCollectAppIDs '"confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if
@@ -74,7 +76,7 @@ end select
 	<form name="frm" action="<%=strAction%>" method="post">
 
 		<input TYPE="hidden" NAME="confirmation" VALUE="<%=strConfirm%>">
-		
+		<input type="hidden" name="hidAppIDs" value="<%=strCollectAppIDs%>">
 		<input TYPE="hidden" NAME="First_Name" VALUE="<%=First_Name%>">
 		<input TYPE="hidden" NAME="Middle_Initial" VALUE="<%=savedMiddle_Initial%>">
 		<input TYPE="hidden" NAME="Last_Name" VALUE="<%=Last_Name%>">
