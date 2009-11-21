@@ -422,6 +422,11 @@
 							</div>			
 							<div class="body">
 								Cut and paste a copy of your resume.
+								<br/><br/>
+								Please note - Entering your resume or application here does not store your information into our searchable database. 
+								Submitting your resume and application to a specific opening listed on our career site will make your resume and 
+								application searchable by our recruiters. Pasting your resume here simply offers you the convenience of having your 
+								resume saved in your profile so that you will not need to paste it each time you apply.<br/>
 								<br>
 								<%
 								Dim RsRecRez
