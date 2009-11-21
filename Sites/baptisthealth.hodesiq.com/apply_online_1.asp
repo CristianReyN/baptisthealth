@@ -248,6 +248,11 @@ if Country = "" or isnull(Country) then Country = "1"
 						<input type="hidden" name="Password" value="<%=Password%>">
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<a href="http://www.hotmail.com" target="other"><span class='dark_link'>Click here to set up a FREE email address.</span></a>
+					</td>
+				</tr>
 				</table>
 			</td>
 			</tr>
@@ -492,7 +497,7 @@ if Country = "" or isnull(Country) then Country = "1"
 		
 		if (CheckForSpaces(document.frm.Email.value) == "")
       {
-			alert("Please enter your E-mail address.");
+			alert("Please enter your E-mail address. If you don't have an email address click on the link to set up a FREE email account.");
 			document.frm.Email.value = "";
          document.frm.Email.focus();
          return false;
