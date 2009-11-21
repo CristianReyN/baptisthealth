@@ -148,7 +148,7 @@ function selectall()
 	
 			<form name="criteria" id="criteria" onsubmit="return Validate()" action="add_agent_2.asp" method="post"> 
             <input type="hidden" name="user_id" value="<%=Request("user_id")%>">
-				<table width="300">
+				<table width="100%">
 					<tr>
                 <td vAlign="top" colSpan="3">
                 <div class="body">
@@ -352,7 +352,7 @@ function selectall()
                   all of these keywords in Job ID, Job Title, and/or Job 
                   Description.</div><br>
                   
-                  <p><textarea name="keywordstext" rows="3" cols="50"></textarea> 
+                  <p><textarea name="keywordstext" rows="3" cols="20"></textarea> 
                   
                 </p></td></tr></tbody></table>
               <p align="center"><input type="submit" id=submit1 name=submit1>  &nbsp;<input type="reset" id=reset1 name=reset1>
