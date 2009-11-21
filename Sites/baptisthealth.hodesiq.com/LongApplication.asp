@@ -157,12 +157,12 @@ b {
                                   <tr> 
                                     <td height="18%" colspan="2" valign="top"> 
                                       <p class="smalltextb">Has your name legally 
-              changed in last ten years?</font>&nbsp; <br>
+              changed in the last ten years?</font>&nbsp; <br>
               <input type="radio" name="radNameChange" value="Yes">
               Yes 
               <input type="radio" name="radNameChange" value="No">
               No<br>
-              Former name: <br>
+              Former name(s): <br>
               <textarea name="txtFormerName" cols="50"></textarea></font>
               </td>
                                     <td colspan="3"></p></td>
@@ -255,15 +255,15 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="3%"> <p class="smalltext"> 
-                                        <input type="radio" name="radAvailability" value="Full time">
+                                        <input type="checkbox" name="radAvailability" value="Full time">
                                         <span class="smalltext">Full time</span> 
                                         <br>
-                                        <input type="radio" name="radAvailability" value="Part time">
+                                        <input type="checkbox" name="radAvailability" value="Part time">
                                         Part time </font></font> </td>
                                     <td><p class="smalltext"> 
-                                        <input type="radio" name="radAvailability" value="PRN">
+                                        <input type="checkbox" name="radAvailability" value="PRN">
                                         PRN</font></font> <br>
-                                        <input type="radio" name="radAvailability" value="Other">
+                                        <input type="checkbox" name="radAvailability" value="Other">
                                         Other </font></td>
                                     <td colspan="3">&nbsp;</font></td>
                                   </tr>
