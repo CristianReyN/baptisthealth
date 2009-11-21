@@ -1110,4 +1110,122 @@ end function
 				GetStateList = strStates
 			End If
 	End Function
+	
 </script>
+<%
+	'Added EH 2006-02-28
+	'
+	'This is outside of <script> block because IIS parsing interprets 
+	' 
+	'  strHTML = strHTML & "<script>" ...
+	'
+	'as a nested <script> block.  :( 
+
+	'------------------------------------------------------------------------------
+	'Name:			globalAgentMenu
+	'Purpose:		Based on CreateUL in /cc/agent_subs.asp...customized for Baptist Health
+	'Inputs:		none
+	'Outputs:		strHTML
+	'------------------------------------------------------------------------------
+	function globalAgentMenu()
+
+		dim strHTML
+		
+		dim bIsJobStartPage
+		
+		if (instr(Request.ServerVariables("URL"), "job_start")) then
+			bIsJobStartPage = true
+		else
+			bIsJobStartPage = false
+		end if		
+
+		if len(request("user_id")) > 2 then
+			strHTML = "<font face='arial' size='2'> <strong>My Actions</strong> <BR>" & VbCrLf
+			
+			if (not bIsJobStartPage) then strHTML = strHTML & "<LI><a href='job_start.asp?User_id="&Request("user_id")&"'>Career Site Home</a>" &VbCrLf 
+
+			strHTML = strHTML & "<LI><a href='agent_menu.asp?User_id="&Request("user_id")&"'>Job Agent Menu</a>" &VbCrLf
+			strHTML = strHTML & "<LI><a href='logout.asp?User_id=" & request("user_id") & requestobjects & "'>Log out</a><BR>"&VbCrLf
+			strHTML = strHTML & "<LI><a href='edit_registration_1.asp?User_id="&Request("user_id")&"'>Edit Contact Info</a>" &VbCrLf
+			strHTML = strHTML & "<LI><a href='add_agent_1.asp?User_id="&Request("user_id")&"'>Add An Agent</a>" &VbCrLf
+			strHTML = strHTML & "<LI><a href='remove_hold_1.asp?User_id="&Request("user_id")&"'>Remove Agent Hold</a>" &VbCrLf
+			strHTML = strHTML & "<LI><a href='job_id_search.asp?User_id="&Request("user_id")&"'>Search Job By Code</a>" &VbCrLf
+			strHTML = strHTML & "</font>" &VbCrLf
+
+		else
+				
+			strHTML = strHTML & "<form name=frmLogin onsubmit='return Validate2()' action=Process_LogIn.asp method=post>" & VbCrLf
+			strHTML = strHTML & "<input type=hidden name=txtHiddenHiringOrgID value="& hiring_org&">"&VbCrLf
+			strHTML = strHTML & "<font face=arial size=2> <strong>Baptist Job Agent </strong><BR CLEAR=ALL>" & VbCrLf
+			
+			if (bIsJobStartPage) then
+				strHTML = strHTML & "If you do not find a current position that matches your experience, please fill out our Job Agent profile. If we post a position matching your skills you can be notified immediately via email. Job Agent does not constitute a submission to a job." & vbcrlf
+			else
+				strHTML = strHTML & "<LI><a href='job_start.asp'>Career Site Home</a>" &VbCrLf 
+			end if
+ 
+			strHTML = strHTML & "<LI><a href='register1.asp'>Register</a>" &VbCrLf 
+			strHTML = strHTML & "<LI><a href='JavaScript: BackClick();'>Lost Password?</a><BR CLEAR=ALL><BR CLEAR=ALL>"&VbCrLf
+			strHTML = strHTML & "  EMAIL ADDRESS:<BR>"&VbCrLf
+			strHTML = strHTML & "  <input name=userid size=20><BR>"&VbCrLf
+			strHTML = strHTML & "  PASSWORD:<br>"&VbCrLf
+			strHTML = strHTML & "  <input type=password name=password size=20><br>"&VbCrLf
+			strHTML = strHTML & "  <input Type='submit' value='Login' id=submit1 name=submit1>"
+			strHTML = strHTML & "  <input type='hidden' name='chkJobCartJobs' value='" & request("chkJobCartJobs") & "'>"
+			strHTML = strHTML & "  </form>"&VbCrLf
+				
+			strHTML = strHTML & "<script LANGUAGE=""javascript"" type=""text/javascript"">" & vbcrlf
+			strHTML = strHTML & "<!--" & vbcrlf
+			strHTML = strHTML & "function Validate2()"
+					
+			strHTML = strHTML & "{" & vbcrlf
+			strHTML = strHTML & "if (document.frmLogin.userid.value == '')" & vbcrlf
+			strHTML = strHTML & "{" & vbcrlf
+			strHTML = strHTML & "alert('Please enter your User ID');" & vbcrlf
+			strHTML = strHTML & "document.frmLogin.userid.focus();" & vbcrlf
+			strHTML = strHTML & "return false;" & vbcrlf
+			strHTML = strHTML & "}" & vbcrlf
+					
+			strHTML = strHTML & "if (document.frmLogin.password.value == '')" & vbcrlf
+			strHTML = strHTML & "{" & vbcrlf
+			strHTML = strHTML & "alert('Please enter your password');" & vbcrlf
+			strHTML = strHTML & "document.frmLogin.password.focus();" & vbcrlf
+			strHTML = strHTML & "return false;" & vbcrlf
+			strHTML = strHTML & "}" & vbcrlf
+
+			strHTML = strHTML & "return true;" & vbcrlf
+			strHTML = strHTML & "}" & vbcrlf
+					
+			strHTML = strHTML & "//-->" & vbcrlf
+			strHTML = strHTML & "</script>" & vbcrlf
+		end if
+			
+		strHTML = strHTML & "<br><br>"
+		strHTML = strHTML & "<a href=""Javascript: ViewJobCart('" & JOB_CART_JOB_NAME & "');""><font face=""Arial"" size=""2""><b>View Job Cart</b></font></a>" & vbcrlf
+			
+		strHTML = strHTML & "<script language=""javascript"" type=""text/javascript"">" & vbcrlf & "<!--" & vbcrlf & vbtab
+		
+		strHTML = strHTML & "function ViewJobCart(strJobCookieName)" & vbcrlf & "{" & vbcrlf & vbtab
+		strHTML = strHTML & "var intIndex;" & vbcrlf & vbtab
+		strHTML = strHTML & "var strCookie;" & vbcrlf & vbtab
+			
+		strHTML = strHTML & "strCookie = document.cookie;" & vbcrlf & vbtab
+		strHTML = strHTML & "intIndex = strCookie.indexOf(strJobCookieName);" & vbcrlf & vbtab
+			
+		strHTML = strHTML & "if (intIndex == -1)" & vbcrlf & vbtab & "{" & vbcrlf & vbtab & vbtab
+
+		strHTML = strHTML & "alert(""There are currently no jobs in your cart."");" & vbcrlf & vbtab & vbtab
+		strHTML = strHTML & "return;" & vbcrlf & vbtab & "}" & vbcrlf & vbtab & "else" & vbcrlf & vbtab & "{"
+		strHTML = strHTML & vbcrlf & vbtab & vbtab
+		strHTML = strHTML & "document.frmJobCart.action = ""job_cart.asp?User_id=" & Request("user_id") & """;" & vbcrlf & vbtab & vbtab
+		strHTML = strHTML & "document.frmJobCart.submit();" & vbcrlf & vbtab & "}" & vbcrlf & "}" & vbcrlf
+		
+		strHTML = strHTML & "//-->" & vbcrlf
+		strHTML = strHTML & "</script>" & vbcrlf
+			
+		strHTML = strHTML & "<form name=""frmJobCart"" action=""job_cart.asp"" method=""post""><input type=""hidden"" name=""txtJobCartJobs"" value=""""></form>"
+			
+		globalAgentMenu = strHTML
+
+	end function
+%>

@@ -425,7 +425,7 @@ end if%>
 					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#fdebbc","#000000", "New Openings!")%>
 					<!--END HOT OPENINGS TABLE-->
 					<br>
-					<%CreateUL%>
+					<%= globalAgentMenu()%>
 					<%end if%>
 					&nbsp;&nbsp;
 				</td>
