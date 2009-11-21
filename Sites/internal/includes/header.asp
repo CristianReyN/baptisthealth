@@ -244,7 +244,7 @@
                             </tr>
                             <!-- mainNav -->
                          	<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/comp/PTORequest.pdf" target="_blank">PTO Request
 Form</a></td>
 		</tr>
@@ -262,7 +262,7 @@ Form</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.valic.com" target="_blank">VALIC</a></td>
 		</tr>
 		<tr>
@@ -279,7 +279,7 @@ Form</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaDirectory.pdf" target="_blank">Humana
 Directory</a></td>
 		</tr>
@@ -297,7 +297,7 @@ Directory</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaFormulary.pdf" target="_blank">Humana
 Formulary</a></td>
 		</tr>
@@ -315,7 +315,7 @@ Formulary</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.humana.com/" target="_blank">Humana Web
 Site</a></td>
 		</tr>
@@ -333,7 +333,7 @@ Site</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="https://www.benefitsnow.com/servicecenter/default.jsp?cono=55739" target="_blank">AON Flex Advantage
 Center</a></td>
 		</tr>
@@ -351,7 +351,7 @@ Center</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/benefits/baptist_healthPharm_list.pdf" target="_blank">Participating
 Pharmacies</a></td>
 		</tr>
@@ -369,7 +369,7 @@ Pharmacies</a></td>
 	
 
 		<tr>
-			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
+			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/services/comm_pavilion.html" target="_blank">Pavilion
 Pharmacy<br>Locations</a></td>
 		</tr>
@@ -421,7 +421,7 @@ Pharmacy<br>Locations</a></td>
 							
 
 							
-							<a class="navBcrumb" onmouseOver="this.className='navBcrumbOver'" onmouseOut="this.className='navBcrumb'" href="http://www.e-baptisthealth.com/" target><img src="http://community.e-baptisthealth.com/images/nav/breadCrumb.gif" width="7" height="10" border="0">e-baptisthealth.com<img src="/images/spacer.gif" width="4" height="8" border="0"></a>
+							<a class="navBcrumb" onmouseOver="this.className='navBcrumbOver'" onmouseOut="this.className='navBcrumb'" href="http://www.e-baptisthealth.com/" target><img src="http://community.e-baptisthealth.comimages/breadCrumb.gif" width="7" height="10" border="0">e-baptisthealth.com<img src="/images/spacer.gif" width="4" height="8" border="0"></a>
 							 
 
 							
