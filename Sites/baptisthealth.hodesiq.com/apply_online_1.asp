@@ -167,6 +167,7 @@
 	<input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 	<input type='hidden' name='showhidStillEmployeed' value=''>
 	<input type='hidden' name='txtCountry' value=''>
+	<input type='hidden' name='Country' value=''>
 	<input type='hidden' name='txtEmpCountry_1' value=''>
 	<input type='hidden' name='txtEmpCountry_2' value=''>
 	<input type='hidden' name='txtEmpCountry_3' value=''>
@@ -1574,6 +1575,7 @@
 
 		function SubmitForm()
 			{
+				document.frmLongApp.Country.value=document.frmLongApp.Country_Field.value;
 				document.frmLongApp.txtCountry.value=document.frmLongApp.Country_Field[document.frmLongApp.Country_Field.selectedIndex].text;
 				
 				if(CheckForSpaces(document.frmLongApp.txtEmpHistCo_1.value)!='')
