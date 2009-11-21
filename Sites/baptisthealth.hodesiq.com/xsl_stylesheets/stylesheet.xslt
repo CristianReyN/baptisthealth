@@ -259,9 +259,9 @@
         <tr> 
           <td height="18%" colspan="2" valign="top"><p class="smalltextb">Has your name legally changed in the last ten years?</p><br/>
 						<xsl:if test="LongApplication/radNameChange = 'Yes'" >
-            <input type="radio" name="radNameChange" disabled="disabled" checked="checked" />
+            <input type="radio" name="radNameChange" onclick="javascript:this.checked=!this.checked;" checked="checked" />
             Yes 
-            <input type="radio" name="radNameChange" disabled="disabled"  />
+            <input type="radio" name="radNameChange" onclick="javascript:this.checked=!this.checked;"  />
             No<br/>
 						</xsl:if>
 						
