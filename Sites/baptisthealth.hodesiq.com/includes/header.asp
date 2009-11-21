@@ -545,9 +545,20 @@ end if%>
 				</tr>
 			</table>
 
+			<script type="text/javascript" language="JavaScript">
+<!--
+	if (screen.width > 800)
+		{
+		document.write('<table cellspacing="0" cellpadding="3" border="0" width="740" bgcolor="<%=BGColor%>">');
+		}
 
+	else
+		{
+		document.write('<table cellspacing="0" cellpadding="3" border="0" width="100%" bgcolor="<%=BGColor%>">');
+		}
+-->
+</script>
 
-			<table border="0" cellpadding="3" cellspacing="0" bgcolor="<%=BGColor%>">
 				<%If (Instr(1, Request.ServerVariables("URL"), "apply_online", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
 					<tr><td COLSPAN="2"><img src="http://community.e-baptisthealth.com/images/c_careers_hdr.gif"></td></tr>
 				<%end if%>							
@@ -574,19 +585,7 @@ end if%>
 						
 						<!-- start: body -->
 
-<script type="text/javascript" language="JavaScript">
-<!--
-	if (screen.width > 800)
-		{
-		document.write('<table cellspacing="0" cellpadding="0" border="0" width="740">');
-		}
 
-	else
-		{
-		document.write('<table cellspacing="0" cellpadding="0" border="0" width="100%">');
-		}
--->
-</script>
 
 
 									<table bgcolor="<%=BGColor%>" VALIGN="top" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor>
