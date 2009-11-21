@@ -9,7 +9,8 @@
 	Dim strFullURL
 	Const SIMPLE_REPORT = "Simple_Report_By_Location.asp"
 	Const FULL_REPORT		= "Full_Report_By_Location.asp"
-	
+	Const FULL_ALL_LOCATIONS = "BaptistHealthReport.asp"	
+	Const SIMPLE_ALL_LOCATIONS = "SimpleBaptistHealthReport.asp"
 	
 	Set AdoRs = server.CreateObject("ADODB.Recordset")
 	
@@ -31,6 +32,9 @@
 
 	If AdoRs.State = 1 Then AdoRs.Close
 	Set AdoRs = Nothing
+
+	strHTML = strHTML & "<tr><td><a href='" & FULL_ALL_LOCATIONS & "'>Full Report for all locations</a></td></tr>"
+	strHTML = strHTML & "<tr><td><a href='" & SIMPLE_ALL_LOCATIONS & "'>Simple Report for all locations</a></td></tr><tr><td height='5'></td></tr>"
 
 	strHTML = "<table>" & strHTML & "</table>"
 	
