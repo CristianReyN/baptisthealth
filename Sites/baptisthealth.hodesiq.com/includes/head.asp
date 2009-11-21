@@ -30,6 +30,6 @@
 
 
 	
-	&lt;%=ValidateLogin%&gt;
+	<%=ValidateLogin%>
 	
 </head>
