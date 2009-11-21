@@ -44,75 +44,57 @@ with objJobsRS
 if .eof and .bof then
 	Response.Write "No Records Found"
 else
-
-	strReportHTML = "<table border='1' width='100%'>"
+	strReportHTML = "<table border='1' width='1000'>"
 
 	strReportHTML = strReportHTML & strHeader
 
 	.movefirst
-	
-'	strCategoryHold = .fields("category_name")
-'	strReportHTML = strReportHTML & "<tr><td colspan='13'><font size='5'><b>"
-'	strReportHTML = strReportHTML & strCategoryHold
-'	strReportHTML = strReportHTML & "</b></font></td></tr>"
-'	strReportHTML = strReportHTML & "<tr><td border='0'><font size='3'><b>Vice President</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Recruiter</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>FT</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PT</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PRN</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Job Title</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Dept</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Shift</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Hours</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Pay Grade</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Min - Mid</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Comments</b></font></td>"
-'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
 
-strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, True)
+	strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, True)
 
-do until .eof
-
-	strVP				= .fields("VP_CustomField251_1").value & ""
-	strUsr			= .fields("user_mgt_name").value & ""
-	strFT				= .fields("FT_CustomField260_1").value & ""
-	strPT				= .fields("PT_CustomField261_1").value & ""
-	strPRN			= .fields("PRN_CustomField262_1").value & ""
-	strTitle		= .fields("title").value & ""
-	strDept			= .fields("Dept_CustomField252_1").value & ""
-	strShift		= .fields("Shift_CustomField264_1").value & ""
-	strHours		= .fields("Hours_CustomField255_1").value & ""
-	strPay			= .fields("Pay_CustomField257_1").value & ""
-	strMinMid		= .fields("MinMid_CustomField258_1").value & ""
-	strComments = .fields("Comments_CustomField259_1").value & ""
-	'strDuties		= .fields("Duties").value & ""
-	'strReqs			= .fields("Requirements").value & ""
+	do until .eof
+		strVP				= .fields("VP_CustomField251_1").value & ""
+		strUsr			= .fields("user_mgt_name").value & ""
+		strFT				= .fields("FT_CustomField260_1").value & ""
+		strPT				= .fields("PT_CustomField261_1").value & ""
+		strPRN			= .fields("PRN_CustomField262_1").value & ""
+		strTitle		= .fields("title").value & ""
+		strDept			= .fields("Dept_CustomField252_1").value & ""
+		strShift		= .fields("Shift_CustomField264_1").value & ""
+		strHours		= .fields("Hours_CustomField255_1").value & ""
+		strPay			= .fields("Pay_CustomField257_1").value & ""
+		strMinMid		= .fields("MinMid_CustomField258_1").value & ""
+		strComments = .fields("Comments_CustomField259_1").value & ""
+		strHeader		= .fields("header").value & ""
+		strDuties		= Replace(.fields("Duties").value, VbCrLf, "<br>") & ""
+		strReqs			= Replace(.fields("Requirements").value, VbCrLf, "<br>") & ""
+		strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
+					
+		strReportHTML = strReportHTML & "<tr>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strVP="","n/a",strVP) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strUsr="","n/a",strUsr) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFT="","n/a",strFT) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPT="","n/a",strPT) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPRN="","n/a",strPRN) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="","n/a",strTitle) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="","n/a",strDept) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="","n/a",strShift) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="","n/a",strHours) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="","n/a",strPay) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strMinMid="","n/a",strMinMid) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strComments="","n/a",strComments) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & strHeader & IIF(strHeader = "", "", "<br><br>") & strReqs & IIF(strReqs = "", "", "<br><br>") & strDuties & IIF(strDuties = "", "", "<br><br>") & strFooter & "</font></td>"
 		
-	strReportHTML = strReportHTML & "<tr>"
-	strReportHTML = strReportHTML & "<td>" & IIF(strVP = "", "N/A", strVP) & "</td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strUsr = "", "N/A", strUsr) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFT = "", "N/A", strFT) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPT = "", "N/A", strPT) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPRN = "", "N/A", strPRN) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept = "", "N/A", strDept) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift = "", "N/A", strShift) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours = "", "N/A", strHours) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay = "", "N/A", strPay) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strMinMid = "", "N/A", strMinMid) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strComments = "", "N/A", strComments) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strUsr = "", "N/A", strUsr) & "</font></td>"
-	strReportHTML = strReportHTML & "<td><font size='2'>" & .fields("Duties").value & " " & .fields("Requirements").value & "</font></td>"
-	
-	Response.Write strReportHTML
-	
-	strReportHTML = ""
-	
-	.movenext
-	
-	if strCategoryHold <> .fields("category_name").value then
-		strReportHTML = ReportHeader(.fields("category_name").value, False)
-	end if
-loop
+		Response.Write strReportHTML
+		
+		strReportHTML = ""
+		
+		.movenext
+		
+		if strCategoryHold <> .fields("category_name").value then
+			strReportHTML = ReportHeader(.fields("category_name").value, False)
+		end if
+	loop
 
 	strReportHTML = strReportHTML & "</table>"
 end if
@@ -129,7 +111,6 @@ Response.Write strReportHTML
 'Outputs:		objResultsRS
 '------------------------------------------------------------------------------
 function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, strFacility, strCategory)
-		
 	dim oServer
 	dim strSearch
 		
@@ -140,7 +121,6 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 																  strSearch, 1, strFacility, strCategory)
 		
 	set oServer = nothing
-		
 end function
 
 function ReportHeader(strCat, blnFirst)
@@ -155,19 +135,19 @@ function ReportHeader(strCat, blnFirst)
 	strHeaderHTM = strHeaderHTM & "<tr><td colspan='13'><font size='5'><b>"
 	strHeaderHTM = strHeaderHTM & strCategoryHold
 	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
-	strHeaderHTM = strHeaderHTM & "<tr><td border='0'><font size='3'><b>Vice President</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Recruiter</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>FT</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>PT</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>PRN</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Job Title</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Dept</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Shift</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Hours</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Pay Grade</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Min - Mid</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Comments</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
+	strHeaderHTM = strHeaderHTM & "<tr><td align='center'><font size='2'><b>Vice President</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Recruiter</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>FT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>PT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>PRN</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Job Title</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Dept</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Shift</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Hours</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Pay Grade</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Min - Mid</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Comments</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Description</b></font></td></tr>"
 	
 	ReportHeader = strHeaderHTM
 End Function
