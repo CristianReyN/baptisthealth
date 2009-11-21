@@ -70,7 +70,6 @@ else
 		'strDuties		= Replace(.fields("Duties").value, VbCrLf, "<br>") & ""
 		'strReqs			= Replace(.fields("Requirements").value, VbCrLf, "<br>") & ""
 		strJobDesc  = .fields("Job_Description267_1").value & ""		'strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
-		strFacility	= .fields("Loc_Description263_1").value
 					
 		strReportHTML = strReportHTML & "<tr>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strVP="","N/A",strVP) & "</font></td>"
@@ -78,16 +77,15 @@ else
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFT="","N/A",strFT) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPT="","N/A",strPT) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPRN="","N/A",strPRN) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="" Or IsNull(strTitle),"N/A",strTitle) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="" Or IsNull(strDept),"N/A",strDept) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="" Or IsNull(strShift),"N/A",strShift) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="" Or IsNull(strHours),"N/A",strHours) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="" Or IsNull(strPay),"N/A",strPay) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="","N/A",strTitle) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="","N/A",strDept) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="","N/A",strShift) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="","N/A",strHours) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="","N/A",strPay) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strMinMid="","N/A",strMinMid) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strComments="","N/A",strComments) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strJobDesc="" Or IsNull(strJobDesc),"N/A",strJobDesc) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strJobDesc="","N/A",strJobDesc) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & strHeader & IIF(strHeader = "", "", "<br><br>") & strReqs & IIF(strReqs = "", "", "<br><br>") & strDuties & IIF(strDuties = "", "", "<br><br>") & strFooter & "</font></td>"
-		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFacility="" Or IsNull(strFacility),"N/A",strFacility) & "</font></td>"
 		
 		Response.Write strReportHTML
 		
