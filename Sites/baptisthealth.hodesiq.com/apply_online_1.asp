@@ -250,7 +250,7 @@ if Country = "" or isnull(Country) then Country = "1"
 				</tr>
 				<tr>
 					<td>
-						<a href="http://www.hotmail.com" target="other"><span class='dark_link'>Click here to set up a FREE email address.</span></a>
+						<a href="http://www.hotmail.com" target="other"><span class='dark_link'>Click here to set up a FREE email address</span></a>
 					</td>
 				</tr>
 				</table>
