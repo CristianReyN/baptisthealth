@@ -1497,7 +1497,7 @@ b {
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
 	var arrCheckList=strValidateCheckList.split(",");
 	
-	var strValidateRadio='radLast_Year_High_School,radGraduated_High_School,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
+	var strValidateRadio='radEverEmployeedWithBaptist,radLast_Year_High_School,radGraduated_High_School,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
 
 	var arrValidateRadio=strValidateRadio.split(",")
 
