@@ -166,7 +166,7 @@ select case intResult
 			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			
 			'strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs
-			strAction = "longapplication.asp?AppID=" & strCollectAppIDs
+			strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
 			'strAction = "confirmation.asp"
 		end if
 		
