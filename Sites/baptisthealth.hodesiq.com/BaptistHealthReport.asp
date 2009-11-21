@@ -136,7 +136,7 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 	strSearch = strKeywords
 		
 	set oServer = server.CreateObject("iq_setup_includes_server.Data")
-	set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults(APP_SERVER, strSPName, _
+	set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults("IQ-SQL-IQ2", strSPName, _
 																  strSearch, 1, strFacility, strCategory)
 		
 	set oServer = nothing
