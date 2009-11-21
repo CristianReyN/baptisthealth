@@ -16,7 +16,7 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931 '11279
 		
-		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealthinternal/"
+		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
@@ -27,7 +27,7 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931 ''11279
 		
-		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealthinternal/"
+		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
 		LOCATION_ID = 263
@@ -38,8 +38,8 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931 '11279
 		
-		sDomain = "http://careers.hodes.com/baptisthealthinternal/"
-		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealthinternal/"
+		sDomain = "http://careers.hodes.com/baptisthealth/"
+		sBaptistDomain = "http://employees.e-baptisthealth.com/tools/jobs/baptisthealth/"
 		
 		
 		LOCATION_ID = 263
