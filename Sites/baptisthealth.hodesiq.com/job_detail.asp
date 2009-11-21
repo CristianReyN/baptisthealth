@@ -145,7 +145,10 @@ ViewedJobCounter intJobID
 				<tr><td>&nbsp;</td></tr>
 				
 				</table>
-				
+				</td>
+		</tr>
+		</table>
+		
 		<!--#include file="includes/footer.asp"-->
 		
 		<form name="frm" action="job_detail.asp" method="post">
