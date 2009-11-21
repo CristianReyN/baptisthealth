@@ -119,9 +119,7 @@ end if
 					Response.write "<p class=registerheader>"& request("msg")&" </p>"
 					%>
 					</div>
-					</td>
-					</tr>
-					</table>
+				
 		
 	<!--#include file="includes/footer.asp"-->
 

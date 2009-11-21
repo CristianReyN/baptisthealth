@@ -51,18 +51,7 @@
 	
 		
 		
-			<table width="660">
-					
-						<tr><td width="5%">&nbsp;</td>
-						<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td valign="top">
+		
 				<table width="400"><tr>
 				<td align="left" colspan=2>
 							<p>        
@@ -100,9 +89,6 @@
 							<TD colspan=2 align=left>
 								<INPUT type="submit" value="Submit" id=submit1 name=submit1> <!--<INPUT type="reset" value="Reset" id=reset1 name=reset1>-->
 							</TD>
-						</TR>
-					</table>
-					</TD>
 						</TR>
 					</table>
 					

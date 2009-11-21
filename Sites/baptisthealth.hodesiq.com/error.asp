@@ -27,10 +27,7 @@
 						</font>
 					</td>
 				</table>
-				</td>
-		</tr>
-		</table>
-		
+				
 		<!--#include file="includes/footer.asp"-->
 		
 		<br clear='all'>

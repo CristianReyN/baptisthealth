@@ -55,23 +55,12 @@
 
 	<!--#include file="includes/header.asp"-->
 	
-	<table border="0" cellspacing="0" cellpadding="0">
-	<tr>
-		<td width="5%">&nbsp;</td>
-		<td valign="top" width="160">
-			<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-			<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-			<!--END HOT OPENINGS TABLE-->
-			<br>
-			<%CreateUL%>
-		</td>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		<td valign="top">
+
 				
 			<!--BEGIN FORM SECTION-->
 			<form name="frm" action="joblist.asp?User_ID=<%=Request("User_ID")%>" method="post" onsubmit="SetFieldValues()">
 			
-			<table cellpadding="0" cellspacing="0" width="400">
+			<table cellpadding="0" cellspacing="0" width="375">
 			<%if trim(request("message")) <> "" then%>
 				<tr>
 					<td>
@@ -111,10 +100,7 @@
 					
 			</form>
 			<!--END FORM SECTION-->
-		</td>
-				
-	</tr>
-	</table>
+		
 
 	<!--#include file="includes/footer.asp"-->
 	

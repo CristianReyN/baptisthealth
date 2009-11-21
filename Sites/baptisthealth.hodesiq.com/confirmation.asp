@@ -32,9 +32,7 @@ if strMessage = "" then strMessage = trim(Request("message"))
 				
 					</table>
 					</form>
-				</td>
-		</tr>
-		</table>
+				
 		
 		<!--#include file="includes/footer.asp"-->
 		

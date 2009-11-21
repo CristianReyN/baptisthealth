@@ -40,20 +40,7 @@ Else
 			
 			<!--#include file="includes/header.asp"-->
 			
-			<table border="0" cellspacing="0" cellpadding="0" width="660">
-			<tr><td width="5%">&nbsp;</td>
-				<td align="left" valign="top">
-					
-					<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td valign="top">
-				
+			
 					<table width="500">
 					<tr>
 						<td> 
@@ -86,9 +73,6 @@ Else
 					</tr>
 					</table>
 				
-			</td>
-		</tr>
-		</table>
 		
 		<!--#include file="includes/footer.asp"-->
 			

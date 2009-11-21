@@ -107,10 +107,7 @@ end if
 							</td>
 						</tr>
 			</table>
-		</td>
-	</tr>
-	</table>
-	
+		
 	<br clear='all'>
 	
 	<!--#include file="includes/footer.asp"-->

@@ -87,10 +87,6 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 				</table>
 		
 				<input type="hidden" name="txtJobCartJobs" value="">
-		</td>
-			
-		</tr>
-		</table>
 		
 		<!--#include file="includes/footer.asp"-->
 	

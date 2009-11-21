@@ -359,14 +359,7 @@ function selectall()
 </form>
 <p>&nbsp;
 
-
-
-
-</td>
-
-
-
-</tr></table>	  
+	  
 	  
 <!--#include file="includes/footer.asp"-->
 

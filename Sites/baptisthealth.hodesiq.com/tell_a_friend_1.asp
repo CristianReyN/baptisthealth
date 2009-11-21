@@ -44,18 +44,7 @@ end if
 	<!--#include file="includes/header.asp"-->
 	
 		
-		<table border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td width="5%">&nbsp;</td>
-			<td valign="top" width="160">
-				<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-				<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-				<!--END HOT OPENINGS TABLE-->
-				<br>
-				<%CreateUL%>
-			</td>
-			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td valign="top">
+		
 				<FORM name="frm" action="tell_a_friend_2.asp" METHOD=POST onsubmit="return ValidateEmail()">
 				<input type=HIDDEN name="JobID" value="<%=intJobID%>">
 				<input type="HIDDEN" name="user_id" value="<%=request("user_id")%>">
@@ -201,12 +190,7 @@ end if
 							</tr>
 							</table>
 							</form>
-						</td>
-					</tr>
-			
-			</table>
-	
-	
+						
 	<!--#include file="includes/footer.asp"-->
 	
    <%

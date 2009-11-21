@@ -402,10 +402,7 @@ if Country = "" or isnull(Country) then Country = "1"
 			
 			</table>
 		</form>
-		</td>
-		
-	</tr>
-	</table>
+	
 	
 	<!--#include file="includes/footer.asp"-->	
 

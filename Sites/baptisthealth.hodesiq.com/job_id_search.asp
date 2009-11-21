@@ -30,18 +30,7 @@
 
 	<!--#include file="includes/header.asp"-->
 
-	<table width="660">
-				<tr>
-				<td width="5%">&nbsp;</td>
-				<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td vAlign="top">
+
 				<table width="400">
 					<tr>
                 <td vAlign="top">
@@ -71,9 +60,7 @@
 				</td>
 			</tr>
 			</table>
-			<td>
-		</tr>
-	</table>
+		
 	
 	<form name="frm" action="" method="post"></form>
 	
