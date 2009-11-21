@@ -353,14 +353,14 @@ b {
                                         <TR> 
                                           <TD align=left width=159> <P class=smalltext><font size="-2">From 
                                               Mo. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=142 size=2 name='txtEmpHistFromMonth_1'>
+                                              <INPUT class=inputclass size='1' tabIndex=142 name='txtEmpHistFromMonth_1'>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=143 size=4 name='txtEmpHistFromYear_1'>
+                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_1'>
                                               </font></P></TD>
                                           <TD align=left width=312> <P class=smalltext><font size="-2">To Mo. 
-                                              <INPUT name='txtEmpHistToMonth_1' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
+                                              <INPUT name='txtEmpHistToMonth_1' class=inputclass size=1 tabIndex=144 size=2>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_1'>
+                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_1'>
                                               
                                               <input type="checkbox" name="chkStillEmployeed" value="Yes">
                                               Still employed
@@ -451,14 +451,14 @@ b {
                                         <TR class="smalltext"> 
                                           <TD width=159 align=left> <P class=smalltext>From 
                                               Mo. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=142 size=2 name='txtEmpHistFromMonth_2'>
+                                              <INPUT class=inputclass tabIndex=142 size=1 name='txtEmpHistFromMonth_2'>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=143 size=4 name='txtEmpHistFromYear_2'>
+                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_2'>
                                             </P></TD>
                                           <TD width=312 align=left> <P class=smalltext>To Mo. 
-                                              <INPUT name='txtEmpHistToMonth_2' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
+                                              <INPUT name='txtEmpHistToMonth_2' class=inputclass tabIndex=144 size=1>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_2'>
+                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_2'>
                                             </P></TD>
                                         </TR>
                                       </TBODY>
@@ -538,15 +538,15 @@ b {
                                         <TR class="smalltext"> 
                                           <TD width=159 align=left> <P class=smalltext>From 
                                               Mo. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=142 size=2 name='txtEmpHistFromMonth_3'>
+                                              <INPUT class=inputclass tabIndex=142 size=1 name='txtEmpHistFromMonth_3'>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=143 size=4 name='txtEmpHistFromYear_3'>
+                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_3'>
                                             </P></TD>
                                           <TD width=312 align=left> <P class=smalltext>To 
                                               Mo. 
-                                              <INPUT name='txtEmpHistToMonth_3' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
+                                              <INPUT name='txtEmpHistToMonth_3' class=inputclass tabIndex=144 size=1>
                                               Yr. 
-                                              <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_3'>
+                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_3'>
                                             </P></TD>
                                         </TR>
                                       </TBODY>
@@ -623,14 +623,14 @@ b {
                                               10 
                                               <INPUT tabIndex=57 type=radio value=10 name=radLast_Year_High_School>
                                               11 
-                                              <INPUT tabIndex=58 type=radio value=11 name=radLast_Year_High_School CHECKED>
+                                              <INPUT tabIndex=58 type=radio value=11 name=radLast_Year_High_School>
                                               12 
                                               <INPUT tabIndex=59 type=radio value=12 name=radLast_Year_High_School>
                                             </P>
                                             <P class=smalltext>Graduated/GED?<BR>
                                               <INPUT tabIndex=60 type=radio value=Yes name=radGraduated_High_School>
                                               Yes 
-                                              <INPUT tabIndex=61 type=radio value=No  Name=radGraduated_High_School CHECKED>
+                                              <INPUT tabIndex=61 type=radio value=No  Name=radGraduated_High_School>
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
                                               <INPUT type='textbox' class=inputclass tabIndex=62 size=35 name=txtHigh_School_Degree_or_Certificate>
@@ -655,14 +655,14 @@ b {
                                               2 
                                               <INPUT tabIndex=66 type=radio value=2 name=radLast_Year_College_1>
                                               3 
-                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_1 CHECKED>
+                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_1 >
                                               4
                                               <INPUT tabIndex=68 type=radio value=4 name=radLast_Year_College_1>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
                                               <INPUT tabIndex=69 type=radio value=Yes name=radGraduated_College_1>
                                               Yes 
-                                              <INPUT tabIndex=70 type=radio value=No name=radGraduated_College_1 CHECKED>
+                                              <INPUT tabIndex=70 type=radio value=No name=radGraduated_College_1 >
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
                                               <INPUT type=text class=inputclass tabIndex=71 size=35 name=txtCollege_1_Degree_or_Certificate>
@@ -687,14 +687,14 @@ b {
                                               2 
                                               <INPUT tabIndex=66 type=radio value=2 name=radLast_Year_College_2>
                                               3 
-                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_2 CHECKED>
+                                              <INPUT tabIndex=67 type=radio value=3 name=radLast_Year_College_2 >
                                               4 
                                               <INPUT tabIndex=68 type=radio value=4 name=radLast_Year_College_2>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
                                               <INPUT tabIndex=69 type=radio value=Yes name=radGraduated_College_2>
                                               Yes 
-                                              <INPUT tabIndex=70 type=radio value=No  name=radGraduated_College_2 CHECKED>
+                                              <INPUT tabIndex=70 type=radio value=No  name=radGraduated_College_2 >
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
                                               <INPUT type='text' class=inputclass tabIndex=71 size=35 name=txtCollege_2_Degree_or_Certificate>
@@ -720,14 +720,14 @@ b {
                                               2 
                                               <INPUT tabIndex=75 type=radio value=2 name=radLast_Year_College_3>
                                               3 
-                                              <INPUT tabIndex=76 type=radio value=3 name=radLast_Year_College_3 CHECKED>
+                                              <INPUT tabIndex=76 type=radio value=3 name=radLast_Year_College_3 >
                                               4 
                                               <INPUT tabIndex=77 type=radio value=4 name=radLast_Year_College_3>
                                             </P>
                                             <P class=smalltext>Graduated?<BR>
                                               <INPUT tabIndex=78 type=radio value=Yes name=radGraduated_College_3>
                                               Yes 
-                                              <INPUT tabIndex=79 type=radio value=No name=radGraduated_College_3 CHECKED>
+                                              <INPUT tabIndex=79 type=radio value=No name=radGraduated_College_3 >
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
                                               <INPUT type=text class=inputclass tabIndex=80 size=35 name=txtCollege_3_Degree_or_Certificate>
@@ -1089,7 +1089,8 @@ b {
                                         status, or status as a veteran. Conviction 
                                         of a crime will not necessarily preclude 
                                         an applicant from consideration for employment 
-                                        with Baptist Health. 
+                                        with Baptist Health.
+   <!--
                                       <p class="smalltextb"><br>
                                         The following information is required 
                                         to perform the background investigation: 
@@ -1161,45 +1162,6 @@ b {
 																									Response.Write("<option value='" & intYear & "'>" & intYear & "</option>")
 																								Next ' intYear
 																							%>
-																							<!--
-                                              <option value=''>Year</option>
-                                              <option value=''>1950</option>
-                                              <option value=''>1951</option>
-                                              <option value=''>1952</option>
-                                              <option value=''>1953</option>
-                                              <option value=''>1954</option>
-                                              <option value=''>1955</option>
-                                              <option value=''>1956</option>
-                                              <option value=''>1957</option>
-                                              <option value=''>1958</option>
-                                              <option value=''>1959</option>
-                                              <option value=''>1960</option>
-                                              <option value=''>1961</option>
-                                              <option value=''>1962</option>
-                                              <option value=''>1963</option>
-                                              <option value=''>1964</option>
-                                              <option value=''>1965</option>
-                                              <option value=''>1966</option>
-                                              <option value=''>1967</option>
-                                              <option value=''>1968</option>
-                                              <option value=''>1969</option>
-                                              <option value=''>1970</option>
-                                              <option value=''>1971</option>
-                                              <option value=''>1972</option>
-                                              <option value=''>1973</option>
-                                              <option value=''>1974</option>
-                                              <option value=''>1975</option>
-                                              <option value=''>1976</option>
-                                              <option value=''>1977</option>
-                                              <option value=''>1978</option>
-                                              <option value=''>1979</option>
-                                              <option value=''>1980</option>
-                                              <option value=''>1981</option>
-                                              <option value=''>1982</option>
-                                              <option value=''>1983</option>
-                                              <option>1984</option>
-                                              <option>1985</option>
-                                              -->
                                             </select></td>
                                         </tr>
                                         <tr> 
@@ -1219,6 +1181,7 @@ b {
                                           <td>&nbsp;</td>
                                         </tr>
                                       </table>
+-->
                                       <p class="smalltextb"> 
                                         <input type="checkbox" name="chkFinalAgree" value="I agree">
                                         &quot;I certify that I have read, understand 
@@ -1231,7 +1194,11 @@ b {
                                         to the same extent as your handwritten 
                                         signature) 
                                       <p class="smalltext"> 
-                                        <input type="text" name="txtSignature">
+                                        <input type="text" name="txtSignature"></p>
+                                        <p class="smalltext"> Date of birth:<br>
+                                        Month<input type='text' name='selBDateMonth' size='1'>&nbsp;&nbsp;
+                                        Day<input type='text' name='selBDateDay' size='1'>
+                                        <!--
                                           <p class="smalltextb"> 
                                               Last Six (6) Digits of Your Driver's 
                                               License Number or State I.D. Number
@@ -1244,6 +1211,7 @@ b {
                                             <select name="selDriverLicenseState" size="1">
 																							<%=GetStateList("", False)%>
                                             </select>
+                                            -->
                                       <p class="smalltext"> 
                                       <input type="submit" name="subSubmit" value="Submit">
                                     <p></td>

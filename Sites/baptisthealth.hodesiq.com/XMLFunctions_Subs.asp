@@ -82,7 +82,7 @@ Sub WriteXMLFile(strXmlText)
 	If Err.number <> 0 Then
 		Response.Redirect("error.asp")
 	Else
-		Response.Redirect("confirmation.asp?message=Thank you for expressing interest and applying with Baptist Health System.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you.")
+		Response.Redirect("confirmation.asp?message=Thank you for expressing interest and applying with Baptist Health System. Your application and/or resume will be reviewed. If your application is selected for further review during the process, you will be contacted by a Baptist Health representative. Again, thank you.")
 	End If
 End Sub
 '===================================================================================================
