@@ -1600,7 +1600,7 @@
 										//Performed just for a few fields.
 										if((strFieldID=='Social Security') || (strFieldID=='State') || (strFieldID=='County'))
 											{
-												if(document.frmLongApp.Country.value==1)
+												if(document.frmLongApp.txtCountry.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
