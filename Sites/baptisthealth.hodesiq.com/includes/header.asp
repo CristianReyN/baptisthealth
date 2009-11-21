@@ -157,7 +157,6 @@
 		
 	<!--***-->
 <!-- cdm: colspan/use spacer inside -->
-<%=Request.ServerVariables("URL")%>
 <%If (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
 		<tr>
 			<td valign="top" align="left" class="navBarHdrCell" colspan="2"><a class="navBarHdr" onmouseOver="this.className='navBarHdrOver'" onmouseOut="this.className='navBarHdr'" href="http://community.e-baptisthealth.com/services/more.html" target><img src="/images/spacer.gif" width="3" border="0">Patient Services</a></td>
