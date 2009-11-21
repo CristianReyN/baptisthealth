@@ -979,7 +979,7 @@ b {
             result in my dismissal. 
           <p class="smalltext">
                                         <input type="checkbox" name="chkCertify_2" value="Agree_2">
-                                        I hereby authorize the Health System to 
+                                        I hereby authorize Baptist Health to 
                                         investigate all statements contained in 
                                         this application, to interview the references 
                                         and previous employers listed in this 
@@ -988,7 +988,7 @@ b {
                                         for employment purposes in accordance 
                                         with the Fair Credit Reporting Act. I 
                                         authorize the references and previous 
-                                        employers listed to give the Health System 
+                                        employers listed to give Baptist Health 
                                         all facts, opinions and evaluations concerning 
                                         my previous employment and any other information 
                                         they may have, personal, or otherwise, 
@@ -1003,7 +1003,7 @@ b {
                                         If I am offered employment, I understand 
                                         that such an offer will be conditioned 
                                         upon satisfactory results of a background 
-                                        investigation and/or Health System medical 
+                                        investigation and/or Baptist Health medical 
                                         examination or inquiry, including a drug 
                                         screen test. If then employed, I understand 
                                         I will be required to serve a ninety (90) 
@@ -1018,11 +1018,11 @@ b {
                                         with or without cause or notice, at any 
                                         time, regardless of the successful completion 
                                         of my probationary period, at the option 
-                                        of either the Health System or myself. 
+                                        of either Baptist Health or myself. 
                                         I understand that no supervisor or other 
-                                        representative of the Health System other 
+                                        representative of Baptist Health other 
                                         than a specifically authorized representative 
-                                        of the Health System has any authority 
+                                        of Baptist Health has any authority 
                                         to enter into any agreement for employment 
                                         for any specified period of time, or to 
                                         make any agreement contrary to the foregoing. 
@@ -1031,7 +1031,7 @@ b {
                                         I further understand and voluntarily agree 
                                         as a condition of employment or my continued 
                                         employment, that I may be requested by 
-                                        the Health System to submit to a urinalysis 
+                                        Baptist Health to submit to a urinalysis 
                                         or other drug screen test. Any positive 
                                         results of such test will be reported 
                                         to the appropriate licensing board and 
