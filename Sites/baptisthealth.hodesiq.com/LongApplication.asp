@@ -1307,7 +1307,7 @@ b {
 				
 				//********************************************************************
 				//Conditional validation
-				if(document.frmLongApp.radNameChange[0].checked=true)
+				if(document.frmLongApp.radNameChange[0].checked==true)
 					{
 						if(CheckForSpaces(document.frmLongApp.txtFormerName.value)=='')
 							{
