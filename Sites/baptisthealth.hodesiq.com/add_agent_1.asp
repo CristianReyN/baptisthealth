@@ -148,7 +148,7 @@ function selectall()
 	
 			<form name="criteria" id="criteria" onsubmit="return Validate()" action="add_agent_2.asp" method="post"> 
             <input type="hidden" name="user_id" value="<%=Request("user_id")%>">
-				<table width="100%">
+				<table width="">
 					<tr>
                 <td vAlign="top" colSpan="3">
                 <div class="body">
@@ -245,7 +245,7 @@ function selectall()
 	<td vAlign="top">
 		<div class="subheader">Compensation</div>
 		<center>	
-		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+		<table border="0" width="" cellpadding="0" cellspacing="0">
 		<!--<tr>
 			<td width="50%" align="center">
 				<div class="subheader">FROM</div>

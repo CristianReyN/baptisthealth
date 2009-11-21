@@ -32,7 +32,7 @@ strTo = TRIM(Request("to_email"))
 
 strPersonal = request("personal")
 
-SendReferralMessages arrJobIDs, "Baptist Health Careers Web site", BaseURL, strFrom, strFromEmail, strTo, strPersonal, strMessage, true
+SendReferralMessages arrJobIDs, "Baptist Health Careers Web site", sDomain, strFrom, strFromEmail, strTo, strPersonal, strMessage, true
 
 if err.number = 0 then
 	strConfirm = "Thank you for your referral.  Please feel free to browse our other open positions."

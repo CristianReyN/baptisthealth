@@ -80,7 +80,7 @@ end if
 								</tr>
 								<tr><td colspan=3>&nbsp;</td></tr>
 								<tr>
-									<td colspan=3 bgcolor="#FF9900">
+									<td colspan=3 bgcolor="#ffffff">
 										<div class="headerwithbackground">
 												Job Questionnaire
 										</div>
