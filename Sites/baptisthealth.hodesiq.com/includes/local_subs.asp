@@ -752,7 +752,7 @@ end function
 		If Not IsEmpty(RsGetJobs) Then
 			If Not (RsGetJobs Is Nothing) Then
 				Do While Not RsGetJobs.EOF
-					strJobsHTML = strJobsHTML & "<tr><td><li><p class='smalltextb'>" & RsGetJobs.Fields("title").value & "</p></li></td></tr>"
+					strJobsHTML = strJobsHTML & "<tr><td colspan='3'><li><p class='smalltextb'>" & RsGetJobs.Fields("title").value & "</p></li></td></tr>"
 					
 					RsGetJobs.MoveNext
 				Loop
