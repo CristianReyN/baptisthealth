@@ -2,7 +2,6 @@
 <!--#include file="includes/local_subs.asp"-->
 <!--#include virtual="../cc/jobseeker.asp"-->
 
-
 <%
 on error resume next
 
@@ -59,27 +58,29 @@ else
 	arrJobIDs = split(strJobCartJobs, ", ")
 end if
 
-strFirstName = trim(Request("First_Name"))
-strMiddleInitial = trim(Request("Middle_Initial"))
-strLastName = trim(Request("Last_Name"))
+strFirstName = trim(Request("txtFirstName"))
+strMiddleInitial = Left(trim(Request("txtMidName")), 1)
+strLastName = trim(Request("txtLastName"))
 
-strHomePhone = trim(Request("Home_Phone"))
-strWorkPhone = trim(Request("Work_Phone"))
+strHomePhone = trim(Request("txtHomePhone"))
+strWorkPhone = trim(Request("txtOtherPhone"))
 
-strEmail = trim(Request("Email"))
+strEmail = trim(Request("txtEmailAddress"))
 strPassword = trim(Request("Password"))
 if strPassword = "" then strPassword = strEmail
 
-strAddress = trim(Request("Address"))
-strCity = trim(Request("City"))
+strAddress = trim(Request("txtAddress"))
+strCity = trim(Request("txtCity"))
 
-lngState = clng(trim(Request("State")))
-if lngState <> -1 then strStateName = GetStateName(lngState)
+'lngState = Request("selState").Item
+'if lngState <> -1 then strStateName = GetStateName(lngState)
+
+strStateName = Request("selState").Item
 
 lngCountry = clng(trim(Request("Country")))
 if lngCountry <> -1 then strCountryName = GetCountryName(lngCountry)
 
-strZip = trim(Request("Zip"))
+strZip = trim(Request("txtZip"))
 
 lngReferral = clng(trim(Request("Media_info")))
 strReferralSource = GetEMediaName(lngReferral)
@@ -160,14 +161,16 @@ select case intResult
 		
 		strJobCartJobs = FilterJobsWithoutQuestionnaires(arrJobIDs, strJobSeekerIDs)
 		
+		strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
+		
 		if trim(request("apply_1a")) = "yes" and strJobCartJobs <> "" then
 			strAction = "apply_online_1a.asp"
 		else
-			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
+			'strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			
 			'strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs
-			strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
-			'strAction = "confirmation.asp"
+			'strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
+			strAction = "confirmation.asp"
 		end if
 		
 		strConfirm = "Thank you for expressing interest and applying with Baptist Health.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."
@@ -175,6 +178,17 @@ select case intResult
 end select
 
 
+%>
+
+<!--#includes file="XMLFunctions_Subs.asp"-->
+
+<%
+	'Very simple
+	'This function is defined in XMLFunctions_Subs.asp
+	'WriteXMLFile gets the xml text from CreateXML()
+	If ((Err.number = 0) And (intResult = 1)) Then
+		Call WriteXMLFile(CreateXML(Request.Form))
+	End If
 %>
 
 <html>

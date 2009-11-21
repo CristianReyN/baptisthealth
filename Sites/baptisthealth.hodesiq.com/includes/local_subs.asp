@@ -10,12 +10,14 @@ DIM LOCATION_ID
 dim sBaptistDomain
 dim ERP_ID
 dim strCollectAppIDs
+Dim SECURED_ADDRESS
 
 select case GetAppServer()
 	
 	case "DEV"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		SECURED_ADDRESS = ""
 		
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
@@ -27,6 +29,7 @@ select case GetAppServer()
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		SECURED_ADDRESS = ""
 		
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
@@ -38,6 +41,7 @@ select case GetAppServer()
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		SECURED_ADDRESS = "https://baptisthealth.hodesiq.com/"
 		
 		'sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
@@ -50,6 +54,7 @@ select case GetAppServer()
 	case else
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		SECURED_ADDRESS = ""
 		
 		'sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
@@ -74,6 +79,7 @@ if trim(request("debug")) = "yes" then
 	Response.Write "CAREER_SITE_EMEDIA_ID: " & CAREER_SITE_EMEDIA_ID & "<br>"
 	Response.Write "REPLICATION_SERVER: " & REPLICATION_SERVER & "<br>"
 	Response.Write "DOC_SERVER_PATH: " & DOC_SERVER_PATH
+	Response.Write "SECURED_ADDRESS: " & SECURED_ADDRESS
 end if
 '=============================================================
 
@@ -1020,7 +1026,7 @@ end function
 						
 				
 						
-			elseif err.number = -2147217873 then
+			elseif ((err.number = -2147217873) Or (err.number = 2627)) then
 				intAlreadyAppliedCount = intAlreadyAppliedCount + 1
 				strJobSeekerIDs = strJobSeekerIDs & "0,"
 				err.clear

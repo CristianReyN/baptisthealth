@@ -52,9 +52,11 @@ select case err.number
 	case 0
 	
 		if trim(request("last_flag")) = "yes" then
-			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
+			'strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
 			'strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs '"confirmation.asp"
-			strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
+			'strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
+			
+			strAction = "confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if

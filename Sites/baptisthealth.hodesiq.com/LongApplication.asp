@@ -1,6 +1,101 @@
-<!--#include file="includes/local_subs.asp"-->
-<!--#include file="includes/head.asp"-->
-<!--#include file="includes/header.asp"-->
+<%
+'<!--#include file="includes/local_subs.asp"-->
+'<!--#include file="includes/head.asp"-->
+'<!--#include file="includes/header.asp"-->
+%>
+
+<%
+on error resume next
+
+response.buffer = true
+
+dim blnJobCartWasUsed
+dim intDisplayNumber
+dim arrJobCart
+dim arrJobQuestionnaires
+dim intNumberOfSelectedJobs
+dim intJobQuestionnaireID
+
+intJobQuestionnaireID = 0
+intJobID = trim(Request("JobID"))
+if intJobID <> "" then 
+
+	intJobID = clng(intJobID)
+	
+	if GetJobQuestionnaireID(intJobID) <> 0 then intJobQuestionnaireID = intJobID
+		
+	set objJobInfoRS = GetJobDetailsRS(intJobID)
+	intNumberOfSelectedJobs = 1
+	blnJobCartWasUsed = false
+	
+else
+
+	strJobCart = trim(Request("chkJobCartJobs"))
+	arrJobCart = split(strJobCart, ", ")
+	intNumberOfSelectedJobs = ubound(arrJobCart) + 1
+	
+	if intNumberOfSelectedJobs = 1 then
+		intJobID = clng(trim(arrJobCart(0)))
+		set objJobInfoRS = GetJobDetailsRS(intJobID)
+		blnJobCartWasUsed = false
+		
+		if GetJobQuestionnaireID(intJobID) <> 0 then intJobQuestionnaireID = intJobID
+			
+	end if
+	
+	blnJobCartWasUsed = true
+	
+end if
+
+First_Name = Request("First_Name")
+Middle_Initial = Request("Middle_Initial")
+Last_Name = Request("Last_Name")
+
+Work_Phone = Request("Work_Phone")
+Home_Phone = Request("Home_Phone")
+Email = Request("txtEmailAddress")
+Password = Request("Password")
+
+Address = Request("Address")
+City = Request("City")
+State = Request("selState")
+Country = Request("Country")
+Zip = Request("txtZip")
+
+resume_text = Request("resume_text")
+
+Media_info = Request("media_info")
+Other_Media = Request("Other_Media")
+
+if len(Request("user_id"))>2 then 
+
+	dim RsInfo
+	
+	set RsInfo = GetUserInfo(intJobSeekerID)
+	
+	First_Name = RsInfo.fields.item("first_name").value
+	Middle_Initial = RsInfo.fields.item("middle_initial").value
+	Last_Name = RsInfo.fields.item("last_name").value
+
+	Work_Phone = RsInfo.fields.item("home_phone").value
+	Home_Phone = RsInfo.fields.item("work_phone").value
+	Email = RsInfo.fields.item("email").value
+	Password = RsInfo.fields.item("password").value
+
+	Address = RsInfo.fields.item("address").value
+	City = RsInfo.fields.item("city").value
+	State = RsInfo.fields.item("state").value
+	Country = RsInfo.fields.item("country").value
+	Zip = RsInfo.fields.item("zip").value
+
+	resume_text = GetResume(intJobSeekerID)
+
+end if
+
+intDisplayNumber = 2
+
+if Country = "" or isnull(Country) then Country = "1"
+%>
 
 <%
 	Dim strAppIDs
@@ -75,13 +170,76 @@ b {
 						<%=strErrorFindingUser%>
 					</td>
 				</tr>
-        <tr> 
-           <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
-        </tr>			
-        <tr><td height='5'></td></tr>
-        <tr><td><p class="smalltextb">List of jobs applied for</p></td></tr>
-				<%=strJobsHTML%>
-				<tr><td height='5'></td></tr>
+						<%if trim(request("message")) <> "" then%>
+						<tr><td colspan=3>
+							<font face=Arial size=4><%=trim(request("message"))%></font>
+						</td></tr>
+						<tr><td>&nbsp;</td></tr>
+						<%end if%>
+						
+						<%if trim(request("confirmation")) <> "" then%>
+							<tr>
+								<td colspan=3>
+									<FONT SIZE="2" FACE="HELVETICA,ARIAL,SANS SERIF">
+									<b><%=trim(request("confirmation"))%></b></font>
+								</td>
+							</tr>
+							<tr><td colspan=3>&nbsp;</td></tr>
+						<%end if%>
+						
+						<%if not blnJobCartWasUsed then%>
+							<tr>
+								<td valign=top colspan=3>
+									<FONT SIZE="3" FACE="ARIAL" color="#093980"><b>
+									<%=objJobInfoRS.fields("title").value%>
+									</b></font>
+								</td>
+							</tr>
+
+							<tr>
+								<td valign=top colspan=3>
+									<FONT SIZE="2" FACE="ARIAL"><font color="#093980"><b>Job Code:</b></font>
+									<%=objJobInfoRS.fields("requisition_code").value%>
+									</font>
+								</td>
+							</tr>
+
+							<tr><td colspan=3>&nbsp;</td></tr>
+						<%else
+							
+							dim intCounter
+							dim strJobCart
+							dim objJobCartJobsRS
+							
+							set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
+						%>
+						
+							<tr>
+								<td colspan="2">
+									<FONT SIZE="3" FACE="HELVETICA,ARIAL,SANS SERIF" color="#093980"><b>Jobs you are applying for:</b></font>
+								</td>
+							</tr>
+						
+							<%do while not objJobCartJobsRS.eof%>
+								<tr>
+									<td colspan="2">
+										<FONT SIZE="2" FACE="HELVETICA,ARIAL,SANS SERIF">&#149;<%=objJobCartJobsRS.fields.item("title").value%></font>
+									</td>
+								</tr>
+							<%
+								objJobCartJobsRS.movenext
+							loop
+							
+							set objJobCartJobsRS = nothing
+							%>
+							
+							<tr><td>&nbsp;</td></tr>
+							<input type="hidden" name="txtJobCartJobs" value="<%=strJobCart%>">
+							
+						<%end if%>
+				
+				<tr><td height='5'></td></tr>				
+								
         <tr> 
                                     <td height="5%" colspan="5"> <p class="smalltextb">Fields 
                                         in bold are required</font></p></td>
@@ -149,34 +307,115 @@ b {
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
 																			<select name='selState' size='-2'>
+																			<option value="-1">SELECT ONE</option>
+																			<%'=GetStateDropdown("", Country)%>
 																			<%=GetStateList(strState, True)%>
 																			</select>
                                       </font></td>
                                     <td><font size="-2"> 
                                       <input name="txtZip" id="Zip_Code" type="text" value="<%=strZip%>">
                                       </font></td>
+                                                                        
                                     <td colspan="3"><font size="-2"> 
                                       <input name="txtHomePhone" id="Home_Phone" type="text" value="<%=strHomePhone%>">
-                                      </font></td>
+                                      </font>
+                                    </td>
                                   </tr>
                                   <tr> 
                                     <td height="1%" valign="top"><p class="smalltext">Alternative 
                                         Phone</font></td>
+
                                     <td valign="top"><p class="smalltextb">Email 
                                         Address</font></td>
+
                                     <td colspan="3"><font size="-2">&nbsp;</font></td>
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
                                       <input name="txtOtherPhone" id="Other_Phone" type="text" value="">
                                       </font></td>
+
                                     <td><font size="-2"> 
                                       <input name="txtEmailAddress" id="Email" type="text" value="<%=strEmail%>">
                                       <br>
                                       Click <a href="http://www.hotmail.com" target="other">here</a> to set up a FREE email address.
                                       </font></td>
+
                                     <td colspan="3"><font size="-2">&nbsp;</font></td>
                                   </tr>
+                                  
+																	<tr>
+																		<td colspan="3">
+																			<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">* COUNTRY:</font>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="3">
+																			<select name="Country">
+																				<%=GetCountryDropdown(Country)%>
+																			</select>
+																			<input type="hidden" name="Country_hidden" size="15" MAXLENGTH=30 value="<%=Country%>">
+																		</td>
+																	</tr>
+																	<tr>
+
+																	<tr>
+																		<td colspan=3>
+																			<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">*  WHERE DID YOU SEE THIS ADVERTISEMENT?:</font>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan=3 align=left>
+																			<select name="media_info">
+																				<option value="" selected>SELECT ONE</option>
+																					
+																				<%
+																				dim lngEmediaJobID
+																					
+																				if intJobID <> "" then
+																					lngEmediaJobID = intJobID
+																				else
+																					lngEmediaJobID = arrJobCart(0)
+																				end if
+																						
+																				Response.write GetReferralSources(lngEmediaJobID)
+																				%>
+																					
+																				<option value="6951">Other</option>
+																					
+																			</select>
+																			<input type="hidden" name="media_info_hidden" size="15" MAXLENGTH=25 value="<%=media_info%>">
+																		</td>
+																	</tr>
+                                  
+																	<tr>
+																		<td colspan=3>
+																			<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">IF YOU CHOSE OTHER, WHERE?</font>
+																		</td>
+																	</tr>
+																		<td colspan=3>
+																			<input type="text" name="Other_Media" size="25" MAXLENGTH=40 value="<%=Other_Media%>">
+																		</td>
+																	</tr>
+
+																	<tr>
+																		<td colspan=3 bgcolor="#ffffff">
+																			<div class="headerwithbackground">
+																				<%=intDisplayNumber%>. Resume or Profile
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan=3>
+																			<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">PLEASE PASTE A COPY OF YOUR RESUME OR PROFILE BELOW.</font>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan=3 align=left>
+																			<textarea cols="44" rows="6" name="resume_text"><%=resume_text%></textarea>
+																		</td>
+																	</tr>
+                                  
                                   <tr> 
                                     <td height="18%" colspan="2" valign="top"> 
                                       <p class="smalltextb">Has your name legally 
@@ -915,6 +1154,9 @@ b {
                                 <tr> 
                                   <td width="100%" height="2%"> <hr></td>
                                 </tr>
+                                
+<!--#include file="Questionnaire.asp"-->
+                                
                                 <tr> 
                                   <td height="6%" valign="top"> <p> 
                                     <p class="smalltext">Have you at any time 
@@ -1248,7 +1490,7 @@ b {
 </body>
 </html>
 
-<!--#include file="includes/footer.asp"-->
+<%'<!--#include file="includes/footer.asp"-->%>
 
 <script language='JavaScript'>
 	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtEmpHistLeaveReason_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';

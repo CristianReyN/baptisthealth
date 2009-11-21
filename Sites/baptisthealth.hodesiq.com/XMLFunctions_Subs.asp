@@ -1,4 +1,4 @@
-<!--#includes file="includes/local_subs.asp"-->
+<%'<!--#includes file="includes/local_subs.asp"-->%>
 <%'===================================================================================================
 'function XMLCheck
 'Called from writexml.asp
@@ -38,13 +38,28 @@ Function CreateXML(objForm)
 	Dim strXmlData
 	Dim strFieldVal
 	Dim strFieldKey
+	Dim strFieldComp
+	Dim blnPrintField
+	
+	blnPrintField = False
 
 	'One root tag
 	strXmlData = "<LongApplication>" & VbCrLf
 
 	'Loop through all the fields in the request.form object
 	For Each objFormField In objForm
-		If Left(objFormField, 3) <> "hid" Then
+		strFieldComp = Left(objFormField, 3)
+		
+		'Filter the fields to make sure we only print to the xml file the fields we need.
+		'We don't want to print to the xml file unnecessary data like questionnaires and resume.
+		Select Case strFieldComp
+			Case "txt", "rad", "chk", "sel"
+				blnPrintField = True
+			Case Else
+				blnPrintField = False
+		End Select
+		
+		If (blnPrintField = True) Then
 			strFieldKey = objFormField ' Get the Field name
 			strFieldVal = XMLCheck(Request.Form(objFormField).Item, "ReplaceIllegal") ' Get The Field value
 		
@@ -62,7 +77,7 @@ End Function
 Sub WriteXMLFile(strXmlText)
 	Dim objFSO
 	
-	arrApplicantIDs = Split(Request.Form("hidAppID").Item, ",")
+	arrApplicantIDs = Split(strCollectAppIDs, ",")
 
 	set objFSO = Server.CreateObject("Scripting.FileSystemObject")
 
@@ -79,11 +94,11 @@ Sub WriteXMLFile(strXmlText)
 	set objFile = Nothing
 	set objFSO = Nothing
 	
-	If Err.number <> 0 Then
-		Response.Redirect("error.asp")
-	Else
-		Response.Redirect("confirmation.asp?message=Thank you for expressing interest and applying with Baptist Health System. Your application and/or resume will be reviewed. If your application is selected for further review during the process, you will be contacted by a Baptist Health representative. Again, thank you.")
-	End If
+	'If Err.number <> 0 Then
+	'	Response.Redirect("error.asp")
+	'Else
+	'	Response.Redirect("confirmation.asp?message=Thank you for expressing interest and applying with Baptist Health System. Your application and/or resume will be reviewed. If your application is selected for further review during the process, you will be contacted by a Baptist Health representative. Again, thank you.")
+	'End If
 End Sub
 '===================================================================================================
 %>

@@ -64,7 +64,7 @@ ViewedJobCounter intJobID
 						
 					</td>
 					<td align=right width=142>
-						<a href="apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
+						<a href="<%=SECURED_ADDRESS%>apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
 					</td>
 				</tr>
 			
@@ -137,7 +137,7 @@ ViewedJobCounter intJobID
 						
 					</td>
 					<td align=right width=142>
-						<a href="apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
+						<a href="<%=SECURED_ADDRESS%>apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
 					</td>
 				</tr>
 			
