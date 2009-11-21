@@ -57,7 +57,7 @@ select case err.number
 			'strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
 			
 			'strAction = Replace(SECURED_ADDRESS,"https","http") & "confirmation.asp"
-			strAction = "confirmation.asp"
+			strAction = "http://www.baptisthealthjaxjobs.com/confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if
