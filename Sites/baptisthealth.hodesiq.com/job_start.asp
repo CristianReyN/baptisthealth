@@ -140,7 +140,7 @@
 			</tr>
 			</table>
 			
-			<INPUT TYPE="hidden" NAME="CustomField_<%=ERP_ID%>" VALUE="Yes">
+			<INPUT TYPE="hidden" NAME="CustomField_<%=ERP_ID%>" VALUE="">
 			</form>
 			<!--END FORM SECTION-->
 			
