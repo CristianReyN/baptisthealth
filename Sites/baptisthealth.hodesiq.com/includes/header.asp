@@ -432,7 +432,7 @@
 
 		<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="http://community.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="<%=sDomain%>job_start.asp" target>Job Openings</a></td>
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="<%=sBaptistDomain%>job_start.asp" target>Job Openings</a></td>
 		</tr>
 		<tr>
 			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>

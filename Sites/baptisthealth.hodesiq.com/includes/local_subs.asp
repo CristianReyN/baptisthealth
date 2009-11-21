@@ -7,34 +7,49 @@ dim CAREER_SITE_EMEDIA_ID
 DIM FACILITY_ID
 DIM SHIFT_ID
 DIM LOCATION_ID
+dim sBaptistDomain
 
 select case GetAppServer()
 	
 	case "DEV"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
+		sBaptistDomain = sDomain
+		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
+		sBaptistDomain = sDomain
+		
 		LOCATION_ID = 263
 		SHIFT_ID = 264		
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		
 		sDomain = "http://careers.hodes.com/baptisthealth/"
+		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
+		
+		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
 		
 	case else
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
-		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
+		
+		sDomain = "http://careers.hodes.com/baptisthealth/"
+		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
+		
+		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
 		
