@@ -87,3 +87,10 @@ TD.question
     COLOR: #000066;
     FONT-FAMILY: Arial
 }
+.headerwithbackground
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Verdana
+}

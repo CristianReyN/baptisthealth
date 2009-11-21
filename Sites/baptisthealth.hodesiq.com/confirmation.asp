@@ -36,7 +36,7 @@ next
 		
 				
 					<form name="frm" action="" method="post">
-					<table width="100%">
+					<table width="">
 					<tr><td>
 					
 						<div class="headerwithbackground">
