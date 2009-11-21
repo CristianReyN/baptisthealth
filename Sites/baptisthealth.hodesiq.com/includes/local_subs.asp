@@ -40,10 +40,9 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		
 		'sDomain = "http://careers.hodes.com/baptisthealth/"
-		sDomain = "http://baptisthealthjaxjobs.com/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
-		
-		
+		sDomain = "http://www.baptisthealthjaxjobs.com/"
+				
 		LOCATION_ID = 263
 		SHIFT_ID = 264
 		ERP_ID = 288
@@ -53,9 +52,8 @@ select case GetAppServer()
 		CAREER_SITE_EMEDIA_ID = 6931
 		
 		'sDomain = "http://careers.hodes.com/baptisthealth/"
-		sDomain = "http://baptisthealthjaxjobs.com/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
-		
+		sDomain = "http://www.baptisthealthjaxjobs.com/"
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264

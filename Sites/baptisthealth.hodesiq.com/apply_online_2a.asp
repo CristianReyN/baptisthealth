@@ -53,7 +53,7 @@ select case err.number
 	
 		if trim(request("last_flag")) = "yes" then
 			strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
-			strAction = "LongApplication.asp?AppID=" & strCollectAppIDs '"confirmation.asp"
+			strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs '"confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if
