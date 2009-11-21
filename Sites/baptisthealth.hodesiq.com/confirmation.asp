@@ -18,17 +18,7 @@ if strMessage = "" then strMessage = trim(Request("message"))
 		
 		<!--#include file="includes/header.asp"-->
 		
-				<table width="660">
-				<tr><td width="5%">&nbsp;</td>
-					<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLE-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-				<td valign="top">
+				
 					<form name="frm" action="" method="post">
 					<table width="400">
 					<tr><td>

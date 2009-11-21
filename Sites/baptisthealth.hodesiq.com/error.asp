@@ -9,17 +9,7 @@
 		
 		<br clear='all'>
 		
-				<table width="425" align="center">
-				<tr><td width="5%">&nbsp;</td>
-					<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLE-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-				<td valign="top">
+			
 				<table width="500">
 				<tr><td>
 					

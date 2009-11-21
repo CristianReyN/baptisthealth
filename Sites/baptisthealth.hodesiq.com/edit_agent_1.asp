@@ -156,19 +156,7 @@ function selectall()
 	<!--#include file="includes/header.asp"-->
 	
 	
-            
-            <table cellSpacing="0" cellPadding="5" border="0" width="660">
-            <tr>
-					<td width="5%">&nbsp;</td>
-					<td valign="top" width="160">
-						<!--BEGIN HOT OPENINGS TABLE-->
-						<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-						<!--END HOT OPENINGS TABLE-->
-						<br>
-						<%CreateUL%>
-					</td>
-					<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-					<td>
+         
 				
 						<form name="criteria" id="criteria" onsubmit="return Validate()" action="edit_agent_2.asp" method="post"> 
 		            <input type = hidden name=user_id value=<%=Request("user_id")%>>
@@ -472,11 +460,6 @@ function selectall()
 
 
 
-
-	</td>
-</tr>
-</table>	  
-	  
 
 
 <!--#include file="includes/footer.asp"-->

@@ -39,17 +39,7 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 		
 		<!--#include file="includes/header.asp"-->
 		
-				<table align="center" border="0" cellpadding="0" cellspacing="0" width="660">
-				<tr><td width="5%">&nbsp;</td>
-						<td valign="top" width="160">
-						<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-						<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-						<!--END HOT OPENINGS TABLE-->
-						<br>
-						<%CreateUL%>
-					</td>
-					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-					<td valign="top">
+				
 					<form name="frm" method="post" action="">
 					<table width=500 align="center">
 					<tr>

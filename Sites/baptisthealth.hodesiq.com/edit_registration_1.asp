@@ -22,17 +22,6 @@
 	
 	<!--#include file="includes/header.asp"-->
 	
-		<table width="660">
-				<tr><td width="5%">&nbsp;</td>
-					<td valign="top" width="160">
-					<!--BEGIN HOT OPENINGS TABLE-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
-					<!--END HOT OPENINGS TABLE-->
-					<br>
-					<%CreateUL%>
-				</td>
-				<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-				<td>
 				
 				<FORM action=edit_registration_2.asp name=frmnewuser method=post onsubmit="return Validate()">
 				<input type=hidden name="user_id" value="<%=Request("user_id")%>">
@@ -478,7 +467,6 @@
 
 <!--#include file="includes/footer.asp"-->			
 
-</div>
 
 	<%
 	if err.number <> 0 then
