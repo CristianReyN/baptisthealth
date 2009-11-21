@@ -1,0 +1,400 @@
+#ddMedicalservices
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:41;
+	top:26px;
+	left:181px;
+	width:165px;
+	height:80px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+#ddHealthinformation
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:42;
+	top:26px;
+	left:339px;
+	width:165px;
+	height:80px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+
+
+#ddDowntown
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:41;
+	top:99px;
+	left:323px;
+	width:200px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+#ddBeaches
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:42;
+	top:99px;
+	left:406px;
+	width:200px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+#ddNassau
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:43;
+	top:99px;
+	left:488px;
+	width:200px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+#ddSouth
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:44;
+	top:99px;
+	left:564px;
+	width:200px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+#ddWolfson
+	{
+	position:absolute;
+	visibility:hidden;
+	z-index:45;
+	top:99px;
+	left:566px;
+	width:200px;
+	background-color:#ffffff;
+	layer-background-color:#ffffff;
+	}
+
+
+
+
+
+
+/* */
+
+.brPx1
+{font-size: 1px; color: #000000; font-weight: normal; font-family: arial; text-decoration: none;}
+
+.brPx2
+{font-size: 2px; color: #000000; font-weight: normal; font-family: arial; text-decoration: none;}
+
+.brPx3
+{font-size: 3px; color: #000000; font-weight: normal; font-family: arial; text-decoration: none;}
+
+
+/* */
+
+.homePrimeHdr
+{font-size: 20px; color: #09357a; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homePrimeHdrOver
+{font-size: 20px; color: #09357a; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homePrimeCopy
+{font-size: 14px; color: #000000; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homePrimeCopyOver
+{font-size: 14px; color: #000000; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homeSecondaryHdr
+{font-size: 14px; color: #09357a; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homeSecondaryHdrOver
+{font-size: 14px; color: #09357a; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homeSecondaryCopy
+{font-size: 12px; color: #000000; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+.homeSecondaryCopyOver
+{font-size: 12px; color: #000000; font-weight: normal; font-family: "times new roman", verdana, arial; text-decoration: none;}
+
+/* */
+
+.hospitalStrip
+{font-size: 12px; color: #ffffff; font-weight: normal; font-family: arial; text-decoration: none;}
+
+/* */
+
+
+.search
+{font-size: 12px; color: #ffffff; font-weight: bold; font-family: arial; text-decoration: none;}
+
+.navHdrCell
+{background-color:#f5f5f5; text-align:center;}
+
+/* */
+
+
+.copy
+{font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyB
+{font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyI
+{font-size: 12px; color: #000000; font-weight: normal; font-style: italic; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyU
+{font-size: 12px; color: #000000; font-weight: normal; text-decoration: underline; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyBI
+{font-size: 12px; color: #000000; font-weight: bold; font-style: italic; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyBU
+{font-size: 12px; color: #000000; font-weight: bold; text-decoration: underline; font-family: arial, helvetica, verdana, sans-serif;}
+
+/* */
+
+.copyExt
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyExtOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyEmail
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyEmailOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyDoc
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyDocOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyJump
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyJumpOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+
+.copyWarm
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyWarmOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+
+/* */
+
+.copyListHdr
+{font-size: 12px; color: #958c7b; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+/* */
+
+.copyJump
+{font-size: 12px; color: #003399; font-weight: normal; font-family: arial; text-decoration: none;}
+
+.copyJumpOver
+{font-size: 12px; color: #003399; font-weight: bold; font-family: arial; text-decoration: none;}
+
+/* */
+
+.copyHdr
+{font-size: 20px; color: #660000; font-weight: bold; font-family: georgia; text-decoration: none;}
+
+.copySubHdr
+{font-size: 18px; color: #003399; font-weight: normal; text-decoration: none; font-family: georgia, times, serif;}
+
+.copySubTitle
+{font-size: 16px; color: #336699; font-weight: normal; font-family: "trebuchet ms"; text-decoration: none;}
+
+.copyTitleSoft
+{font-size: 18px; color: #958c7b; font-weight: normal; text-decoration: none; font-family: georgia, times, serif;}
+
+/* */
+
+.copySoft
+{font-size: 12px; color: #958c7b; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copySoftB
+{font-size: 12px; color: #958c7b; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyAlert
+{font-size: 12px; color: #cc3333; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyAlertB
+{font-size: 12px; color: #cc3333; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.copyInverse
+{font-size: 12px; color: #ffffff; font-weight: normal; font-family: arial; text-decoration: none;}
+
+/* */
+
+
+
+.navBarHdrCell
+{font-size: 12px; color: #003366; font-weight: bold; font-family: verdana, arial; text-decoration: none; background-color:#09357a;}
+
+
+
+
+.navBarHdr
+{font-size: 12px; color: #ffffff; font-weight: bold; font-family: arial; text-decoration: none;}
+
+.navBarHdrOver
+{font-size: 12px; color: #ffffff; font-weight: bold; font-family: arial; text-decoration: none;}
+
+.navBar
+{font-size: 12px; color: #000000; font-weight: normal; font-family: arial; text-decoration: none;}
+
+.navBarOver
+{font-size: 12px; color: #000000; font-weight: bold; font-family: arial; text-decoration: none;}
+
+.navBarSub
+{font-size: 12px; color: #000000; font-weight: normal; font-family: arial; text-decoration: none;}
+
+.navBarSubOver
+{font-size: 12px; color: #000000; font-weight: bold; font-family: arial; text-decoration: none;}
+
+.navBarBgColor
+{background: fdebbc}
+
+/* */
+
+.areaHdr
+{font-size: 16px; color: #003399; font-weight: normal; font-family: verdana; text-decoration: none;}
+
+/* */
+
+form
+{margin-top: 2; margin-bottom: 0; font-size: 12px}
+
+.vimg
+{vertical-align:middle}
+
+
+/* */
+
+
+.navBcrumb
+{font-size: 10px; color: #660000; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.navBcrumbOver
+{font-size: 10px; color: #660000; font-weight: bold; text-decoration: underline; font-family: arial, helvetica, verdana, sans-serif;}
+
+
+/* */
+
+
+.searchResult
+{font-size: 12px; color: #003399; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.searchResultOver
+{font-size: 12px; color: #003399; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+
+/* */
+
+.infobarCopyHdr
+{font-size: 11px; color: #6699cc; font-weight: bold; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+.infobarCopy
+{font-size: 10px; color: #000000; font-weight: normal; text-decoration: none; font-family: arial, helvetica, verdana, sans-serif;}
+
+/* */
+
+
+
+/*
+			_______________
+			Original Styles
+
+*/
+
+
+
+
+.boldText
+{color: #000000; font-weight: bold; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif; text-decoration: none;}
+
+.plainText
+{color: #000000; font-weight: normal; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif; text-decoration: none;}
+
+.brownText
+{color: #958c7b; font-weight: normal; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif; text-decoration: none;}
+
+.arialBlue12px
+{color: #003399; font-weight: normal; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif; text-decoration: none;}
+
+.arialBlueLink12px
+{color: #003399; font-weight: normal; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif;}
+
+.arialBoldBlue12px
+{color: #003399; font-weight: bold; font-size: 12px; font-family: arial, helvetica, verdana, sans-serif; text-decoration: none;}
+
+
+
+
+
+/* */
+/* */
+/*
+
+			georgia-serif
+
+*/
+/* */
+/* */
+
+
+
+.GaBlue18px
+{color: #6699cc; font-weight: normal; font-size: 18px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBlue18px2
+{color: #003399; font-weight: normal; font-size: 18px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBlue22px
+{color: #6699cc; font-weight: normal; font-size: 22px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBrn18px
+{color: #958c7b; font-weight: normal; font-size: 18px; font-family: georgia, times, serif; text-decoration: none; line-height:30px;}
+
+.GaBrn18px2
+{color: #958c7b; font-weight: normal; font-size: 18px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBrn24px
+{color: #958c7b; font-weight: normal; font-size: 24px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBlk18px
+{color: #000000; font-weight: normal; font-size: 18px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBlk22px
+{color: #000000; font-weight: normal; font-size: 22px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaGrey14px
+{color: #666666; font-weight: normal; font-size: 14px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBoldGrey12px
+{color: #666666; font-weight: bold; font-size: 12px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaBoldBlue16px
+{color: #003399; font-weight: bold; font-size: 16px; font-family: georgia, times, serif; text-decoration: none;}
+
+.GaItalBlue12px
+{color: #003399; font-style: italic; font-weight: normal; font-size: 12px; font-family: georgia, times, serif; text-decoration: none;}
+
