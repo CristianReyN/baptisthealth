@@ -2,7 +2,24 @@
 
 <!--#include file="includes/local_subs.asp"-->
 
-<%on error resume next%>
+<%on error resume next
+
+	dim strCFL_Javascript
+	dim arrCFL_Search
+	dim intFieldCount
+
+	strCFL_Javascript = ""
+	arrCFL_Search = split(sCFL_Search, ",")
+
+	for intFieldCount = 0 to ubound(arrCFL_Search)
+
+		strCFL_Javascript = strCFL_Javascript & "CustomField_"
+		strCFL_Javascript = strCFL_Javascript & arrCFL_Search(intFieldCount)
+		strCFL_Javascript = strCFL_Javascript & ".selectedIndex = 0;" & vbcrlf
+
+	next
+
+%>
 
 <html>
 
@@ -13,18 +30,18 @@
 		
 	function SetFieldValues()
 	{
-		//document.frm.title.value=document.frm.titleSelect[document.frm.titleSelect.selectedIndex].value
-		//document.frm.location.value=document.frm.locationSelect[document.frm.locationSelect.selectedIndex].value
 		document.frm.category.value=document.frm.categorySelect[document.frm.categorySelect.selectedIndex].value
 	}
 		
 	function ViewAll()
 	{
-		//document.frm.title.value = "";
-		//document.frm.location.value = "-1";
-		document.frm.category.value = "";
-		document.frm.keywords.value = "";
-		document.frm.submit();
+		with(document.frm)
+		{
+			category.value = "";
+			keywords.value = "";
+			submit();
+			<%=strCFL_Javascript%>
+		}
 	}
 	
 	function ViewJobCart(strJobCookieName)
@@ -82,6 +99,19 @@
 						<%=GetJobCategories("Dropdown")%>
 					</select><br clear="all">
 					<input type="hidden" name="category" value>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%
+						strHTML=""
+						GetCustomFieldsDataArray ""
+						strHTML =  replace(GetCustomFieldsSearchHTML_style("","categorySelect"), "LOCATION","Location")
+						strHTML =  replace(strHTML, "SHIFT","Shift")
+						strHTML =  replace(strHTML, "<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">All Shifts")
+						strHTML =  replace(strHTML, "<select name='CustomField_" & Locations_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & Locations_ID & "' class='categorySelect' ><option value="""">All Locations")
+						Response.Write strHTML
+					%>
 				</td>
 			</tr>
 			<tr>

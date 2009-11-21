@@ -6,6 +6,7 @@ dim HIRING_ORG_ID
 dim CAREER_SITE_EMEDIA_ID
 DIM FACILITY_ID
 DIM SHIFT_ID
+DIM LOCATION_ID
 
 select case GetAppServer()
 	
@@ -13,26 +14,29 @@ select case GetAppServer()
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
-		FACILITY_ID = 0
-		SHIFT_ID = 0
+		LOCATION_ID = 263
+		SHIFT_ID = 264
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
-		
-		FACILITY_ID = 0
-		SHIFT_ID = 264
+		LOCATION_ID = 263
+		SHIFT_ID = 264		
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
 		sDomain = "http://careers.hodes.com/baptisthealth/"
+		LOCATION_ID = 263
+		SHIFT_ID = 264
 		
 	case else
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
+		LOCATION_ID = 263
+		SHIFT_ID = 264
 		
 end select
 
@@ -45,7 +49,14 @@ end select
 'DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
 'docFileLink         = "https://payflow.hodes.com/iq-doc/"
 'sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
-		
+'LOCATION_ID = 263
+'SHIFT_ID = 264
+
+sCFL_Search = LOCATION_ID & "," & SHIFT_ID
+sCFL_Results = LOCATION_ID & "," & SHIFT_ID
+
+
+
 if trim(request("debug")) = "yes" then
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"
 	Response.Write "HIRING_ORG_ID: " & HIRING_ORG_ID & "<br>"
@@ -68,7 +79,7 @@ strCurrentPage = Request.ServerVariables("URL")
 <!--#include virtual="../cc/questionnaire_subs.asp"-->
 <!--#include virtual="../cc/agent_subs.asp"-->
 <!--#include virtual="../cc/IQ_2_0_subs.asp"-->
-
+<!--#include virtual="../cc/custom_data_subs.asp"-->
 <script language="vbscript" runat="server">
 
 	'------------------------------------------------------------------------------
