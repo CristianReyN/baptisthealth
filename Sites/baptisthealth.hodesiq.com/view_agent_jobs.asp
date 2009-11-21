@@ -40,7 +40,7 @@ End If
 
 			
 				<FORM name="frm" action="" METHOD="POST">
-				<table><tr>
+				<table "100%"><tr>
 				<td align="center" valign="top" colspan=3> 
 					<%=GetMessage(request("message"))%>
 					

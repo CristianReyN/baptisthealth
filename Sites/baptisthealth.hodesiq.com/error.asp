@@ -10,7 +10,7 @@
 		<br clear='all'>
 		
 			
-				<table width="500">
+				<table width="100%">
 				<tr><td>
 					
 						<div class="headerwithbackground">

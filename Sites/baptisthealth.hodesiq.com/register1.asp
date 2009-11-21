@@ -14,7 +14,7 @@
 		
 				<form action="register2.asp" name="frm" method="post" onsubmit="return Validate3()">
 				
-				<table width="400">
+				<table width="100%">
 				<tr>
 				<td width="400">
 				<%=Request("message")%>  

@@ -41,7 +41,7 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 		
 				
 					<form name="frm" method="post" action="">
-					<table width=500 align="center">
+					<table width="100%" align="center">
 					<tr>
 					<td>
 						<FONT SIZE="3" FACE="HELVETICA,ARIAL,SANS SERIF" color="#093980"><b>

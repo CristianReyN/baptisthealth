@@ -161,7 +161,7 @@ function selectall()
 						<form name="criteria" id="criteria" onsubmit="return Validate()" action="edit_agent_2.asp" method="post"> 
 		            <input type = hidden name=user_id value=<%=Request("user_id")%>>
 		            <input type = hidden name=agent_id value=<%=RsAgent("iq_Agent_ID")%>>
-						<table width="400"><tr>
+						<table width="100%"><tr>
 		                <td vAlign="top" colSpan="3">
 		                <div class="body">
 		                  <p align="center" class="criteria">Please make any changes to this agent and press submit to update.<br>

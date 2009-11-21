@@ -49,7 +49,7 @@ end if
 				<input type=HIDDEN name="JobID" value="<%=intJobID%>">
 				<input type="HIDDEN" name="user_id" value="<%=request("user_id")%>">
 	
-			<table cellspacing="0" cellpadding="0" width="400">
+			<table cellspacing="0" cellpadding="0" width="100%">
 			
 			<%if trim(request("message")) <> "" then%>
 						<tr><td colspan=3>

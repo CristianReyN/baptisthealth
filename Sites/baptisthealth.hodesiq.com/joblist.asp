@@ -80,7 +80,7 @@ end if
 							</P>
 						<%end if%>
 						
-						<table cellpadding="0" cellspacing="0" width="400">
+						<table cellpadding="0" cellspacing="0" width="100%">
 						
 							<%=strResults%>
 							

@@ -4,36 +4,47 @@
 '=============================================================
 dim HIRING_ORG_ID
 dim CAREER_SITE_EMEDIA_ID
+DIM FACILITY_ID
+DIM SHIFT_ID
 
 select case GetAppServer()
 	
 	case "DEV"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
-
+		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
+		FACILITY_ID = 0
+		SHIFT_ID = 0
+		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
+		
+		FACILITY_ID = 0
+		SHIFT_ID = 264
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
-	
+		sDomain = "http://careers.hodes.com/baptisthealth/"
+		
 	case else
 		HIRING_ORG_ID = 632
 		CAREER_SITE_EMEDIA_ID = 6931
+		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		
 end select
 
-HIRING_ORG_ID = 632
-CAREER_SITE_EMEDIA_ID = 6931
-APP_SERVER          = "IQ-SQL-IQ2"
-REPLICATION_SERVER  = APP_SERVER
-arrIQConnection     = Array("10.100.50.133", "iq2", "sa", "1q51r00t", 3)
-arrSearchConnection = Array("10.100.50.133", "candidate_search", "sa", "1q51r00t", 3)
-DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
-docFileLink         = "https://payflow.hodes.com/iq-doc/"
-
+'HIRING_ORG_ID = 632
+'CAREER_SITE_EMEDIA_ID = 6931
+'APP_SERVER          = "IQ-SQL-IQ2"
+'REPLICATION_SERVER  = APP_SERVER
+'arrIQConnection     = Array("10.100.50.133", "iq2", "sa", "1q51r00t", 3)
+'arrSearchConnection = Array("10.100.50.133", "candidate_search", "sa", "1q51r00t", 3)
+'DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
+'docFileLink         = "https://payflow.hodes.com/iq-doc/"
+'sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		
 if trim(request("debug")) = "yes" then
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"

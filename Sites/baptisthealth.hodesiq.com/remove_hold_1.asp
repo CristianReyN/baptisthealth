@@ -41,7 +41,7 @@ Else
 			<!--#include file="includes/header.asp"-->
 			
 			
-					<table width="500">
+					<table width="100%">
 					<tr>
 						<td> 
 							<br clear="all">

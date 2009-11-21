@@ -60,7 +60,7 @@
 			<!--BEGIN FORM SECTION-->
 			<form name="frm" action="joblist.asp?User_ID=<%=Request("User_ID")%>" method="post" onsubmit="SetFieldValues()">
 			
-			<table cellpadding="0" cellspacing="0" width="375">
+			<table cellpadding="0" cellspacing="0" width="100%">
 			<%if trim(request("message")) <> "" then%>
 				<tr>
 					<td>

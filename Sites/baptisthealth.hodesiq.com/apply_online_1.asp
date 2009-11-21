@@ -109,7 +109,7 @@ if Country = "" or isnull(Country) then Country = "1"
 					<input TYPE="hidden" NAME="user_id" VALUE="<%=Request("user_id")%>">
 					<input type="hidden" name="JobID" value="<%=intJobID%>">
 					
-					<table width="420">
+					<table width="100%">
 						
 						<%if trim(request("message")) <> "" then%>
 						<tr><td colspan=3>

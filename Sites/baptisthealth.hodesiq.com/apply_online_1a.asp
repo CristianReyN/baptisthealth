@@ -54,7 +54,7 @@ end if
 				<input TYPE="hidden" NAME="Email" VALUE="<%=Request("Email").item%>">
 				<input TYPE="hidden" NAME="resume_text" VALUE="<%=Request("resume_text").item%>">
 		
-					<table width="400" align="center">
+					<table width="100%" align="center">
 							<%
 							intJobID = clng(trim(arrJobCart(intQACounter)))
 							

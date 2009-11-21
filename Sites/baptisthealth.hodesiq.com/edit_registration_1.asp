@@ -27,7 +27,7 @@
 				<input type=hidden name="user_id" value="<%=Request("user_id")%>">
 				<input type=hidden name="SSN" value="<%=HTMLEncode(Trim(rsUserInfo.Fields("social_security").Value))%>">
 				
-				<table width="400"><tr>
+				<table width="100%"><tr>
 					<td valign="top">   
 									<div class="headerwithbackground">
 										Personal Preferences

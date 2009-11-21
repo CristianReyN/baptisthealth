@@ -31,7 +31,7 @@
 	<!--#include file="includes/header.asp"-->
 
 
-				<table width="400">
+				<table width="100%">
 					<tr>
                 <td vAlign="top">
 			

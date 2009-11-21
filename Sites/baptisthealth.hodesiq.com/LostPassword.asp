@@ -52,7 +52,7 @@
 		
 		
 		
-				<table width="400"><tr>
+				<table width="100%"><tr>
 				<td align="left" colspan=2>
 							<p>        
 							<div class=headerwithbackground>

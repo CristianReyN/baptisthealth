@@ -20,7 +20,7 @@ if strMessage = "" then strMessage = trim(Request("message"))
 		
 				
 					<form name="frm" action="" method="post">
-					<table width="400">
+					<table width="100%">
 					<tr><td>
 					
 						<div class="headerwithbackground">

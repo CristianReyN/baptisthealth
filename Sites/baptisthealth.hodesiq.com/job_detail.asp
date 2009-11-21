@@ -49,7 +49,7 @@ ViewedJobCounter intJobID
 			
 		<!--#include file="includes/header.asp"-->
 	
-				<table width=425 align="center">
+				<table width="100%" align="center">
 				<tr>
 					<td align=left width=142>
 						<a href="tell_a_friend_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Tell A Friend</span></a>
