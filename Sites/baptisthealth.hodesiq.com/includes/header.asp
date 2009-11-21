@@ -114,12 +114,8 @@
 <!-- /include header -->
 
 
-
-
-
-
-
 <!-- navigation and content -->
+
 <table border="0" cellpadding="0" cellspacing="0" width="764" bordercolor="#f5f5f5">
 	<tr>
 		<td bgcolor="#003366" valign="top" align="left">
@@ -159,15 +155,12 @@
 <!-- header -->
 	
 		
-	
+	<!--***-->
 <!-- cdm: colspan/use spacer inside -->
+<%If Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0 Then%>
 		<tr>
 			<td valign="top" align="left" class="navBarHdrCell" colspan="2"><a class="navBarHdr" onmouseOver="this.className='navBarHdrOver'" onmouseOut="this.className='navBarHdr'" href="http://community.e-baptisthealth.com/services/more.html" target><img src="/images/spacer.gif" width="3" border="0">Patient Services</a></td>
 		</tr>
-
-	
-		
-	
 
 	<tr>
 		<td colspan="2"><img src="/images/spacer.gif" width="1" height="10" border="0"></td>
@@ -300,15 +293,6 @@
 			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
-		
-			
-		
-
-
-	
-		
-	
-
 		<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="http://community.e-baptisthealth.com/images/nav/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
 			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://community.e-baptisthealth.com/careers/index.html" target>Careers</a></td>
@@ -317,42 +301,11 @@
 			<td colspan="2"><img src="/images/spacer.gif" width="1" height="2" border="0"></td>
 		</tr>
 
-		
-			
-		
-
-
-	
-		
-	
-
 </table>
 
 <!-- end: navBar -->
 
-
-
-
-
-												
-
-												
-												
-												
-
-													
-
-													
-														
-
-
   	<!-- begin: navBar -->	
-
-
-
-
-
-
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
 
 <!-- header -->
@@ -606,3 +559,4 @@
 				</td>
 				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td valign="top">
+<%End If%>

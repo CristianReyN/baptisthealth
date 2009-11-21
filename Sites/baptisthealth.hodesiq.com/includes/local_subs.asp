@@ -62,12 +62,11 @@ select case GetAppServer()
 		
 end select
 
+DOC_SERVER_PATH = "\\10.1.20.16\iq-doc\"
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
 DAYS_TO_DELAY = 5
-
-
 
 if trim(request("debug")) = "yes" then
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"
