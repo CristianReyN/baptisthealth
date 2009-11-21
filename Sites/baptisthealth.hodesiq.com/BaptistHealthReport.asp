@@ -65,10 +65,10 @@ else
 		strPay			= .fields("Pay_CustomField257_1").value & ""
 		strMinMid		= .fields("MinMid_CustomField258_1").value & ""
 		strComments = .fields("Comments_CustomField259_1").value & ""
-		strHeader		= .fields("header").value & ""
+		'strHeader		= .fields("header").value & ""
 		strDuties		= Replace(.fields("Duties").value, VbCrLf, "<br>") & ""
 		strReqs			= Replace(.fields("Requirements").value, VbCrLf, "<br>") & ""
-		strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
+		'strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
 					
 		strReportHTML = strReportHTML & "<tr>"
 		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strVP="","N/A",strVP) & "</font></td>"
