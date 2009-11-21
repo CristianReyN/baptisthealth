@@ -53,14 +53,15 @@ End Function
 Sub WriteXMLFile(strXmlText)
 	Dim objFSO
 	
-	arrApplicantIDs = Split(strCollectAppIDs, ",")
+	arrApplicantIDs = Split(strAppIDs, ",")
 
 	set objFSO = Server.CreateObject("Scripting.FileSystemObject")
 
-	for i=0 to UBound(arrApplicantIDs)
-		objFSO.CreateTextFile(DOC_SERVER_PATH & HIRING_ORG_ID & "\XML_Applications\" & trim(arrApplicantIDs(i)) & ".xml" )
+	dim AppID
+	for each AppID in arrApplicantIDs
+		objFSO.CreateTextFile(DOC_SERVER_PATH & HIRING_ORG_ID & "\XML_Applications\" & AppID & ".xml" )
 		
-		set objFile = objFSO.OpenTextFile(DOC_SERVER_PATH & HIRING_ORG_ID & "\XML_Applications\" & trim(arrApplicantIDs(i)) & ".xml" ,2)
+		set objFile = objFSO.OpenTextFile(DOC_SERVER_PATH & HIRING_ORG_ID & "\XML_Applications\" & AppID & ".xml" ,2)
 		
 		objFile.WriteLine("<?xml version=""1.0"" encoding=""ISO-8859-1""?>" & VbCrLf & strXmlText)
 		
