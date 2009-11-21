@@ -39,7 +39,7 @@ end if
 
 <!--#include file="includes/head.asp"-->
 
-	<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();document.frm.from_name.focus();">
+	<!--<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();document.frm.from_name.focus();">//-->
 
 	<!--#include file="includes/header.asp"-->
 	

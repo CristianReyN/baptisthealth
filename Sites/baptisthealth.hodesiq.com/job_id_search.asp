@@ -25,7 +25,7 @@
 
 <!--#include file="includes/head.asp"-->
 	
-<body topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">
+<!--y topmargin="10" bottommargin="10" leftmargin="10" rightmargin="10" marginwidth="10" marginheight="10" bgcolor="#ffffff" onload="doInit();">//-->
 
 
 	<!--#include file="includes/header.asp"-->
