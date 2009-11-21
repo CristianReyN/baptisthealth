@@ -117,9 +117,9 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 	strSearch = strKeywords
 		
 	set oServer = server.CreateObject("iq_setup_includes_server.Data")
-	set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults("IQ-SQL-IQ2", strSPName, _
-																  strSearch, 1, strFacility, strCategory)
-		
+	'set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults("IQ-SQL-IQ2", strSPName, _
+	'															  strSearch, 1, strFacility, strCategory)
+	set GetCustomSearchResultsRS_BaptistHealthReport = ExecuteBaptistHealthReport(strSPName)
 	set oServer = nothing
 end function
 
@@ -151,6 +151,29 @@ function ReportHeader(strCat, blnFirst)
 	
 	ReportHeader = strHeaderHTM
 End Function
+
+function ExecuteBaptistHealthReport(strSPName)
+	dim rsResult
+	Dim AdoCommand
+	Dim AdoRecordset
+	
+	Set AdoCommand = Server.CreateObject("ADODB.Command")
+	Set AdoRecordset = Server.CreateObject("ADODB.Recordset")
+		
+	With AdoCommand
+		.ActiveConnection=GetDynamicConnection("IQ-SQL-IQ2")
+		.CommandType=adCmdStoredProc
+		.CommandText=strSPName
+		.CommandTimeout=240
+		Set AdoRecordset = .Execute 
+	End With
+		
+	set ExecuteBaptistHealthReport = AdoRecordset
+	
+	Set AdoRecordset = Nothing
+	Set adoCommand=Nothing
+end function
+
 %>
 </body>
 </html>
