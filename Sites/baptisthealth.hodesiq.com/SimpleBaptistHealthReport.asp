@@ -51,7 +51,7 @@ else
 
 	.movefirst
 
-	strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, True)
+	strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, .fields("Loc_Description263_1").value, True)
 
 	do until .eof
 		'strVP				= .fields("VP_CustomField251_1").value & ""
@@ -70,6 +70,7 @@ else
 		'strDuties		= Replace(.fields("Duties").value, VbCrLf, "<br>") & ""
 		'strReqs			= Replace(.fields("Requirements").value, VbCrLf, "<br>") & ""
 		strJobDesc  = .fields("Job_Description267_1").value & ""		'strFooter		= Replace(.fields("footer").value, VbCrLf, "<br>") & ""
+		strFacility	= .fields("Loc_Description263_1").value
 					
 		strReportHTML = strReportHTML & "<tr>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strVP="","N/A",strVP) & "</font></td>"
@@ -77,15 +78,16 @@ else
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFT="","N/A",strFT) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPT="","N/A",strPT) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPRN="","N/A",strPRN) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="","N/A",strTitle) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="","N/A",strDept) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="","N/A",strShift) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="","N/A",strHours) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="","N/A",strPay) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strTitle="" Or IsNull(strTitle),"N/A",strTitle) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strDept="" Or IsNull(strDept),"N/A",strDept) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strShift="" Or IsNull(strShift),"N/A",strShift) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strHours="" Or IsNull(strHours),"N/A",strHours) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strPay="" Or IsNull(strPay),"N/A",strPay) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strMinMid="","N/A",strMinMid) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strComments="","N/A",strComments) & "</font></td>"
-		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strJobDesc="","N/A",strJobDesc) & "</font></td>"
+		strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strJobDesc="" Or IsNull(strJobDesc),"N/A",strJobDesc) & "</font></td>"
 		'strReportHTML = strReportHTML & "<td><font size='2'>" & strHeader & IIF(strHeader = "", "", "<br><br>") & strReqs & IIF(strReqs = "", "", "<br><br>") & strDuties & IIF(strDuties = "", "", "<br><br>") & strFooter & "</font></td>"
+		'strReportHTML = strReportHTML & "<td><font size='2'>" & IIF(strFacility="" Or IsNull(strFacility),"N/A",strFacility) & "</font></td>"
 		
 		Response.Write strReportHTML
 		
@@ -94,7 +96,7 @@ else
 		.movenext
 		
 		if strCategoryHold <> .fields("category_name").value then
-			strReportHTML = ReportHeader(.fields("category_name").value, False)
+			strReportHTML = ReportHeader(.fields("category_name").value, .fields("Loc_Description263_1").value, False)
 		end if
 	loop
 
@@ -125,7 +127,7 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 	set oServer = nothing
 end function
 
-function ReportHeader(strCat, blnFirst)
+function ReportHeader(strCat, strFacility, blnFirst)
 	Dim strHeaderHTM
 	
 	strCategoryHold = strCat
@@ -135,7 +137,7 @@ function ReportHeader(strCat, blnFirst)
 	End If
 	
 	strHeaderHTM = strHeaderHTM & "<tr><td colspan='13'><font size='5'><b>"
-	strHeaderHTM = strHeaderHTM & strCategoryHold
+	strHeaderHTM = strHeaderHTM & IIF(strFacility="" Or IsNull(strFacility), "No Location", strFacility) & "/" & strCategoryHold
 	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
 	'strHeaderHTM = strHeaderHTM & "<tr><td align='center'><font size='2'><b>Vice President</b></font></td>"
 	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Recruiter</b></font></td>"
@@ -149,8 +151,9 @@ function ReportHeader(strCat, blnFirst)
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Pay Grade</b></font></td>"
 	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Min - Mid</b></font></td>"
 	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Comments</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Description</b></font></td></tr>"
-	
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Description</b></font></td>"
+	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Facility</b></font></td></tr>"
+		
 	ReportHeader = strHeaderHTM
 End Function
 

@@ -51,7 +51,7 @@ else
 
 	.movefirst
 
-	strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, True)
+	strReportHTML = strReportHTML & ReportHeader(.fields("category_name").value, .fields("Loc_Description263_1").value, True)
 
 	do until .eof
 		strVP				= .fields("VP_CustomField251_1").value & ""
@@ -95,7 +95,7 @@ else
 		.movenext
 		
 		if strCategoryHold <> .fields("category_name").value then
-			strReportHTML = ReportHeader(.fields("category_name").value, False)
+			strReportHTML = ReportHeader(.fields("category_name").value, .fields("Loc_Description263_1").value, False)
 		end if
 	loop
 
@@ -126,7 +126,7 @@ function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, st
 	set oServer = nothing
 end function
 
-function ReportHeader(strCat, blnFirst)
+function ReportHeader(strCat, strFacility, blnFirst)
 	Dim strHeaderHTM
 	
 	strCategoryHold = strCat
@@ -136,7 +136,7 @@ function ReportHeader(strCat, blnFirst)
 	End If
 	
 	strHeaderHTM = strHeaderHTM & "<tr><td colspan='13'><font size='5'><b>"
-	strHeaderHTM = strHeaderHTM & strCategoryHold
+	strHeaderHTM = strHeaderHTM & IIF(strFacility="" Or IsNull(strFacility), "No Location", strFacility) & "/" & strCategoryHold
 	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
 	strHeaderHTM = strHeaderHTM & "<tr><td align='center'><font size='2'><b>Vice President</b></font></td>"
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Recruiter</b></font></td>"
