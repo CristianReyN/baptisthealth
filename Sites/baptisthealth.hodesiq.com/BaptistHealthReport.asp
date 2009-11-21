@@ -45,7 +45,7 @@ if .eof and .bof then
 	Response.Write "No Records Found"
 else
 
-	strReportHTML = "<table border='0' width='100%'>"
+	strReportHTML = "<table border='1' width='100%'>"
 
 	strReportHTML = strReportHTML & strHeader
 
