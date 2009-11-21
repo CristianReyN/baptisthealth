@@ -170,7 +170,8 @@ select case intResult
 			
 			'strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs
 			'strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
-			strAction = Replace(SECURED_ADDRESS,"https","http") & "confirmation.asp"
+			'strAction = Replace(SECURED_ADDRESS,"https","http") & "confirmation.asp"
+			strAction = "confirmation.asp"
 		end if
 		
 		strConfirm = "Thank you for expressing interest and applying with Baptist Health.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."

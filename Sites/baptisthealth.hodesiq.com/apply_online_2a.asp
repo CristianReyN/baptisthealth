@@ -56,7 +56,8 @@ select case err.number
 			'strAction = "https://payflow.hodes.com/baptisthealth/longapplication.asp?AppID=" & strCollectAppIDs '"confirmation.asp"
 			'strAction = "https://baptisthealth.hodesiq.com/LongApplication.asp?AppID=" & strCollectAppIDs
 			
-			strAction = Replace(SECURED_ADDRESS,"https","http") & "confirmation.asp"
+			'strAction = Replace(SECURED_ADDRESS,"https","http") & "confirmation.asp"
+			strAction = "confirmation.asp"
 		else
 			strAction = "apply_online_1a.asp"
 		end if
