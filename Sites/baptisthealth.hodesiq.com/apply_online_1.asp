@@ -1,7 +1,6 @@
 <!--#include file="includes/local_subs.asp"-->
 <!--#include file="includes/IDInclude.asp"-->
 
-<!--#include file="includes/header.asp"-->
 
 <%
 on error resume next
@@ -158,6 +157,7 @@ b {
 }
 
 </style>
+<!--#include file="includes/header.asp"-->
 
 <form name='frmLongApp' OnSubmit="return SubmitForm()" method='Post' action='apply_online_2.asp'><!--action='WriteXml.asp'-->
 <input TYPE="hidden" NAME="user_id" VALUE="<%=Request("user_id")%>">
@@ -166,6 +166,8 @@ b {
 <%=strHideJobs%>
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <input type='hidden' name='showhidStillEmployeed' value=''>
+<table width="100%" align="center">
+<TR>
 <td width="100%" height="3484" valign="top"> 
 			<table bgcolor="<%=LONG_FORM_COLOR%>" width="100%" border="0" cellpadding="1" cellspacing="1">
 				<tr> 
@@ -1525,10 +1527,11 @@ b {
                               </table>
                               
 </form>
-</body>
-</html>
+</TD>
+</TR>
+</TABLE>
 
-<%'<!--#include file="includes/footer.asp"-->%>
+<!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
 	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,selState,txtZip,txtHomePhone,txtEmailAddress,Country,media_info,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,selBDateMonth,selBDateDay,txtSignature';

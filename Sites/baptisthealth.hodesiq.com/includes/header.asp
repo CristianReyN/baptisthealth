@@ -131,8 +131,14 @@
 
 
 
-<%'If (Instr(1, Request.ServerVariables("URL"), "apply_online.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
+<%dim BGColor
+If (Instr(1, Request.ServerVariables("URL"), "apply_online", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then
+	BGColor="#ffffff"
+else
+	BGColor=LONG_FORM_COLOR
+end if%>
 
+<%'If (Instr(1, Request.ServerVariables("URL"), "apply_online", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
 
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
 
@@ -480,7 +486,7 @@
 
 <!-- end: navBar -->
 
-
+<%'end if%>
 
 
 											
@@ -538,17 +544,24 @@
 					</td>
 				</tr>
 			</table>
-<%'end if%>
 
 
-			<table border="0" cellpadding="3" cellspacing="0">
+
+			<table border="0" cellpadding="3" cellspacing="0" bgcolor="<%=BGColor%>">
+				<%If (Instr(1, Request.ServerVariables("URL"), "apply_online", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
+					<tr><td COLSPAN="2"><img src="http://community.e-baptisthealth.com/images/c_careers_hdr.gif"></td></tr>
+				<%end if%>							
 				<tr>
 					<td valign="top" width="160">
+					<%If (Instr(1, Request.ServerVariables("URL"), "apply_online", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "LongApplication.asp", VbTextCompare) = 0) And (Instr(1, Request.ServerVariables("URL"), "applicationFullLogin.asp", VbTextCompare) = 0) Then%>
+
 					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
 					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#fdebbc","#000000", "New Openings!")%>
 					<!--END HOT OPENINGS TABLE-->
 					<br>
 					<%CreateUL%>
+					<%end if%>
+					&nbsp;&nbsp;
 				</td>
 				
 					<td class="pfContent" VALIGN="top">
@@ -576,7 +589,7 @@
 </script>
 
 
-									<table VALIGN="top" cellspacing="0" cellpadding="0" border="0" width="100%">
+									<table bgcolor="<%=BGColor%>" VALIGN="top" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor>
 										<tr>
 											<td><img src="http://www.e-baptisthealth.com/images/spacer.gif" width="8"></td><!-- very important navBar/content spacer -->
 											<td><img src="http://www.e-baptisthealth.com/images/spacer.gif" height="9"></td>
