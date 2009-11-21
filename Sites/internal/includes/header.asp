@@ -146,42 +146,42 @@
                         <table cellSpacing="0" cellPadding="0" width="100%" border="0"><!-- header --><!-- cdm: colspan/use spacer inside -->
                           <tbody>
                           <tr>
-                            <td class="navBarHdrCell" vAlign="top" align="left" colSpan="2"><a class="navBarHdr" onmouseover="this.className='navBarHdrOver'" onmouseout="this.className='navBarHdr'" href="http://community.e-baptisthealth.com/dept/hr/forms.html" target><img src="images/spacer.gif" width="3" border="0">Human Resources</a></td></tr>
+                            <td class="navBarHdrCell" vAlign="top" align="left" colSpan="2"><a class="navBarHdr" onmouseover="this.className='navBarHdrOver'" onmouseout="this.className='navBarHdr'" href="http://employees.e-baptisthealth.com/dept/hr/forms.html" target><img src="images/spacer.gif" width="3" border="0">Human Resources</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="10" src="images/spacer.gif" width="1" border="0"></td></tr><!-- mainNav -->
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/emphealth/index.html" target>Employee Health</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/emphealth/index.html" target>Employee Health</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/forms.html" target>Benefit Forms</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/forms.html" target>Benefit Forms</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/discounts/index.html" target>Discounts</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/discounts/index.html" target>Discounts</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/docs/comp/2004PayCalendar.pdf" target="paycalendar.pdf">Pay Calendar</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/comp/2004PayCalendar.pdf" target="paycalendar.pdf">Pay Calendar</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/docs/comp/2004PayStructure.pdf" target="PayStructure.pdf">Pay Structure</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/comp/2004PayStructure.pdf" target="PayStructure.pdf">Pay Structure</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/docs/EmpHandbook.pdf" target="EmpHandbook.pdf">Employee Handbook</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/docs/EmpHandbook.pdf" target="EmpHandbook.pdf">Employee Handbook</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/policies.html" target>HR Policies</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/policies.html" target>HR Policies</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
@@ -198,54 +198,54 @@
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/benefits/eap/index.html" target>(EAP) Employee<br>Assistance 
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/benefits/eap/index.html" target>(EAP) Employee<br>Assistance 
                             Program</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/dept/hr/benefits/contactus.html" target>Contact Benefits</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/dept/hr/benefits/contactus.html" target>Contact Benefits</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/tools/jobs/baptisthealth/" target>Job Openings</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/baptisthealthinternal/" target>Job Openings</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr></tbody></table><!-- end: navBar --><!-- begin: navBar -->
                         <table cellSpacing="0" cellPadding="0" width="100%" border="0"><!-- header --><!-- cdm: colspan/use spacer inside -->
                           <tbody>
                           <tr>
-                            <td class="navBarHdrCell" vAlign="top" align="left" colSpan="2"><a class="navBarHdr" onmouseover="this.className='navBarHdrOver'" onmouseout="this.className='navBarHdr'" href="http://community.e-baptisthealth.com/oe/crc/index.html" target><img src="images/spacer.gif" width="3" border="0">Career Resource Center</a></td></tr>
+                            <td class="navBarHdrCell" vAlign="top" align="left" colSpan="2"><a class="navBarHdr" onmouseover="this.className='navBarHdrOver'" onmouseout="this.className='navBarHdr'" href="http://employees.e-baptisthealth.com/oe/crc/index.html" target><img src="images/spacer.gif" width="3" border="0">Career Resource Center</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="10" src="images/spacer.gif" width="1" border="0"></td></tr><!-- mainNav -->
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/tuneup.html" target>Need A Career Tuneup?</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/tuneup.html" target>Need A Career Tuneup?</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/leapaid.html" target>LEAP</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/leapaid.html" target>LEAP</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/selfanalysis.html" target>Self Analysis Assessments</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/selfanalysis.html" target>Self Analysis Assessments</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/careertips.html" target>Career Tips</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/careertips.html" target>Career Tips</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/library.html" target>Library Resources</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/library.html" target>Library Resources</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr>
                           <tr>
                             <td vAlign="top"><img src="images/spacer.gif" width="3" border="0"><img class="vimg" src="images/navStd.gif" border="0"><img src="images/spacer.gif" width="3" border="0"></td>
-                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://community.e-baptisthealth.com/oe/crc/webresources.html" target>Web Resources</a></td></tr>
+                            <td vAlign="top" width="100%"><a class="navBar" onmouseover="this.className='navBarOver'" onmouseout="this.className='navBar'" href="http://employees.e-baptisthealth.com/oe/crc/webresources.html" target>Web Resources</a></td></tr>
                           <tr>
                             <td colSpan="2"><img height="2" src="images/spacer.gif" width="1" border="0"></td></tr></tbody></table><!-- end: navBar --><!-- begin: navBar -->
                         <table cellSpacing="0" cellPadding="0" width="100%" border="0"><!-- header -->
