@@ -245,7 +245,7 @@
                             <!-- mainNav -->
                          	<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/comp/PTORequest.pdf" target="_blank">PTO Request
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.employees.e-baptisthealth.com/dept/hr/docs/comp/PTORequest.pdf" target="_blank">PTO Request
 Form</a></td>
 		</tr>
 		<tr>
@@ -280,7 +280,7 @@ Form</a></td>
 
 		<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaDirectory.pdf" target="_blank">Humana
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.employees.e-baptisthealth.com/dept/hr/docs/benefits/HumanaDirectory.pdf" target="_blank">Humana
 Directory</a></td>
 		</tr>
 		<tr>
@@ -298,7 +298,7 @@ Directory</a></td>
 
 		<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/docs/benefits/HumanaFormulary.pdf" target="_blank">Humana
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.employees.e-baptisthealth.com/dept/hr/docs/benefits/HumanaFormulary.pdf" target="_blank">Humana
 Formulary</a></td>
 		</tr>
 		<tr>
@@ -352,7 +352,7 @@ Center</a></td>
 
 		<tr>
 			<td valign="top"><img src="/images/spacer.gif" width="3" border="0"><img src="images/navStd.gif" class="vimg" border="0"><img src="/images/spacer.gif" width="3" border="0"></td>
-			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="/dept/hr/benefits/baptist_healthPharm_list.pdf" target="_blank">Participating
+			<td valign="top" width="100%"><a class="navBar" onmouseOver="this.className='navBarOver'" onmouseOut="this.className='navBar'" href="http://www.employees.e-baptisthealth.com/dept/hr/benefits/baptist_healthPharm_list.pdf" target="_blank">Participating
 Pharmacies</a></td>
 		</tr>
 		<tr>
