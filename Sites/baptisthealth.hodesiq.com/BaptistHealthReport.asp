@@ -165,6 +165,9 @@ function ExecuteBaptistHealthReport(strSPName)
 		.CommandType=adCmdStoredProc
 		.CommandText=strSPName
 		.CommandTimeout=240
+		
+		.Parameters.Append .CreateParameter("@ReportType", adInteger, adParamInput, 1, 1)
+		
 		Set AdoRecordset = .Execute 
 	End With
 		
