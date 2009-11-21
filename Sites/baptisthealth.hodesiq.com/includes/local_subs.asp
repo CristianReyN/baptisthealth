@@ -179,12 +179,12 @@ strCurrentPage = Request.ServerVariables("URL")
 	function GetTopXRS(intNumToGet)
 	
 		dim objTopXRS
-		dim arrInputParams(3)
+		dim arrInputParams(2)
 		
 		arrInputParams(0) = HIRING_ORG_ID
 		arrInputParams(1) = CAREER_SITE_EMEDIA_ID
 		arrInputParams(2) = intNumToGet
-		arrInputParams(3) = DAYS_TO_DELAY
+		'arrInputParams(3) = DAYS_TO_DELAY
 		
 		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration", arrInputParams)
 		
