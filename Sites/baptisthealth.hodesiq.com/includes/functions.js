@@ -48,7 +48,7 @@ else
 //___________________________________________________________________
 function initialize()
 	{
-	PreloadImages('/images/header/medicalservicesOver.gif','/images/header/healthinformationOver.gif','/images/header/searchBtnOver.gif','/images/header/hospitals/downtownOver.gif','/images/header/hospitals/beachesOver.gif','/images/header/hospitals/nassauOver.gif','/images/header/hospitals/southOver.gif','/images/header/hospitals/wolfsonOver.gif');
+	PreloadImages(http://community.e-baptisthealth.com/images/header/medicalservicesOver.gif',http://community.e-baptisthealth.com/images/header/healthinformationOver.gif',http://community.e-baptisthealth.com/images/header/searchBtnOver.gif',http://community.e-baptisthealth.com/images/header/hospitals/downtownOver.gif',http://community.e-baptisthealth.com/images/header/hospitals/beachesOver.gif',http://community.e-baptisthealth.com/images/header/hospitals/nassauOver.gif',http://community.e-baptisthealth.com/images/header/hospitals/southOver.gif',http://community.e-baptisthealth.com/images/header/hospitals/wolfsonOver.gif');
 	}
 
 
@@ -80,14 +80,14 @@ function flipHdowntown(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddDowntown');
-		imgDowntown.src='/images/header/hospitals/downtownOver.gif';
-		//bmcLogo.src='/images/logo/downtown.jpg';
+		imgDowntown.src=http://community.e-baptisthealth.com/images/header/hospitals/downtownOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/downtown.jpg';
 		}
 	else
 		{
 		hide('ddDowntown');
-		imgDowntown.src='/images/header/hospitals/downtown.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgDowntown.src=http://community.e-baptisthealth.com/images/header/hospitals/downtown.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -96,14 +96,14 @@ function flipHbeaches(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddBeaches');
-		imgBeaches.src='/images/header/hospitals/beachesOver.gif';
-		//bmcLogo.src='/images/logo/beaches.jpg';
+		imgBeaches.src=http://community.e-baptisthealth.com/images/header/hospitals/beachesOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/beaches.jpg';
 		}
 	else
 		{
 		hide('ddBeaches');
-		imgBeaches.src='/images/header/hospitals/beaches.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgBeaches.src=http://community.e-baptisthealth.com/images/header/hospitals/beaches.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -112,14 +112,14 @@ function flipHnassau(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddNassau');
-		imgNassau.src='/images/header/hospitals/nassauOver.gif';
-		//bmcLogo.src='/images/logo/nassau.jpg';
+		imgNassau.src=http://community.e-baptisthealth.com/images/header/hospitals/nassauOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/nassau.jpg';
 		}
 	else
 		{
 		hide('ddNassau');
-		imgNassau.src='/images/header/hospitals/nassau.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgNassau.src=http://community.e-baptisthealth.com/images/header/hospitals/nassau.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -128,14 +128,14 @@ function flipHsouth(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddSouth');
-		imgSouth.src='/images/header/hospitals/southOver.gif';
-		//bmcLogo.src='/images/logo/south.jpg';
+		imgSouth.src=http://community.e-baptisthealth.com/images/header/hospitals/southOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/south.jpg';
 		}
 	else
 		{
 		hide('ddSouth');
-		imgSouth.src='/images/header/hospitals/south.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgSouth.src=http://community.e-baptisthealth.com/images/header/hospitals/south.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -144,14 +144,14 @@ function flipHwolfson(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddWolfson');
-		imgWolfson.src='/images/header/hospitals/wolfsonOver.gif';
-		//bmcLogo.src='/images/logo/wolfson.jpg';
+		imgWolfson.src=http://community.e-baptisthealth.com/images/header/hospitals/wolfsonOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/wolfson.jpg';
 		}
 	else
 		{
 		hide('ddWolfson');
-		imgWolfson.src='/images/header/hospitals/wolfson.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgWolfson.src='http://community.e-baptisthealth.com/images/header/hospitals/wolfson.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -160,14 +160,14 @@ function flipHmedicalservices(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddMedicalservices');
-		imgMedicalservices.src='/images/header/medicalservicesOver.gif';
-		//bmcLogo.src='/images/logo/downtown.jpg';
+		imgMedicalservices.src=http://community.e-baptisthealth.com/images/header/medicalservicesOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/downtown.jpg';
 		}
 	else
 		{
 		hide('ddDowntown');
-		imgMedicalservices.src='/images/header/medicalservices.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgMedicalservices.src=http://community.e-baptisthealth.com/images/header/medicalservices.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -176,14 +176,14 @@ function flipHbeaches(fnOpenClose)
 	if(fnOpenClose)
 		{
 		show('ddHealthinformation');
-		imgHealthinformation.src='/images/header/healthinformationOver.gif';
-		//bmcLogo.src='/images/logo/beaches.jpg';
+		imgHealthinformation.src=http://community.e-baptisthealth.com/images/header/healthinformationOver.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/beaches.jpg';
 		}
 	else
 		{
 		hide('ddBeaches');
-		imgHealthinformation.src='/images/header/healthinformation.gif';
-		//bmcLogo.src='/images/logo/bhLogo.gif';
+		imgHealthinformation.src=http://community.e-baptisthealth.com/images/header/healthinformation.gif';
+		//bmcLogo.src=http://community.e-baptisthealth.com/images/logo/bhLogo.gif';
 		}
 	}
 
@@ -267,10 +267,10 @@ function showPrinterFriendly()
 
 	w = window.open("","Print","height=600,width=764,left=80,top=80,scrollbars=1,menubar=1,resizable=1,toolbar=0");
 	w.document.write("<html><head><title>Print Window</title>");
-	w.document.write("<link rel='stylesheet' href='style/bmc.css' type='text/css'></head>");
+	w.document.write("<link rel='stylesheet' href='http://community.e-baptisthealth.com/components/bmc.css' type='text/css'></head>");
 	w.document.write("<body bgcolor='white'>");
 	w.document.write("<table><tr><td>");
-	w.document.write("<img src='/images/logo.gif'>");
+	w.document.write("<img src=http://community.e-baptisthealth.com/images/logo.gif'>");
 	w.document.write("</td><td width='20'></td><td valign='top'>");
 	w.document.write("<div id='titleDiv' class='title'><b>" + strTitle + "</b></div>");
 	w.document.write("</td></tr></table>");
