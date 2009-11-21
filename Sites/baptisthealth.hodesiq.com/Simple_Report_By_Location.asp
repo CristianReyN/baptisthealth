@@ -52,7 +52,7 @@ with objJobsRS
 if .eof and .bof then
 	Response.Write "No Records Found"
 else
-	strReportHTML = "<table border='1' width='1000'>"
+	strReportHTML = "<table border='1' width='100%'>"
 
 	strReportHTML = strReportHTML & strHeader
 
