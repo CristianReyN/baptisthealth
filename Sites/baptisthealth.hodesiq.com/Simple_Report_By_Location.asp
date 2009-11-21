@@ -133,7 +133,7 @@ function ReportHeader(strCat, strFacility, blnFirst)
 	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>PRN</b></font></td>"
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Job Title</b></font></td>"
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Dept</b></font></td>"
-	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Shift</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Shift Details</b></font></td>"
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Hours</b></font></td>"
 	strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Pay Grade</b></font></td>"
 	'strHeaderHTM = strHeaderHTM & "<td align='center'><font size='2'><b>Min - Mid</b></font></td>"
