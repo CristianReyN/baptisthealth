@@ -193,7 +193,7 @@ function selectall()
  </td>
 
 <center>
-                <td width="20" vAlign="middle">&nbsp;</td>
+                <td width="" vAlign="middle">&nbsp;</td>
                 <td vAlign="top">
                 <div class="subheader">
                   Education *
@@ -225,7 +225,7 @@ function selectall()
  </td>
 
 <center>
-                <td width="20" vAlign="middle">&nbsp;</td>
+                <td width="" vAlign="middle">&nbsp;</td>
                 <td vAlign="middle">
                 <div class="subheader">
                  Location
@@ -256,7 +256,7 @@ function selectall()
 	
 		</tr>-->
 		<tr>
-			<td width="50%">
+			<td width="">
 				<select class="options" name="compensationf"> 
 					<option VALUE="0" SELECTED>
 						<div class="subheader">ANY</div>
@@ -277,7 +277,7 @@ function selectall()
 		</table>
 	</td>
 	
-   <td width="20" vAlign="middle">&nbsp; </td>
+   <td width="" vAlign="middle">&nbsp; </td>
                 <td vAlign="middle">
                 <br>
                 <div class="subheader">
@@ -313,7 +313,7 @@ function selectall()
                 <option value="19">95%
                 <option value="20">No Limit
                 </option></select></td>
-                <td width="20" vAlign="middle">&nbsp;<br></td>
+                <td width="" vAlign="middle">&nbsp;<br></td>
                 <td vAlign="middle">
                 <div class="subheader">
                   Start Date
