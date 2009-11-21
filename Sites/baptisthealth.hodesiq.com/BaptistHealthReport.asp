@@ -9,11 +9,27 @@
 	<body>	
 
 <%
+Server.ScriptTimeout=200
 
 dim objJobsRS
 dim strReportHTML
 dim strCategoryHold
 Dim strHeader
+
+Dim strVP
+Dim strUsr
+Dim strFT
+Dim strPT
+Dim strPRN
+Dim strTitle
+Dim strDept
+Dim strShift
+Dim strHours
+Dim strPay
+Dim strMinMid
+Dim strComments
+Dim strDuties
+Dim strReqs
 
 'strHeader="<tr><td align='center'><font size='4'>Children's Hospital & Regional Medical Center/Opportunities in Health Care<br>" & Date() & "</font><br><a href='www.seattlechildrens.org/jobs'>www.seattlechildrens.org/jobs</a><br><br></tr></td>"
 
@@ -29,31 +45,31 @@ if .eof and .bof then
 	Response.Write "No Records Found"
 else
 
-strReportHTML = "<table border='1' width='100%'>"
+	strReportHTML = "<table border='1' width='100%'>"
 
-strReportHTML = strReportHTML & strHeader
+	strReportHTML = strReportHTML & strHeader
 
-.movefirst
-		strCategoryHold = .fields("category_name")
-		strReportHTML = strReportHTML & "<tr><td colspan='13'><font size='5'><b>"
-		strReportHTML = strReportHTML & strCategoryHold
-		strReportHTML = strReportHTML & "</b></font></td></tr>"
-		'strReportHTML = strReportHTML & "<tr><td colspan='13' border='0'>"		
-		'strReportHTML = strReportHTML & "<hr>"		
-		'strReportHTML = strReportHTML & "</td></tr>"
-		strReportHTML = strReportHTML & "<tr><td border='0'><font size='3'><b>Vice President</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Recruiter</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>FT</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PT</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PRN</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Job Title</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Dept</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Shift</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Hours</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Pay Grade</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Min - Mid</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Comments</b></font></td>"
-		strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
+	.movefirst
+	
+'	strCategoryHold = .fields("category_name")
+'	strReportHTML = strReportHTML & "<tr><td colspan='13'><font size='5'><b>"
+'	strReportHTML = strReportHTML & strCategoryHold
+'	strReportHTML = strReportHTML & "</b></font></td></tr>"
+'	strReportHTML = strReportHTML & "<tr><td border='0'><font size='3'><b>Vice President</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Recruiter</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>FT</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PT</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>PRN</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Job Title</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Dept</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Shift</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Hours</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Pay Grade</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Min - Mid</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Comments</b></font></td>"
+'	strReportHTML = strReportHTML & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
+
+strReportHTML = ReportHeader(.fields("category_name").value)
 
 do until .eof
 
@@ -93,21 +109,9 @@ do until .eof
 	
 	.movenext
 	
-	'if strCategoryHold <> .fields("category_name") then
-	'	strCategoryHold = .fields("category_name")
-	'	strReportHTML = strReportHTML & "<tr><td colspan='13' border='0'><font size='5'><b>"
-	'	strReportHTML = strReportHTML & strCategoryHold
-	'	strReportHTML = strReportHTML & "</b></font></td></tr>"
-	'	strReportHTML = strReportHTML & "<tr><td colspan='13' border='0' bgcolor='#000000' height='1'>"
-	'	'strReportHTML = strReportHTML & "<hr>"		
-	'	strReportHTML = strReportHTML & "</td></tr>"		
-	'	strReportHTML = strReportHTML & "<tr><td colspan='2'><font size='3'><b>Job Code/Job Title/Job Description</b></font></td></tr>"
-	'	strReportHTML = strReportHTML & "<tr><td colspan='3'>"		
-	'	strReportHTML = strReportHTML & "<hr>"		
-	'	strReportHTML = strReportHTML & "</td></tr>"	
-	'	Response.Write strReportHTML
-	'	strReportHTML = ""
-	'end if
+	if strCategoryHold <> .fields("category_name").value then
+		strReportHTML = ReportHeader(.fields("category_name").value)
+	end if
 loop
 
 	strReportHTML = strReportHTML & "</table>"
@@ -119,27 +123,49 @@ set objJobsRS = nothing
 
 Response.Write strReportHTML
 
-	'------------------------------------------------------------------------------
-	'Name:			GetCustomSearchResultsRS
-	'Inputs:		strSPName, arrCustomInput, strKeywords
-	'Outputs:		objResultsRS
-	'------------------------------------------------------------------------------
-	function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, strFacility, strCategory)
+'------------------------------------------------------------------------------
+'Name:			GetCustomSearchResultsRS
+'Inputs:		strSPName, arrCustomInput, strKeywords
+'Outputs:		objResultsRS
+'------------------------------------------------------------------------------
+function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, strFacility, strCategory)
 		
-		dim oServer
-		dim strSearch
+	dim oServer
+	dim strSearch
 		
-		strSearch = strKeywords
-		APP_SERVER="IQ-SQL-IQ2"
-		set oServer = server.CreateObject("iq_setup_includes_server.Data")
-		set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults(APP_SERVER, strSPName, _
-																	  strSearch, 1, strFacility, strCategory)
+	strSearch = strKeywords
 		
-		set oServer = nothing
+	set oServer = server.CreateObject("iq_setup_includes_server.Data")
+	set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults(APP_SERVER, strSPName, _
+																  strSearch, 1, strFacility, strCategory)
 		
-	end function
+	set oServer = nothing
+		
+end function
 
-
+function ReportHeader(strCat)
+	Dim strHeaderHTM
+	
+	strCategoryHold = strCat
+	strHeaderHTM = strHeaderHTM & "<tr><td colspan='13'><font size='5'><b>"
+	strHeaderHTM = strHeaderHTM & strCategoryHold
+	strHeaderHTM = strHeaderHTM & "</b></font></td></tr>"
+	strHeaderHTM = strHeaderHTM & "<tr><td border='0'><font size='3'><b>Vice President</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Recruiter</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>FT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>PT</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>PRN</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Job Title</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Dept</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Shift</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Hours</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Pay Grade</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Min - Mid</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Comments</b></font></td>"
+	strHeaderHTM = strHeaderHTM & "<td border='0'><font size='3'><b>Description</b></font></td></tr>"
+	
+	ReportHeader = strHeaderHTM
+End Function
 %>
 </body>
 </html>
