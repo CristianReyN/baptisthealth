@@ -61,13 +61,14 @@ select case GetAppServer()
 		
 end select
 
-DOC_SERVER_PATH = request.servervariables("APPL_PHYSICAL_PATH") ' "\\Iq-stg-app-2\data\web\baptisthealth.hodesiq.com\" ' "\\10.1.20.16\iq-doc\"
+DOC_SERVER_PATH = "\\iq-doc-1\IQ-DOC\" ' request.servervariables("APPL_PHYSICAL_PATH") ' "\\Iq-stg-app-2\data\web\baptisthealth.hodesiq.com\" ' "\\10.1.20.16\iq-doc\"
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
 DAYS_TO_DELAY = 5
 
 if trim(request("debug")) = "yes" then
+	Response.Write "DEBUG=YES<br>"
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"
 	Response.Write "HIRING_ORG_ID: " & HIRING_ORG_ID & "<br>"
 	Response.Write "CAREER_SITE_EMEDIA_ID: " & CAREER_SITE_EMEDIA_ID & "<br>"
@@ -736,12 +737,27 @@ end function
 			
 		Dim RsViewApplicant
 		Dim lngApplicantID
+		Dim RsGetJobs
 			
 		'lngApplicantID = 1924624
 		
 		strApplicantIDs  = Split(strApplicantIDs, ",")
 
 		lngApplicantID = Clng(strApplicantIDs(0))
+		
+		Set RsGetJobs = Server.CreateObject("ADODB.Recordset")
+		
+		Set RsGetJobs = ExecuteDynamicStoredProcedure("p_Get_Jobs_Per_Applicant_Baptist", Array(lngApplicantID))
+
+		If Not IsEmpty(RsGetJobs) Then
+			If Not (RsGetJobs Is Nothing) Then
+				Do While Not RsGetJobs.EOF
+					strJobsHTML = strJobsHTML & "<tr><td><li><p class='smalltextb'>" & RsGetJobs.Fields("title").value & "</p></li></td></tr>"
+					
+					RsGetJobs.MoveNext
+				Loop
+			End If
+		End If
 
 		Set RsViewApplicant = Server.CreateObject("ADODB.Recordset")
 		'set RsViewApplicant = server.CreateObject("Roam.Applicant").ViewApplicantPersonalInfo2("IQ-DEV-ASP-IQ2",lngApplicantID)

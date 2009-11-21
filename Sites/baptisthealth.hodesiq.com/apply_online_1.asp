@@ -383,7 +383,7 @@ if Country = "" or isnull(Country) then Country = "1"
 			</tr>
 			<tr>
 				<td colspan=3>
-					<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">* PLEASE PASTE A COPY OF YOUR RESUME OR PROFILE BELOW.</font>
+					<FONT SIZE="1" FACE="HELVETICA,ARIAL,SANS SERIF">PLEASE PASTE A COPY OF YOUR RESUME OR PROFILE BELOW.</font>
 				</td>
 			</tr>
 			<tr>
@@ -394,7 +394,7 @@ if Country = "" or isnull(Country) then Country = "1"
 	
 			<tr>
 				<td colspan=4 align=left>
-					<input type="submit" name="submit" value="Apply Now">
+					<input type="submit" name="submit" value="Click here to continue">
 				</td>
 			</tr>
 	
@@ -568,14 +568,14 @@ if Country = "" or isnull(Country) then Country = "1"
       {
 			blnOtherChosen = false;
 		}
-		
+		/*
 		if (document.frm.resume_text.value == "")
 		{
 			alert("Please paste a copy of your resume.");
 			document.frm.resume_text.focus();
 			return false;
 		}
-      
+     */
 		if (!blnOtherChosen)
 		{
 			for (var loopIndex = 0; loopIndex < document.frm.media_info.options.length; loopIndex++)

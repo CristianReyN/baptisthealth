@@ -14,6 +14,7 @@
 	Dim strHomePhone
 	Dim strState
 	Dim strErrorFindingUser
+	Dim strJobsHTML
 	
 	strAppIDs = Request.QueryString("AppID").Item
 
@@ -75,6 +76,10 @@ b {
         <tr> 
            <td height="5%" colspan="5" align="center"> <p class="smalltextb">THIS IS A SECURED SITE</p></td>
         </tr>			
+        <tr><td height='5'></td></tr>
+        <tr><td><p class="smalltextb">List of jobs applied for</p></td></tr>
+				<%=strJobsHTML%>
+				<tr><td height='5'></td></tr>
         <tr> 
                                     <td height="5%" colspan="5"> <p class="smalltextb">Fields 
                                         in bold are required</font></p></td>
