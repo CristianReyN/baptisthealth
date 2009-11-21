@@ -1255,7 +1255,7 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress,txtSignature';
+	var strTextFields='txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
