@@ -62,7 +62,7 @@ select case GetAppServer()
 		
 end select
 
-DOC_SERVER_PATH = "\\10.1.20.16\iq-doc\"
+DOC_SERVER_PATH = request.servervariables("APPL_PHYSICAL_PATH") ' "\\Iq-stg-app-2\data\web\baptisthealth.hodesiq.com\" ' "\\10.1.20.16\iq-doc\"
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
