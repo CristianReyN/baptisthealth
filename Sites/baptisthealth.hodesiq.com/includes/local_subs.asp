@@ -730,5 +730,113 @@ end function
 
 	End Function
 
+	Sub ViewApplicant(ByVal strApplicantIDs)
+		on error resume next
+			
+		Const EMPTY_STRING = ""
+			
+		Dim RsViewApplicant
+		Dim lngApplicantID
+			
+		'lngApplicantID = 1924624
+		
+		strApplicantIDs  = Split(strApplicantIDs, ",")
 
+		lngApplicantID = Clng(strApplicantIDs(0))
+
+		Set RsViewApplicant = Server.CreateObject("ADODB.Recordset")
+		'set RsViewApplicant = server.CreateObject("Roam.Applicant").ViewApplicantPersonalInfo2("IQ-DEV-ASP-IQ2",lngApplicantID)
+		set RsViewApplicant = ViewApplicantPersonalInfo2("IQ-REPLICATION",lngApplicantID)
+		
+		strFirstName = RsViewApplicant.Fields("First_Name").Value & ""
+		strMidName   = RsViewApplicant.Fields("Middle_Initial").Value & ""
+		strLastName  = RsViewApplicant.Fields("Last_Name").Value & ""
+		strStreet		 = RsViewApplicant.Fields("Street").Value & "" & RsViewApplicant.Fields("Street2").Value & ""
+		strCity			 = RsViewApplicant.Fields("City").Value & ""
+		strZip			 = RsViewApplicant.Fields("Zip").Value & ""
+		strEmail		 = RsViewApplicant.Fields("Email").Value & ""
+		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
+		strState		 = RsViewApplicant.Fields("state_name").Value & ""
+			
+		strHomePhone = RsViewApplicant.Fields("HomePhone").Value & ""
+			
+		If RsViewApplicant.State = 1 Then RsViewApplicant.Close()
+		set RsViewApplicant = Nothing
+	end sub
+	
+	Public Function ViewApplicantPersonalInfo2(strAppServer, intApplicantID) ' As ADODB.Recordset
+	    'declare connection,recordset and command objects
+	    Const adCmdStoredProc = 4
+	    
+	    Dim objViewApplicantPersonalInfoConnection ' As ADODB.Connection
+	    Dim objViewApplicantPersonalInfoCommand ' As ADODB.Command
+	    
+	    'declare recordset
+	    Dim objViewApplicantPersonalInfoRecordset ' As ADODB.Recordset
+	    
+	   
+	    Set objViewApplicantPersonalInfoConnection = Server.CreateObject("ADODB.Connection")
+	    
+	    'create recordset
+	    Set objViewApplicantPersonalInfoRecordset = Server.CreateObject("ADODB.Recordset")
+	    
+	    'assign connection
+	    Set objViewApplicantPersonalInfoConnection = GetDynamicConnection_BAPTIST(strAppServer) ' objCDynamic.ConnectToDB2(strAppServer)
+	    
+	    'destroy connection class object
+	    Set objCDynamic = Nothing
+
+	    'create command object
+	    Set objViewApplicantPersonalInfoCommand = Server.CreateObject("ADODB.Command")
+	    
+	    'assign command properties
+	    With objViewApplicantPersonalInfoCommand
+	    
+	        Set .ActiveConnection = objViewApplicantPersonalInfoConnection
+	        .CommandText = "SP_View_Applicant_Personal_Info2"
+	        .CommandType = adCmdStoredProc
+	        .CommandTimeout = 120
+	        'create parameters
+	        .Parameters.Append .CreateParameter("@return", adInteger, adParamReturnValue)
+	        .Parameters.Append .CreateParameter("@applicantid", adInteger, adParamInput, 4, intApplicantID)
+	       
+	        'execute command into recordset
+	        Set objViewApplicantPersonalInfoRecordset = .Execute
+	        
+	        Set objViewApplicantPersonalInfoRecordset.ActiveConnection = Nothing
+	        'return recordset thru function
+	        Set ViewApplicantPersonalInfo2 = objViewApplicantPersonalInfoRecordset
+	    End With
+	    'destroy active connection
+	    Set objViewApplicantPersonalInfoCommand.ActiveConnection = Nothing
+	    
+	    'close connection
+	    objViewApplicantPersonalInfoConnection.Close
+	    
+	    'destroy objects
+	    Set objViewApplicantPersonalInfoConnection = Nothing
+	    Set objViewApplicantPersonalInfoCommand = Nothing
+	    
+	    Set objViewApplicantPersonalInfoRecordset = Nothing
+	End Function
+
+	function GetDynamicConnection_BAPTIST(strAppServer)
+		dim objADOConn
+		
+		'Get an ADO Connection object
+		set objADOConn = server.CreateObject("ADODB.Connection")
+		
+		sUser = "iq-iq3-asp"		
+    strPassword = "0olki87"
+				
+		with objADOConn
+			.CursorLocation = adUseClient
+			.CommandTimeout = 120
+			.Open "file name=d:\data\db\iqrep.udl"
+		end with
+		
+		'Return the ADO Connection object
+		set GetDynamicConnection_BAPTIST = objADOConn
+	end function
+	
 </script>

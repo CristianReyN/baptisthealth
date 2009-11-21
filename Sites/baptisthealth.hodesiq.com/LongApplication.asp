@@ -2,6 +2,25 @@
 <!--#include file="includes/head.asp"-->
 <!--#include file="includes/header.asp"-->
 
+<%
+	Dim strAppIDs
+	Dim strFirstName
+	Dim strMidName
+	Dim strLastName
+	Dim strStreet
+	Dim strCity
+	Dim strZip
+	Dim strEmail
+	Dim strHomePhone
+	Dim strState
+	
+	strAppIDs = Request.QueryString("AppID").Item
+
+	If strAppIDs <> "" Then
+		Call ViewApplicant(strAppIDs)
+	End If
+%>
+
 <style>
 
 body {
@@ -70,13 +89,13 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtFirstName" type="text" value="">
+                                      <input name="txtFirstName" type="text" value="<%=strFirstName%>">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtMidName" type="text" value="">
+                                      <input name="txtMidName" type="text" value="<%=strMidName%>">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtLastName" type="text" value="">
+                                      <input name="txtLastName" type="text" value="<%=strLastName%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -87,13 +106,13 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtAddress" type="text" value="">
+                                      <input name="txtAddress" type="text" value="<%=strStreet%>">
                                       </font></td>
                                     <td><font size="-2"> 
                                       <input name="txtCounty" type="text" value="">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtCity" type="text" value="">
+                                      <input name="txtCity" type="text" value="<%=strCity%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -159,10 +178,10 @@ b {
                                       </select>
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtZip" type="text" value="">
+                                      <input name="txtZip" type="text" value="<%=strZip%>">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtHomePhone" type="text" value="">
+                                      <input name="txtHomePhone" type="text" value="<%=strHomePhone%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -177,7 +196,7 @@ b {
                                       <input name="txtOtherPhone" type="text" value="">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtEmailAddress" type="text" value="">
+                                      <input name="txtEmailAddress" type="text" value="<%=strEmail%>">
                                       </font></td>
                                     <td colspan="3"><font size="-2">&nbsp;</font></td>
                                   </tr>
