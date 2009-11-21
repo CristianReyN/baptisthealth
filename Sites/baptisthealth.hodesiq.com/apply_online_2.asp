@@ -175,6 +175,8 @@ select case intResult
 		
 end select
 
+Response.Write "UnsecuredBaseURL=" & UnsecuredBaseURL
+
 
 %>
 
