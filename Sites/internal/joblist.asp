@@ -113,6 +113,7 @@ end if
 						<input type="hidden" name="keywords" value="<%=strKeywords%>">
 						<input type="hidden" name="sort_column" value="<%=strSortColumn%>">
 						<input type="hidden" name="HasCustomFields" value="1">
+						<input type="hidden" value="true" name="ExclusiveSearchCustomFields">
 	
 						<%
 							dim strCFL_Hidden

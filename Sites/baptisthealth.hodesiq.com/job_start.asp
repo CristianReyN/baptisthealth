@@ -130,6 +130,7 @@
 					<input type="text" size="30" name="keywords"><br clear="all"><br>
 					<input type="submit" value="Begin Search" id="submit1" name="submit1">&nbsp;&nbsp;
 					<input type="button" value="View All Jobs" onClick="ViewAll();" id="button1" name="button1">
+					<input type="hidden" value="true" name="ExclusiveSearchCustomFields">
 				</td>
 			</tr>
 			</table>
