@@ -6,6 +6,9 @@ on error resume next
 dim intPage
 dim strNoResultsMessage
 
+
+strSortColumn = request("sort_column").item
+
 intTotalResults = 0
 
 strNoResultsMessage = "<tr><td colspan='2'><font class='plainText'>" & _
@@ -48,13 +51,20 @@ else
 	dim strTitle
 	dim intLocation
 	dim strKeywords
-
+	dim intCountry
+	intCountry = -1
+	
 	strCategory = trim(Request("category"))
 	strTitle = trim(Request("title"))
 	intLocation = -1
 	strKeywords = trim(Request("keywords"))
-		
-	strResults = GetJobSearchResults(strCategory, strTitle, intLocation, strKeywords, true, strNoResultsMessage, "", PAGE_SIZE, intPage)
+	
+	GetCustomFieldsDataArray ""
+	arrCustomData = GetCustomFieldSearchData()
+	
+	set objJobsRS = GetSearchResults_CustomFields(strCategory, strTitle, intLocation, strKeywords, intCountry, arrCustomData)
+	objJobsRS.sort = strSortColumn
+	strResults = GetPagedSortableSearchResults_CustomReq(objJobsRS, PAGE_SIZE, intPage, strNoResultsMessage, true)								 	
 	
 end if
 %>
@@ -95,7 +105,28 @@ end if
 						<input type="hidden" name="title" value="<%=strTitle%>">
 						<input type="hidden" name="location" value="<%=intLocation%>">
 						<input type="hidden" name="keywords" value="<%=strKeywords%>">
+						<input type="hidden" name="sort_column" value="<%=strSortColumn%>">
+						<input type="hidden" name="HasCustomFields" value="1">
+	
+						<%
+							dim strCFL_Hidden
+							dim arrCFL_Search
+							dim intFieldCount
+
+							strCFL_Hidden = ""
+							arrCFL_Search = split(sCFL_Search, ",")
+
+							for intFieldCount = 0 to ubound(arrCFL_Search)
+
+								strCFL_Hidden = strCFL_Hidden & "<input type='hidden' name='CustomField_"
+								strCFL_Hidden = strCFL_Hidden & arrCFL_Search(intFieldCount) & "' value="""
+								strCFL_Hidden = strCFL_Hidden & request("CustomField_" & arrCFL_Search(intFieldCount))
+								strCFL_Hidden = strCFL_Hidden & """>" & vbcrlf
+
+							next
 							
+							response.write strCFL_Hidden
+						%>
 						</form>	
 						
 					
@@ -122,6 +153,12 @@ end if
 		document.frm.move_indicator.value = strIndicator;
 		document.frm.submit();
 	}
-
+	
+	function Sort(strSortColumn)
+	{
+		document.frm.sort_column.value = strSortColumn;
+		document.frm.submit();
+	}
+	
 //-->
 </script>

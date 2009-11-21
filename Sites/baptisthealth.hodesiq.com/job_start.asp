@@ -109,7 +109,7 @@
 						strHTML =  replace(GetCustomFieldsSearchHTML_style("","categorySelect"), "LOCATION","Location")
 						strHTML =  replace(strHTML, "SHIFT","Shift")
 						strHTML =  replace(strHTML, "<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">All Shifts")
-						strHTML =  replace(strHTML, "<select name='CustomField_" & Locations_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & Locations_ID & "' class='categorySelect' ><option value="""">All Locations")
+						strHTML =  replace(strHTML, "<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">All Locations")
 						Response.Write strHTML
 					%>
 				</td>
