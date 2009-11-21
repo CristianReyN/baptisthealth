@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
 	
 <xsl:template match="/">
-
 <LINK REL="stylesheet" HREF="http://community.e-baptisthealth.com/components/css/greystone.css" TYPE="text/css" />
 <LINK REL="stylesheet" HREF="http://community.e-baptisthealth.com/components/css/bmc.css" TYPE="text/css" />
 <title>Baptist Health of Northeast Florida - Work Worth Doing</title>
@@ -1916,13 +1914,9 @@
   </tr>
   
   <tr> 
-    <td height="49%"> <p class="smalltext">I further 
-          certify that I have not been found by 
-          an administrative body or civil court 
-          to have violated any of the statues, rules 
-          or regulations pertaining to the Health 
-          Care Financial Act, Medicare, Medicaid 
-          or any other federal programs. </p>
+    <td height="49%"> <p class="smalltext">
+		Have you ever been found by an administrative body or civil court to have violated any of the statutes, rules or regulations pertaining to the Health Care Financial Act, Medicare, Medicaid or any other federal programs? 
+		</p>
         <p class="smalltext">
 					<xsl:if test="LongApplication/radNoFraud = 'Yes'" >
           <input type="radio" name="radNoFraud" disabled="disabled" checked="checked" />
