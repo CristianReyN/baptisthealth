@@ -1,3 +1,9 @@
+
+<!--#include virtual="../cc/data_subs.asp"-->
+<!--#include virtual="../cc/general_subs.asp"-->
+<!--#include virtual="../cc/questionnaire_subs.asp"-->
+<!--#include virtual="../cc/agent_subs.asp"-->
+<!--#include virtual="../cc/IQ_2_0_subs.asp"-->
 <%
 '=============================================================
 'CODE FOR DYNAMICALLY ASSIGNING THE APP_SERVER VALUES
@@ -38,11 +44,6 @@ strCurrentPage = Request.ServerVariables("URL")
 '=============================================================
 %>
 
-<!--#include virtual="../cc/data_subs.asp"-->
-<!--#include virtual="../cc/general_subs.asp"-->
-<!--#include virtual="../cc/questionnaire_subs.asp"-->
-<!--#include virtual="../cc/agent_subs.asp"-->
-<!--#include virtual="../cc/IQ_2_0_subs.asp"-->
 
 <script language="vbscript" runat="server">
 
