@@ -64,6 +64,9 @@ if trim(request("debug")) = "yes" then
 	Response.Write "DOC_SERVER_PATH: " & DOC_SERVER_PATH & "<br>"
 	Response.Write "SECURED_ADDRESS: " & SECURED_ADDRESS
 end if
+
+Const APPLY_CONFIRMATION_MESSAGE = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application.||We appreciate your interest in Baptist Health and wish you success in your employment endeavors.||Very Sincerely,||Baptist HR Staff||*** This is an automatically generated communication. ***|*** Please do not respond to this e-mail. ***"
+
 '=============================================================
 
 '=============================================================

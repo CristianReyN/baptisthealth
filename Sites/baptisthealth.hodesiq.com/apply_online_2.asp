@@ -27,6 +27,7 @@ dim strReferralSource
 
 dim strResume
 dim strContactInfo
+dim strFullName
 
 dim blnAddQA
 dim arrJobIDs
@@ -89,9 +90,10 @@ if lngReferral = 6951 then strReferralSource = strReferralSource & " (" & trim(R
 
 strResume = trim(Request("resume_text"))
 
-strContactInfo = strFirstName & " "
-if strMiddleInitial <> "" then strContactInfo = strContactInfo & strMiddleInitial & ". "   
-strContactInfo = strContactInfo & strLastName & vbcrlf
+strFullName = strFirstName & " "
+if strMiddleInitial <> "" then strFullName = strFullName & strMiddleInitial & ". "   
+strFullName = strFullName & strLastName & vbcrlf
+strContactInfo = strFullName
 	
 if strAddress <> "" then strContactInfo = strContactInfo & strAddress & vbcrlf
 if strCity <> "" then strContactInfo = strContactInfo & strCity
@@ -171,8 +173,16 @@ select case intResult
 			strAction = UnsecuredBaseURL & "confirmation.asp"
 		end if
 		
-		strConfirm = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application." & vbCrLf & vbCrLf & "We appreciate your interest in Baptist Health and wish you success in your employment endeavors." & vbCrLf & vbCrLf & "Very Sincerely," & vbCrLf & vbCrLf & "Baptist HR Staff" & vbCrLf & vbCrLf & "*** This is an automatically generated communication. ***" & vbCrLf & "*** Please do not respond to this e-mail. ***"
+		strConfirm = Replace(APPLY_CONFIRMATION_MESSAGE, "|", vbCrLf)
 		
+		SendApplyConfirmationMessages _
+			"Baptist Health Human Resources <noreplies@emailhr.com>", _
+			strEmail, _
+			strFullName, _
+			"Your application with Baptist Health", _
+			strConfirm, _
+			true
+
 end select
 
 
