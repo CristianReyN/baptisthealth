@@ -1,0 +1,261 @@
+<STYLE>
+.boldText
+{
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+}
+.plainText
+{
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.Text10px
+{
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.arialBlkLink12px
+{
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.brownText
+{
+    COLOR: #958c7b;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.arialBlue12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.arialBlueLink12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.arialBoldBlue12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: arial, helvetica, verdana, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+}
+.GaBlue13px
+{
+    COLOR: #6699cc;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 13px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 20px;
+    TEXT-DECORATION: none
+}
+.GaBlueLink12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.GaBoldBlueLink12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: underline
+}
+.GaItalBlueLink12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 12px;
+    FONT-STYLE: italic;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.GaBlue18px
+{
+    COLOR: #6699cc;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBlue18px2
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBlue22px
+{
+    COLOR: #6699cc;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 22px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBrn18px
+{
+    COLOR: #958c7b;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 30px;
+    TEXT-DECORATION: none
+}
+.GaBrn18px2
+{
+    COLOR: #958c7b;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBrn24px
+{
+    COLOR: #958c7b;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 24px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBlk18px
+{
+    COLOR: #000000;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 18px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBlk22px
+{
+    COLOR: #000000;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 22px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaGrey14px
+{
+    COLOR: #666666;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 14px;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.GaBoldGrey12px
+{
+    COLOR: #666666;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+}
+.GaBoldBlue16px
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 16px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+}
+.GaItalBlue12px
+{
+    COLOR: #003399;
+    FONT-FAMILY: georgia, times, serif;
+    FONT-SIZE: 12px;
+    FONT-STYLE: italic;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+.italicLink
+{
+    FONT-STYLE: italic
+}
+#community
+{
+    BACKGROUND-COLOR: #ebe7e0;
+    BOTTOM: 60px;
+    HEIGHT: 49px;
+    LEFT: 168px;
+    POSITION: absolute;
+    RIGHT: 767px;
+    TOP: 11px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    Z-INDEX: 500;
+    layer-background-color: #ebe7e0
+}
+#patients
+{
+    BACKGROUND-COLOR: #ebe7e0;
+    BOTTOM: 60px;
+    HEIGHT: 49px;
+    LEFT: 168px;
+    POSITION: absolute;
+    RIGHT: 767px;
+    TOP: 11px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    Z-INDEX: 500;
+    layer-background-color: #ebe7e0
+}
+#physicians
+{
+    BACKGROUND-COLOR: #ebe7e0;
+    BOTTOM: 60px;
+    HEIGHT: 49px;
+    LEFT: 168px;
+    POSITION: absolute;
+    RIGHT: 767px;
+    TOP: 11px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    Z-INDEX: 500;
+    layer-background-color: #ebe7e0
+}
+#employees
+{
+    BACKGROUND-COLOR: #ebe7e0;
+    BOTTOM: 60px;
+    HEIGHT: 49px;
+    LEFT: 168px;
+    POSITION: absolute;
+    RIGHT: 767px;
+    TOP: 11px;
+    VISIBILITY: hidden;
+    WIDTH: 599px;
+    Z-INDEX: 500;
+    layer-background-color: #ebe7e0
+}
+A:hover
+{
+    COLOR: #000000
+}
+</STYLE>
