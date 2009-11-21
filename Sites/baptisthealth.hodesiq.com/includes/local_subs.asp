@@ -179,7 +179,7 @@ strCurrentPage = Request.ServerVariables("URL")
 	function GetTopXRS(intNumToGet)
 	
 		dim objTopXRS
-		dim arrInputParams(2)
+		dim arrInputParams(3)
 		
 		arrInputParams(0) = HIRING_ORG_ID
 		arrInputParams(1) = CAREER_SITE_EMEDIA_ID
