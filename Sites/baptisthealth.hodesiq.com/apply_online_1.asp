@@ -166,6 +166,10 @@
 	<%=strHideJobs%>
 	<input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 	<input type='hidden' name='showhidStillEmployeed' value=''>
+	<input type='hidden' name='txtCountry' value=''>
+	<input type='hidden' name='txtEmpCountry_1' value=''>
+	<input type='hidden' name='txtEmpCountry_2' value=''>
+	<input type='hidden' name='txtEmpCountry_3' value=''>
 	<table width="100%" align="center">
 	<TR>
 	<td width="100%" height="3484" valign="top"> 
@@ -301,7 +305,7 @@
 																		</tr>
 																		<tr>
 																			<td colspan="3">
-																				<select name="txtCountry">
+																				<select name="Country_Field">
 																					<%=GetCountryDropdown(Country)%>
 																				</select>
 																				<input type="hidden" name="Country_hidden" size="15" MAXLENGTH=30 value="<%=Country%>">
@@ -607,7 +611,7 @@
 	                                <tr> 
 	                                  <td width="0" height="11%" valign="top"> <p class="smalltext">Country </font>
 	                                      <!--<font size="-2">-->
-	                                      <select name="txtEmpCountry_1">
+	                                      <select name="EmpCountry_1_Field">
 	                                      <%=GetCountryDropdown(Country)%>
 	                                      </select>
 	                                      <!--
@@ -710,7 +714,7 @@
 	                                </tr>
 	                                <tr> 
 																		<td width="0" height="11%" valign="top"> <p class="smalltext">Country<br></font> 
-	                                    <select name="txtEmpCountry_2">
+	                                    <select name="EmpCountry_2_Field">
 	                                    <%=GetCountryDropdown(Country)%>
 	                                    </select>
 	                                  </td>
@@ -804,7 +808,7 @@
 	                                </tr>
 	                                <tr> 
 																		<td width="0" height="11%" valign="top"> <p class="smalltext">Country<br></font> 
-	                                    <select name="txtEmpCountry_3">
+	                                    <select name="EmpCountry_3_Field">
 	                                    <%=GetCountryDropdown(Country)%>
 	                                    </select>
 	                                  </td>	                                
@@ -1558,7 +1562,7 @@
 	<!--#include file="includes/footer.asp"-->
 
 	<script language='JavaScript'>
-		var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,selState,txtZip,txtHomePhone,txtEmailAddress,txtCountry,media_info,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,selBDateMonth,selBDateDay,txtSignature';
+		var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,selState,txtZip,txtHomePhone,txtEmailAddress,Country_Field,media_info,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,selBDateMonth,selBDateDay,txtSignature';
 		var arrTextFields=strTextFields.split(",");
 		
 		var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
@@ -1570,6 +1574,34 @@
 
 		function SubmitForm()
 			{
+				document.frmLongApp.txtCountry.value=document.frmLongApp.Country_Field[document.frmLongApp.Country_Field.selectedIndex].text;
+				
+				if(CheckForSpaces(document.frmLongApp.txtEmpHistCo_1.value)!='')
+					{
+						document.frmLongApp.txtEmpCountry_1.value=document.frmLongApp.EmpCountry_1_Field[document.frmLongApp.EmpCountry_1_Field.selectedIndex].text;
+					}
+				else
+					{
+						document.frmLongApp.txtEmpCountry_1.value='';
+					}
+
+				if(CheckForSpaces(document.frmLongApp.txtEmpHistCo_2.value)!='')
+					{
+						document.frmLongApp.txtEmpCountry_2.value=document.frmLongApp.EmpCountry_2_Field[document.frmLongApp.EmpCountry_2_Field.selectedIndex].text;
+					}
+				else
+					{
+						document.frmLongApp.txtEmpCountry_2.value='';
+					}
+
+				if(CheckForSpaces(document.frmLongApp.txtEmpHistCo_3.value)!='')
+					{
+						document.frmLongApp.txtEmpCountry_3.value=document.frmLongApp.EmpCountry_3_Field[document.frmLongApp.EmpCountry_3_Field.selectedIndex].text;				}
+				else
+					{
+						document.frmLongApp.txtEmpCountry_3.value='';
+					}
+				
 				if(document.frmLongApp.chkStillEmployeed.checked==true)
 					{
 						document.frmLongApp.showhidStillEmployeed.value='Yes';
@@ -1600,7 +1632,7 @@
 										//Performed just for a few fields.
 										if((strFieldID=='Social Security') || (strFieldID=='State') || (strFieldID=='County'))
 											{
-												if(document.frmLongApp.txtCountry.value==1)
+												if(document.frmLongApp.Country_Field.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
@@ -1611,7 +1643,7 @@
 											
 										if(strFieldID=='State one')
 											{
-												if(document.frmLongApp.txtEmpCountry_1.value==1)
+												if(document.frmLongApp.EmpCountry_1_Field.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
@@ -1622,7 +1654,7 @@
 											
 										if(strFieldID=='State two')
 											{
-												if(document.frmLongApp.txtEmpCountry_2.value==1)
+												if(document.frmLongApp.EmpCountry_2_Field.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
@@ -1633,7 +1665,7 @@
 											
 										if(strFieldID=='State three')				
 											{
-												if(document.frmLongApp.txtEmpCountry_3.value==1)
+												if(document.frmLongApp.EmpCountry_3_Field.value==1)
 													{
 														alert('Please enter the missing data - ' + strFieldID)
 														eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
