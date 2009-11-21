@@ -26,7 +26,11 @@
 			AdoRs.MoveNext
 		Loop
 	Else
+		strHTML = "<tr><td>No Facilities Found</td></tr>"
 	End If
+
+	If AdoRs.State = 1 Then AdoRs.Close
+	Set AdoRs = Nothing
 
 	strHTML = "<table>" & strHTML & "</table>"
 	
