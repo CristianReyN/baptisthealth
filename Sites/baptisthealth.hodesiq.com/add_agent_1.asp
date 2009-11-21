@@ -244,17 +244,7 @@ function selectall()
 <tr>
 	<td vAlign="top">
 		<div class="subheader">Compensation</div>
-		<center>	
-		<table border="0" width="" cellpadding="0" cellspacing="0">
-		<!--<tr>
-			<td width="50%" align="center">
-				<div class="subheader">FROM</div>
-			</td>
-			<td width="50%" align="center">
-				<div class="subheader">TO</div>
-			</td>
-	
-		</tr>-->
+		
 		<tr>
 			<td width="">
 				<select class="options" name="compensationf"> 
