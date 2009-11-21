@@ -626,31 +626,31 @@ b {
                                             <P class=smalltext>High School/<BR>GED</P></TD>
                                           <TD width=28% height="9%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT class=inputclass tabIndex=54 size=30 name='txtHighSchoolName'>
+                                                <INPUT class=inputclass tabIndex=54 size=30 name='txtHighSchoolName' id='School_Name'>
                                             </P></TD>
                                           <TD class=TCell align=middle width=24% bgColor=#eeeeee rowSpan=2> 
                                             <P class=smalltext>9 
-                                              <INPUT tabIndex=56 type=radio value=9 name=radLast_Year_High_School>
+                                              <INPUT tabIndex=56 type=radio value=9 name=radLast_Year_High_School id='HS-Last_year'>
                                               10 
-                                              <INPUT tabIndex=57 type=radio value=10 name=radLast_Year_High_School>
+                                              <INPUT tabIndex=57 type=radio value=10 name=radLast_Year_High_School id='HS-Last_year'>
                                               11 
-                                              <INPUT tabIndex=58 type=radio value=11 name=radLast_Year_High_School>
+                                              <INPUT tabIndex=58 type=radio value=11 name=radLast_Year_High_School id='HS-Last_year'>
                                               12 
-                                              <INPUT tabIndex=59 type=radio value=12 name=radLast_Year_High_School>
+                                              <INPUT tabIndex=59 type=radio value=12 name=radLast_Year_High_School id='HS-Last_year'>
                                             </P>
                                             <P class=smalltext>Graduated/GED?<BR>
-                                              <INPUT tabIndex=60 type=radio value=Yes name=radGraduated_High_School>
+                                              <INPUT tabIndex=60 type=radio value=Yes name=radGraduated_High_School id='HS-Graduated'>
                                               Yes 
-                                              <INPUT tabIndex=61 type=radio value=No  Name=radGraduated_High_School>
+                                              <INPUT tabIndex=61 type=radio value=No  Name=radGraduated_High_School id='HS-Graduated'>
                                               No</P></TD>
                                           <TD class=TCell vAlign=center align=middle width=32% bgColor=#eeeeee rowSpan=2> <P class=smalltext> 
-                                              <INPUT type='textbox' class=inputclass tabIndex=62 size=35 name=txtHigh_School_Degree_or_Certificate>
+                                              <INPUT type='textbox' class=inputclass tabIndex=62 size=35 name=txtHigh_School_Degree_or_Certificate id='Degree_Certificate'>
                                             </P></TD>
                                         </TR>
                                         <TR> 
                                           <TD width=28% height="11%" align=middle bgColor=#eeeeee class=TCell> 
                                             <P class=smalltext> 
-                                                <INPUT class=inputclass tabIndex=55 size=30 name=txtHigh_School_City_State>
+                                                <INPUT class=inputclass tabIndex=55 size=30 name=txtHigh_School_City_State id='School_address'>
                                             </P></TD>
                                         </TR>
                                         <TR> 
@@ -839,16 +839,16 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="24%"><font size="-2"> 
-                                      <input type="text" name="txtRefName_1">
+                                      <input type="text" name="txtRefName_1" id="Reference_name">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefPos_1">
+                                      <input type="text" name="txtRefPos_1" id="Reference_position">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefCo_1">
+                                      <input type="text" name="txtRefCo_1" id="Reference_company">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtRefPhone_1" type="text" size="10">
+                                      <input name="txtRefPhone_1" type="text" size="10" id="Reference_phone">
                                       </font></td>
                                   </tr>
                                 </table>
@@ -862,16 +862,16 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="33%"><font size="-2"> 
-                                      <input type="text" name="txtRefName_2">
+                                      <input type="text" name="txtRefName_2" id="Reference_name">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefPos_2">
+                                      <input type="text" name="txtRefPos_2" id="Reference_position">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefCo_2">
+                                      <input type="text" name="txtRefCo_2" id="Reference_company">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtRefPhone_2" type="text" size="10">
+                                      <input name="txtRefPhone_2" type="text" size="10" id="Reference_phone">
                                       </font></td>
                                   </tr>
                                 </table>
@@ -885,16 +885,16 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="33%"><font size="-2"> 
-                                      <input type="text" name="txtRefName_3">
+                                      <input type="text" name="txtRefName_3" id="Reference_name">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefPos_3">
+                                      <input type="text" name="txtRefPos_3" id="Reference_position">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input type="text" name="txtRefCo_3">
+                                      <input type="text" name="txtRefCo_3" id="Reference_company">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtRefPhone_3" type="text" size="10">
+                                      <input name="txtRefPhone_3" type="text" size="10" id="Reference_phone">
                                       </font></td>
                                   </tr>
                                 </table>
@@ -914,9 +914,9 @@ b {
                                       time as a Medical Fiscal intermediary for 
                                       Baptist Health? </font></p>
                                     <p class="smalltext"> 
-                                      <input type="radio" name="radBaptistMngr" value="Yes">
+                                      <input type="radio" name="radBaptistMngr" value="Yes" id="Baptist_manager">
                                       Yes 
-                                      <input type="radio" name="radBaptistMngr" value="No">
+                                      <input type="radio" name="radBaptistMngr" value="No" id="Baptist_manager">
                                       No </font> </p></td>
                                 </tr>
                                 <tr> 
@@ -925,9 +925,9 @@ b {
                                       proof that you are eligible to work in the 
                                       United States? </font></p>
                                     <p class="smalltext"> 
-                                      <input type="radio" name="radUSAllowed" value="Yes">
+                                      <input type="radio" name="radUSAllowed" value="Yes" id="US-Work_authorized">
                                       Yes 
-                                      <input type="radio" name="radUSAllowed" value="No">
+                                      <input type="radio" name="radUSAllowed" value="No" id="US-Work_authorized">
                                       No</font></p></td>
                                 </tr>
                                 <tr> 
@@ -939,9 +939,9 @@ b {
                                         Care Financial Act, Medicare, Medicaid 
                                         or any other federal programs. </font>
                                       <p class="smalltext">
-                                        <input type="radio" name="radNoFraud" value="Yes">
+                                        <input type="radio" name="radNoFraud" value="Yes" id="No_Fraud">
                                         Yes 
-                                        <input type="radio" name="radNoFraud" value="No">
+                                        <input type="radio" name="radNoFraud" value="No" id="No_Fraud">
                                         No 
                                       <p class="smalltext">Have you even been 
                                         convicted of, or pled guilty, no contest 
@@ -952,10 +952,10 @@ b {
                                         health care program(s), or ineligibility 
                                         for participation in a federally or state-funded 
                                         health care program. 
-                                      <p class="smalltext"> 
-                                        <input type="radio" name="radConviction" value="Yes">
+                                      <p class="smalltext">
+                                        <input type="radio" name="radConviction" value="Yes" id="Conviction">
                                         Yes 
-                                        <input type="radio" name="radConviction" value="No">
+                                        <input type="radio" name="radConviction" value="No" id="Conviction">
                                         No<br>
                                         <br>
                                         If yes, give details (date, place, offense(s), 
@@ -967,9 +967,9 @@ b {
                                       withheld, entered a pre-trial intervention 
                                       program, or have any criminal charges now 
                                       pending? 
-                                      <input type="radio" name="radCrime" value="Yes">
+                                      <input type="radio" name="radCrime" value="Yes" id="Crimes">
                                       Yes 
-                                      <input type="radio" name="radCrime" value="No">
+                                      <input type="radio" name="radCrime" value="No" id="Crimes">
                                       No 
                                     <p class="smalltext">If yes, give details:<br>
                                       <textarea name="txtCrime" cols="85"></textarea>
@@ -980,7 +980,7 @@ b {
             
           <p class="smalltext">Please read carefully and sign below. 
           <p class="smalltext">
-            <input type="checkbox" name="chkCertify_1" value="Agree_1">
+            <input type="checkbox" name="chkCertify_1" value="Agree_1" id="Agreement">
             I hereby certify that all of the facts and information listed on this 
             employment application are true and complete. I understand that any 
             false, incomplete or misleading information given by me on this application is 
@@ -989,7 +989,7 @@ b {
             discovered on this application at any time after I am employed may 
             result in my dismissal. 
           <p class="smalltext">
-                                        <input type="checkbox" name="chkCertify_2" value="Agree_2">
+                                        <input type="checkbox" name="chkCertify_2" value="Agree_2" id="Agreement">
                                         I hereby authorize Baptist Health to 
                                         investigate all statements contained in 
                                         this application, to interview the references 
@@ -1010,7 +1010,7 @@ b {
                                         any liability for defamation or invasion 
                                         of privacy. 
                                       <p class="smalltext">
-                                        <input type="checkbox" name="chkCertify_3" value="Agree_3">
+                                        <input type="checkbox" name="chkCertify_3" value="Agree_3" id="Agreement">
                                         If I am offered employment, I understand 
                                         that such an offer will be conditioned 
                                         upon satisfactory results of a background 
@@ -1038,7 +1038,7 @@ b {
                                         for any specified period of time, or to 
                                         make any agreement contrary to the foregoing. 
                                       <p class="smalltext">
-                                        <input type="checkbox" name="chkCertify_4" value="Agree_4">
+                                        <input type="checkbox" name="chkCertify_4" value="Agree_4" id="Agreement">
                                         I further understand and voluntarily agree 
                                         as a condition of employment or my continued 
                                         employment, that I may be requested by 
@@ -1064,7 +1064,7 @@ b {
             for employment and/or decisions concerning your employment status 
             with Baptist Health. </p>
                                         <p class="smalltextb"> 
-                                        <input type="checkbox" name="chkCertify_5" value="Agree_5">
+                                        <input type="checkbox" name="chkCertify_5" value="Agree_5" id="Agreement">
                                         &quot;I certify that I have read, understand 
                                         and agree with the above.&quot;
                                       <p class="smalltextb"><br>
@@ -1081,7 +1081,7 @@ b {
                                         employment and/or decisions concerning 
                                         my employment status with Baptist Health.
                                       <p class="smalltextb"> 
-                                        <input type="checkbox" name="chkCertify_6" value="Agree_6">
+                                        <input type="checkbox" name="chkCertify_6" value="Agree_6" id="Agreement">
                                         &quot;I certify that I have read, understand 
                                         and agree with the above.&quot; 
                                       <p class="smalltextb">PRE-EMPLOYMENT 
@@ -1193,7 +1193,7 @@ b {
                                       </table>
 -->
                                       <p class="smalltextb"> 
-                                        <input type="checkbox" name="chkFinalAgree" value="I agree">
+                                        <input type="checkbox" name="chkFinalAgree" value="I agree" id="Final_agreement">
                                         &quot;I certify that I have read, understand 
                                         and agree with the above.&quot; 
                                       <p class="smalltext"><br>
@@ -1204,7 +1204,7 @@ b {
                                         to the same extent as your handwritten 
                                         signature) 
                                       <p class="smalltext"> 
-                                        <input type="text" name="txtSignature"></p>
+                                        <input type="text" name="txtSignature" id="Signature"></p>
                                         <p class="smalltext"> Date of birth:<br>
                                         Month<input type='text' name='selBDateMonth' size='1'>&nbsp;&nbsp;
                                         Day<input type='text' name='selBDateDay' size='1'>
@@ -1238,11 +1238,15 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
 	var arrCheckList=strValidateCheckList.split(",");
+	
+	var strValidateRadio='radLast_Year_High_School,radGraduated_High_School,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
+
+	var arrValidateRadio=strValidateRadio.split(",")
 
 	function SubmitForm()
 		{
@@ -1251,7 +1255,9 @@ b {
 					document.frmLongApp.showhidStillEmployeed.value='Yes';
 				}
 				
+			var strID='';
 			var strFieldID='';
+			
 			//Check for spaces
 			for(iLoop=0; iLoop < arrTextFields.length; iLoop++)
 				{
@@ -1269,6 +1275,38 @@ b {
 				}
 				//***************************************************************
 				
+				//***************************************************************
+				//Check for radio buttons
+				var blnChecked=false;
+				var intRadioLen=0;
+				var intCntRadio=0;
+				
+				for(iLoop=0; iLoop < arrValidateRadio.length; iLoop++)
+					{
+						blnChecked=false;
+						intRadioLen=eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '.length');
+						
+						for(intCntRadio=0;intCntRadio<intRadioLen;intCntRadio++)
+							{//alert(eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[' + intCntRadio + '].name'))
+								strID = eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[' + intCntRadio + '].id');
+								
+								if(eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[' + intCntRadio + '].checked')==true)
+									{
+										blnChecked=true;
+										break;
+									}
+							}
+							
+						if(blnChecked==false)
+							{
+								strID = strID.replace('_',' ')
+								alert('Please make a selection - ' + strID)
+								eval('document.frmLongApp.' + arrValidateRadio[iLoop] + '[0].focus()')
+								return false;
+							}
+					}
+				//End radio validation
+				//***************************************************************
 				
 				//***************************************************************
 				//Check for Checkboxes
@@ -1276,7 +1314,9 @@ b {
 					{
 						if(eval('document.frmLongApp.' + arrCheckList[iLoop] + '.checked')==false)
 							{
-								alert('Please make the required selection')
+								strID = eval('document.frmLongApp.' + arrCheckList[iLoop] + '.id');
+								strID = strID.replace('_',' ')
+								alert('Please make the required selection - ' + strID)
 								eval('document.frmLongApp.' + arrCheckList[iLoop] + '.focus()')
 												
 								return false;
@@ -1293,6 +1333,26 @@ b {
 								alert('Please enter previous name(s)');
 								document.frmLongApp.txtFormerName.select();
 								return false
+							}
+					}
+	
+				if(document.frmLongApp.radConviction[0].checked==true)
+					{
+						if(CheckForSpaces(document.frmLongApp.txtConvictionList.value)=='')
+							{
+								alert('Please enter the list of convictions');
+								document.frmLongApp.txtConvictionList.focus();
+								return false;
+							}
+					}
+					
+				if(document.frmLongApp.radCrime[0].checked==true)
+					{
+						if(CheckForSpaces(document.frmLongApp.txtCrime.value)=='')
+							{
+								alert('Please enter the list of crimes');
+								document.frmLongApp.txtCrime.focus();
+								return false;
 							}
 					}
 				//********************************************************************
