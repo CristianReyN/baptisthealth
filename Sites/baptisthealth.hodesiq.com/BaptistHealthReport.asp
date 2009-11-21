@@ -34,7 +34,7 @@ Dim strJobDesc
 
 'strHeader="<tr><td align='center'><font size='4'>Children's Hospital & Regional Medical Center/Opportunities in Health Care<br>" & Date() & "</font><br><a href='www.seattlechildrens.org/jobs'>www.seattlechildrens.org/jobs</a><br><br></tr></td>"
 
-set objJobsRS = GetCustomSearchResultsRS_BaptistHealthReport("sp_Career_Sites_report_BaptistHealth", strKeywords, strFacility, strCategory)
+set objJobsRS = ExecuteBaptistHealthReport("sp_Career_Sites_report_BaptistHealth")
 
 if err.number <> 0 then
 	Response.Write err.Description
@@ -107,24 +107,6 @@ end with
 set objJobsRS = nothing
 
 Response.Write strReportHTML
-
-'------------------------------------------------------------------------------
-'Name:			GetCustomSearchResultsRS
-'Inputs:		strSPName, arrCustomInput, strKeywords
-'Outputs:		objResultsRS
-'------------------------------------------------------------------------------
-function GetCustomSearchResultsRS_BaptistHealthReport(strSPName, strKeywords, strFacility, strCategory)
-	dim oServer
-	dim strSearch
-		
-	strSearch = strKeywords
-		
-	set oServer = server.CreateObject("iq_setup_includes_server.Data")
-	'set GetCustomSearchResultsRS_BaptistHealthReport = oServer.GetCustomSearchResults("IQ-SQL-IQ2", strSPName, _
-	'															  strSearch, 1, strFacility, strCategory)
-	set GetCustomSearchResultsRS_BaptistHealthReport = ExecuteBaptistHealthReport(strSPName)
-	set oServer = nothing
-end function
 
 function ReportHeader(strCat, strFacility, blnFirst)
 	Dim strHeaderHTM
