@@ -116,7 +116,7 @@
 			<tr>
 				<td>
 					<%
-						strHTML=""
+						strHTML="xxxxxxxxxxxxx"
 						GetCustomFieldsDataArray ""
 						strHTML =  replace(GetCustomFieldsSearchHTML_style("","categorySelect"), "LOCATION","Location")
 						strHTML =  replace(strHTML, "SHIFT","Shift")

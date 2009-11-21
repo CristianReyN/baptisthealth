@@ -60,18 +60,6 @@ select case GetAppServer()
 		
 end select
 
-						'GetAppServer        = "PRODUCTION"
-						APP_SERVER          = "IQ-SQL-IQ2"
-						REPLICATION_SERVER  = "IQ-REPLICATION"
-
-						arrIQConnection			=  Array("10.100.50.133", "iq2", "IQ-IQ3-asp", "0olki87", 3)
-						arrSearchConnection =  Array("10.100.50.133", "candidate_search", "IQ-IQ3-asp", "0olki87", 3)
-
-						'arrIQConnection     = Array("10.100.50.133", "iq2", "sa", "1q51r00t", 3)
-						'arrSearchConnection = Array("10.100.50.133", "candidate_search", "sa", "1q51r00t", 3)
-									
-						DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
-						docFileLink         = "https://payflow.hodes.com/iq-doc/"
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
