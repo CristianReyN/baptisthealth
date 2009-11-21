@@ -65,6 +65,7 @@ end select
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
 sCFL_Results = LOCATION_ID & "," & SHIFT_ID
+DAYS_TO_DELAY = 5
 
 
 
@@ -183,8 +184,9 @@ strCurrentPage = Request.ServerVariables("URL")
 		arrInputParams(0) = HIRING_ORG_ID
 		arrInputParams(1) = CAREER_SITE_EMEDIA_ID
 		arrInputParams(2) = intNumToGet
+		arrInputParams(3) = DAYS_TO_DELAY
 		
-		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration", arrInputParams)
+		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration_with_delay", arrInputParams)
 		
 		set GetTopXRS = objTopXRS
 		
@@ -490,6 +492,242 @@ end function
 				
 		End If
 			
+	End Function
+
+	'------------------------------------------------------------------------------
+	'Name:			GetSearchResults_CustomFields
+	'Inputs:		strCategory, strTitle, intLocation, strKeywords, intCountry, arrCustom
+	'Outputs:		objResultsRS
+	'------------------------------------------------------------------------------
+	Function GetSearchResults_CustomFields_Delay(strCategory, strTitle, intLocation, strKeywords, _
+										   intCountry, arrCustom, intDaysToDelay)
+		
+		Dim objConn, objResultsRS, sSQL
+		
+		sSQL = BuildSearchSQL_Delay(strTitle, strCategory, intLocation, strKeywords, intCountry, arrCustom, intDaysToDelay)
+
+		Set objConn = GetDynamicConnection(REPLICATION_SERVER)
+		Set objResultsRS = objConn.execute(sSQL)
+		
+		Set GetSearchResults_CustomFields_Delay = objResultsRS
+
+		Set objResultsRS.ActiveConnection = Nothing
+		Set objResultsRS = Nothing
+		objConn.Close
+		
+	End Function
+	
+	'------------------------------------------------------------------------------
+	'Name:			BuildSearchSQL
+	'Inputs:		sTitle, sCategory, iLocation, sKeywords, iCountry, arrCustom 
+	'Outputs:		objResultsRS
+	'------------------------------------------------------------------------------
+	Function BuildSearchSQL_Delay(sTitle, sCategory, iLocation, sKeywords, iCountry, arrCustom, iDaysToDelay)
+
+		On Error Goto 0
+
+		dim bExclusiveSearchKeywords     : bExclusiveSearchKeywords     = CBool(Request("ExclusiveSearchKeywords"))
+		dim bExclusiveSearchCustomFields : bExclusiveSearchCustomFields = CBool(Request("ExclusiveSearchCustomFields"))
+
+		Dim strSQL, sSelectSQL, sJoinSQL, CFD, iCount, iAnswerCount
+		Dim sFieldAlias, sTableAlias, sFieldAliasPrefix, sTableAliasPrefix
+		Dim sCustomFieldsSQL, strTempSQL
+		iPrevQ = 0
+		
+		'loop thru search fields
+		For each CFD in arrCustomFieldsData
+			
+			sFieldAliasPrefix = "CustomField" & CFD(CF_FIELD_ID) & "_"
+			sTableAliasPrefix = "q" & CFD(CF_FIELD_ID) & "_"
+				
+			Select Case CFD(CF_FIELD_TYPE)
+			
+				Case CFT_SINGLE_DROPDOWN, CFT_RADIO_BUTTON, CFT_TEXTBOX, CFT_TEXTAREA
+					sTableAlias = sTableAliasPrefix & "1"
+					sFieldAlias = sFieldAliasPrefix & "1"
+					sSelectSQL = sSelectSQL & ", " & sTableAlias & ".req_answer AS " & sFieldAlias & vbCrLf
+
+					if bExclusiveSearchCustomFields and IsArray(arrCustom) Then
+						sCustomFieldsSQL = ""
+						For each Custom in arrCustom
+							If Custom(0) = CFD(CF_FIELD_ID) then
+								If CStr(Custom(1)) <> "" Then
+									sCustomFieldsSQL = " AND " & sTableAlias & ".req_answer = '" & Replace(Custom(1), "'", "''") & "'"
+								End If
+								Exit For
+							End If
+						Next
+					End If
+
+					if sCustomFieldsSQL = "" then
+						sJoinSQL = sJoinSQL & "LEFT OUTER "
+					else
+						sJoinSQL = sJoinSQL & "INNER "
+					end if
+					
+					sJoinSQL = sJoinSQL & "JOIN tbl_req_custom_data AS " & sTableAlias & " "
+					sJoinSQL = sJoinSQL & "ON r.requisition_id = " & sTableAlias & ".requisition_id AND " & sTableAlias & ".req_questionID = " & CFD(CF_FIELD_ID) & sCustomFieldsSQL & vbCrLf
+					
+				Case CFT_MULTIPLE_SELECT, CFT_CHECKBOX
+					For iCount = 0 To UBound(CFD(CF_FIELD_ANSWERS))
+						sTableAlias = sTableAliasPrefix & (iCount + 1)
+						sFieldAlias = sFieldAliasPrefix & (iCount + 1)
+						sSelectSQL = sSelectSQL & ", " & sTableAlias & ".req_answer AS " & sFieldAlias & vbCrLf
+						sJoinSQL = sJoinSQL & "LEFT JOIN tbl_req_custom_data " & sTableAlias & " "
+						sJoinSQL = sJoinSQL & "ON r.requisition_id = " & sTableAlias & ".requisition_id AND " & sTableAlias & ".req_questionID = " & CFD(CF_FIELD_ID) & " AND " & sTableAlias & ".req_answer = '" & CFD(CF_FIELD_ANSWERS)(iCount) & "'" & vbCrLf
+					Next
+	
+			End Select
+
+		Next
+			
+		strSQL = "SELECT DISTINCT r.requisition_code, r.requisition_id, r.title, r.careerpost_datetime, ctg.category_name,"
+		strSQL = strSQL & " c.city_name, c.city_id, s.state_code, tbl_CountryISO.Country, rai.requirements, rpp.listing,"
+		strSQL = strSQL & " r.city_name as req_city_name, r.state_name as req_state_name"
+		strSQL = strSQL & sSelectSQL & " "	'custom fields
+		
+		strSQL = strSQL & "FROM requisition r LEFT OUTER JOIN category ctg ON r.category_id = ctg.category_id " & vbCrLf
+		
+'		strSQL = strSQL & "JOIN requisition_project_profile_additional_info rppai ON r.requisition_id = rppai.requisition_id " & vbCrLf
+		strSQL = strSQL & "JOIN requisition_additional_info rai ON rai.requisition_id = r.requisition_id " & vbCrLf
+		strSQL = strSQL & "JOIN requisition_project_profile rpp ON rpp.requisition_id = r.requisition_id " & vbCrLf
+		strSQL = strSQL & "JOIN requisition_emedia re ON re.requisition_id = r.requisition_id " & vbCrLf
+		strSQL = strSQL & "JOIN city c ON r.city_id = c.city_id " & vbCrLf
+		strSQL = strSQL & "JOIN state s ON s.state_id = c.state_id " & vbCrLf
+		strSQL = strSQL & "JOIN tbl_CountryISO ON r.countryID = tbl_CountryISO.CountryID " & vbCrLf
+		
+		if not bExclusiveSearchCustomFields then
+			strSQL = strSQL & "LEFT OUTER JOIN tbl_Req_Custom_Data cd ON r.requisition_id = cd.requisition_id " & vbCrLf
+		end if
+		
+		strSQL = strSQL & sJoinSQL
+			
+		strSQL = strSQL & "WHERE r.Hiring_OrgID = " & HIRING_ORG_ID & " AND " & vbCrLf
+		strSQL = strSQL & "re.emedia_id = " & CAREER_SITE_EMEDIA_ID & " AND " & vbCrLf
+			
+		'if sCategory <> "" then
+		'	strSQL = strSQL & "ctg.category_name = '" & sCategory & "' AND " & vbCrLf
+		'end if
+		
+		if sCategory <> "" then
+			strSQL = strSQL & "r.category_id = " & sCategory & " AND " & vbCrLf
+		end if
+		
+		if sTitle <> "" then
+			strSQL = strSQL & "r.title = '" & sTitle & "' AND " & vbCrLf
+		end if
+			
+		if iLocation <> "-1" then
+			strSQL = strSQL & "((s.state_id = " & iLocation & ") OR (c.city_id = " & iLocation & ")) AND " & vbCrLf
+		end if
+			
+		if sKeywords <> "" then
+		
+			dim sSQLkeywords
+			dim oParser
+			dim sSearch
+			
+			if blnUseFreeText then
+				set oParser = server.createobject("ccc.ContainsParser")
+				sSearch = oParser.ParseKeywords(cstr(sKeywords))
+				set oParser = Nothing
+				
+				sSQLkeywords = sSQLkeywords & _
+					"CONTAINS(rai.duties, '"       & sSearch & "') OR " & _
+					"CONTAINS(rai.requirements, '" & sSearch & "') OR " & _
+					"CONTAINS(r.title, '"          & sSearch & "')"
+			else
+				dim sConjunction
+				if bExclusiveSearchKeywords then
+					sConjunction = "OR"
+				else
+					sConjunction = "AND"
+				end if
+				
+				set oParser = server.createobject("ccc.LikeParser")
+				sSearch = oParser.ParseKeywords(cstr(sKeywords))
+				set oParser = Nothing
+
+				for each sSearch in Split(sSearch, "%")
+					if not IsEmpty(sSQLkeywords) then sSQLkeywords = sSQLkeywords & " " & sConjunction & vbCrLf
+					sSQLkeywords = sSQLkeywords &         "(r.title LIKE '%" & sSearch & "%' OR "
+				'	sSQLkeywords = sSQLkeywords &     "rppai.header LIKE '%" & sSearch & "%' OR "
+				'	sSQLkeywords = sSQLkeywords &     "rppai.fooder LIKE '%" & sSearch & "%' OR "
+					sSQLkeywords = sSQLkeywords & "rai.requirements LIKE '%" & sSearch & "%' OR "
+					sSQLkeywords = sSQLkeywords &       "rai.duties LIKE '%" & sSearch & "%')"
+				next
+			end if
+			        
+			strSQL = strSQL & "(" & sSQLkeywords & ") AND " & vbCrLf
+			
+		end if
+			
+		if iCountry <> "-1" And iCountry & "" <> "" then
+			strSQL = strSQL & "r.countryid = " & iCountry & " AND " & vbCrLf
+		end if
+			
+		'if strIndustry <> "" then
+		'	strSQL = strSQL & "((r.requisition_id IN (SELECT requisition_id FROM requisition_project_profile_smartpost_industry WHERE smartpost_industry_fullcode = @industry)) OR @industry = '') AND "
+		'end if
+			
+		'if strListing <> "" then
+		'	strSQL = strSQL & "(rpp.listing = '" & sListing & "') AND "
+		'end if
+			
+		If not bExclusiveSearchCustomFields and IsArray(arrCustom) Then
+			
+			sCustomFieldsSQL = ""
+						
+			For each Custom in arrCustom
+				
+				strTempSQL = ""
+				
+				If IsArray(Custom(1)) Then
+				
+					'strTempSQL = strTempSQL & "q" & Custom(0) & "_1.req_answer IN ("
+					
+					For iCount = 0 To UBound(Custom(1))
+						If Custom(1)(iCount) & "" <> "" Then
+							strTempSQL = strTempSQL & "'" & Replace(Custom(1)(iCount), "'", "''") & "'"
+							If iCount <> UBound(Custom(1)) Then
+								strTempSQL = strTempSQL & ", "
+							End If
+						End If
+					Next
+					
+				Else
+					If Custom(1) & "" <> "" Then
+						strTempSQL = strTempSQL & "'" & Replace(Custom(1), "'", "''") & "'" & vbCrLf
+					End If
+					
+				End If
+				
+				If strTempSQL <> "" Then
+					sCustomFieldsSQL = sCustomFieldsSQL & "(cd.req_questionid = " & Custom(0) & " AND " 
+					sCustomFieldsSQL = sCustomFieldsSQL & "cd.req_answer IN ("
+					sCustomFieldsSQL = sCustomFieldsSQL & strTempSQL
+					sCustomFieldsSQL = sCustomFieldsSQL & ")) OR "
+				End If
+				
+			Next
+			
+			If sCustomFieldsSQL <> "" Then	
+				sCustomFieldsSQL = Mid(sCustomFieldsSQL, 1, Len(sCustomFieldsSQL) - 4)
+				strSQL = strSQL & "(" & sCustomFieldsSQL & ") AND " & vbCrLf
+			End If
+			
+		End If
+			
+		strSQL = strSQL & "DATEDIFF(day,re.postdate, GETDATE()) > " &  iDaysToDelay & " AND " & vbCrLf
+		strSQL = strSQL & "r.temporary_status = 0 AND r.operation_status <> 3 AND " & vbCrLf
+		strSQL = strSQL & "r.launch_status = 0 AND r.requisition_statusID = 2 AND " & vbCrLf
+		strSQL = strSQL & "r.hide_unhide = 0 " & vbCrLf
+			
+		strSQL = strSQL & "ORDER BY r.careerpost_datetime ASC"
+		'Response.Write strSQL
+		'Response.end
+		BuildSearchSQL_Delay = strSQL
+
 	End Function
 
 
