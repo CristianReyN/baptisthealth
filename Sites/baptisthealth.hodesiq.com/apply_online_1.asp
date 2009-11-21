@@ -628,12 +628,12 @@ b {
                                               Mo. 
                                               <INPUT class=inputclass size='1' tabIndex=142 name='txtEmpHistFromMonth_1' id="From_month">
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_1' id="From_year">
+                                              <INPUT class=inputclass tabIndex=143 size='2' name='txtEmpHistFromYear_1' id="From_year">
                                               </font></P></TD>
                                           <TD align=left width=312> <P class=smalltext><font size="-2">To Mo. 
                                               <INPUT name='txtEmpHistToMonth_1' class=inputclass size=1 tabIndex=144 size=2 id="To_month">
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_1' id="To_year">
+                                              <INPUT class=inputclass tabIndex=145 size='2' name='txtEmpHistToYear_1' id="To_year">
                                               
                                               <input type="checkbox" name="chkStillEmployeed" value="Yes" id="Still_employed">
                                               Still employed
@@ -726,12 +726,12 @@ b {
                                               Mo. 
                                               <INPUT class=inputclass tabIndex=142 size=1 name='txtEmpHistFromMonth_2'>
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_2'>
+                                              <INPUT class=inputclass tabIndex=143 size='2' name='txtEmpHistFromYear_2'>
                                             </P></TD>
                                           <TD width=312 align=left> <P class=smalltext>To Mo. 
                                               <INPUT name='txtEmpHistToMonth_2' class=inputclass tabIndex=144 size=1>
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_2'>
+                                              <INPUT class=inputclass tabIndex=145 size='2' name='txtEmpHistToYear_2'>
                                             </P></TD>
                                         </TR>
                                       </TBODY>
@@ -813,13 +813,13 @@ b {
                                               Mo. 
                                               <INPUT class=inputclass tabIndex=142 size=1 name='txtEmpHistFromMonth_3'>
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=143 size=1 name='txtEmpHistFromYear_3'>
+                                              <INPUT class=inputclass tabIndex=143 size='2' name='txtEmpHistFromYear_3'>
                                             </P></TD>
                                           <TD width=312 align=left> <P class=smalltext>To 
                                               Mo. 
                                               <INPUT name='txtEmpHistToMonth_3' class=inputclass tabIndex=144 size=1>
                                               Yr. 
-                                              <INPUT class=inputclass tabIndex=145 size=1 name='txtEmpHistToYear_3'>
+                                              <INPUT class=inputclass tabIndex=145 size='2' name='txtEmpHistToYear_3'>
                                             </P></TD>
                                         </TR>
                                       </TBODY>
