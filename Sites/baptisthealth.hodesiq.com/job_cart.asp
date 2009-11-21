@@ -55,7 +55,7 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 				<tr>
 					<td>
 						<%
-						Response.write DisplayJobCartTable(objJobCartJobsRS, "100%", "#093980", "<font face='Arial' size='2' color='#FFFFFF'>", "#D9D1C3", "<font face='Arial' size='2' color='#000000'>", "Your job cart is now empty", false, false, false, 0, 0, "Title", "Location", "Code")
+						Response.write DisplayJobCartTable(objJobCartJobsRS, "100%", "#093980", "<font face='Arial' size='2' color='#FFFFFF'>", "#fdebbc", "<font face='Arial' size='2' color='#000000'>", "Your job cart is now empty", false, false, false, 0, 0, "Title", "Location", "Code")
 						set objJobCartJobsRS = nothing
 						%>
 					</td>
