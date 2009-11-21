@@ -25,7 +25,7 @@ select case GetAppServer()
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 6931 ''11279
+		CAREER_SITE_EMEDIA_ID = 6931
 		
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
@@ -95,12 +95,12 @@ strCurrentPage = Request.ServerVariables("URL")
 '=============================================================
 %>
 
-<!--#include virtual="cc/data_subs.asp"-->
-<!--#include virtual="cc/general_subs.asp"-->
-<!--#include virtual="cc/questionnaire_subs.asp"-->
-<!--#include virtual="cc/agent_subs.asp"-->
-<!--#include virtual="cc/IQ_2_0_subs.asp"-->
-<!--#include virtual="cc/custom_data_subs.asp"-->
+<!--#include virtual="../cc/data_subs.asp"-->
+<!--#include virtual="../cc/general_subs.asp"-->
+<!--#include virtual="../cc/questionnaire_subs.asp"-->
+<!--#include virtual="../cc/agent_subs.asp"-->
+<!--#include virtual="../cc/IQ_2_0_subs.asp"-->
+<!--#include virtual="../cc/custom_data_subs.asp"-->
 <script language="vbscript" runat="server">
 
 	'------------------------------------------------------------------------------
