@@ -49,7 +49,17 @@ ViewedJobCounter intJobID
 			
 		<!--#include file="includes/header.asp"-->
 		
-	
+		<table width="100%">
+				<tr><td width="5%">&nbsp;</td>
+				<td valign="top" width="160">
+					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
+					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#D9D1C3" ,"#000000", "Hot Openings!")%>
+					<!--END HOT OPENINGS TABLE-->
+					<br>
+					<%CreateUL%>
+				</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td valign="top">
 				<table width=425 align="center">
 				<tr>
 					<td align=left width=142>
