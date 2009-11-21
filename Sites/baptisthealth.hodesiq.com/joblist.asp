@@ -8,7 +8,9 @@ dim strNoResultsMessage
 dim sShowERPJobs
 
 sShowERPJobs = request("CustomField_" & ERP_ID).Item
-strSortColumn = request("sort_column").item
+strSortColumn = request("sort_colum
+
+if strSortColumn = "" then strSortColumn = "careerpost_datetime desc"
 
 intTotalResults = 0
 
