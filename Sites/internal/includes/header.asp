@@ -464,7 +464,7 @@ Pharmacy<br>Locations</a></td>
 				<tr><td width="5">&nbsp;</td>
 				<td valign="top" width="160">
 					<!--BEGIN HOT OPENINGS TABLEEE8C82-->
-					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#fdebbc","#000000", "HOT JOBS!")%>
+					<%=GetTopX(5, 160, "#093980", "#FFFFFF","#fdebbc","#000000", "New Openings!")%>
 					<!--END HOT OPENINGS TABLE-->
 					<br>
 					<a href="job_start.asp">Career Home Page</a>

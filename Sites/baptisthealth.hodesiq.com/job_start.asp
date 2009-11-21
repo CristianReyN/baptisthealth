@@ -151,7 +151,7 @@
 			</form>
 			<!--END FORM SECTION-->
 			
-			<BR><BR><font face="Arial" size="2"><b>Employee Referrals, <a href="javascript:ViewErpJobs();">click here.</a></b></font>
+			<BR><BR><font face="Arial" size="2"><b>Hot Jobs, <a href="javascript:ViewErpJobs();">click here.</a></b></font>
 					
 
 	<!--#include file="includes/footer.asp"-->
