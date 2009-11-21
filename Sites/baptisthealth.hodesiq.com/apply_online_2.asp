@@ -10,7 +10,7 @@ on error resume next
 dim strFirstName
 dim strMiddleInitial
 dim strLastName
-
+dim strAppIDs
 dim strHomePhone
 dim strWorkPhone
 dim strEmail
@@ -140,7 +140,7 @@ iEthnicity = ""
 'strLastName = Last_Name
 strMiddleName = strMiddleInitial
 
-intResult =  InsertJobSeeker_NoQIDArray_EmailQA(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
+intResult =  InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
 					  strEmail, strJSPassword, strAddress, strCity, intState, strStateName, intCountry, _
 					  strZip, strHomePhone, strWorkPhone, strMobilePhone, strResume, strMediaCode, intJobSeekerID, _
 					  intApplicantSource, blnAddQA, blnAlwaysSendNotification, iGender, iEthnicity)
@@ -164,7 +164,10 @@ select case intResult
 		if trim(request("apply_1a")) = "yes" and strJobCartJobs <> "" then
 			strAction = "apply_online_1a.asp"
 		else
-			strAction = "confirmation.asp"
+			strAppIDs = Left(strAppIDs, Len(strAppIDs)-1)
+			
+			strAction = "LongApplication.asp?AppID=" & strAppIDs ' & "&State=" & strStateName
+			'strAction = "confirmation.asp"
 		end if
 		
 		strConfirm = "Thank you for expressing interest and applying with Baptist Health System.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."

@@ -838,5 +838,262 @@ end function
 		'Return the ADO Connection object
 		set GetDynamicConnection_BAPTIST = objADOConn
 	end function
+
+	'Not only inserts new applicants but it also collects a list of applicant Ids.	
+	Function InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
+						  strEmail, strJSPassword, strAddress, strCity, intState, strStateName, intCountry, _
+						  strZip, strHomePhone, strWorkPhone, strMobilePhone, strResume, strMediaCode, intJobSeekerID, _
+						  intApplicantSource, blnAddQA, blnAlwaysSendNotification, iGender, iEthnicity)
+			
+	on error resume next
+
+		'server.ScriptTimeout = 300
+				
+		ArchiveApplicantData HIRING_ORG_ID
+			
+		dim intIndicator
+		dim objJobSeeker 
+		dim intReturnArray
+		dim intCount
+		dim intJobID
+		dim intQuestionnaireID
+		dim intAlreadyAppliedCount
+		dim intTotalJobs
+		dim lngClientID
+				
+		intAlreadyAppliedCount = 0
+		intTotalJobs = ubound(arrJobIDs) + 1
+		
+		strMediaCode = cstr(strMediaCode)
+		if len(strMediaCode) < 4 then strMediaCode = right("0000" & strMediaCode, 4)
+		
+		set objJobSeeker = server.CreateObject("corpjs.corp_job_seeker")
+		
+		for intCount = 0 to ubound(arrJobIDs)
+					
+			intJobId = clng(arrJobIDs(intCount))
+				
+			set objJobInfoRS = GetJobDetailsRS(intJobId)
+						
+			strUserMgtID = objJobInfoRS.fields.item("created_user_mgt_id").value
+			intHiringOrgID = objJobInfoRS.fields.item("hiring_orgID").value
+			lngClientID = objJobInfoRS.fields.item("client_id").value
+					
+			if isnull(lngClientID) then lngClientID = 510
+				
+			dim lngJobSeekerType   : lngJobSeekerType   = 3
+			dim lngApplicantSource : lngApplicantSource = 5
+			dim lngAddressType     : lngAddressType     = 1
+
+			dim arrInputParams     : arrInputParams = array _
+			( _
+				strFirstName, _
+				strLastName, _
+				strMiddleName, _
+				strSSN, _
+				strEmail, _
+				strJSPassword, _
+				intHiringOrgID, _
+				strAddress, _
+				"", _ 
+				strCity, _
+				intState, _
+				intCountry, _
+				strZip, _
+				strHomePhone, _
+				strWorkPhone, _
+				strMobilePhone, _
+				strResume, _
+				intJobSeekerID, _
+				strUserMgtID, _
+				lngClientID, _
+				intJobId, _
+				lngApplicantSource, _
+				strMediaCode, _
+				strStateName, _
+				lngJobSeekerType, _
+				lngAddressType, _
+				Null _
+			)
+					
+			intReturnArray = objJobSeeker.AddJobseekerMain(arrIQConnection, arrInputParams)
+			
+			if err.number = 0 then
+					
+				m_lngJSID = intReturnArray(0)
+				m_lngAppID = intReturnArray(2)
+					
+				'Now collect the applicant ids
+				strAppIDs = strAppIDs & m_lngAppID & ","
+					
+				'********************************************EEO STUFF*******************************************
+				'9/21/01 ADDED BY DWILEY	-	'Edited 9/9/2002 by jsherian	
+				'THIS FUNCTION WILL INSERT EOO INFO FOR 
+				'APPLICANT IF HIRING ORG IS AN EEO CLIENT
+				
+				Dim objEEO
+				Set objEEO = server.CreateObject("ccc.eeo")
+
+				If objEEO.IsHiringOrgEEO(APP_SERVER, intJobID) Then		
+					
+					'intEEOResult = objEEO.InsertEEOApplicant(APP_SERVER, HIRING_ORG_ID, intJobID, CLng(intReturnArray(0)), CLng(intReturnArray(2)), iGender, iEthnicity)
+					
+					dim arrEEOInput(6)
+							
+					if iGender = ""    or cstr(iGender)    = "0" then iGender    = "0"
+					if iEthnicity = "" or cstr(iEthnicity) = "0" then iEthnicity = "0"
+					if iVeteran = ""   or cstr(iVeteran)   = "0" then iVeteran   = "0"  'note that iVeteran is a global and not a formal param
+						
+					arrEEOInput(0) = HIRING_ORG_ID
+					arrEEOInput(1) = intJobId
+					arrEEOInput(2) = m_lngJSID
+					arrEEOInput(3) = m_lngAppID
+					arrEEOInput(4) = iGender
+					arrEEOInput(5) = iEthnicity
+					arrEEOInput(6) = iVeteran
+					
+					ExecuteDynamicStoredProcedure_NoReturn "sp_EEO_Insert_Applicant", arrEEOInput
+							
+				End If
+				'******************************************************************************************
+				'THIS INSERTS APPLICANT INTO CUSTOM JOB SEARCH DB
+						dim strSearchResume
+													   
+					strSearchResume =  strFirstName & " "  & strLastName  & " "  & strMiddleName & " "  & _ 
+						strEmail  & " "  & strAddress & " "  & _ 
+						strCity & " "  & strZip & " "  & _ 
+						strHomePhone & " "  & strSSN & " " & strStateName & " " & strResume
+						
+					arrInputParams = array(m_lngJSID,m_lngAppID, null,null,strSearchResume,HIRING_ORG_ID, TRUE, intState,intCountry, _
+						strFirstName, strLastName, strMiddleName, _
+						strEmail,strAddress , null, _
+						strCity, strStateName, strHomePhone,arrJobIDs(intCount))
+			
+					AddApplicantIntoSearchDB arrInputParams
+				
+				'**************************************************************************************
+			
+				if blnAddQA then
+					'single job with questionnaire
+					intQuestionnaireID = GetJobQuestionnaireID(intJobId)
+					if intQuestionnaireID <> 0 then
+						InsertQuestionnaireResults intJobId, intReturnArray(2), intQuestionnaireID
+						strQA = GetQuestionnaireResults(intReturnArray(2))
+						SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail	
+					end if
+				elseif not blnAddQA and Request("txtJobCartJobs").Item <> "" then
+					'do nothing email is sent when questionnaire is graded
+					'applying for multiple jobs with questions
+				else
+					'single job with no questionnaire or mult jobs with no questionnaire
+					SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail				
+				end if
+						
+				'SendApplyNotificationEmail objJobInfoRS, strQA, strEmailBody, strResume, strEmail
+					
+				strJobSeekerIDs = strJobSeekerIDs & cstr(intReturnArray(2)) & ","
+				strResumeID = cstr(intReturnArray(0))
+					
+				if err.number <> 0 then err.clear
+						
+				
+						
+			elseif err.number = -2147217873 then
+				intAlreadyAppliedCount = intAlreadyAppliedCount + 1
+				strJobSeekerIDs = strJobSeekerIDs & "0,"
+				err.clear
+			else
+					
+				'improved error handling (added 2/19/2002)
+				strJobSeekerIDs = strJobSeekerIDs & "0,"
+				EmailApplicantInfoToSupport intJobId, err.number, err.Source, err.Description, Request.ServerVariables("URL")
+				err.clear
+				'=========================================
+						
+				'AddJobSeeker_JobCart = 0
+				'exit function
+						
+			end if
+			
+			Set objJobInfoRS = Nothing
+				
+		next
+				
+		if len(strJobSeekerIDs) > 1 then strJobSeekerIDs = left(strJobSeekerIDs, len(strJobSeekerIDs) - 1)
+				
+		if intAlreadyAppliedCount = intTotalJobs then
+			intIndicator = -1
+		else
+			intIndicator = 1
+		end if
+		
+		'server.ScriptTimeout = 90
+			
+		InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST = intIndicator
+				
+		Set objJobSeeker = Nothing
+				
+	End Function
 	
+	Function GetStateList(strStateSelected, blnWithDefault)
+		Dim strStates
+		
+		  strStates = "<option value=''>Select State</option>"
+		  strStates = strStates &  "<option value='Alabama'>Alabama</option>"
+	  	strStates = strStates &  "<option value='Alaska'>Alaska</option>"
+			strStates = strStates &  "<option value='Arizona'>Arizona</option>"
+			strStates = strStates &  "<option value='Arkansas'>Arkansas</option>"
+			strStates = strStates &  "<option value='California'>California</option>"
+			strStates = strStates &  "<option value='Colorado'>Colorado</option>"
+			strStates = strStates &  "<option value='Connecticut'>Connecticut</option>"
+			strStates = strStates &  "<option value='Delaware'>Delaware</option>"
+			strStates = strStates &  "<option value='Florida'>Florida</option>"
+			strStates = strStates &  "<option value='Georgia'>Georgia</option>"
+			strStates = strStates &  "<option value='Hawaii'>Hawaii</option>"
+			strStates = strStates &  "<option value='Idaho'>Idaho</option>"
+			strStates = strStates &  "<option value='Illinois'>Illinois</option>"
+			strStates = strStates &  "<option value='Indiana'>Indiana</option>"
+			strStates = strStates &  "<option value='Iowa'>Iowa</option>"
+			strStates = strStates &  "<option value='Kansas'>Kansas</option>"
+			strStates = strStates &  "<option value='Kentucky'>Kentucky</option>"
+			strStates = strStates &  "<option value='Louisiana'>Louisiana</option>"
+			strStates = strStates &  "<option value='Maine'>Maine</option>"
+			strStates = strStates &  "<option value='Maryland'>Maryland</option>"
+			strStates = strStates &  "<option value='Massachusetts'>Massachusetts</option>"
+			strStates = strStates &  "<option value='Michigan'>Michigan</option>"
+			strStates = strStates &  "<option value='Minnesota'>Minnesota</option>"
+			strStates = strStates &  "<option value='Mississipp'>Mississippi</option>"
+			strStates = strStates &  "<option value='Missouri'>Missouri</option>"
+			strStates = strStates &  "<option value='Montana'>Montana</option>"
+			strStates = strStates &  "<option value='Nebraska'>Nebraska</option>"
+			strStates = strStates &  "<option value='Nevada'>Nevada</option>"
+			strStates = strStates &  "<option value='New Hampshire'>New Hampshire</option>"
+			strStates = strStates &  "<option value='New Jersey'>New Jersey</option>"
+			strStates = strStates &  "<option value='New Mexico'>New Mexico</option>"
+			strStates = strStates &  "<option value='New York'>New York</option>"
+			strStates = strStates &  "<option value='North Carolina'>North Carolina</option>"
+			strStates = strStates &  "<option value='North Dakota'>North Dakota</option>"
+			strStates = strStates &  "<option value='Ohio'>Ohio</option>"
+			strStates = strStates &  "<option value='Oklahoma'>Oklahoma</option>"
+			strStates = strStates &  "<option value='Oregon'>Oregon</option>"
+			strStates = strStates &  "<option value='Pennsylvania'>Pennsylvania</option>"
+			strStates = strStates &  "<option value='Rhode Island'>Rhode Island</option>"
+			strStates = strStates &  "<option value='South Carolina'>South Carolina</option>"
+			strStates = strStates &  "<option value='South Dakota'>South Dakota</option>"
+			strStates = strStates &  "<option value='Tennessee'>Tennessee</option>"
+			strStates = strStates &  "<option value='Texas'>Texas</option>"
+			strStates = strStates &  "<option value='Utah'>Utah</option>"
+			strStates = strStates &  "<option value='Vermont'>Vermont</option>"
+			strStates = strStates &  "<option value='Virginia'>Virginia</option>"
+			strStates = strStates &  "<option value='Washington'>Washington</option>"
+			strStates = strStates &  "<option value='West Virginia'>West Virginia</option>"
+			strStates = strStates &  "<option value='Wisconsin'>Wisconsin</option>"
+			strStates = strStates &  "<option value='Wyoming'>Wyoming</option>"
+
+			If blnWithDefault = True Then
+				GetStateList = Replace(strStates, "value='" & strStateSelected & "'", "value='" & strStateSelected & "' selected")
+			Else
+				GetStateList = strStates
+			End If
+	End Function
 </script>
