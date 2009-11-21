@@ -1251,7 +1251,7 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtRefName_1,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
@@ -1281,7 +1281,7 @@ b {
 							strFieldID = strFieldID.replace("_", " ");
 							
 							alert('Please enter the missing data - ' + strFieldID)
-							eval('document.frmLongApp.' + arrTextFields[iLoop] + '.select()')
+							eval('document.frmLongApp.' + arrTextFields[iLoop] + '.focus()')
 									
 							return false;
 						}
