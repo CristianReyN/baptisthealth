@@ -62,7 +62,7 @@ select case err.number
 			strAction = "apply_online_1a.asp"
 		end if
 		
-		strConfirm = "Thank you for expressing interest and applying with Baptist Health.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."
+		strConfirm = "Thank you for considering Baptist Health as your employer of choice.  Your Application has been received and we will be reviewing your qualifications.  Please continue to check your e-mail for communication regarding the status of your application." & vbCrLf & vbCrLf & "We appreciate your interest in Baptist Health and wish you success in your employment endeavors." & vbCrLf & vbCrLf & "Very Sincerely," & vbCrLf & vbCrLf & "Baptist HR Staff" & vbCrLf
 		
 	case else
 		strAction = "apply_online_1a.asp"
