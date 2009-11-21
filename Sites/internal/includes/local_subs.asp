@@ -21,7 +21,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
-		'ERP_ID = 262
+		ERP_ID = 262
 		
 	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
@@ -32,7 +32,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264		
-		'ERP_ID = 288
+		ERP_ID = 288
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
@@ -44,7 +44,7 @@ select case GetAppServer()
 		
 		LOCATION_ID = 263
 		SHIFT_ID = 264
-		'ERP_ID = 288
+		ERP_ID = 288
 		
 	case else
 		HIRING_ORG_ID = 632
@@ -54,13 +54,13 @@ select case GetAppServer()
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
 		
 		
-		'LOCATION_ID = 263
-		'SHIFT_ID = 264
-		'ERP_ID = 288
+		LOCATION_ID = 263
+		SHIFT_ID = 264
+		ERP_ID = 288
 		
 end select
-				'APP_SERVER          = "IQ-DEV-ASP-IQ2" ' "IQSQL5-IQ2"
-				'REPLICATION_SERVER  = APP_SERVER
+				APP_SERVER          = "IQSQL5-IQ2" '"IQ-DEV-ASP-IQ2"
+				REPLICATION_SERVER  = APP_SERVER
 
 
 sCFL_Search = LOCATION_ID & "," & SHIFT_ID
