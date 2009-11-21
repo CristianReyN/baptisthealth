@@ -150,29 +150,7 @@ strCurrentPage = Request.ServerVariables("URL")
 		set objResultsRS = nothing
 	
 	end function
-	
-	'------------------------------------------------------------------------------
-	'Name:			GetTopXRS
-	'Purpose:		Returns a recordset containing the "Hot Openings" list for a site
-	'Inputs:			intNumToGet
-	'Outputs:		objTopXRS
-	'------------------------------------------------------------------------------
-	function GetTopXRS(intNumToGet)
-	
-		dim objTopXRS
-		dim arrInputParams(2)
-		
-		arrInputParams(0) = HIRING_ORG_ID
-		arrInputParams(1) = CAREER_SITE_EMEDIA_ID
-		arrInputParams(2) = intNumToGet
-		
-		set objTopXRS = ExecuteDynamicStoredProcedure("sp_Career_Sites_select_top_x_expiration", arrInputParams)
-		
-		set GetTopXRS = objTopXRS
-		
-		set objTopXRS = nothing
-
-	end function
+	 
 	
 		'------------------------------------------------------------------------------
 'Name:			AddJobSeeker_JobCart_EmailQA
