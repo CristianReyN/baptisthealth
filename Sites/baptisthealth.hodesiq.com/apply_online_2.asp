@@ -169,7 +169,7 @@ select case intResult
 			'strAction = "confirmation.asp"
 		end if
 		
-		strConfirm = "Thank you for expressing interest and applying with Baptist Health System.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."
+		strConfirm = "Thank you for expressing interest and applying with Baptist Health.  Your application and/or resume will be reviewed.  If your application is selected for further review during the process, you will be contacted within 14 business days. Again, thank you."
 		
 end select
 

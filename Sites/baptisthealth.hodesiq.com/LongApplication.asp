@@ -148,6 +148,8 @@ b {
                                       </font></td>
                                     <td><font size="-2"> 
                                       <input name="txtEmailAddress" type="text" value="<%=strEmail%>">
+                                      <br>
+                                      Click <a href="http://www.hotmail.com" target="other">here</a> to set up a FREE email address.
                                       </font></td>
                                     <td colspan="3"><font size="-2">&nbsp;</font></td>
                                   </tr>
@@ -164,6 +166,7 @@ b {
               </td>
                                     <td colspan="3"></p></td>
                                   </tr>
+                                  <!--
                                   <tr valign="top"> 
                                     <td height="4%" colspan="5"> <p> 
                                       <p class="smalltext">Where did you first 
@@ -175,6 +178,7 @@ b {
                                         </select></font>
                                         </p></td>
                                   </tr>
+                                  -->
                                   <tr> 
                                     <td height="1%" colspan="5"> <p class="smalltext">If 
                                         a Baptist Health employee referred you, 
@@ -236,7 +240,7 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="1%" colspan="2"> <p class="smalltext">Do 
-                                        you have relatives employed at Baptist?</font></td>
+                                        you have relatives employed at Baptist Health?</font></td>
                                     <td colspan="3"><p class="smalltext"> 
                                         <input type="radio" name="radRelativesWithBaptist" value="Yes">
                                         Yes 
@@ -357,6 +361,9 @@ b {
                                               <INPUT name='txtEmpHistToMonth_2' class=inputclass style="WIDTH: 18px" tabIndex=144 size=2>
                                               Yr. 
                                               <INPUT class=inputclass style="WIDTH: 18px" tabIndex=145 size=4 name='txtEmpHistToYear_2'>
+                                              
+                                              <input type="checkbox" name="chkStillEmployeed" value="Yes">
+                                              Still employeed
                                               </font></P></TD>
                                         </TR>
                                       </TBODY>
@@ -914,8 +921,8 @@ b {
                                       No</font></p></td>
                                 </tr>
                                 <tr> 
-                                  <td height="49%"> <p class="smalltext">I further 
-                                        certify that I have not been found by 
+                                  <td height="49%"> <p class="smalltext">Do you 
+                                        certify that you have not been found by 
                                         an administrative body or civil court 
                                         to have violated any of the statues, rules 
                                         or regulations pertaining to the Health 
@@ -966,7 +973,7 @@ b {
             <input type="checkbox" name="chkCertify_1" value="Agree_1">
             I hereby certify that all of the facts and information listed on this 
             employment application are true and complete. I understand that any 
-            false, incomplete or misleading given by me on this application is 
+            false, incomplete or misleading information given by me on this application is 
             sufficient cause for rejection of this application. I also understand 
             and agree that any such false, incomplete, or misleading information 
             discovered on this application at any time after I am employed may 
@@ -1070,8 +1077,7 @@ b {
                                         and agree with the above.&quot; 
                                       <p class="smalltextb">PRE-EMPLOYMENT 
                                         BACKGROUND INVESTIGATION<br></p>
-                                        <p class="smalltext">To be considered for employment with Baptist 
-                                        Health or affiliates, applicants are subject 
+                                        <p class="smalltext">Applicants are subject 
                                         to a background investigation with Florida 
                                         Department of Law Enforcement and other 
                                         state, out of state and local agencies. 
@@ -1213,21 +1219,6 @@ b {
                                             </select></td>
                                           <td>&nbsp;</td>
                                         </tr>
-                                        <tr> 
-                                          <td colspan="3"><p class="smalltextb"> 
-                                              Last Six (6) Digits of Your Driver's 
-                                              License Number or State I.D. Number
-                                            <p class="smalltextb">Driver License 
-                                              Number 
-                                              <input name="txtDriverLicenseNumber" type="text" size="6">
-                                              State I.D. Number 
-                                              <input type="text" name="txtDriverLicenseIDNumber">
-                                              State of Issue 
-                                              <select name="selDriverLicenseState" size="1">
-																								<%=GetStateList("", False)%>
-                                              </select>
-                                          </td>
-                                        </tr>
                                       </table>
                                       <p class="smalltextb"> 
                                         <input type="checkbox" name="chkFinalAgree" value="I agree">
@@ -1237,11 +1228,23 @@ b {
                                         Acknowledgment: 
                                       <p class="smalltext">Your Full Name (which 
                                         will represent your electronic signature, 
-                                        and which you agree Baptist can rely upon 
+                                        and which you agree Baptist Health can rely upon 
                                         to the same extent as your handwritten 
                                         signature) 
                                       <p class="smalltext"> 
                                         <input type="text" name="txtSignature">
+                                          <p class="smalltextb"> 
+                                              Last Six (6) Digits of Your Driver's 
+                                              License Number or State I.D. Number
+                                          <p class="smalltextb">Driver License 
+                                            Number 
+                                            <input name="txtDriverLicenseNumber" type="text" size="6">
+                                            State I.D. Number 
+                                            <input type="text" name="txtDriverLicenseIDNumber">
+                                            State of Issue 
+                                            <select name="selDriverLicenseState" size="1">
+																							<%=GetStateList("", False)%>
+                                            </select>
                                       <p class="smalltext"> 
                                       <input type="submit" name="subSubmit" value="Submit">
                                     <p></td>
