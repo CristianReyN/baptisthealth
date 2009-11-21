@@ -91,13 +91,13 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtFirstName" type="text" value="<%=strFirstName%>">
+                                      <input name="txtFirstName" id="First_Name" type="text" value="<%=strFirstName%>">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtMidName" type="text" value="<%=strMidName%>">
+                                      <input name="txtMidName" id="Middle_Name" type="text" value="<%=strMidName%>">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtLastName" type="text" value="<%=strLastName%>">
+                                      <input name="txtLastName" id="Last_Name" type="text" value="<%=strLastName%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -108,13 +108,13 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtAddress" type="text" value="<%=strStreet%>">
+                                      <input name="txtAddress" id="Address" type="text" value="<%=strStreet%>">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtCounty" type="text" value="">
+                                      <input name="txtCounty" id="County" type="text" value="">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtCity" type="text" value="<%=strCity%>">
+                                      <input name="txtCity" id="City" type="text" value="<%=strCity%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -130,10 +130,10 @@ b {
 																			</select>
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtZip" type="text" value="<%=strZip%>">
+                                      <input name="txtZip" id="Zip_Code" type="text" value="<%=strZip%>">
                                       </font></td>
                                     <td colspan="3"><font size="-2"> 
-                                      <input name="txtHomePhone" type="text" value="<%=strHomePhone%>">
+                                      <input name="txtHomePhone" id="Home_Phone" type="text" value="<%=strHomePhone%>">
                                       </font></td>
                                   </tr>
                                   <tr> 
@@ -145,10 +145,10 @@ b {
                                   </tr>
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
-                                      <input name="txtOtherPhone" type="text" value="">
+                                      <input name="txtOtherPhone" id="Other_Phone" type="text" value="">
                                       </font></td>
                                     <td><font size="-2"> 
-                                      <input name="txtEmailAddress" type="text" value="<%=strEmail%>">
+                                      <input name="txtEmailAddress" id="Email" type="text" value="<%=strEmail%>">
                                       <br>
                                       Click <a href="http://www.hotmail.com" target="other">here</a> to set up a FREE email address.
                                       </font></td>
@@ -1257,7 +1257,7 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
