@@ -34,7 +34,7 @@ b {
 }
 
 </style>
-<form name='frmLongApp' method='Post' action='WriteXml.asp'>
+<form name='frmLongApp' OnSubmit="return SubmitForm()" method='Post' action='WriteXml.asp'>
 <input type='hidden' name='hidAppID' value='<%=Request.QueryString("AppID").Item%>'>
 <td width="100%" height="3484" valign="top"> 
 			<table width="100%" border="0" cellpadding="1" cellspacing="1">
@@ -105,7 +105,57 @@ b {
                                   <tr> 
                                     <td height="2%"><font size="-2"> 
                                       <select name="selState" size="-2">
-                                        <option>Select State</option>
+                                        <option value="">Select State</option>
+																				<option value="Alabama">Alabama</option>
+																				<option value="Alaska">Alaska</option>
+																				<option value="Arizona">Arizona</option>
+																				<option value="Arkansas">Arkansas</option>
+																				<option value="California">California</option>
+																				<option value="Colorado">Colorado</option>
+																				<option value="Connecticut">Connecticut</option>
+																				<option value="Delaware">Delaware</option>
+																				<option value="Florida">Florida</option>
+																				<option value="Georgia">Georgia</option>
+																				<option value="Hawaii">Hawaii</option>
+																				<option value="Idaho">Idaho</option>
+																				<option value="Illinois">Illinois</option>
+																				<option value="Indiana">Indiana</option>
+																				<option value="Iowa">Iowa</option>
+																				<option value="Kansas">Kansas</option>
+																				<option value="Kentucky">Kentucky</option>
+																				<option value="Louisiana">Louisiana</option>
+																				<option value="Maine">Maine</option>
+																				<option value="Maryland">Maryland</option>
+																				<option value="Massachusetts">Massachusetts</option>
+																				<option value="Michigan">Michigan</option>
+																				<option value="Minnesota">Minnesota</option>
+																				<option value="Mississipp">Mississippi</option>
+																				<option value="Missouri">Missouri</option>
+																				<option value="Montana">Montana</option>
+																				<option value="Nebraska">Nebraska</option>
+																				<option value="Nevada">Nevada</option>
+																				<option value="New Hampshire">New Hampshire</option>
+																				<option value="New Jersey">New Jersey</option>
+																				<option value="New Mexico">New Mexico</option>
+																				<option value="New York">New York</option>
+																				<option value="North Carolina">North Carolina</option>
+																				<option value="North Dakota">North Dakota</option>
+																				<option value="Ohio">Ohio</option>
+																				<option value="Oklahoma">Oklahoma</option>
+																				<option value="Oregon">Oregon</option>
+																				<option value="Pennsylvania">Pennsylvania</option>
+																				<option value="Rhode Island">Rhode Island</option>
+																				<option value="South Carolina">South Carolina</option>
+																				<option value="South Dakota">South Dakota</option>
+																				<option value="Tennessee">Tennessee</option>
+																				<option value="Texas">Texas</option>
+																				<option value="Utah">Utah</option>
+																				<option value="Vermont">Vermont</option>
+																				<option value="Virginia">Virginia</option>
+																				<option value="Washington">Washington</option>
+																				<option value="West Virginia">West Virginia</option>
+																				<option value="Wisconsin">Wisconsin</option>
+																				<option value="Wyoming">Wyoming</option>
                                       </select>
                                       </font></td>
                                     <td><font size="-2"> 
@@ -149,9 +199,9 @@ b {
                                       <p class="smalltext">Where did you first 
                                         see this position? 
                                         <select name="selEmedia">
-                                          <option>Please select</option>
-                                          <option>Advertisement</option>
-                                          <option>Job Posting</option>
+                                          <option value="">Please select</option>
+                                          <option value="Advertisement">Advertisement</option>
+                                          <option value="Job Posting">Job Posting</option>
                                         </select></font>
                                         </p></td>
                                   </tr>
@@ -190,29 +240,179 @@ b {
                                         <input type="radio" name="radPast7Years" value="Yes">
                                         Yes 
                                         <input type="radio" name="radPast7Years" value="No">
-                                        No</font>&nbsp;&nbsp; If yes,</td>
+                                        No</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If yes,</td>
                                     <td width="9%"> <p class="smalltext">
                                         <input name="txtCounty7Years_1" type="text" value="County" size="10">
                                       
                                       </td>
                                     <td width="17%" valign="top">
 																			<select name="selState7Years_1">
-                                        <option>State</option>
+                                        <option value="">Select a State</option>
+																				<option value="Alabama">Alabama</option>
+																				<option value="Alaska">Alaska</option>
+																				<option value="Arizona">Arizona</option>
+																				<option value="Arkansas">Arkansas</option>
+																				<option value="California">California</option>
+																				<option value="Colorado">Colorado</option>
+																				<option value="Connecticut">Connecticut</option>
+																				<option value="Delaware">Delaware</option>
+																				<option value="Florida">Florida</option>
+																				<option value="Georgia">Georgia</option>
+																				<option value="Hawaii">Hawaii</option>
+																				<option value="Idaho">Idaho</option>
+																				<option value="Illinois">Illinois</option>
+																				<option value="Indiana">Indiana</option>
+																				<option value="Iowa">Iowa</option>
+																				<option value="Kansas">Kansas</option>
+																				<option value="Kentucky">Kentucky</option>
+																				<option value="Louisiana">Louisiana</option>
+																				<option value="Maine">Maine</option>
+																				<option value="Maryland">Maryland</option>
+																				<option value="Massachusetts">Massachusetts</option>
+																				<option value="Michigan">Michigan</option>
+																				<option value="Minnesota">Minnesota</option>
+																				<option value="Mississipp">Mississippi</option>
+																				<option value="Missouri">Missouri</option>
+																				<option value="Montana">Montana</option>
+																				<option value="Nebraska">Nebraska</option>
+																				<option value="Nevada">Nevada</option>
+																				<option value="New Hampshire">New Hampshire</option>
+																				<option value="New Jersey">New Jersey</option>
+																				<option value="New Mexico">New Mexico</option>
+																				<option value="New York">New York</option>
+																				<option value="North Carolina">North Carolina</option>
+																				<option value="North Dakota">North Dakota</option>
+																				<option value="Ohio">Ohio</option>
+																				<option value="Oklahoma">Oklahoma</option>
+																				<option value="Oregon">Oregon</option>
+																				<option value="Pennsylvania">Pennsylvania</option>
+																				<option value="Rhode Island">Rhode Island</option>
+																				<option value="South Carolina">South Carolina</option>
+																				<option value="South Dakota">South Dakota</option>
+																				<option value="Tennessee">Tennessee</option>
+																				<option value="Texas">Texas</option>
+																				<option value="Utah">Utah</option>
+																				<option value="Vermont">Vermont</option>
+																				<option value="Virginia">Virginia</option>
+																				<option value="Washington">Washington</option>
+																				<option value="West Virginia">West Virginia</option>
+																				<option value="Wisconsin">Wisconsin</option>
+																				<option value="Wyoming">Wyoming</option>                                        
                                       </select>
                                     </td>
                                   </tr>
                                   <tr> 
                                     <td><input name="txtCounty7Years_2" type="text" value="County" size="10"></td>
                                     <td width="17%"><select name="selState7Years_2">
-                                        <option>State</option>
+                                        <option value="">Select a State</option>
+																				<option value="Alabama">Alabama</option>
+																				<option value="Alaska">Alaska</option>
+																				<option value="Arizona">Arizona</option>
+																				<option value="Arkansas">Arkansas</option>
+																				<option value="California">California</option>
+																				<option value="Colorado">Colorado</option>
+																				<option value="Connecticut">Connecticut</option>
+																				<option value="Delaware">Delaware</option>
+																				<option value="Florida">Florida</option>
+																				<option value="Georgia">Georgia</option>
+																				<option value="Hawaii">Hawaii</option>
+																				<option value="Idaho">Idaho</option>
+																				<option value="Illinois">Illinois</option>
+																				<option value="Indiana">Indiana</option>
+																				<option value="Iowa">Iowa</option>
+																				<option value="Kansas">Kansas</option>
+																				<option value="Kentucky">Kentucky</option>
+																				<option value="Louisiana">Louisiana</option>
+																				<option value="Maine">Maine</option>
+																				<option value="Maryland">Maryland</option>
+																				<option value="Massachusetts">Massachusetts</option>
+																				<option value="Michigan">Michigan</option>
+																				<option value="Minnesota">Minnesota</option>
+																				<option value="Mississipp">Mississippi</option>
+																				<option value="Missouri">Missouri</option>
+																				<option value="Montana">Montana</option>
+																				<option value="Nebraska">Nebraska</option>
+																				<option value="Nevada">Nevada</option>
+																				<option value="New Hampshire">New Hampshire</option>
+																				<option value="New Jersey">New Jersey</option>
+																				<option value="New Mexico">New Mexico</option>
+																				<option value="New York">New York</option>
+																				<option value="North Carolina">North Carolina</option>
+																				<option value="North Dakota">North Dakota</option>
+																				<option value="Ohio">Ohio</option>
+																				<option value="Oklahoma">Oklahoma</option>
+																				<option value="Oregon">Oregon</option>
+																				<option value="Pennsylvania">Pennsylvania</option>
+																				<option value="Rhode Island">Rhode Island</option>
+																				<option value="South Carolina">South Carolina</option>
+																				<option value="South Dakota">South Dakota</option>
+																				<option value="Tennessee">Tennessee</option>
+																				<option value="Texas">Texas</option>
+																				<option value="Utah">Utah</option>
+																				<option value="Vermont">Vermont</option>
+																				<option value="Virginia">Virginia</option>
+																				<option value="Washington">Washington</option>
+																				<option value="West Virginia">West Virginia</option>
+																				<option value="Wisconsin">Wisconsin</option>
+																				<option value="Wyoming">Wyoming</option>                                        
                                       </select></td>
                                   </tr>
                                   <tr> 
                                     <td><input name="txtCounty7Years_3" type="text" value="County" size="10"></td>
                                     <td width="17%">
 																			<select name="selState7Years_3">
-                                        <option>State</option>
-                                      </select></td>
+                                        <option value="">Select a State</option>
+																				<option value="Alabama">Alabama</option>
+																				<option value="Alaska">Alaska</option>
+																				<option value="Arizona">Arizona</option>
+																				<option value="Arkansas">Arkansas</option>
+																				<option value="California">California</option>
+																				<option value="Colorado">Colorado</option>
+																				<option value="Connecticut">Connecticut</option>
+																				<option value="Delaware">Delaware</option>
+																				<option value="Florida">Florida</option>
+																				<option value="Georgia">Georgia</option>
+																				<option value="Hawaii">Hawaii</option>
+																				<option value="Idaho">Idaho</option>
+																				<option value="Illinois">Illinois</option>
+																				<option value="Indiana">Indiana</option>
+																				<option value="Iowa">Iowa</option>
+																				<option value="Kansas">Kansas</option>
+																				<option value="Kentucky">Kentucky</option>
+																				<option value="Louisiana">Louisiana</option>
+																				<option value="Maine">Maine</option>
+																				<option value="Maryland">Maryland</option>
+																				<option value="Massachusetts">Massachusetts</option>
+																				<option value="Michigan">Michigan</option>
+																				<option value="Minnesota">Minnesota</option>
+																				<option value="Mississipp">Mississippi</option>
+																				<option value="Missouri">Missouri</option>
+																				<option value="Montana">Montana</option>
+																				<option value="Nebraska">Nebraska</option>
+																				<option value="Nevada">Nevada</option>
+																				<option value="New Hampshire">New Hampshire</option>
+																				<option value="New Jersey">New Jersey</option>
+																				<option value="New Mexico">New Mexico</option>
+																				<option value="New York">New York</option>
+																				<option value="North Carolina">North Carolina</option>
+																				<option value="North Dakota">North Dakota</option>
+																				<option value="Ohio">Ohio</option>
+																				<option value="Oklahoma">Oklahoma</option>
+																				<option value="Oregon">Oregon</option>
+																				<option value="Pennsylvania">Pennsylvania</option>
+																				<option value="Rhode Island">Rhode Island</option>
+																				<option value="South Carolina">South Carolina</option>
+																				<option value="South Dakota">South Dakota</option>
+																				<option value="Tennessee">Tennessee</option>
+																				<option value="Texas">Texas</option>
+																				<option value="Utah">Utah</option>
+																				<option value="Vermont">Vermont</option>
+																				<option value="Virginia">Virginia</option>
+																				<option value="Washington">Washington</option>
+																				<option value="West Virginia">West Virginia</option>
+																				<option value="Wisconsin">Wisconsin</option>
+																				<option value="Wyoming">Wyoming</option>
+	                                    </select></td>
                                   </tr>
                                   <tr> 
                                     <td height="1%" colspan="2"> <p class="smalltext">Do 
@@ -308,7 +508,57 @@ b {
                                       </font> </td>
                                   <td width="9%" valign="top"> <p class="smalltext">State</font><font size="-2"><br>
                                       <select name="txtEmpHistState_1" size="1">
-                                        <option>TX</option>
+                                        <option value="">Select a State</option>
+	<option value="Alabama">Alabama</option>
+	<option value="Alaska">Alaska</option>
+	<option value="Arizona">Arizona</option>
+	<option value="Arkansas">Arkansas</option>
+	<option value="California">California</option>
+	<option value="Colorado">Colorado</option>
+	<option value="Connecticut">Connecticut</option>
+	<option value="Delaware">Delaware</option>
+	<option value="Florida">Florida</option>
+	<option value="Georgia">Georgia</option>
+	<option value="Hawaii">Hawaii</option>
+	<option value="Idaho">Idaho</option>
+	<option value="Illinois">Illinois</option>
+	<option value="Indiana">Indiana</option>
+	<option value="Iowa">Iowa</option>
+	<option value="Kansas">Kansas</option>
+	<option value="Kentucky">Kentucky</option>
+	<option value="Louisiana">Louisiana</option>
+	<option value="Maine">Maine</option>
+	<option value="Maryland">Maryland</option>
+	<option value="Massachusetts">Massachusetts</option>
+	<option value="Michigan">Michigan</option>
+	<option value="Minnesota">Minnesota</option>
+	<option value="Mississipp">Mississippi</option>
+	<option value="Missouri">Missouri</option>
+	<option value="Montana">Montana</option>
+	<option value="Nebraska">Nebraska</option>
+	<option value="Nevada">Nevada</option>
+	<option value="New Hampshire">New Hampshire</option>
+	<option value="New Jersey">New Jersey</option>
+	<option value="New Mexico">New Mexico</option>
+	<option value="New York">New York</option>
+	<option value="North Carolina">North Carolina</option>
+	<option value="North Dakota">North Dakota</option>
+	<option value="Ohio">Ohio</option>
+	<option value="Oklahoma">Oklahoma</option>
+	<option value="Oregon">Oregon</option>
+	<option value="Pennsylvania">Pennsylvania</option>
+	<option value="Rhode Island">Rhode Island</option>
+	<option value="South Carolina">South Carolina</option>
+	<option value="South Dakota">South Dakota</option>
+	<option value="Tennessee">Tennessee</option>
+	<option value="Texas">Texas</option>
+	<option value="Utah">Utah</option>
+	<option value="Vermont">Vermont</option>
+	<option value="Virginia">Virginia</option>
+	<option value="Washington">Washington</option>
+	<option value="West Virginia">West Virginia</option>
+	<option value="Wisconsin">Wisconsin</option>
+	<option value="Wyoming">Wyoming</option>                                        
                                       </select>
                                       </font></td>
                                   <td width="10%" valign="top"> <p class="smalltext">Zip</font><font size="-2"><br>
@@ -401,7 +651,57 @@ b {
                                       </font> </td>
                                   <td width="9%" valign="top"> <p class="smalltext">State</font><font size="-2"><br>
                                       <select name="txtEmpHistState_2" size="1">
-                                        <option>TX</option>
+                                        <option value="">Select a State</option>
+	<option value="Alabama">Alabama</option>
+	<option value="Alaska">Alaska</option>
+	<option value="Arizona">Arizona</option>
+	<option value="Arkansas">Arkansas</option>
+	<option value="California">California</option>
+	<option value="Colorado">Colorado</option>
+	<option value="Connecticut">Connecticut</option>
+	<option value="Delaware">Delaware</option>
+	<option value="Florida">Florida</option>
+	<option value="Georgia">Georgia</option>
+	<option value="Hawaii">Hawaii</option>
+	<option value="Idaho">Idaho</option>
+	<option value="Illinois">Illinois</option>
+	<option value="Indiana">Indiana</option>
+	<option value="Iowa">Iowa</option>
+	<option value="Kansas">Kansas</option>
+	<option value="Kentucky">Kentucky</option>
+	<option value="Louisiana">Louisiana</option>
+	<option value="Maine">Maine</option>
+	<option value="Maryland">Maryland</option>
+	<option value="Massachusetts">Massachusetts</option>
+	<option value="Michigan">Michigan</option>
+	<option value="Minnesota">Minnesota</option>
+	<option value="Mississipp">Mississippi</option>
+	<option value="Missouri">Missouri</option>
+	<option value="Montana">Montana</option>
+	<option value="Nebraska">Nebraska</option>
+	<option value="Nevada">Nevada</option>
+	<option value="New Hampshire">New Hampshire</option>
+	<option value="New Jersey">New Jersey</option>
+	<option value="New Mexico">New Mexico</option>
+	<option value="New York">New York</option>
+	<option value="North Carolina">North Carolina</option>
+	<option value="North Dakota">North Dakota</option>
+	<option value="Ohio">Ohio</option>
+	<option value="Oklahoma">Oklahoma</option>
+	<option value="Oregon">Oregon</option>
+	<option value="Pennsylvania">Pennsylvania</option>
+	<option value="Rhode Island">Rhode Island</option>
+	<option value="South Carolina">South Carolina</option>
+	<option value="South Dakota">South Dakota</option>
+	<option value="Tennessee">Tennessee</option>
+	<option value="Texas">Texas</option>
+	<option value="Utah">Utah</option>
+	<option value="Vermont">Vermont</option>
+	<option value="Virginia">Virginia</option>
+	<option value="Washington">Washington</option>
+	<option value="West Virginia">West Virginia</option>
+	<option value="Wisconsin">Wisconsin</option>
+	<option value="Wyoming">Wyoming</option>                                        
                                       </select>
                                       </font></td>
                                   <td width="10%" valign="top"> <p class="smalltext">Zip</font><font size="-2"> 
@@ -490,7 +790,57 @@ b {
                                   </td>
                                   <td width="10%" valign="top"> <p class="smalltext">State<br>
                                       <select name="txtEmpHistState_3" size="1">
-                                        <option>TX</option>
+                                        <option value="">Select a State</option>
+	<option value="Alabama">Alabama</option>
+	<option value="Alaska">Alaska</option>
+	<option value="Arizona">Arizona</option>
+	<option value="Arkansas">Arkansas</option>
+	<option value="California">California</option>
+	<option value="Colorado">Colorado</option>
+	<option value="Connecticut">Connecticut</option>
+	<option value="Delaware">Delaware</option>
+	<option value="Florida">Florida</option>
+	<option value="Georgia">Georgia</option>
+	<option value="Hawaii">Hawaii</option>
+	<option value="Idaho">Idaho</option>
+	<option value="Illinois">Illinois</option>
+	<option value="Indiana">Indiana</option>
+	<option value="Iowa">Iowa</option>
+	<option value="Kansas">Kansas</option>
+	<option value="Kentucky">Kentucky</option>
+	<option value="Louisiana">Louisiana</option>
+	<option value="Maine">Maine</option>
+	<option value="Maryland">Maryland</option>
+	<option value="Massachusetts">Massachusetts</option>
+	<option value="Michigan">Michigan</option>
+	<option value="Minnesota">Minnesota</option>
+	<option value="Mississipp">Mississippi</option>
+	<option value="Missouri">Missouri</option>
+	<option value="Montana">Montana</option>
+	<option value="Nebraska">Nebraska</option>
+	<option value="Nevada">Nevada</option>
+	<option value="New Hampshire">New Hampshire</option>
+	<option value="New Jersey">New Jersey</option>
+	<option value="New Mexico">New Mexico</option>
+	<option value="New York">New York</option>
+	<option value="North Carolina">North Carolina</option>
+	<option value="North Dakota">North Dakota</option>
+	<option value="Ohio">Ohio</option>
+	<option value="Oklahoma">Oklahoma</option>
+	<option value="Oregon">Oregon</option>
+	<option value="Pennsylvania">Pennsylvania</option>
+	<option value="Rhode Island">Rhode Island</option>
+	<option value="South Carolina">South Carolina</option>
+	<option value="South Dakota">South Dakota</option>
+	<option value="Tennessee">Tennessee</option>
+	<option value="Texas">Texas</option>
+	<option value="Utah">Utah</option>
+	<option value="Vermont">Vermont</option>
+	<option value="Virginia">Virginia</option>
+	<option value="Washington">Washington</option>
+	<option value="West Virginia">West Virginia</option>
+	<option value="Wisconsin">Wisconsin</option>
+	<option value="Wyoming">Wyoming</option>                                        
                                       </select></font>
                                   </td>
                                   <td width="11%" valign="top"> <p class="smalltext">Zip 
@@ -1204,7 +1554,57 @@ b {
                                               <input type="text" name="txtDriverLicenseIDNumber">
                                               State of Issue 
                                               <select name="selDriverLicenseState" size="1">
-                                                <option>State</option>
+                                                <option value="">Select a State</option>
+	<option value="Alabama">Alabama</option>
+	<option value="Alaska">Alaska</option>
+	<option value="Arizona">Arizona</option>
+	<option value="Arkansas">Arkansas</option>
+	<option value="California">California</option>
+	<option value="Colorado">Colorado</option>
+	<option value="Connecticut">Connecticut</option>
+	<option value="Delaware">Delaware</option>
+	<option value="Florida">Florida</option>
+	<option value="Georgia">Georgia</option>
+	<option value="Hawaii">Hawaii</option>
+	<option value="Idaho">Idaho</option>
+	<option value="Illinois">Illinois</option>
+	<option value="Indiana">Indiana</option>
+	<option value="Iowa">Iowa</option>
+	<option value="Kansas">Kansas</option>
+	<option value="Kentucky">Kentucky</option>
+	<option value="Louisiana">Louisiana</option>
+	<option value="Maine">Maine</option>
+	<option value="Maryland">Maryland</option>
+	<option value="Massachusetts">Massachusetts</option>
+	<option value="Michigan">Michigan</option>
+	<option value="Minnesota">Minnesota</option>
+	<option value="Mississipp">Mississippi</option>
+	<option value="Missouri">Missouri</option>
+	<option value="Montana">Montana</option>
+	<option value="Nebraska">Nebraska</option>
+	<option value="Nevada">Nevada</option>
+	<option value="New Hampshire">New Hampshire</option>
+	<option value="New Jersey">New Jersey</option>
+	<option value="New Mexico">New Mexico</option>
+	<option value="New York">New York</option>
+	<option value="North Carolina">North Carolina</option>
+	<option value="North Dakota">North Dakota</option>
+	<option value="Ohio">Ohio</option>
+	<option value="Oklahoma">Oklahoma</option>
+	<option value="Oregon">Oregon</option>
+	<option value="Pennsylvania">Pennsylvania</option>
+	<option value="Rhode Island">Rhode Island</option>
+	<option value="South Carolina">South Carolina</option>
+	<option value="South Dakota">South Dakota</option>
+	<option value="Tennessee">Tennessee</option>
+	<option value="Texas">Texas</option>
+	<option value="Utah">Utah</option>
+	<option value="Vermont">Vermont</option>
+	<option value="Virginia">Virginia</option>
+	<option value="Washington">Washington</option>
+	<option value="West Virginia">West Virginia</option>
+	<option value="Wisconsin">Wisconsin</option>
+	<option value="Wyoming">Wyoming</option>
                                               </select>
                                           </td>
                                         </tr>
@@ -1233,5 +1633,73 @@ b {
 </html>
 
 
- 
+<script language='JavaScript'>
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtOtherPhone,txtEmailAddress';
+	var arrTextFields=strTextFields.split(",");
+	
+	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
+	var arrCheckList=strValidateCheckList.split(",");
 
+	function SubmitForm()
+		{
+			//Check for spaces
+			for(iLoop=0; iLoop < arrTextFields.length; iLoop++)
+				{
+					if(CheckForSpaces(eval('document.frmLongApp.' + arrTextFields[iLoop] + '.value'))=='')
+						{
+							alert('Please enter the missing Data')
+							eval('document.frmLongApp.' + arrTextFields[iLoop] + '.select()')
+									
+							return false;
+						}
+				}
+				//***************************************************************
+				
+				
+				//***************************************************************
+				//Check for Checkboxes
+				for(iLoop=0; iLoop < arrCheckList.length; iLoop++)
+					{
+						if(eval('document.frmLongApp.' + arrCheckList[iLoop] + '.checked')==false)
+							{
+								alert('Please make the required selection')
+								eval('document.frmLongApp.' + arrCheckList[iLoop] + '.focus()')
+												
+								return false;
+							}
+					}
+				//***************************************************************
+				
+				//********************************************************************
+				//Conditional validation
+				if(document.frmLongApp.radNameChange.value='Yes')
+					{
+						if(CheckForSpaces(document.frmLongApp.txtFormerName.value)=='')
+							{
+								alert('Please enter previous name(s)');
+								document.frmLongApp.txtFormerName.select();
+								return false
+							}
+					}
+				//********************************************************************
+		}
+		
+		function CheckForSpaces(strTextIn)
+			{	
+				var strWorkText;
+				var intPointer;
+					
+				strWorkText = strTextIn;
+				intPointer = strWorkText.indexOf(" ");
+					
+				for (var loopIndex = 0; loopIndex < strTextIn.length; loopIndex++)
+				{
+					strWorkText = strWorkText.substring(0, intPointer) + strWorkText.substring(intPointer + 1, strWorkText.length);
+					intPointer = strWorkText.indexOf(" ", intPointer);
+						
+					if(intPointer == -1)
+					{break;}
+				}
+				return strWorkText;
+			}
+</script>
