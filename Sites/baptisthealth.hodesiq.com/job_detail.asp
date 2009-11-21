@@ -55,10 +55,10 @@ ViewedJobCounter intJobID
 						<%else%>
 							<FONT class="plainText"><b>Saved In Cart</b></font>
 						<%end if%>
-						
+				
 					</td>
 					<td align=right width=142>
-						<a href="<%=SECURED_ADDRESS%>apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
+						<a href="<%=sBaptistDomain%>apply_online_1.asp?JobID=<%=intJobID%>&User_ID=<%=Request("user_id")%>"><span class="link">Apply Online</span></a>
 					</td>
 				</tr>
 			
