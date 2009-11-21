@@ -267,7 +267,7 @@ function showPrinterFriendly()
 
 	w = window.open("","Print","height=600,width=764,left=80,top=80,scrollbars=1,menubar=1,resizable=1,toolbar=0");
 	w.document.write("<html><head><title>Print Window</title>");
-	w.document.write("<link rel='stylesheet' href='/components/css/bmc.css' type='text/css'></head>");
+	w.document.write("<link rel='stylesheet' href='style/bmc.css' type='text/css'></head>");
 	w.document.write("<body bgcolor='white'>");
 	w.document.write("<table><tr><td>");
 	w.document.write("<img src='/images/logo.gif'>");
