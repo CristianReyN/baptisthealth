@@ -43,6 +43,7 @@ dim strHTML
 dim strMediaCode
 
 
+stop
 if trim(Request("one_qa")) = "yes" then
 	blnAddQA = true
 else
@@ -142,7 +143,7 @@ iEthnicity = ""
 'strLastName = Last_Name
 strMiddleName = strMiddleInitial
 
-intResult =  InsertJobSeeker_NoQIDArray_EmailQA_BAPTIST(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
+intResult =  InsertJobSeeker_NoQIDArray_EmailQA(strAppServer, arrJobIDs, strFirstName, strLastname, strMiddleName, strSSN, _
 					  strEmail, strJSPassword, strAddress, strCity, intState, strStateName, intCountry, _
 					  strZip, strHomePhone, strWorkPhone, strMobilePhone, strResume, strMediaCode, intJobSeekerID, _
 					  intApplicantSource, blnAddQA, blnAlwaysSendNotification, iGender, iEthnicity)
@@ -163,13 +164,9 @@ select case intResult
 		
 		strJobCartJobs = FilterJobsWithoutQuestionnaires(arrJobIDs, strJobSeekerIDs)
 		
-		strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
-		
 		if trim(request("apply_1a")) = "yes" and strJobCartJobs <> "" then
 			strAction = "apply_online_1a.asp"
 		else
-			'strCollectAppIDs = Left(strCollectAppIDs, Len(strCollectAppIDs)-1)
-			
 			strAction = UnsecuredBaseURL & "confirmation.asp"
 		end if
 		
