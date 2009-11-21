@@ -62,7 +62,7 @@ select case err.number
 		
 	case else
 		strAction = "apply_online_1a.asp"
-		strConfirm = "An error occurred while attempting to process your request.  Please try again."
+		strConfirm = "An error occurred while attempting to process your request.  Please try again." & " number " & err.number & " description " & err.Description
 		
 end select
 %>
