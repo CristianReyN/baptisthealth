@@ -69,7 +69,7 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 							<tr>
 								<td width="33%">
 									&nbsp;<!--<a href="Javascript: ApplyToJobCartJobs();"><span class="link">Apply Online</span></a>-->
-									<a href="Javascript: ApplyToJobCartJobs();"><span class="link">Apply Online</span></a>
+									<a href="Javascript: ApplyToJobCartJobs_Baptist();"><span class="link">Apply Online</span></a>
 								</td>
 								<td width="33%" align="center">
 									<a href="Javascript: ReferJobCartJobsToFriend();"><span class="link">Tell A friend</span></a>
@@ -104,6 +104,19 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 
 <script language="javascript">
 <!--
+
+	function ApplyToJobCartJobs_Baptist()
+	{
+		if(!JobsAreChecked())
+		{
+			alert("You must select at least one job in order to apply.");
+		}
+		else
+		{
+			document.frm.action = "<%=SECURED_ADDRESS%>apply_online_1.asp?User_id=";
+			document.frm.submit();
+		}
+	}
 
 	function DeleteJobCartJobs(strCookieName)
 	{
