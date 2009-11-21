@@ -219,7 +219,7 @@ b {
                                         <input type="radio" name="radPast7Years" value="Yes">
                                         Yes 
                                         <input type="radio" name="radPast7Years" value="No">
-                                        No</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If yes,</td>
+                                        No</font><br>If yes, enter<br>county and state</td>
                                     <td width="9%"> <p class="smalltext">
                                         <input name="txtCounty7Years_1" type="text" value="County" size="10">
                                       
