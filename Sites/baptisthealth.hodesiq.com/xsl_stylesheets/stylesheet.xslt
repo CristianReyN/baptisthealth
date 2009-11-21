@@ -49,7 +49,7 @@
 									<table cellspacing="0" cellpadding="0" border="0" width="100%">
 										<tr>
 											<td width="100%" bgcolor="#09357a" class="hospitalStrip" valign="bottom">Baptist Medical Centers:
-
+										
 											</td>
 										</tr>
 									</table>
