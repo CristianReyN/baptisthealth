@@ -12,43 +12,43 @@ dim ERP_ID
 
 select case GetAppServer()
 	
-	case "DEV", "STG"
+	case "DEV"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 11279 '6931
+		CAREER_SITE_EMEDIA_ID = 6931 '11279
 		
 		sDomain = "http://careers.iqdev.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
-		'LOCATION_ID = 263
-		'SHIFT_ID = 264
+		LOCATION_ID = 263
+		SHIFT_ID = 264
 		'ERP_ID = 262
 		
-	case "DEMO"', "STG"
+	case "DEMO", "STG"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 11279
+		CAREER_SITE_EMEDIA_ID = 6931 ''11279
 		
 		sDomain = "http://careers.iqstg.beta.hodes.com/baptisthealth/"
 		sBaptistDomain = sDomain
 		
-		'LOCATION_ID = 263
-		'SHIFT_ID = 264		
+		LOCATION_ID = 263
+		SHIFT_ID = 264		
 		'ERP_ID = 288
 		
 	case "PRODUCTION"
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 11279
+		CAREER_SITE_EMEDIA_ID = 6931 '11279
 		
 		sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
 		
 		
-		'LOCATION_ID = 263
-		'SHIFT_ID = 264
+		LOCATION_ID = 263
+		SHIFT_ID = 264
 		'ERP_ID = 288
 		
 	case else
 		HIRING_ORG_ID = 632
-		CAREER_SITE_EMEDIA_ID = 11279 '6931
+		CAREER_SITE_EMEDIA_ID = 6931 '11279 '6931
 		
 		sDomain = "http://careers.hodes.com/baptisthealth/"
 		sBaptistDomain = "http://community.e-baptisthealth.com/tools/jobs/baptisthealth/"
@@ -59,12 +59,12 @@ select case GetAppServer()
 		'ERP_ID = 288
 		
 end select
-				APP_SERVER          = "IQ-DEV-ASP-IQ2" ' "IQSQL5-IQ2"
-				REPLICATION_SERVER  = APP_SERVER
+				'APP_SERVER          = "IQ-DEV-ASP-IQ2" ' "IQSQL5-IQ2"
+				'REPLICATION_SERVER  = APP_SERVER
 
 
-'sCFL_Search = LOCATION_ID & "," & SHIFT_ID
-'sCFL_Results = LOCATION_ID & "," & SHIFT_ID
+sCFL_Search = LOCATION_ID & "," & SHIFT_ID
+sCFL_Results = LOCATION_ID & "," & SHIFT_ID
 
 
 

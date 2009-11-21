@@ -4,20 +4,20 @@
 
 <%on error resume next
 
-	'dim strCFL_Javascript
-	'dim arrCFL_Search
-	'dim intFieldCount
+	dim strCFL_Javascript
+	dim arrCFL_Search
+	dim intFieldCount
 
-	'strCFL_Javascript = ""
-	'arrCFL_Search = split(sCFL_Search, ",")
+	strCFL_Javascript = ""
+	arrCFL_Search = split(sCFL_Search, ",")
 
-	'for intFieldCount = 0 to ubound(arrCFL_Search)
+	for intFieldCount = 0 to ubound(arrCFL_Search)
 
-	'	strCFL_Javascript = strCFL_Javascript & "CustomField_"
-	'	strCFL_Javascript = strCFL_Javascript & arrCFL_Search(intFieldCount)
-	'	strCFL_Javascript = strCFL_Javascript & ".selectedIndex = 0;" & vbcrlf
+		strCFL_Javascript = strCFL_Javascript & "CustomField_"
+		strCFL_Javascript = strCFL_Javascript & arrCFL_Search(intFieldCount)
+		strCFL_Javascript = strCFL_Javascript & ".selectedIndex = 0;" & vbcrlf
 
-	'next
+	next
 
 %>
 
@@ -37,10 +37,10 @@
 	{
 		with(document.frm)
 		{
-		//	category.value = "";
-		//	keywords.value = "";
+			category.value = "";
+			keywords.value = "";
 			submit();
-		//	<%=strCFL_Javascript%>
+			<%=strCFL_Javascript%>
 		}
 	}
 	
@@ -117,11 +117,11 @@
 				<td>
 					<%
 						strHTML=""
-						'GetCustomFieldsDataArray ""
-						'strHTML =  replace(GetCustomFieldsSearchHTML_style("","categorySelect"), "LOCATION","Location")
-						'strHTML =  replace(strHTML, "SHIFT","Shift")
-						'strHTML =  replace(strHTML, "<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">All Shifts")
-						'strHTML =  replace(strHTML, "<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">All Locations")
+						GetCustomFieldsDataArray ""
+						strHTML =  replace(GetCustomFieldsSearchHTML_style("","categorySelect"), "LOCATION","Location")
+						strHTML =  replace(strHTML, "SHIFT","Shift")
+						strHTML =  replace(strHTML, "<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & SHIFT_ID & "' class='categorySelect' ><option value="""">All Shifts")
+						strHTML =  replace(strHTML, "<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">Search All","<select name='CustomField_" & Location_ID & "' class='categorySelect' ><option value="""">All Locations")
 						Response.Write strHTML
 					%>
 				</td>
