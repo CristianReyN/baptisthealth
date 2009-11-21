@@ -179,7 +179,7 @@ function selectall()
                   </div>
                  
  				</td></tr>
-</center>
+
               <tr>
                 <td vAlign="middle">
                   <p align="left">
@@ -314,7 +314,7 @@ function selectall()
                   
 				<br></td></tr>
               <tr>
-                <td vAlign="top" colspan=2>
+                <td vAlign="top" colspan=3>
                 <div class="subheader">Referral 
                   Source *
                 </div>
