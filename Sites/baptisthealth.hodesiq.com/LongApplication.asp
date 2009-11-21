@@ -167,6 +167,7 @@ b {
               No<br>
               Former name(s): <br>
               <textarea name="txtFormerName" cols="50"></textarea></font>
+<p class='breakhere'></p>
               </td>
                                     <td colspan="3"></p></td>
                                   </tr>
@@ -1047,7 +1048,7 @@ b {
                                 </tr>
                                 <tr> 
                                   <td height="38%"> <p> 
-                                    
+<p class="breakhere"></p>
           <p class="smalltextb">FAIR CREDIT REPORTING ACT<br>
             DISCLOSURE TO APPLICANTS AND EMPLOYEES<br>
             <p class="smalltext">Pursuant to the Fair Credit Reporting Act, 15 U.S.C. 1681-1681u, Baptist 
