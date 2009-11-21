@@ -397,28 +397,28 @@ b {
                                   <td height="10%" colspan="4"> <p class="smalltext">Name 
                                       of immediate supervisor<br></font>
                                       <font size="-2"> 
-                                      <input name="txtImmediateSuper_1" type="text" size="30">
+                                      <input name="txtImmediateSuper_1" type="text" size="30" id="Supervisor_name">
                                       </font>May we contact them 
-                                      <input type="radio" name="radEmpHistContactSuper_1" value="Yes">
+                                      <input type="radio" name="radEmpHistContactSuper_1" value="Yes" id="May_contact">
                                       Yes 
-                                      <input type="radio" name="radEmpHistContactSuper_1" value="No">
+                                      <input type="radio" name="radEmpHistContactSuper_1" value="No" id="May_contact">
                                       No </td>
                                 </tr>
                                 <tr> 
                                   <td height="21%" colspan="4"> <p class="smalltext">Duties 
                                       Performed<br></font>
                                       <font size="-2"> 
-                                      <textarea name="txtEmpHistDuties_1" cols="62"></textarea>
+                                      <textarea name="txtEmpHistDuties_1" cols="62" id="Duties"></textarea>
                                       </font></td>
                                 </tr>
                                 <tr> 
                                   <td height="10%"> <p class="smalltext">Salary</font><font size="-2"> 
-                                      <input type="text" name="txtEmpHistSalary_1">
+                                      <input type="text" name="txtEmpHistSalary_1" id="Salary">
                                       </font></td>
                                   <td colspan="3"><p class="smalltext">Name of 
                                       Department or Unit<br></font>
                                       <font size="-2"> 
-                                      <input type="text" name="txtEmpHistDeptName_1">
+                                      <input type="text" name="txtEmpHistDeptName_1" id="Department">
                                       </font></td>
                                 </tr>
                                 <tr> 
@@ -1251,13 +1251,13 @@ b {
 <!--#include file="includes/footer.asp"-->
 
 <script language='JavaScript'>
-	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
+	var strTextFields='txtSSN,txtFirstName,txtLastName,txtAddress,txtCounty,txtCity,txtZip,txtHomePhone,txtEmailAddress,txtHighSchoolName,txtHigh_School_Degree_or_Certificate,txtHigh_School_City_State,txtEmpHistCo_1,txtEmpHistCity_1,txtEmpHistState_1,txtEmpHistZip_1,txtEmpHistPhone_1,txtEmpHistJobTitle_1,txtEmpHistFromMonth_1,txtEmpHistFromYear_1,txtImmediateSuper_1,txtEmpHistDuties_1,txtEmpHistSalary_1,txtEmpHistDeptName_1,txtEmpHistLeaveReason_1,txtRefName_1,txtRefPos_1,txtRefCo_1,txtRefPhone_1,txtRefName_2,txtRefPos_2,txtRefCo_2,txtRefPhone_2,txtRefName_3,txtRefPos_3,txtRefCo_3,txtRefPhone_3,txtSignature';
 	var arrTextFields=strTextFields.split(",");
 	
 	var strValidateCheckList='chkCertify_1,chkCertify_2,chkCertify_3,chkCertify_4,chkCertify_5,chkCertify_6,chkFinalAgree';
 	var arrCheckList=strValidateCheckList.split(",");
 	
-	var strValidateRadio='radLast_Year_High_School,radGraduated_High_School,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
+	var strValidateRadio='radLast_Year_High_School,radGraduated_High_School,radEmpHistContactSuper_1,radBaptistMngr,radUSAllowed,radNoFraud,radConviction,radCrime'
 
 	var arrValidateRadio=strValidateRadio.split(",")
 
