@@ -22,7 +22,7 @@
 			strSimpleURL = SIMPLE_REPORT & "?Location=" & strLoc
 			strFullURL = Full_REPORT & "?Location=" & strLoc
 			
-			strHTML = strHTML & "<tr><td><a href=""" & strSimpleURL & """>" & strLoc & "- Simple Report</a></td></tr><tr><td><a href='" & strFullURL & "'>" & strLoc & "- Full Report</a></td></tr><tr><td height='5'></td></tr>"
+			strHTML = strHTML & "<tr><td><a href=""" & strSimpleURL & """>" & strLoc & "- Simple Report</a></td></tr><tr><td><a href=""" & strFullURL & """>" & strLoc & "- Full Report</a></td></tr><tr><td height='5'></td></tr>"
 			
 			AdoRs.MoveNext
 		Loop
