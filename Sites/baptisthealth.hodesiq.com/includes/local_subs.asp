@@ -1,9 +1,3 @@
-
-<!--#include virtual="../cc/data_subs.asp"-->
-<!--#include virtual="../cc/general_subs.asp"-->
-<!--#include virtual="../cc/questionnaire_subs.asp"-->
-<!--#include virtual="../cc/agent_subs.asp"-->
-<!--#include virtual="../cc/IQ_2_0_subs.asp"-->
 <%
 '=============================================================
 'CODE FOR DYNAMICALLY ASSIGNING THE APP_SERVER VALUES
@@ -27,17 +21,6 @@ select case GetAppServer()
 		
 end select
 
-'HIRING_ORG_ID = 632
-'CAREER_SITE_EMEDIA_ID = 6931
-'APP_SERVER          = "IQ-SQL-IQ2"
-'REPLICATION_SERVER  = APP_SERVER 
-'arrIQConnection     = Array("10.100.50.133", "iq2", "sa", "1q51r00t", 3)
-'arrSearchConnection = Array("10.100.50.133", "candidate_search", "sa", "1q51r00t", 3)
-''DOC_SERVER_PATH     = "\\iq-doc-1\iq-doc\"
-'DOC_SERVER_PATH     = "c:\iq-doc"
-'docFileLink         = "https://payflow.hodes.com/iq-doc/"
-
-
 if trim(request("debug")) = "yes" then
 	Response.Write "APP_SERVER: " & APP_SERVER & "<br>"
 	Response.Write "HIRING_ORG_ID: " & HIRING_ORG_ID & "<br>"
@@ -55,6 +38,11 @@ strCurrentPage = Request.ServerVariables("URL")
 '=============================================================
 %>
 
+<!--#include virtual="../cc/data_subs.asp"-->
+<!--#include virtual="../cc/general_subs.asp"-->
+<!--#include virtual="../cc/questionnaire_subs.asp"-->
+<!--#include virtual="../cc/agent_subs.asp"-->
+<!--#include virtual="../cc/IQ_2_0_subs.asp"-->
 
 <script language="vbscript" runat="server">
 
