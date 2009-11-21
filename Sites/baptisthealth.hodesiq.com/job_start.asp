@@ -1,3 +1,9 @@
+<%
+
+response.redirect sDomain & "job_start.asp"
+
+%>
+
 <% 'Response.Redirect "http://smartpost.hodes.com/baptisthealth/job_start.asp" %>
 
 <!--#include file="includes/local_subs.asp"-->
