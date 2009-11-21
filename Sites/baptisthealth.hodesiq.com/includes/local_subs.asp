@@ -78,7 +78,7 @@ if trim(request("debug")) = "yes" then
 	Response.Write "HIRING_ORG_ID: " & HIRING_ORG_ID & "<br>"
 	Response.Write "CAREER_SITE_EMEDIA_ID: " & CAREER_SITE_EMEDIA_ID & "<br>"
 	Response.Write "REPLICATION_SERVER: " & REPLICATION_SERVER & "<br>"
-	Response.Write "DOC_SERVER_PATH: " & DOC_SERVER_PATH
+	Response.Write "DOC_SERVER_PATH: " & DOC_SERVER_PATH & "<br>"
 	Response.Write "SECURED_ADDRESS: " & SECURED_ADDRESS
 end if
 '=============================================================
