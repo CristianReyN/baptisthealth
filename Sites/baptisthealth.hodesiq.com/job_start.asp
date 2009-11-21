@@ -35,8 +35,8 @@
 		{
 			category.value = "";
 			keywords.value = "";
-			submit();
 			<%=strCFL_Javascript%>
+			submit();
 		}
 	}
 	

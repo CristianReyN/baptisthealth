@@ -99,7 +99,7 @@ set objJobCartJobsRS = GetJobCartJobsRS(strJobCart)
 		}
 		else
 		{
-			document.frm.action = "<%=SECURED_ADDRESS%>apply_online_1.asp?User_id=";
+			document.frm.action = "<%=SECURED_ADDRESS%>apply_online_1.asp?User_id=<%=Request("user_id")%>";
 			document.frm.submit();
 		}
 	}
